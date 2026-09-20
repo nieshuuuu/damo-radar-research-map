@@ -153,6 +153,53 @@ run:
 
 ⚠️ 报告解析脚本里要填 `dashscope.api_key = "YOUR_DASHSCOPE_API_KEY"` —— 复现需要阿里云账号。文档说"any other LLM can be substituted"。
 
+### ⚠️ 重要更正：TotalSegmentator 是**教师**，不是**运行时组件**
+
+> [!strategy] 先看推理时到底调用了什么，再判断依赖有多重
+
+读 `RADAR_inference/dynamic_network_architectures/vision_branch.py`（160 行），`VisionBranch` **自带一个分割网络**：
+
+```python
+# line 35
+arch_class_name="dynamic_network_architectures.architectures.unet_lightdecoder.PlainConvUNetLightD",
+# line 54
+output_channels=37,          # 36 个解剖结构 + 背景
+# line 63
+self.organs = [ ... ]
+# line 113-115  —— 推理时自己预测 mask，不读外部 mask
+pred_mask = torch.softmax(pred_logit, 1)
+pred_mask = pred_mask.argmax(1)
+y = pred_mask
+```
+
+==**推理时 RADAR 跑的是自己这个 37 通道 U-Net，根本不调用 TotalSegmentator。**==
+TotalSegmentator v1.5.7 只出现在 `docs/PREPROCESS.md` 里，用来**离线生成训练标签**。README 也明说："The pretrained masks we release already went through the TotalSegmentator step, so you only need TotalSegmentator if you want to preprocess your own images from scratch."
+
+对应修正 §⑥ 里"真正的成本是安装"那句：
+
+| 你要做的事 | 需要装 TotalSegmentator v1.5.7 吗 |
+|---|---|
+| 跑 RADAR 发布的 checkpoint 做推理 | ✗ **完全不需要** |
+| 在 MERLIN 上复现他们的外部测试 | ✗ 不需要（他们发布了处理好的 mask）|
+| 用**自己的**数据重新预处理 / 重训 | ✓ 需要，这时才会撞上 `nnunet-customized==1.2` 那套 2022 年的依赖 |
+
+### 池化核决定了分割精度根本不重要
+
+同一文件 line 138–158，预测出的 mask 被 `F.max_pool3d` 三档下采样成 token 级布尔标记：
+
+```python
+kernel_size=(2, 8, 8)      # → organ_token_flags3
+kernel_size=(4, 16, 16)    # → organ_token_flags2
+kernel_size=(8, 32, 32)    # → organ_token_flags1
+organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
+```
+
+最粗那一档，**一个 token 覆盖 8×32×32 个体素**。在 `[1, 1, 5]` mm 的 spacing 下就是 **40 mm(z) × 32 mm × 32 mm**。
+
+> [!insight] RADAR 对分割的要求是"标签别搞错、大致位置别飘"，不是"边界准"
+> 边界级的 Dice 改进在 max-pool 到 40×32×32 mm 之后被完全吃掉。==这解释了为什么钉住 v1.5.7 的代价比看上去还小 —— 升级分割器的收益在数学上接近零。==
+> 注意 `organ_token_flags1[i][unique_values.long() - 1]` 这一行：它**直接拿 mask 的整数标签当数组下标**去对齐器官文本。所以 RADAR 需要的不是"一块区域"，是"索引为 k 的那块是肝"。这一点在 [radar-vs-medsam.md](radar-vs-medsam.md) §能不能换成 MedSAM2 里是决定性的。
+
 ---
 
 ## ⑥ TotalSegmentator 钉在 v1.5.7 —— 钉的是一条已死分支的末端
@@ -184,7 +231,7 @@ GitHub weights tag：`v3.0.0-weights` 发布于 **2026-09-07**，比 RADAR 仓�
 
 ⚠️ 最后一行很要命：RADAR 四种病理确诊癌症里的**结直肠癌**，正好踩在 v2 明确没修的那条上。
 
-**真正的成本是安装。** v1.5.7 的 `setup.py` 依赖：
+**安装成本只在"用自己的数据重训"这条路上才出现**（见上一节的更正表）。v1.5.7 的 `setup.py` 依赖：
 
 ```python
 'nnunet-customized==1.2',      # 2022 年的 nnU-Net v1 私有 fork
@@ -193,6 +240,7 @@ GitHub weights tag：`v3.0.0-weights` 发布于 **2026-09-07**，比 RADAR 仓�
 ```
 
 2026 年要跑起来必须单独开环境，和 RADAR 自己的 `transformers==4.25`（跟随 LAVIS 的 pin）不在一个世界。
+✓ 但如果你只是跑发布的 checkpoint，这一整段与你无关。
 
 💡 顺带：`tissue_types` 任务（`subcutaneous_fat` / `skeletal_muscle` / `torso_fat`）是 **v2 才加的**，v1 完全没有，且是 v2 里少数**非商用许可**的任务之一。做脂肪/肌肉组成的工作只能走 v2 或 v3。
 
