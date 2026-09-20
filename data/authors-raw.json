@@ -1,0 +1,561 @@
+{
+ "radar": [
+  {
+   "pos": 1,
+   "name": "Qi Zhang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "Zhejiang Provincial Key Laboratory of Pancreatic Disease, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "MOE Joint International Research Laboratory of Pancreatic Diseases, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 2,
+   "name": "Jianpeng Zhang",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China.",
+    "College of Computer Science and Technology, Zhejiang University, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 3,
+   "name": "Weiwei Cao",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China.",
+    "College of Computer Science and Technology, Zhejiang University, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 4,
+   "name": "Zilin Lu",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 5,
+   "name": "Wanxing Chang",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 6,
+   "name": "Haonan Ding",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 7,
+   "name": "Cao Chen",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 8,
+   "name": "Zhi Li",
+   "affiliations": [
+    "Department of Radiology, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 9,
+   "name": "Xing Xue",
+   "affiliations": [
+    "Department of Radiology, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 10,
+   "name": "Sinuo Wang",
+   "affiliations": [
+    "Australian Institute for Machine Learning, Adelaide University, Adelaide SA, Australia."
+   ]
+  },
+  {
+   "pos": 11,
+   "name": "Shaoteng Zhang",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 12,
+   "name": "Yutong Xie",
+   "affiliations": [
+    "Department of Computer Vision, Mohamed bin Zayed University of Artificial Intelligence, Masdar City, Abu Dhabi, United Arab Emirates."
+   ]
+  },
+  {
+   "pos": 13,
+   "name": "Yong Xia",
+   "affiliations": [
+    "Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 14,
+   "name": "Qi Wu",
+   "affiliations": [
+    "Australian Institute for Machine Learning, Adelaide University, Adelaide SA, Australia."
+   ]
+  },
+  {
+   "pos": 15,
+   "name": "Zhongyi Shui",
+   "affiliations": [
+    "College of Computer Science and Technology, Zhejiang University, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 16,
+   "name": "Xi Li",
+   "affiliations": [
+    "College of Computer Science and Technology, Zhejiang University, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 17,
+   "name": "Zhilin Zheng",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 18,
+   "name": "Yanjie Zhou",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China.",
+    "College of Computer Science and Technology, Zhejiang University, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 19,
+   "name": "Tony C W Mok",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 20,
+   "name": "Yingda Xia",
+   "affiliations": [
+    "Alibaba DAMO Academy, Washington, DC, USA."
+   ]
+  },
+  {
+   "pos": 21,
+   "name": "Hongkan Wang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 22,
+   "name": "Xianghua Ye",
+   "affiliations": [
+    "Department of Radiation Oncology, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 23,
+   "name": "Tao Ma",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "Department of General Surgery, The First Division Hospital of Xinjiang Production and Construction Corps, Akesu, Xinjiang, China."
+   ]
+  },
+  {
+   "pos": 24,
+   "name": "Jie Peng",
+   "affiliations": [
+    "Department of Radiology, The First Division Hospital of Xinjiang Production and Construction Corps, Akesu, Xinjiang, China."
+   ]
+  },
+  {
+   "pos": 25,
+   "name": "Xiaoguang Wang",
+   "affiliations": [
+    "Department of Surgery, Affiliated Hospital of Jiaxing University, Jiaxing, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 26,
+   "name": "Jian Ding",
+   "affiliations": [
+    "Department of Radiology, Affiliated Hospital of Jiaxing University, Jiaxing, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 27,
+   "name": "Yuming Gao",
+   "affiliations": [
+    "Department of General Surgery, Jixi County People's Hospital, Xuancheng, Anhui, China."
+   ]
+  },
+  {
+   "pos": 28,
+   "name": "Huazhen Ye",
+   "affiliations": [
+    "Department of Radiology, People's Hospital of Jingning She Autonomous County, Lishui, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 29,
+   "name": "Yiping Liu",
+   "affiliations": [
+    "Department of Radiology, Shengzhou People's Hospital, Shaoxing, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 30,
+   "name": "Dongjie Chen",
+   "affiliations": [
+    "Department of General Surgery, Haining People's Hospital, Jiaxing, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 31,
+   "name": "Zhaomin Ni",
+   "affiliations": [
+    "Department of Radiology, Anji County People's Hospital, Huzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 32,
+   "name": "Jianwen Ning",
+   "affiliations": [
+    "Department of Emergency, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 33,
+   "name": "Wei Zhang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "Department of General Surgery, The First People's Hospital of Yuhang District, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 34,
+   "name": "Jian Liu",
+   "affiliations": [
+    "Department of Surgical Oncology, The People's Hospital of Beilun District, Ningbo, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 35,
+   "name": "Chaohui Yu",
+   "affiliations": [
+    "Department of Gastroenterology, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 36,
+   "name": "Shenghong Ju",
+   "affiliations": [
+    "Nurturing Center of Jiangsu Province for State Laboratory of AI Imaging & Interventional Radiology (Southeast University); Department of Radiology, Zhongda Hospital, Medical School of Southeast University, Nanjing, Jiangsu, China."
+   ]
+  },
+  {
+   "pos": 37,
+   "name": "Jianfeng Zhang",
+   "affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 38,
+   "name": "Wenbo Xiao",
+   "affiliations": [
+    "Department of Radiology, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  },
+  {
+   "pos": 39,
+   "name": "Ling Zhang",
+   "affiliations": [
+    "Alibaba DAMO Academy, Washington, DC, USA."
+   ]
+  },
+  {
+   "pos": 40,
+   "name": "Tingbo Liang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "Zhejiang Provincial Key Laboratory of Pancreatic Disease, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "MOE Joint International Research Laboratory of Pancreatic Diseases, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ]
+  }
+ ],
+ "panda": [
+  {
+   "pos": 1,
+   "name": "Kai Cao",
+   "affiliations": [
+    "Department of Radiology, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 2,
+   "name": "Yingda Xia",
+   "affiliations": [
+    "DAMO Academy, Alibaba Group, New York, NY, USA."
+   ]
+  },
+  {
+   "pos": 3,
+   "name": "Jiawen Yao",
+   "affiliations": [
+    "Hupan Laboratory, Hangzhou, China.",
+    "Damo Academy, Alibaba Group, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 4,
+   "name": "Xu Han",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, First Affiliated Hospital of Zhejiang University, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 5,
+   "name": "Lukas Lambert",
+   "affiliations": [
+    "Department of Radiology, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague, Czech Republic."
+   ]
+  },
+  {
+   "pos": 6,
+   "name": "Tingting Zhang",
+   "affiliations": [
+    "Department of Radiology, Xinhua Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 7,
+   "name": "Wei Tang",
+   "affiliations": [
+    "Department of Radiology, Fudan University Shanghai Cancer Center, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 8,
+   "name": "Gang Jin",
+   "affiliations": [
+    "Department of Surgery, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 9,
+   "name": "Hui Jiang",
+   "affiliations": [
+    "Department of Pathology, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 10,
+   "name": "Xu Fang",
+   "affiliations": [
+    "Department of Radiology, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 11,
+   "name": "Isabella Nogues",
+   "affiliations": [
+    "Department of Biostatistics, Harvard University T.H. Chan School of Public Health, Cambridge, MA, USA."
+   ]
+  },
+  {
+   "pos": 12,
+   "name": "Xuezhou Li",
+   "affiliations": [
+    "Department of Radiology, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 13,
+   "name": "Wenchao Guo",
+   "affiliations": [
+    "Hupan Laboratory, Hangzhou, China.",
+    "Damo Academy, Alibaba Group, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 14,
+   "name": "Yu Wang",
+   "affiliations": [
+    "Hupan Laboratory, Hangzhou, China.",
+    "Damo Academy, Alibaba Group, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 15,
+   "name": "Wei Fang",
+   "affiliations": [
+    "Hupan Laboratory, Hangzhou, China.",
+    "Damo Academy, Alibaba Group, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 16,
+   "name": "Mingyan Qiu",
+   "affiliations": [
+    "Hupan Laboratory, Hangzhou, China.",
+    "Damo Academy, Alibaba Group, Hangzhou, China."
+   ]
+  },
+  {
+   "pos": 17,
+   "name": "Yang Hou",
+   "affiliations": [
+    "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, China."
+   ]
+  },
+  {
+   "pos": 18,
+   "name": "Tomas Kovarnik",
+   "affiliations": [
+    "Department of Invasive Cardiology, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague, Czech Republic."
+   ]
+  },
+  {
+   "pos": 19,
+   "name": "Michal Vocka",
+   "affiliations": [
+    "Department of Oncology, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague, Czech Republic."
+   ]
+  },
+  {
+   "pos": 20,
+   "name": "Yimei Lu",
+   "affiliations": [
+    "Department of Radiology, Fudan University Shanghai Cancer Center, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 21,
+   "name": "Yingli Chen",
+   "affiliations": [
+    "Department of Surgery, Shanghai Institution of Pancreatic Disease, Shanghai, China."
+   ]
+  },
+  {
+   "pos": 22,
+   "name": "Xin Chen",
+   "affiliations": [
+    "Department of Radiology, Guangdong Provincial People's Hospital, Guangzhou, China."
+   ]
+  },
+  {
+   "pos": 23,
+   "name": "Zaiyi Liu",
+   "affiliations": [
+    "Department of Radiology, Guangdong Provincial People's Hospital, Guangzhou, China."
+   ]
+  },
+  {
+   "pos": 24,
+   "name": "Jian Zhou",
+   "affiliations": [
+    "Department of Radiology, Sun Yat-Sen University Cancer Center, Guangzhou, China."
+   ]
+  },
+  {
+   "pos": 25,
+   "name": "Chuanmiao Xie",
+   "affiliations": [
+    "Department of Radiology, Sun Yat-Sen University Cancer Center, Guangzhou, China."
+   ]
+  },
+  {
+   "pos": 26,
+   "name": "Rong Zhang",
+   "affiliations": [
+    "Department of Radiology, Sun Yat-Sen University Cancer Center, Guangzhou, China."
+   ]
+  },
+  {
+   "pos": 27,
+   "name": "Hong Lu",
+   "affiliations": [
+    "Department of Radiology, Tianjin Medical University Cancer Institute and Hospital, Tianjin, China."
+   ]
+  },
+  {
+   "pos": 28,
+   "name": "Gregory D Hager",
+   "affiliations": [
+    "Department of Computer Science, Johns Hopkins University, Baltimore, MD, USA."
+   ]
+  },
+  {
+   "pos": 29,
+   "name": "Alan L Yuille",
+   "affiliations": [
+    "Department of Computer Science, Johns Hopkins University, Baltimore, MD, USA."
+   ]
+  },
+  {
+   "pos": 30,
+   "name": "Le Lu",
+   "affiliations": [
+    "DAMO Academy, Alibaba Group, New York, NY, USA."
+   ]
+  },
+  {
+   "pos": 31,
+   "name": "Chengwei Shao",
+   "affiliations": [
+    "Department of Radiology, Shanghai Institution of Pancreatic Disease, Shanghai, China. cwshao@sina.com."
+   ]
+  },
+  {
+   "pos": 32,
+   "name": "Yu Shi",
+   "affiliations": [
+    "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, China. 18940259980@163.com."
+   ]
+  },
+  {
+   "pos": 33,
+   "name": "Qi Zhang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, First Affiliated Hospital of Zhejiang University, Hangzhou, China. qi.zhang@zju.edu.cn."
+   ]
+  },
+  {
+   "pos": 34,
+   "name": "Tingbo Liang",
+   "affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, First Affiliated Hospital of Zhejiang University, Hangzhou, China. liangtingbo@zju.edu.cn."
+   ]
+  },
+  {
+   "pos": 35,
+   "name": "Ling Zhang",
+   "affiliations": [
+    "DAMO Academy, Alibaba Group, New York, NY, USA. ling.z@alibaba-inc.com."
+   ]
+  },
+  {
+   "pos": 36,
+   "name": "Jianping Lu",
+   "affiliations": [
+    "Department of Radiology, Shanghai Institution of Pancreatic Disease, Shanghai, China. cjr.lujianping@vip.163.com."
+   ]
+  }
+ ]
+}
