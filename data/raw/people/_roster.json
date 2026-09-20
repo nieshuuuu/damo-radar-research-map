@@ -1,0 +1,107 @@
+[
+ {
+  "pos": 1,
+  "en": "Qi Zhang",
+  "cn": "章琦",
+  "slug": "01-qi-zhang",
+  "panda_pos": 33
+ },
+ {
+  "pos": 2,
+  "en": "Jianpeng Zhang",
+  "cn": "张建鹏",
+  "slug": "02-jianpeng-zhang",
+  "panda_pos": null
+ },
+ {
+  "pos": 3,
+  "en": "Weiwei Cao",
+  "cn": "曹维维",
+  "slug": "03-weiwei-cao",
+  "panda_pos": null
+ },
+ {
+  "pos": 12,
+  "en": "Yutong Xie",
+  "cn": "谢雨彤",
+  "slug": "12-yutong-xie",
+  "panda_pos": null
+ },
+ {
+  "pos": 13,
+  "en": "Yong Xia",
+  "cn": "夏勇",
+  "slug": "13-yong-xia",
+  "panda_pos": null
+ },
+ {
+  "pos": 14,
+  "en": "Qi Wu",
+  "cn": "吴琦",
+  "slug": "14-qi-wu",
+  "panda_pos": null
+ },
+ {
+  "pos": 16,
+  "en": "Xi Li",
+  "cn": "李玺",
+  "slug": "16-xi-li",
+  "panda_pos": null
+ },
+ {
+  "pos": 19,
+  "en": "Tony C W Mok",
+  "cn": "—",
+  "slug": "19-tony-c-w-mok",
+  "panda_pos": null
+ },
+ {
+  "pos": 20,
+  "en": "Yingda Xia",
+  "cn": "夏英达",
+  "slug": "20-yingda-xia",
+  "panda_pos": 2
+ },
+ {
+  "pos": 22,
+  "en": "Xianghua Ye",
+  "cn": "叶香华",
+  "slug": "22-xianghua-ye",
+  "panda_pos": null
+ },
+ {
+  "pos": 35,
+  "en": "Chaohui Yu",
+  "cn": "虞朝辉",
+  "slug": "35-chaohui-yu",
+  "panda_pos": null
+ },
+ {
+  "pos": 36,
+  "en": "Shenghong Ju",
+  "cn": "居胜红",
+  "slug": "36-shenghong-ju",
+  "panda_pos": null
+ },
+ {
+  "pos": 38,
+  "en": "Wenbo Xiao",
+  "cn": "肖文波",
+  "slug": "38-wenbo-xiao",
+  "panda_pos": null
+ },
+ {
+  "pos": 39,
+  "en": "Ling Zhang",
+  "cn": "张灵",
+  "slug": "39-ling-zhang",
+  "panda_pos": 35
+ },
+ {
+  "pos": 40,
+  "en": "Tingbo Liang",
+  "cn": "梁廷波",
+  "slug": "40-tingbo-liang",
+  "panda_pos": 34
+ }
+]

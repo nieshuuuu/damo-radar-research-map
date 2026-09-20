@@ -21,10 +21,11 @@ RADAR 的视觉-语言方法供给线不是三个孤立的海外单位，而是*
 | 9 | Australian Institute for Machine Learning, **Adelaide University** | #10 Sinuo Wang · #14 Qi Wu |
 | 10 | Department of Computer Vision, **MBZUAI**, Abu Dhabi | #12 Yutong Xie |
 
-**判定：#13 Yong Xia = 西北工业大学计算机学院 夏勇教授，把握 95%+。** 证据链：
+**#13 Yong Xia = 西北工业大学计算机学院 夏勇教授，已确证。** 证据链：
 
 | 证据 | 内容 |
 |---|---|
+| ⓪ **ORCID 直证** | RADAR 的 PubMed 记录里 #13 带 ORCID `0000-0001-9273-2847`；同一 ORCID 下另外 5 篇（*Nat Commun* 2025、*Radiology* 2023 等）的单位**全部是西北工业大学计算机学院** |
 | ① 师承直证 | 谢雨彤（#12）第一人称自述"**2021 年在西北工业大学获得博士学位，师从夏勇教授**" |
 | ② ORCID 旁证 | **Zilin Lu（#4）的 ORCID 0000-0003-2437-283X，educations 栏明写 Northwestern Polytechnical University** —— 他和夏勇共享同一个单位编号 7 |
 | ③ 合著网络 | OpenAlex：Jianpeng Zhang（#2）的头号合著者就是 Yong Xia，**22 篇共著，机构标 NWPU ×21**；Yutong Xie 第 3 位，NWPU ×18 |

@@ -81,7 +81,7 @@ Google Scholar profile `-toYdm8AAAAJ`，单位行 "Alibaba DAMO Academy USA"，�
 
 ## 对 Shu 意味着什么
 
-- **签证赛道上的一个具体名字。** 达摩院美国实体（Washington DC / New York）是真实存在的雇主，张灵是其中医疗影像方向的负责人级人物。对"工业界 + 需要 sponsorship"那条线，这是可以点名的去处。⚠️ 但吕乐已走、美国侧署名的只剩两人，编制在收缩还是扩张、是否还开 H-1B，都没查到——不能假设。另见[达摩院招聘线索](../sources/damo-hiring.md)。
+- **签证赛道上的一个具体名字。** 达摩院美国实体（Washington DC / New York）是真实存在的雇主，张灵是其中医疗影像方向的负责人级人物。对"工业界 + 需要 sponsorship"那条线，这是可以点名的去处。⚠️ 但它不公开招聘：LCA 披露里 Washington DC 的研究岗 2026 年只有一条（Senior Algorithm Engineer，2026-04 申报），"Research Scientist"头衔 2022 年后归零；吕乐已去蚂蚁。只能定向联系，且岗位语言是 LLM / VLM 而非成像物理。另见[达摩院招聘线索](../sources/damo-hiring.md)。
 - **交叉点恰好是 Shu 的独门。** 这条路线的立身之本是一个物理命题——"为什么平扫 CT 里看得见胰腺癌 / 胃癌"。达摩院的回答是"模型学到了"，说不清是什么对比度在支撑；而 RADAR 达摩院侧的署名单位里没有任何成像物理背景的机构。water/lipid（乃至 water/lipid/protein）材料分解正好能把它量化成物理量而不是深度特征。这是真实的差异化切口，可以直接写进 cold email 第一段。
 - **破冰点是真的，不是硬凑。** 2013–2016 年在 Iowa 做的是 IVUS + virtual histology 冠脉易损斑块预测；Shu 做 PCAT / 冠脉周围脂肪 FAI，是同一个临床问题的另一侧（管腔内 vs 管壁外）。
 - **BigAug 是该引的引文，也是该批评的对象。** 做仿真到真机的迁移（NAEOTOM 无标定迁移、Canon / Oxford 数据转移）时 BigAug 是标准引文；同时可以提出自己的物理论断——数据增强是在图像域模拟域偏移，而 CT 域偏移的根源在能谱与探测器响应，物理前向模型比随机增强更可控。==这是 Shu 自己的观点，不是文献共识，写的时候要以己见提出。==

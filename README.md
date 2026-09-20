@@ -7,6 +7,7 @@
 ## 目录
 
 - [一页概览](#一页概览)
+- [15 位核心作者](#15-位核心作者)
 - [40 位作者中文名总表](#40-位作者中文名总表)
 - [结构：四条腿](#结构四条腿)
 - [三条血统线](#三条血统线)
@@ -42,6 +43,34 @@
 
 ---
 
+## 15 位核心作者
+
+![15 位核心作者](photos/face-sheet.jpg)
+
+每人一页：画像、在 RADAR 里的位置、履历时间线、研究方向、代表作、师承与关系、学术指标、对你意味着什么。照片只取自所在机构的官方个人页或本人主页，出处记在各页「来源」末行；曹维维没有可确认身份的公开照片。
+
+<!-- MEMBERS:START -->
+| 照片 | 姓名 | # | 身份 |
+|:---:|---|---:|---|
+| <img src="photos/thumbs/01-qi-zhang.jpg" width="80"> | **[章琦 Qi Zhang](members/01-qi-zhang.md)** | 1 | 浙大一院肝胆胰外科 教授/主任医师/博导；**院党委副书记**。共一 |
+| <img src="photos/thumbs/02-jianpeng-zhang.jpg" width="80"> | **[张建鹏 Jianpeng Zhang](members/02-jianpeng-zhang.md)** | 2 | 达摩院 Staff Algorithm Engineer；**西工大夏勇门下**。共一，技术侧主力 |
+| — | **[曹维维 Weiwei Cao](members/03-weiwei-cao.md)** | 3 | 达摩院医疗 AI（湖畔）。共一 |
+| <img src="photos/thumbs/12-yutong-xie.jpg" width="80"> | **[谢雨彤 Yutong Xie](members/12-yutong-xie.md)** | 12 | MBZUAI 计算机视觉系 **助理教授**；西工大 2016 级直博，**导师夏勇** |
+| <img src="photos/thumbs/13-yong-xia.jpg" width="80"> | **[夏勇 Yong Xia](members/13-yong-xia.md)** | 13 | ⚠️ **西北工业大学计算机学院长聘教授、博导、副院长** —— 论文只标了「宁波市第二医院放射科」 |
+| <img src="photos/thumbs/14-qi-wu.jpg" width="80"> | **[吴琦 Qi Wu](members/14-qi-wu.md)** | 14 | Adelaide AIML 副教授，V3A Lab 主任 |
+| <img src="photos/thumbs/16-xi-li.jpg" width="80"> | **[李玺 Xi Li](members/16-xi-li.md)** | 16 | 浙大计算机学院 教授、**求是特聘教授** |
+| <img src="photos/thumbs/19-tony-c-w-mok.jpg" width="80"> | **[Tony C W Mok](members/19-tony-c-w-mok.md)** | 19 | 香港人，署名 **Tony Chi Wing MOK**；达摩院算法工程师；HKUST 博士（导师 **Pedro Sander + Albert C.S. Chung** 两人） |
+| <img src="photos/thumbs/20-yingda-xia.jpg" width="80"> | **[夏英达 Yingda Xia](members/20-yingda-xia.md)** | 20 | 达摩院 **Washington DC**；JHU Alan Yuille 门下 |
+| <img src="photos/thumbs/22-xianghua-ye.jpg" width="80"> | **[叶香华 Xianghua Ye](members/22-xianghua-ye.md)** | 22 | 浙大一院放疗科 **副主任**、主任医师 |
+| <img src="photos/thumbs/35-chaohui-yu.jpg" width="80"> | **[虞朝辉 Chaohui Yu](members/35-chaohui-yu.md)** | 35 | 浙大一院 **副院长**、消化内科主任 |
+| <img src="photos/thumbs/36-shenghong-ju.jpg" width="80"> | **[居胜红 Shenghong Ju](members/36-shenghong-ju.md)** | 36 | 东南大学中大医院 **副院长**、医学影像部主任、东南大学首席教授 |
+| <img src="photos/thumbs/38-wenbo-xiao.jpg" width="80"> | **[肖文波 Wenbo Xiao](members/38-wenbo-xiao.md)** | 38 | 浙大一院放射科 **副主任（主持工作）**、主任医师 |
+| <img src="photos/thumbs/39-ling-zhang.jpg" width="80"> | **[张灵 Ling Zhang](members/39-ling-zhang.md)** | 39 | 达摩院 Washington DC 资深算法专家。AI 侧通讯 |
+| <img src="photos/thumbs/40-tingbo-liang.jpg" width="80"> | **[梁廷波 Tingbo Liang](members/40-tingbo-liang.md)** | 40 | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 |
+<!-- MEMBERS:END -->
+
+---
+
 ## 40 位作者中文名总表
 
 把握分三档：**✅ 确认** = 中文权威来源直接看到英↔中对应，或单位+职务+方向三重锁定；**🟡 可能** = 间接证据；**❓ 未知** = 没查到，**留空不猜**。
@@ -49,28 +78,28 @@
 <!-- NAME-TABLE:START -->
 | # | 英文 | 中文 | 把握 | 单位 · 身份 | PANDA |
 |---:|---|---|:---:|---|:---:|
-| 1 | Qi Zhang | **章琦** | ✅ | 浙大一院肝胆胰外科 教授/主任医师/博导；**院党委副书记**。共一 | ✅ |
-| 2 | Jianpeng Zhang | **张建鹏** | ✅ | 达摩院 Staff Algorithm Engineer；**西工大夏勇门下**。共一，技术侧主力 |  |
-| 3 | Weiwei Cao | **曹维维** | ✅ | 达摩院医疗 AI（湖畔）。共一 |  |
-| 4 | Zilin Lu | **—** | ❓ | **西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU |  |
+| 1 | [Qi Zhang](members/01-qi-zhang.md) | **章琦** | ✅ | 浙大一院肝胆胰外科 教授/主任医师/博导；**院党委副书记**。共一 | ✅ |
+| 2 | [Jianpeng Zhang](members/02-jianpeng-zhang.md) | **张建鹏** | ✅ | 达摩院 Staff Algorithm Engineer；**西工大夏勇门下**。共一，技术侧主力 |  |
+| 3 | [Weiwei Cao](members/03-weiwei-cao.md) | **曹维维** | ✅ | 达摩院医疗 AI（湖畔）。共一 |  |
+| 4 | Zilin Lu | — | ❓ | **西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU |  |
 | 5 | Wanxing Chang | **常琬星** | ✅ | 达摩院算法工程师。共一 |  |
-| 6 | Haonan Ding | **—** | ❓ | 浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一 |  |
-| 7 | Cao Chen | **—** | ❓ | 浙大一院肝胆胰外科，推断为章琦组研究生/在培医师 |  |
+| 6 | Haonan Ding | — | ❓ | 浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一 |  |
+| 7 | Cao Chen | — | ❓ | 浙大一院肝胆胰外科，推断为章琦组研究生/在培医师 |  |
 | 8 | Zhi Li | **李志** | ✅ | 浙大一院放射科 主治医师 |  |
 | 9 | Xing Xue | **薛星** | ✅ | 浙大一院放射科（ORCID 自述 2018-08 起受雇） |  |
-| 10 | Sinuo Wang | **—** | ❓ | Adelaide AIML 博士生 + 达摩院实习（推断） |  |
-| 11 | Shaoteng Zhang | **—** | ❓ | **西工大计算机学院在读博士**，达摩院实习 |  |
-| 12 | Yutong Xie | **谢雨彤** | ✅ | MBZUAI 计算机视觉系 **助理教授**；西工大 2016 级直博，**导师夏勇** |  |
-| 13 | Yong Xia | **夏勇** | ✅ | ⚠️ **西北工业大学计算机学院长聘教授、博导、副院长** —— 论文只标了「宁波市第二医院放射科」 |  |
-| 14 | Qi Wu | **吴琦** | ✅ | Adelaide AIML 副教授，V3A Lab 主任 |  |
-| 15 | Zhongyi Shui | **—** | ❓ | 浙大-西湖大学联合培养博士生（推断） |  |
-| 16 | Xi Li | **李玺** | ✅ | 浙大计算机学院 教授、**求是特聘教授** |  |
-| 17 | Zhilin Zheng | **—** | ❓ | 达摩院算法研究员（2022 起持续正式署名，非实习） |  |
-| 18 | Yanjie Zhou | **—** | ❓ | 达摩院算法研究员；论文另写作 Yan-Jie Zhou |  |
-| 19 | Tony C W Mok | **—** | ❓ | 香港人，署名 **Tony Chi Wing MOK**；达摩院算法工程师；HKUST 博士（导师 **Pedro Sander + Albert C.S. Chung** 两人） |  |
-| 20 | Yingda Xia | **夏英达** | ✅ | 达摩院 **Washington DC**；JHU Alan Yuille 门下 | ✅ |
-| 21 | Hongkan Wang | **—** | ❓ | 浙大一院肝胆胰外科，深度参与早期临床试验（GCP） |  |
-| 22 | Xianghua Ye | **叶香华** | ✅ | 浙大一院放疗科 **副主任**、主任医师 |  |
+| 10 | Sinuo Wang | — | ❓ | Adelaide AIML 博士生 + 达摩院实习（推断） |  |
+| 11 | Shaoteng Zhang | — | ❓ | **西工大计算机学院在读博士**，达摩院实习 |  |
+| 12 | [Yutong Xie](members/12-yutong-xie.md) | **谢雨彤** | ✅ | MBZUAI 计算机视觉系 **助理教授**；西工大 2016 级直博，**导师夏勇** |  |
+| 13 | [Yong Xia](members/13-yong-xia.md) | **夏勇** | ✅ | ⚠️ **西北工业大学计算机学院长聘教授、博导、副院长** —— 论文只标了「宁波市第二医院放射科」 |  |
+| 14 | [Qi Wu](members/14-qi-wu.md) | **吴琦** | ✅ | Adelaide AIML 副教授，V3A Lab 主任 |  |
+| 15 | Zhongyi Shui | — | ❓ | 浙大-西湖大学联合培养博士生（推断） |  |
+| 16 | [Xi Li](members/16-xi-li.md) | **李玺** | ✅ | 浙大计算机学院 教授、**求是特聘教授** |  |
+| 17 | Zhilin Zheng | — | ❓ | 达摩院算法研究员（2022 起持续正式署名，非实习） |  |
+| 18 | Yanjie Zhou | — | ❓ | 达摩院算法研究员；论文另写作 Yan-Jie Zhou |  |
+| 19 | [Tony C W Mok](members/19-tony-c-w-mok.md) | — | ❓ | 香港人，署名 **Tony Chi Wing MOK**；达摩院算法工程师；HKUST 博士（导师 **Pedro Sander + Albert C.S. Chung** 两人） |  |
+| 20 | [Yingda Xia](members/20-yingda-xia.md) | **夏英达** | ✅ | 达摩院 **Washington DC**；JHU Alan Yuille 门下 | ✅ |
+| 21 | Hongkan Wang | — | ❓ | 浙大一院肝胆胰外科，深度参与早期临床试验（GCP） |  |
+| 22 | [Xianghua Ye](members/22-xianghua-ye.md) | **叶香华** | ✅ | 浙大一院放疗科 **副主任**、主任医师 |  |
 | 23 | Tao Ma | **马涛** | ✅ | 浙大一院肝胆胰外科主任医师；**兵团第一师医院党委副书记兼院长**、中组部第十一批援疆领队 |  |
 | 24 | Jie Peng | **彭杰** | ✅ | 兵团第一师医院 医学影像中心主任、副主任医师 |  |
 | 25 | Xiaoguang Wang | **王晓光** | ✅ | 嘉兴一院 **党委委员、副院长**、主任医师 |  |
@@ -83,12 +112,12 @@
 | 32 | Jianwen Ning | **宁建文** | ✅ | 浙大一院急诊科；**浙大一院安吉分院党委副书记、院长** |  |
 | 33 | Wei Zhang | **张微** | ✅ | 浙大一院肝胆胰外科主任医师、肝移植中心副主任；兼良渚分院 |  |
 | 34 | Jian Liu | **刘剑** | ✅ | 北仑区人民医院（浙大一院北仑分院）**院长**、主任医师 |  |
-| 35 | Chaohui Yu | **虞朝辉** | ✅ | 浙大一院 **副院长**、消化内科主任 |  |
-| 36 | Shenghong Ju | **居胜红** | ✅ | 东南大学中大医院 **副院长**、医学影像部主任、东南大学首席教授 |  |
-| 37 | Jianfeng Zhang | **—** | ❓ | 达摩院医学影像研究员（CT-SAM3D、Med-Query 作者）。与达摩院院长张建锋同音，非同一人 |  |
-| 38 | Wenbo Xiao | **肖文波** | ✅ | 浙大一院放射科 **副主任（主持工作）**、主任医师 |  |
-| 39 | Ling Zhang | **张灵** | ✅ | 达摩院 Washington DC 资深算法专家。AI 侧通讯 | ✅ |
-| 40 | Tingbo Liang | **梁廷波** | ✅ | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 | ✅ |
+| 35 | [Chaohui Yu](members/35-chaohui-yu.md) | **虞朝辉** | ✅ | 浙大一院 **副院长**、消化内科主任 |  |
+| 36 | [Shenghong Ju](members/36-shenghong-ju.md) | **居胜红** | ✅ | 东南大学中大医院 **副院长**、医学影像部主任、东南大学首席教授 |  |
+| 37 | Jianfeng Zhang | — | ❓ | 达摩院医学影像研究员（CT-SAM3D、Med-Query 作者）。与达摩院院长张建锋同音，非同一人 |  |
+| 38 | [Wenbo Xiao](members/38-wenbo-xiao.md) | **肖文波** | ✅ | 浙大一院放射科 **副主任（主持工作）**、主任医师 |  |
+| 39 | [Ling Zhang](members/39-ling-zhang.md) | **张灵** | ✅ | 达摩院 Washington DC 资深算法专家。AI 侧通讯 | ✅ |
+| 40 | [Tingbo Liang](members/40-tingbo-liang.md) | **梁廷波** | ✅ | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 | ✅ |
 <!-- NAME-TABLE:END -->
 
 > [!strategy] 读这张表的正确方式：看职务，不看职称
@@ -336,13 +365,15 @@ sources/                           各专题的结论页
   hupan-lab.md                     湖畔实验室是什么
   grassroots-network.md            外部验证网络：为什么是这几家医院
   damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道
+members/                           15 位核心作者每人一页
+photos/                            头像（出处见各成员页「来源」）· face-sheet.jpg · thumbs/ · build_face_sheet.py
 figures/                           六张图：*.json 是图源，*.html 是交互版，*.png 是内嵌用的静态导出
 data/
   names-final.json                 ★ 中文名的唯一真源（含把握等级）
   authors-meta.json                ★ 单位 / 身份 / PANDA 标记的唯一真源
   build_name_table.py              README 名表由上面两个 JSON 生成，不要手改表格
   pubmed-*.xml · authors-raw.json · radar-authors.tsv     PubMed 原始记录与结构化作者表
-  raw/                             取证存档：各专题的完整 URL 清单与每位作者的详细履历
+  raw/                             取证存档：各专题的完整 URL 清单；raw/people/ 是成员页的写作输入
 ```
 
 > [!strategy] 约定

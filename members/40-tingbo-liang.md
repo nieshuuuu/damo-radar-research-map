@@ -12,10 +12,10 @@
 
 - **第 40 / 40 位，末位通讯**。论文给标的三个单位（肝胆胰外科、浙江省胰腺病研究重点实验室、教育部胰腺疾病国际合作联合实验室）正是三个实职，无第二人可能。
 - 与第一作者 [章琦](01-qi-zhang.md) 单位完全相同，**首尾夹住整篇论文的临床端**。AI 侧资深作者 [张灵](39-ling-zhang.md) 排第 39。
-- **推断**的具体承担：① 数据准入与合规——424,911 例增强腹部 CT + 1500 万 anatomy-wise 图文对全部来自临床报告库，这一级授权只能由院领导推动；② 多中心组织——8 家外部验证医院里 8 家在浙大一院托管 / 分院 / 对口支援体系内，是院方的行政资产（→ [grassroots-network.md](../sources/grassroots-network.md)）；③ 26 位放射科医生的 reader study 的跨院协调。
+- **推断**的具体承担：① 数据准入与合规——424,911 例增强腹部 CT + 1500 万 anatomy-wise 图文对全部来自临床报告库，这一级授权只能由院领导推动；② 多中心组织——外部验证的 10 家医院里 8 家在浙大一院的托管 / 分院 / 对口支援体系内，是院方的行政资产（→ [grassroots-network.md](../sources/grassroots-network.md)）；③ 26 位放射科医生的 reader study 的跨院协调。
 - **几乎肯定没有碰模型。** 算法侧的实际负责人是达摩院的 [张建鹏](02-jianpeng-zhang.md) 与 [张灵](39-ling-zhang.md)，影像科侧对口是 [肖文波](38-wenbo-xiao.md)。
 
-### 与 PANDA 及其他达摩院 × 浙大一院论文的重合
+### 与 PANDA 及其余达摩院 × 浙大一院论文的重合
 
 | 论文 | 年份 | 本人位次 | 同在的 RADAR 作者 |
 |---|---|---|---|
@@ -81,7 +81,7 @@
 | Mass cytometry-based peripheral blood analysis for early detection of solid tumours | *Gut*, 2023（PMID 36113977）| 30 / 30，末位通讯 |
 | Viral load dynamics and disease severity in patients infected with SARS-CoV-2 in Zhejiang province | *BMJ*, 2020 | 位次未核实；Google Scholar 引用最高的一篇（1911）|
 | The gluconeogenic enzyme PCK1 phosphorylates INSIG1/2 for lipogenesis | *Nature* 581:100-105, 2020（PMID 32322062）| 16 / 18；末位通讯为浙大吕志民，属合作而非主导 |
-| Pembrolizumab + 吉西他滨/顺铂治疗晚期胆道癌（KEYNOTE-966）| *The Lancet*, 2023 | 中国研究者之一，位次未逐一核实 |
+| Pembrolizumab 联合化疗治疗晚期胆道癌（KEYNOTE-966）| *The Lancet*, 2023 | 中国研究者之一，位次未逐一核实 |
 | Liver transplantation for hepatocellular carcinoma: Hangzhou experiences（"杭州标准"）| *Transplantation* 85(12):1726-32, 2008（PMID 18580463）| 7 / 8（第一作者郑树森）。⚠️ 该文 **2019 年被 *Transplantation* 撤稿**（撤稿通知 PMID 31348443）；撤稿理由未在 PubMed 元数据中给出，此处不作任何判断 |
 
 ## 师承与关系
@@ -113,7 +113,7 @@
 
 **直接价值低，间接价值高。** 技术栈零重叠——器官是肝胆胰不是冠脉，不做重建、不做材料分解、不做影像物理；组里招的是临床医学博士，不招影像物理博后；现任院长 + 全国人大代表，行政负荷极高，**不是会回陌生邮件的人，发邮件是浪费子弹**。
 
-但这一页值得当**尺子**用：RADAR 能拿到 424,911 例，靠的不是算法而是末位这个签字的人。Shu 做 PVAT/FAI 和水脂分解，瓶颈从来不是方法，是"谁给数据、谁给阅片人、谁给外部中心"——挑下一站 PI 时该问的正是这一条。另外 **RADAR 的评估形式可以直接抄**（26 位放射科医生 reader study、AI 辅助后敏感度 +约 10%、内部 + 8 家外部中心、下沉到县医院验证泛化），这与 Slomka EAT 那条结论一致：**抄评估形式，不抄模型**。
+但这一页值得当**尺子**用：RADAR 能拿到 424,911 例，靠的不是算法而是末位这个签字的人。Shu 做 PVAT/FAI 和水脂分解，瓶颈从来不是方法，是"谁给数据、谁给阅片人、谁给外部中心"——挑下一站 PI 时该问的正是这一条。另外 **RADAR 的评估形式可以直接抄**（26 位放射科医生 reader study、AI 辅助后敏感度 +约 10%、内部 + 多中心外部验证、下沉到县医院验证泛化），这与 Slomka EAT 那条结论一致：**抄评估形式，不抄模型**。
 
 **真要接触这条线，入口不是这里**：技术侧找 [张建鹏](02-jianpeng-zhang.md)，影像科侧找 [肖文波](38-wenbo-xiao.md) 或 [章琦](01-qi-zhang.md)，北美侧找 [张灵](39-ling-zhang.md) 与 [夏英达](20-yingda-xia.md)——**达摩院在华盛顿 DC 有实体组，那才是 2026 年 9 月毕业后唯一能解决工作许可的门**（→ [damo-hiring.md](../sources/damo-hiring.md)）。这一页的作用是证明这条链是真的，不是提供可联系人。
 
