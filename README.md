@@ -140,21 +140,13 @@
 
 ### ② NIH → 平安 PAII → 达摩院 —— AI 侧的整建制迁徙
 
-```
-NIH Clinical Center 放射与影像科学系（Ronald M. Summers 实验室）
-  吕乐(Le Lu) · Ke Yan · Xiaosong Wang · Holger Roth · 唐有宝(Youbao Tang) · 张灵
-  产出：ChestX-ray8/14 (2017, 112,120 张) · DeepLesion (2018, 32k CT)
-        ↓  2018–2019
-PAII Inc. = 平安科技美国研究院（2016 创立，Palo Alto + Bethesda 双点）
-  ★ Bethesda 点距 NIH 临床中心 3.5 公里 —— 公司有硅谷点却专为这支队伍在马里兰单开一个
-  吕乐任 Executive Director (2018-06 → 2021-07)
-        ↓  2021，整队迁移（已补全到 12 人）
-阿里巴巴达摩院
-  吕乐 → 领全球医疗 AI (2021-08 → 2025-06) → 蚂蚁 Ant Group Sunnyvale
-  张灵 → 达摩院 Washington DC，PANDA 与 RADAR 的 AI 侧通讯
-  Ke Yan → 达摩院（DeepLesion 一作）
-  Jiawen Yao → 达摩院
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/damo-lineage.dark.png">
+  <img alt="一支队伍走过的四站：NIH Clinical Center 产出 ChestX-ray14 与 DeepLesion，被挖到隔壁的平安 PAII，2021 整队迁移到达摩院，吕乐一人去蚂蚁" src="figures/damo-lineage.light.png">
+</picture>
+
+> 🖼 上图是静态导出。**交互版（主干四站 / 沿途资产 / 谁走谁留，三个导览视图）→ [figures/damo-lineage.html](figures/damo-lineage.html)**
+> 图源 [figures/damo-lineage.lifecycle.json](figures/damo-lineage.lifecycle.json)。
 
 **几条被推翻或新补的：**
 

@@ -1,5 +1,13 @@
 # 达摩院医疗 AI 的组建史与血统
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../figures/damo-lineage.dark.png">
+  <img alt="一支队伍走过的四站：NIH Clinical Center 产出 ChestX-ray14 与 DeepLesion，被挖到隔壁的平安 PAII，2021 整队迁移到达摩院，吕乐一人去蚂蚁" src="../figures/damo-lineage.light.png">
+</picture>
+
+> 🖼 交互版 → [../figures/damo-lineage.html](../figures/damo-lineage.html)｜图源 [../figures/damo-lineage.lifecycle.json](../figures/damo-lineage.lifecycle.json)
+
+
 一句话脉络：**这支队伍的根在 NIH 临床中心 Ronald Summers 的影像实验室；2018 年被平安集团的美国研究院 PAII Inc. 整建制挖到 3 公里外的 Bethesda 办公楼；2021 年 7 月又整建制转投阿里达摩院，嫁接到达摩院原有的杭州医疗线上；2025—2026 年领队吕乐离开，去了蚂蚁。**
 
 ---

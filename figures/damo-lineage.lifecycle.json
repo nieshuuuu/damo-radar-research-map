@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "一支队伍走过的四站：NIH → 平安 PAII → 达摩院 → 蚂蚁",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1060,
+      592
+    ],
+    "views": [
+      {
+        "id": "chain",
+        "label": "主干四站",
+        "focus": [
+          "nih",
+          "assets",
+          "paii",
+          "damo",
+          "ant"
+        ],
+        "note": "地理位置几乎没动过，换的是公司。Bethesda 三家单位彼此相距几公里。"
+      },
+      {
+        "id": "assets",
+        "label": "沿途留下的公共资产",
+        "focus": [
+          "nih",
+          "assets"
+        ],
+        "note": "会复利的是数据集，不是论文。八年后 MedSAM2 仍建在 DeepLesion 上。"
+      },
+      {
+        "id": "split",
+        "label": "谁走、谁留",
+        "focus": [
+          "damo",
+          "ant",
+          "stay",
+          "left"
+        ],
+        "note": "吕乐一个人走的；核心班底留在达摩院，三篇 2026 旗舰的通讯都是张灵。"
+      }
+    ]
+  },
+  "lanes": [
+    {
+      "id": "main",
+      "label": "主干：同一批人走过的四站"
+    },
+    {
+      "id": "stay",
+      "label": "留在达摩院的"
+    },
+    {
+      "id": "terminal",
+      "label": "没跟过去的"
+    }
+  ],
+  "states": [
+    {
+      "id": "nih",
+      "type": "start",
+      "label": "NIH Clinical Center",
+      "sublabel": "Summers 实验室",
+      "lane": "main",
+      "col": 0,
+      "step": "01",
+      "tag": "2013–2018"
+    },
+    {
+      "id": "assets",
+      "type": "success",
+      "label": "公开数据集",
+      "sublabel": "ChestX-ray14 · DeepLesion",
+      "lane": "main",
+      "col": 1,
+      "step": "02",
+      "tag": "会复利的资产"
+    },
+    {
+      "id": "paii",
+      "type": "active",
+      "label": "平安 PAII",
+      "sublabel": "Bethesda · 距 NIH 3.5 km",
+      "lane": "main",
+      "col": 2,
+      "step": "03",
+      "tag": "2018-06–2021-07"
+    },
+    {
+      "id": "damo",
+      "type": "active",
+      "label": "阿里巴巴达摩院",
+      "sublabel": "杭州 + 纽约 + 华盛顿",
+      "lane": "main",
+      "col": 3,
+      "step": "04",
+      "tag": "2021-08 起"
+    },
+    {
+      "id": "ant",
+      "type": "neutral",
+      "label": "蚂蚁 Medical AI Lab",
+      "sublabel": "Sunnyvale, CA",
+      "lane": "main",
+      "col": 4,
+      "step": "05",
+      "tag": "2026-03 起"
+    },
+    {
+      "id": "stay",
+      "type": "success",
+      "label": "核心班底留下",
+      "sublabel": "张灵 · Ke Yan · 夏英达",
+      "lane": "stay",
+      "col": 1,
+      "tag": "PANDA / RADAR"
+    },
+    {
+      "id": "left",
+      "type": "external",
+      "label": "各自散开",
+      "sublabel": "未随队去达摩院",
+      "lane": "terminal",
+      "col": 0,
+      "tag": "未随队迁移",
+      "yOffset": -44
+    }
+  ],
+  "transitions": [
+    {
+      "id": "t1",
+      "from": "nih",
+      "to": "assets",
+      "label": "五年留下两个地基",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelDy": -26
+    },
+    {
+      "id": "t2",
+      "from": "assets",
+      "to": "paii",
+      "label": "被挖到隔壁",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelDy": -26
+    },
+    {
+      "id": "t3",
+      "from": "paii",
+      "to": "damo",
+      "label": "2021 整队迁移，至少 12 人",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelDy": -26
+    },
+    {
+      "id": "t4",
+      "from": "damo",
+      "to": "ant",
+      "label": "吕乐一个人走的",
+      "variant": "dashed",
+      "route": "straight",
+      "labelDy": -26
+    },
+    {
+      "id": "t5",
+      "from": "damo",
+      "to": "stay",
+      "label": "三篇 2026 旗舰通讯都是张灵",
+      "variant": "emphasis",
+      "route": "drop",
+      "labelDx": -20
+    },
+    {
+      "id": "t9",
+      "from": "paii",
+      "to": "left",
+      "label": "部分人没跟过去",
+      "variant": "dashed",
+      "route": "drop"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "会复利的是数据集，不是论文",
+      "items": [
+        "ChestX-ray14 与 DeepLesion 到今天仍是这个领域的地基",
+        "只有 NIH 那五年做得出来——政府医院给的不是钱，是发布许可"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Bethesda 三角 · 散开的去了哪",
+      "items": [
+        "NIH 临床中心、平安 PAII、NVIDIA 医学影像组都在 Bethesda，几平方公里一个人才市场",
+        "Roth → NVIDIA · Xiaosong Wang → 上海人工智能实验室 · Harrison → Riverain"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "吕乐是一个人走的",
+      "items": [
+        "扫了蚂蚁 2025–26 全部 1221 篇论文查 15 位旧部，零命中",
+        "⚠️「2025-06 离开」无公开证据：2025-09 仍署达摩院，2026-03 起署蚂蚁"
+      ]
+    }
+  ]
+}

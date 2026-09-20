@@ -35,7 +35,7 @@ def trim(path):
     return Image.open(path).size
 
 # 每张图的导出窗口宽度：窗口比图宽会在面板右侧留白
-WINDOW = {"radar-structure": (1560, 1250), "deeplesion-lineage": (1240, 1150)}
+WINDOW = {"radar-structure": (1560, 1250), "deeplesion-lineage": (1240, 1150), "damo-lineage": (1260, 1180)}
 
 def export(name, theme, w=None, h=None):
     w, h = WINDOW.get(name, (1560, 1250)) if w is None else (w, h)

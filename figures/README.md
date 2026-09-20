@@ -6,6 +6,7 @@ markdown 里内嵌的是静态 PNG 导出；要交互版就本地打开对应的
 | 图 | 类型 | 图源（唯一真源） | 静态导出 | 被谁引用 |
 |---|---|---|---|---|
 | [radar-structure.html](radar-structure.html) | architecture | [radar-structure.architecture.json](radar-structure.architecture.json) | `radar-structure.{light,dark}.png` | [../README.md](../README.md#结构四条腿) |
+| [damo-lineage.html](damo-lineage.html) | lifecycle | [damo-lineage.lifecycle.json](damo-lineage.lifecycle.json) | `damo-lineage.{light,dark}.png` | [../README.md](../README.md#三条血统线) · [../sources/damo-lineage.md](../sources/damo-lineage.md) |
 | [deeplesion-lineage.html](deeplesion-lineage.html) | dataflow | [deeplesion-lineage.dataflow.json](deeplesion-lineage.dataflow.json) | `deeplesion-lineage.{light,dark}.png` | [../sources/radar-vs-medsam.md](../sources/radar-vs-medsam.md) |
 
 ## SSoT
@@ -38,6 +39,13 @@ Chrome headless `--screenshot`（`--force-device-scale-factor=2` 出 2× 高清�
 
 **自动化浏览器证据 ≠ 人眼审美复核。** 后者我做了（看了导出的 PNG），并因此改掉了谱系图第一版
 两行之间空一整条、标题折两行的问题 —— 这类问题自动检查全过，只有看图才能发现。
+
+## lifecycle 那张图的两个坑
+
+- **非 `main`/`terminal` 的 lane 全部挤在同一条带里。** 想要三条独立带，第三条的 lane id 必须字面叫 `terminal`。
+- **`terminal` lane 的 col N 对齐 main 的 col N+2。** 对不上源列的节点会画出斜穿其他节点的长线——Holger Roth 从 NIH（main col 0）走，没有可对齐的列，所以他在图上被删掉、事实留在卡片里。
+- 渲染器**总会预留第三条带**。只定义两条 lane 时它会画一条空的「03 / Outcomes」（还是英文）。要么填满，要么就会看见一块空白。
+- `left` 节点掉出竖直可用区时用负 `yOffset` 往上拉；这个值和 `viewBox[1]` 互相牵制，我是网格搜出 `H=592 / yOffset=-44` 才同时过 validate 和 overflow 的。
 
 ## 已知取舍
 
