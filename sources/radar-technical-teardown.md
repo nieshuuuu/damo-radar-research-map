@@ -117,16 +117,52 @@ run:
 
 | 项 | 值 | 说明 |
 |---|---|---|
-| 框架 | **LAVIS**（Salesforce，BSD-3） | `arch: radar_pretrain` 是 LAVIS 的模型注册名 |
-| 文本编码器 | **BERT-base-uncased**，max 512 token | 不是 LLM，是 2018 年的 BERT |
-| 视觉编码器 | **3D ResNet** | `dynamic_network_architectures/architectures/resnet_vl.py` |
+| 框架 | **LAVIS**（Salesforce，BSD-3） | `arch: radar_pretrain` 是 LAVIS 的模型注册名。⚠️ LAVIS 已于 **2026-09-18 归档**，比 RADAR 最后一次 push 晚 8 小时 |
+| 视觉编码器 | **`PlainConvUNetLightD`**（nnU-Net 血统）| 见下方更正 —— **不是 3D ResNet** |
+| 文本编码器 | 旗舰档 **`bert-base-chinese`**；MERLIN 档 `bert-base-uncased`，max 512 token | 见下方更正 —— **有两个** |
 | `alpha: 0.4` | ALBEF 的 **momentum distillation** 权重 | 不是什么新东西 |
 | `queue_size: 0` | **关掉了 MoCo 式队列** | 纯 in-batch 负样本 |
 | 训练规模 | 24 张 GPU，总 batch 48，30 epoch | 以现在的标准算**很小** |
 | `amp: False` | 不用混合精度 | |
 
+### ⚠️ 更正一：视觉编码器不是 3D ResNet
+
+我最初照着 Acknowledgements 里的 "3D-ResNets-PyTorch" 写成 3D ResNet。==错了。==
+
+```bash
+curl -sL ".../RADAR_inference/inference_demo.py" | grep -ci resnet          # → 0
+curl -sL ".../RADAR_inference/.../vision_branch.py" | grep -ci resnet       # → 0
+```
+
+`vision_branch.py:35` 实例化的是：
+
+```python
+arch_class_name="dynamic_network_architectures.architectures.unet_lightdecoder.PlainConvUNetLightD",
+arch_kwargs={
+    "n_stages": 6,
+    "features_per_stage": [32, 64, 128, 256, 320, 320],
+    "strides": [[1,1,1], [1,2,2], [1,2,2], [2,2,2], [2,2,2], [2,2,2]],
+    "n_conv_per_stage":          [2,2,2,2,2,2],
+    "n_conv_per_stage_decoder":  [1,1,1,1,1],     # ← 解码器被砍薄，这是他们对 nnU-Net 架构库的唯一改动
+}
+```
+
+`resnet_vl.py` 确实在仓库里、确实是 kenshohara 血统，但**从未被调用 —— 死代码**。README 的致谢和 `THIRD_PARTY_LICENSES.md` 里那份 MIT 全文，对应的是一个没人用的文件。
+
+💡 由此 `max_pool3d` 那三个核也有了解释：`strides` 逐级累乘 = `(2,8,8)` / `(4,16,16)` / `(8,32,32)`，与 `vision_branch.py:140/146/152` 三个 `kernel_size` **精确相等**。
+==所以 40×32×32 mm 不是额外的粗化，是编码器最深层的固有分辨率。==
+
+### ⚠️ 更正二：文本编码器有两个，旗舰那个是中文 BERT
+
+| checkpoint | 训练数据 | 文本编码器 | 出处 |
+|---|---|---|---|
+| `checkpoint_radar_pretrain.pth` | **RAD-CT**（浙大一院 42 万例，中文报告）| **`bert-base-chinese`** | `docs/INFERENCE.md:23` |
+| `checkpoint_radar_plus.pth` | **Merlin-CT-Train**（Stanford，英文报告）| `bert-base-uncased` | `docs/TRAINING.md` + `radar_config.yaml` |
+
+我之前只看了 `radar_config.yaml`，那是 MERLIN 那一支的配置。
+
 > [!insight] 数学层面没有新东西
-> 损失是 InfoNCE + 交叉熵。骨干全是现成的。Acknowledgements 自己列了 LAVIS / nnU-Net / MONAI / 3D-ResNets-PyTorch 四个。
+> 损失是 InfoNCE + 交叉熵。骨干全是现成的（nnU-Net 的编码器 + BERT + LAVIS 的对比学习框架）。
 > **真正的创新在监督信号怎么造出来**，不在模型。
 
 ---
@@ -152,6 +188,28 @@ run:
 ```
 
 ⚠️ 报告解析脚本里要填 `dashscope.api_key = "YOUR_DASHSCOPE_API_KEY"` —— 复现需要阿里云账号。文档说"any other LLM can be substituted"。
+💡 两档成本分级：`check_organ_mention.py` 用 `qwen_plus`（高频过滤），`report_parsing.py` 用 `qwen_max`（结构化抽取）。
+⚠️ 另：**Qwen 属于阿里云，不属于达摩院**。RADAR 调 Qwen 是跨事业部调商业 API，不是内部工具。
+
+### 💡 最大的一条：MERLIN 不是外部测试集，是 RADAR 全部公开可复现性的载体
+
+我最初把 MERLIN 当成"外部验证用的公开数据集"。==它的角色比这大得多。==
+
+`docs/TRAINING.md` 第 3 行原文："training RADAR/RADAR+ on **Merlin-CT-Train set** from scratch"。
+`checkpoint_radar_plus.pth` 的说明："trained from scratch on Merlin-CT-Train set"。
+
+仓库里躺着的全是 MERLIN 的东西：`data/merlin_data_train_demo/`、`ckpt/merlin_report_organ_*.json`、`infer_text_embedding_merlin.pt`、`inference_merlin_testset.py`、`calc_metrics_merlin_testset.py`；预处理脚本的参数直接叫 `--root-dir /path/to/merlin_data_root`。他们还在 HuggingFace 上发了自己跑的 MERLIN 训练 mask（part00/01/02）。
+
+```
+RAD-CT（浙大一院 42 万例，中文报告）  →  永远不可能放出来
+      ↓  同一套流水线
+MERLIN（Stanford 15,331 例，英文报告）→  公开、可下载、可复现
+```
+
+==他们发布的那批 TotalSegmentator v1.5.7 mask，跑的是**斯坦福的 CT**；Qwen 解析的是**斯坦福的英文报告**。== 用一个公开的同任务美国数据集，把整条流水线完整演示了一遍。
+
+**MERLIN 是什么**：*Nature* **652:1318–1328**(2026)，40 位作者**全部斯坦福**，一作 Louis Blankemeier，通讯 **Akshay S. Chaudhari**，15,331 例腹部 CT + 报告，代码与权重 **MIT** 许可。
+💡 Chaudhari 就是之前 PI scouting 里评过的那位（[[project_pi_chaudhari_mimi_2026_09]]）。==RADAR 能有一条公开可复现路径，靠的是他那个组的开放数据。==
 
 ### ⚠️ 重要更正：TotalSegmentator 是**教师**，不是**运行时组件**
 
