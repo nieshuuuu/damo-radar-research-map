@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "一个命题的两个投影：DeepLesion → MedSAM2 与 RADAR",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1050,
+      520
+    ],
+    "views": [
+      {
+        "id": "geometry",
+        "label": "几何方向",
+        "focus": [
+          "recist",
+          "deeplesion",
+          "mask3d",
+          "medsam2"
+        ],
+        "note": "痕迹是 RECIST 十字标记，升级成 3D mask，产物是可提示分割。"
+      },
+      {
+        "id": "semantic",
+        "label": "语义方向",
+        "focus": [
+          "reports",
+          "radct",
+          "qwen",
+          "radar"
+        ],
+        "note": "痕迹是报告文本，经 LLM 解析成器官级标签，产物是无提示诊断。"
+      },
+      {
+        "id": "no-data-bridge",
+        "label": "连接的是人，不是数据",
+        "focus": [
+          "deeplesion",
+          "qwen",
+          "radar",
+          "medsam2"
+        ],
+        "note": "两条线共享祖先命题与部分人员，但双向数据集交集为空。"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "label": "医院日常留下的痕迹"
+    },
+    {
+      "label": "变成数据集"
+    },
+    {
+      "label": "升级成监督信号"
+    },
+    {
+      "label": "今天的产物"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "recist",
+      "type": "database",
+      "label": "RECIST 长径/垂直径",
+      "sublabel": "随手画的十字",
+      "stage": 0,
+      "row": 0,
+      "tag": "2D 标记"
+    },
+    {
+      "id": "reports",
+      "type": "database",
+      "label": "自由文本报告",
+      "sublabel": "写完就存进 PACS",
+      "stage": 0,
+      "row": 2,
+      "tag": "无坐标"
+    },
+    {
+      "id": "deeplesion",
+      "type": "database",
+      "label": "NIH DeepLesion",
+      "sublabel": "Ke Yan · 吕乐 · Summers",
+      "stage": 1,
+      "row": 0,
+      "tag": "公开 · 32k CT"
+    },
+    {
+      "id": "radct",
+      "type": "database",
+      "label": "RAD-CT",
+      "sublabel": "浙大一院 424,911 次",
+      "stage": 1,
+      "row": 2,
+      "tag": "永不公开"
+    },
+    {
+      "id": "mask3d",
+      "type": "backend",
+      "label": "3D mask 升级",
+      "sublabel": "人在回路补成 3D",
+      "stage": 2,
+      "row": 0,
+      "tag": "仍靠人手"
+    },
+    {
+      "id": "qwen",
+      "type": "cloud",
+      "label": "Qwen 解析报告",
+      "sublabel": "器官级标签 · 零标注",
+      "stage": 2,
+      "row": 2,
+      "tag": "换的是量纲"
+    },
+    {
+      "id": "medsam2",
+      "type": "backend",
+      "label": "MedSAM2",
+      "sublabel": "Toronto · 可提示分割",
+      "stage": 3,
+      "row": 0,
+      "tag": "代码+权重 Apache-2.0"
+    },
+    {
+      "id": "radar",
+      "type": "backend",
+      "label": "RADAR",
+      "sublabel": "达摩院 · 146 征象",
+      "stage": 3,
+      "row": 2,
+      "tag": "权重 CC BY-NC-SA"
+    }
+  ],
+  "flows": [
+    {
+      "id": "recist-mined",
+      "from": "recist",
+      "to": "deeplesion",
+      "label": "从 PACS 里挖出来",
+      "classification": "几何痕迹",
+      "variant": "emphasis"
+    },
+    {
+      "id": "reports-mined",
+      "from": "reports",
+      "to": "radct",
+      "label": "从 PACS 里挖出来",
+      "classification": "语义痕迹",
+      "variant": "emphasis"
+    },
+    {
+      "id": "to-mask",
+      "from": "deeplesion",
+      "to": "mask3d",
+      "label": "32,735 个病灶",
+      "classification": "2D → 3D",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "to-qwen",
+      "from": "radct",
+      "to": "qwen",
+      "label": "42 万份中文报告",
+      "classification": "文本 → 标签",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "mask-out",
+      "from": "mask3d",
+      "to": "medsam2",
+      "label": "455k image-mask 对",
+      "classification": "像素级精确",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "label-out",
+      "from": "qwen",
+      "to": "radar",
+      "label": "1500 万 anatomy-wise 对",
+      "classification": "语义级丰富",
+      "variant": "emphasis",
+      "route": "straight",
+      "labelDy": 53
+    },
+    {
+      "id": "junma-demo",
+      "from": "medsam2",
+      "to": "radar",
+      "label": "Jun Ma 在 RADAR 发布次日做了 demo",
+      "classification": "2026-09-19 · 单向下游消费",
+      "variant": "dashed",
+      "labelDy": 24
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "共享的是祖先命题",
+      "items": [
+        "DeepLesion 提出：医院日常留下的痕迹就是免费的大规模监督",
+        "几何投影榨 RECIST 标记，语义投影榨报告文本",
+        "DeepLesion 作者全名：Ke Yan · Xiaosong Wang · 吕乐 · Ronald M. Summers"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "不共享的是数据",
+      "items": [
+        "RADAR 的 60 条参考文献里没有 SAM、MedSAM、DeepLesion、FLARE",
+        "双向数据集交集为空；零行共享代码，零权重复用",
+        "唯一跨过去的是人：Ke Yan 与吕乐从 NIH 先后进了达摩院——所以这里没有画箭头"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "天花板不同",
+      "items": [
+        "mask 监督是线性的：10 倍数据要 10 倍标注预算",
+        "报告监督是常数的：报告已经写完了，存量就在那"
+      ]
+    }
+  ]
+}

@@ -120,22 +120,10 @@ Docker : docker pull miccaiflare/damomia
 
 ## ④ 数据谱系：共同祖先是 DeepLesion，但这座桥只单向承重
 
-```
-                NIH DeepLesion (2018)
-      Ke Yan · Xiaosong Wang · Le Lu · Ronald M. Summers
-      NIH Clinical Center 放射与影像科学系
-      本体 = 放射科医生日常随手画的 RECIST 长径/垂直径
-             —— 为临床而非为 AI 产生的痕迹
-                          │
-         ┌────────────────┴────────────────┐
-         │ 几何方向                          │ 语义方向
-         │ 痕迹 = RECIST 标记                │ 痕迹 = 报告文本
-         │ → 升级成 3D mask                  │ → LLM 解析成 anatomy-wise 标签
-         ▼                                  ▼
-  CT_DeepLesion-MedSAM2                  RADAR
-  MedSAM / MedSAM2                       达摩院
-  Wang Lab @ Toronto
-```
+> 🖼 **交互图（archify，几何方向 / 语义方向 / 连接的是人三个视图）→ [../figures/deeplesion-lineage.html](../figures/deeplesion-lineage.html)**
+> 图源 [../figures/deeplesion-lineage.dataflow.json](../figures/deeplesion-lineage.dataflow.json)。
+
+⚠️ 图里**故意没有画**一条从 DeepLesion 指向 RADAR 的箭头 —— 画了就等于暗示有数据通路，而事实恰恰相反：跨过去的只有人（Ke Yan 与吕乐从 NIH 先后进了达摩院），数据一份都没过去。
 
 **DeepLesion 提出的核心命题是：医院日常留下的痕迹就是免费的大规模监督。** 两条线是这一个命题的两个投影 —— 一个榨几何，一个榨语义。
 

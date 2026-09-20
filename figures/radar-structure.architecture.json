@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "RADAR 的四条腿：数据、算力、身份、验证",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "data-path",
+        "label": "数据主路径",
+        "focus": [
+          "zju",
+          "supervis",
+          "damo",
+          "radar",
+          "external"
+        ],
+        "note": "从浙大一院 PACS 的存量报告，到 146 个征象的概率输出。"
+      },
+      {
+        "id": "supervision",
+        "label": "监督信号怎么造出来",
+        "focus": [
+          "zju",
+          "supervis",
+          "damo"
+        ],
+        "note": "报告经 Qwen 解析成器官级标签，解剖 mask 负责把无坐标的文本挂到空间上。"
+      },
+      {
+        "id": "institution",
+        "label": "机构与身份",
+        "focus": [
+          "damo",
+          "hupan",
+          "academic"
+        ],
+        "note": "湖畔实验室是达摩院与浙江省科创体系之间唯一的制度性接口。"
+      }
+    ],
+    "viewBox": [
+      1110,
+      500
+    ]
+  },
+  "components": [
+    {
+      "id": "academic",
+      "type": "external",
+      "label": "学术方法供给",
+      "sublabel": "西工大夏勇 → Adelaide 吴琦 → MBZUAI",
+      "tag": "5 人",
+      "pos": [
+        310,
+        40
+      ],
+      "size": [
+        195,
+        70
+      ]
+    },
+    {
+      "id": "zju",
+      "type": "database",
+      "label": "浙大一院 PACS",
+      "sublabel": "RAD-CT · 424,911 次增强腹部 CT",
+      "tag": "13 人 · 临床主干",
+      "pos": [
+        40,
+        180
+      ],
+      "size": [
+        175,
+        88
+      ]
+    },
+    {
+      "id": "supervis",
+      "type": "cloud",
+      "label": "监督信号构造",
+      "sublabel": "Qwen 解析报告 + 36 个解剖结构定位",
+      "tag": "零人工标注",
+      "pos": [
+        310,
+        180
+      ],
+      "size": [
+        195,
+        88
+      ]
+    },
+    {
+      "id": "damo",
+      "type": "backend",
+      "label": "达摩院 + 湖畔 + 浙大计算机",
+      "sublabel": "LAVIS 图文对比 · 24 GPU × 30 epoch",
+      "tag": "11 人 · 杭州 + Washington DC",
+      "pos": [
+        600,
+        180
+      ],
+      "size": [
+        195,
+        88
+      ]
+    },
+    {
+      "id": "hupan",
+      "type": "security",
+      "label": "湖畔实验室",
+      "sublabel": "数据科学与应用浙江省实验室",
+      "tag": "唯一的制度性接口",
+      "pos": [
+        600,
+        330
+      ],
+      "size": [
+        195,
+        76
+      ]
+    },
+    {
+      "id": "radar",
+      "type": "backend",
+      "label": "RADAR",
+      "sublabel": "18 个器官 · 146 个征象概率",
+      "tag": "无提示全自动",
+      "pos": [
+        890,
+        180
+      ],
+      "size": [
+        175,
+        88
+      ]
+    },
+    {
+      "id": "external",
+      "type": "external",
+      "label": "外部验证网络",
+      "sublabel": "10 家医院 · 8 家是浙大一院分院",
+      "tag": "9 人",
+      "pos": [
+        890,
+        330
+      ],
+      "size": [
+        175,
+        88
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "阿里巴巴达摩院体系",
+      "wraps": [
+        "damo",
+        "hupan"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "raw",
+      "from": "zju",
+      "to": "supervis",
+      "label": "报告 + CT 图像",
+      "variant": "emphasis"
+    },
+    {
+      "id": "pairs",
+      "from": "supervis",
+      "to": "damo",
+      "label": "1500 万 anatomy-wise 图文对",
+      "variant": "emphasis",
+      "labelDy": 71
+    },
+    {
+      "id": "method",
+      "from": "academic",
+      "to": "damo",
+      "label": "视觉-语言方法",
+      "variant": "dashed"
+    },
+    {
+      "id": "identity",
+      "from": "hupan",
+      "to": "damo",
+      "label": "省实验室署名身份",
+      "variant": "security"
+    },
+    {
+      "id": "train",
+      "from": "damo",
+      "to": "radar",
+      "label": "预训练",
+      "variant": "emphasis"
+    },
+    {
+      "id": "validate",
+      "from": "radar",
+      "to": "external",
+      "label": "8 外部中心 AUC 0.895",
+      "variant": "emphasis",
+      "labelDy": 30
+    },
+    {
+      "id": "owned",
+      "from": "external",
+      "to": "zju",
+      "label": "8/10 在浙大一院托管体系内",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "via": [
+        [
+          977.5,
+          460
+        ],
+        [
+          127.5,
+          460
+        ]
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "监督信号才是创新",
+      "items": [
+        "模型全是现成的：LAVIS 图文对比 + BERT + nnU-Net 编码器",
+        "新东西是把 42 万份存量报告用 LLM 解析成器官级标签"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "身份工程",
+      "items": [
+        "浙大一院与达摩院之间没有任何院级签约",
+        "湖畔实验室是唯一的制度性接口：省实验室，不是国家建制"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "外部验证的真实含义",
+      "items": [
+        "10 家外部中心里 8 家是浙大一院的分院或援疆单位",
+        "沿浙江省「山海」工程已有的影像上行管道取样"
+      ]
+    }
+  ]
+}
