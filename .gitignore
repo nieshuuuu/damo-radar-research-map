@@ -2,3 +2,7 @@
 *.pyc
 __pycache__/
 .venv/
+
+# archify visual-check 的副产品（可重生，收据 .json 保留）
+figures/*.visual-check.*.png
+figures/*.visual-check.html

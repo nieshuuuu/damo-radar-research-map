@@ -120,7 +120,12 @@ Docker : docker pull miccaiflare/damomia
 
 ## ④ 数据谱系：共同祖先是 DeepLesion，但这座桥只单向承重
 
-> 🖼 **交互图（archify，几何方向 / 语义方向 / 连接的是人三个视图）→ [../figures/deeplesion-lineage.html](../figures/deeplesion-lineage.html)**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../figures/deeplesion-lineage.dark.png">
+  <img alt="DeepLesion 的两个投影：几何方向到 MedSAM2，语义方向到 RADAR" src="../figures/deeplesion-lineage.light.png">
+</picture>
+
+> 🖼 上图是静态导出。**交互版（几何方向 / 语义方向 / 连接的是人，三个导览视图）→ [../figures/deeplesion-lineage.html](../figures/deeplesion-lineage.html)**
 > 图源 [../figures/deeplesion-lineage.dataflow.json](../figures/deeplesion-lineage.dataflow.json)。
 
 ⚠️ 图里**故意没有画**一条从 DeepLesion 指向 RADAR 的箭头 —— 画了就等于暗示有数据通路，而事实恰恰相反：跨过去的只有人（Ke Yan 与吕乐从 NIH 先后进了达摩院），数据一份都没过去。

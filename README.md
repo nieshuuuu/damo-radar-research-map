@@ -100,8 +100,13 @@
 
 ## 结构：四条腿
 
-> 🖼 **交互图（archify，含三个导览视图 + 明暗主题 + 导出）→ [figures/radar-structure.html](figures/radar-structure.html)**
-> 图源 [figures/radar-structure.architecture.json](figures/radar-structure.architecture.json)，改图改 JSON 后重跑 `archify deliver`。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/radar-structure.dark.png">
+  <img alt="RADAR 的四条腿：浙大一院 PACS → Qwen 解析 → 达摩院训练 → RADAR → 外部验证网络" src="figures/radar-structure.light.png">
+</picture>
+
+> 🖼 上图是静态导出。**交互版（三个导览视图 + 搜索聚焦 + 关系追踪 + 导出）→ [figures/radar-structure.html](figures/radar-structure.html)**（clone 后本地打开）
+> 图源 [figures/radar-structure.architecture.json](figures/radar-structure.architecture.json)。改图改 JSON，再跑 `archify deliver` 与 `figures/export-png.py`。
 
 一句话读法：==数据从浙大一院 PACS 出发，经 Qwen 把 42 万份报告解析成器官级标签，在达摩院训练出 RADAR，最后回到浙大一院自己的分院体系做"外部"验证。==
 
