@@ -15,6 +15,7 @@
 - [技术底细](#技术底细)
 - [对抗核查推翻了什么](#对抗核查推翻了什么)
 - [与你研究的交集](#与你研究的交集)
+- [求职通道](#求职通道)
 - [数据缺口](#数据缺口)
 - [文件说明](#文件说明)
 
@@ -327,6 +328,24 @@ RADAR 全部设计在回答"我有海量数据但没有标签"；你的处境是
 
 ---
 
+---
+
+## 求职通道
+
+达摩院美国那条**不用考虑**：`Alibaba Group (US) Inc` 的 `RESEARCH SCIENTIST` 头衔在 **2022 年之后彻底消失**（2019:5 → 2020:7 → 2021:2 → 2022:1 → 0），Washington DC 在 2026 年的研究岗 LCA 申报**只有一条**。它是几个资深研究员的据点，不是能投简历的机构。
+
+真正对口且在办身份的是**设备厂**：
+
+```
+🟢 United Imaging（Houston）  2026 年 5–6 月五周内连办 7 个 research scientist，三个岗名带 "CT"
+🟢 Canon（Vernon Hills IL）   Reconstruction Scientist，2026-05-08
+🟢 GE HealthCare（Waukesha）  Lead Scientist - Clinical Physics，2026-04
+🟡 Elucid / HeartFlow / Cleerly   冠脉 CT 定量三家，和 PCAT/FAI 同构，但岗位名是 engineer
+⛔ Philips（Orange OH）       技术上最贴合，JD 白纸黑字拒绝任何"now or in the future"需要 sponsorship 的人
+```
+
+→ 完整分级、薪资申报数据、逐条复核状态见 **[sources/damo-hiring.md](sources/damo-hiring.md)**
+
 ## 数据缺口
 
 不要当成已知：
@@ -354,6 +373,7 @@ sources/                           【裁决后的结论页，正文以此为准
   zju-hospital.md                  浙大一院 × 梁廷波：424,911 例怎么拿到的
   hupan-lab.md                     湖畔实验室是什么（制度性接口）
   grassroots-network.md            八家县医院：为什么是这几家
+  damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道（★ 求职直接相关）
   radar-vs-medsam.md               与 MedSAM 的关系（含双向对抗立场记录）
 data/
   names-final.json                 ★ 中文名的【唯一真源】，含把握等级
@@ -371,10 +391,9 @@ data/
     evidence/                        damo-lineage 的 API 原始 JSON
 ```
 
-**两个还没提升成 `sources/` 页、但内容很值的原始专题：**
+**还没提升成 `sources/` 页、但内容很值的原始专题：**
 
 - [`data/raw/ctx-radar-audit.md`](data/raw/ctx-radar-audit.md) —— RADAR 各项数字的独立技术审计（哪些在摘要里、哪些只在新闻稿里、哪些查不到）
-- [`data/raw/ctx-damo-hiring.md`](data/raw/ctx-damo-hiring.md) —— 达摩院美国实体现状与这个圈子的求职通道（**对找工作直接相关**）
 
 > [!strategy] SSoT 约定
 > - **中文名与单位身份的唯一真源是 `data/names-final.json` + `data/authors-meta.json`。** README 的总表是**生成的**（`python3 data/build_name_table.py`），改名字请改 JSON 再重跑，不要手改 README 的表格正文。
