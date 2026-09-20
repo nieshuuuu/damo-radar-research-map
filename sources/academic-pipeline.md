@@ -1,6 +1,6 @@
 # 学术供给线：西工大 → Adelaide → MBZUAI
 
-> 裁决后的结论页。**完整取证与全部 URL 在 [../data/raw/ctx-academic-pipeline.md](../data/raw/ctx-academic-pipeline.md)**（agent 原始返回，未编辑）。
+> 完整 URL 清单见 [../data/raw/ctx-academic-pipeline.md](../data/raw/ctx-academic-pipeline.md)。
 > 核对日期：2026-09-20。
 
 ---
@@ -11,9 +11,7 @@ RADAR 的视觉-语言方法供给线不是三个孤立的海外单位，而是*
 
 ---
 
-## ⚠️ 头号消歧：Yong Xia 就是西工大夏勇
-
-> [!strategy] 先把论文原文钉死，再判断它有没有写全
+## Yong Xia 就是西工大夏勇
 
 从 PubMed efetch 原始 XML 抽取 RADAR 的 26 个单位编号 —— ==**"西北工业大学"五个字在全文 26 个单位里一次都没出现**。==
 
@@ -35,9 +33,9 @@ RADAR 的视觉-语言方法供给线不是三个孤立的海外单位，而是*
 
 ==所以挂"宁波二院放射科"的三个人（#4、#11、#13）其实是一条西工大线。这个单位编号是这条线的落点，不是一群放射科医生。==
 
-⚠️ **但"夏勇与宁波二院放射科的具体关系"没有找到直接记载**（西工大主页被拦，412 / 空白；宁波二院放射科医生名单里没有"夏勇"）。判定靠的是上面五条，不是靠一份任命文件。**这是本页把握最低的一处。**
+⚠️ 夏勇与宁波二院放射科的**具体关系**（任命 / 兼职 / 客座）没有找到直接记载；宁波二院放射科的医生名单里没有"夏勇"。判定靠的是上面五条。
 
-💡 顺带：对抗核查另外指出 **RADAR 在 OpenAlex 与 PubMed 两处的 author-affiliation 映射本身就有错位**（谢雨彤在两处分别被记成 MBZUAI 与 Adelaide）。用本文 affiliation 字段做任何推断都要带这个保留。
+💡 RADAR 在 OpenAlex 与 PubMed 两处的 author-affiliation 记录并不完全一致（谢雨彤一处记为 MBZUAI、另一处记为 Adelaide）。用本文 affiliation 字段做推断要带这个保留。
 
 ---
 
@@ -84,7 +82,7 @@ MBZUAI 计算机视觉系             ← 现职：助理教授（独立 PI）
 
 ---
 
-## 一个容易写错的小细节
+## 校名细节
 
 论文写的是 **"Adelaide University"**，不是 "The University of Adelaide"。
 

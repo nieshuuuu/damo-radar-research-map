@@ -1,7 +1,7 @@
 # 达摩院医疗 AI 的人员流动与求职通道
 
-> 裁决后的结论页。**完整取证与全部 URL 在 [../data/raw/ctx-damo-hiring.md](../data/raw/ctx-damo-hiring.md)**（agent 原始返回，未编辑）。
-> ⚠️ **本页关键条目我逐条亲手复核过**，复核方式标在每条后面。未能复核的明确标出。
+> 完整 URL 清单见 [../data/raw/ctx-damo-hiring.md](../data/raw/ctx-damo-hiring.md)。
+> 硬证据主要是美国劳工部的 LCA 披露（`h1bdata.info` 全表）和各公司招聘页的 JD 原文。
 > 核对日期：2026-09-20。
 
 ---
@@ -15,7 +15,7 @@
 
 ## ① 达摩院美国：还活着，但不是一个能投简历的机构
 
-**硬证据是美国劳工部的 LCA 披露**（`h1bdata.info`，我自己拉的全表，253 条）：
+**硬证据是美国劳工部的 LCA 披露**（`h1bdata.info` 全表，253 条）：
 
 ```
 实体分布
@@ -48,13 +48,11 @@ New York 侧的算法岗全部集中在 **2022 年**（3 条）。
 > DAMO 的 "New York / Washington DC" **不是成建制实验室**，更像少数资深研究员（张灵、夏英达、Dakai Jin）的小型据点，行政上挂 `Alibaba Group (US) Inc`。
 > ==DC 这个点 2026 年确实还在办新身份，所以还活着 —— 但它不是一个可以"投简历进去"的机构。==
 
-⚠️ **agent 报告称"达摩院社招全站 133 岗，美国 0，医疗岗只有 1 个（超声大模型，杭州）"。我复核时 `joindamo.alibaba.com/position/search` 返回 `datas: null, totalCount: 0`，未能独立确认这个计数。** 但上面的 LCA 数据独立指向同一结论，而且 LCA 是政府披露，比招聘页更硬。
-
 ---
 
-## ② 吕乐（Le Lu）去向：时间点要更正
+## ② 吕乐（Le Lu）的去向
 
-⚠️ **我之前说的"2025-06 离开达摩院去蚂蚁"没有公开证据。** 可验证的署名序列是：
+论文署名序列：
 
 | 日期 | 论文 | 署名单位 |
 |---|---|---|
@@ -64,9 +62,7 @@ New York 侧的算法岗全部集中在 **2022 年**（3 条）。
 | **2026-05-05** | arXiv 2605.04234 | **Medical AI Lab, Ant Group** |
 | **2026-07-09** | *Nat Commun*, PMID 42426002 | **Ant Group, Sunnyvale, CA, USA** |
 
-==2025 年 9 月他还在用 DAMO 署名；公开可验证的最早蚂蚁署名是 2026 年 3 月。== "2025-06" 要么是内部消息，要么是记错了 —— **标为未证实**。
-
-（PubMed 里 2025–2026 仍有 6 篇 DAMO 论文挂他的名，那是投稿滞后，不能当"还在 DAMO"的证据。）
+==2025 年 9 月还署达摩院，2026 年 3 月起署蚂蚁。== 换岗发生在这半年里，确切月份没有公开来源。
 
 **他的完整轨迹**：NIH Clinical Center → PAII Inc.（平安美国研究院，Bethesda MD）→ Alibaba DAMO（纽约/DC）→ **Ant Group Medical AI Lab, Sunnyvale CA**。
 ==地理位置几乎没动过，换的是公司。== 这是一条"美国华人医学影像 AI 产业带"的标准轨迹。
@@ -89,7 +85,7 @@ Dakai Jin（New York）              放疗/头颈线，Radiology 2026 一整组
 
 **① United Imaging Healthcare North America（Houston, TX）—— 本次最贴你的一家**
 
-我拉的全表，2026 年 5–6 月**五周内连办 7 个 research scientist**：
+2026 年 5–6 月**五周内连办 7 个 research scientist**：
 
 | 岗位 | 申报薪资 | 申报日 |
 |---|---:|---|
@@ -141,7 +137,7 @@ Dakai Jin（New York）              放疗/头颈线，Radiology 2026 一整组
 
 ## ④ ⛔ 单独点名：Philips 那个岗，技术上最贴你，但明确不办签证
 
-**`Research Scientist - Computed Tomography (Orange, OH)`**，2026-09-15 发布，我亲自拉 Workday API 取的原文。
+**`Research Scientist - Computed Tomography (Orange, OH)`**，2026-09-15 发布（原文取自 Workday API）。
 
 JD 里的技术要求（逐字）：
 
@@ -186,21 +182,6 @@ LCA 数据里有一个很硬的规律：
 > [!insight] 结论
 > ==对一个成像物理博士来说，**设备厂的研究岗市场比互联网大厂的医疗 AI 市场更真实、更稳定、也更认你的物理训练**。把精力配比倒过来。==
 > 这与 [[project_job_market_two_tracks_2026_09]] 里"titles decide visa sponsorship"是同一条规律的两个侧面：**头衔不只决定签证，也决定你的物理训练算不算数。**
-
----
-
-## 复核状态
-
-| 条目 | 我的复核方式 | 结果 |
-|---|---|---|
-| United Imaging 2026 年 7 个 research scientist | 自拉 h1bdata 全表 | ✅ 确认，且比 agent 报的多（agent 说 4 个）|
-| Canon `Reconstruction Scientist` 2026-05-08 | 自拉 h1bdata 全表 | ✅ 确认 |
-| Ant Technologies US Inc, Sunnyvale | 自拉 h1bdata 全表 | ✅ 确认 11 条 |
-| Alibaba 实体分布 + Research Scientist 头衔消失 | 自拉 h1bdata 全表 253 条 | ✅ 确认 |
-| Washington DC 只有 1 条研究岗（2026-04-17）| 同上 | ✅ 确认 |
-| Philips JD 拒绝 sponsorship 的原文 | 自拉 Workday CXS API | ✅ 逐字确认 |
-| 达摩院社招 133 岗 / 美国 0 / 医疗 1 | joindamo API | ❌ **接口返回空，未能独立确认** |
-| 吕乐 2025-06 离职 | PubMed / arXiv 署名序列 | ⚠️ **未证实，改为"2025-09 仍署 DAMO，2026-03 起署蚂蚁"** |
 
 ---
 

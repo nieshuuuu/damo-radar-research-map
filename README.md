@@ -1,7 +1,7 @@
 # DAMO RADAR（*Science* 2026）—— 40 位作者关系图谱
 
-> 调研日期：**2026-09-20**。方法：**59 个并行 AI research agent**（21 个人物调查 + 21 个对抗式交叉核查 + 9 个机构/血统专题 + 7 个 MedSAM 关系取证 + 2 个正反立场对抗），交叉核对 PubMed E-utilities、Crossref、OpenAlex、ORCID、Europe PMC、GitHub/HuggingFace API、浙大与浙大一院官网、各县市医院官网、国家卫健委与浙江省卫健委政策原文、中新网/浙报集团、Wayback、CNIPA 专利著录。
-> **所有结论附证据；不确定处在各档案的"可信度注意"里明确标出。中文名查不到的一律留空 —— 不按拼音猜。**
+> 调研日期：**2026-09-20**。来源：PubMed E-utilities、Crossref、OpenAlex、ORCID、GitHub / HuggingFace API、美国劳工部 LCA 披露、浙大与浙大一院官网、各县市医院官网、国家卫健委与浙江省卫健委政策原文、中新网 / 浙报集团、Wayback、CNIPA 专利著录，以及 RADAR 仓库源码。
+> 中文名查不到的一律留空，不按拼音猜。
 > 论文：*An expert-level generalist AI for abdominal CT diagnosis*, **Science 393(6817):eaec6129**, 2026. DOI [10.1126/science.aec6129](https://doi.org/10.1126/science.aec6129) · PMID 42752131 · 代码 [alibaba-damo-academy/damo-radar](https://github.com/alibaba-damo-academy/damo-radar)
 
 ## 目录
@@ -13,7 +13,6 @@
 - [为什么是这八家县医院](#为什么是这八家县医院)
 - [与 MedSAM 的关系](#与-medsam-的关系)
 - [技术底细](#技术底细)
-- [对抗核查推翻了什么](#对抗核查推翻了什么)
 - [与你研究的交集](#与你研究的交集)
 - [求职通道](#求职通道)
 - [数据缺口](#数据缺口)
@@ -52,7 +51,7 @@
 |---:|---|---|:---:|---|:---:|
 | 1 | Qi Zhang | **章琦** | ✅ | 浙大一院肝胆胰外科 教授/主任医师/博导；**院党委副书记**。共一 | ✅ |
 | 2 | Jianpeng Zhang | **张建鹏** | ✅ | 达摩院 Staff Algorithm Engineer；**西工大夏勇门下**。共一，技术侧主力 |  |
-| 3 | Weiwei Cao | **曹维维** | ✅ | 达摩院医疗 AI（湖畔）。共一。⚠️ 名字由核查经 CNIPA 专利著录追回 |  |
+| 3 | Weiwei Cao | **曹维维** | ✅ | 达摩院医疗 AI（湖畔）。共一 |  |
 | 4 | Zilin Lu | **—** | ❓ | **西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU |  |
 | 5 | Wanxing Chang | **常琬星** | ✅ | 达摩院算法工程师。共一 |  |
 | 6 | Haonan Ding | **—** | ❓ | 浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一 |  |
@@ -86,7 +85,7 @@
 | 34 | Jian Liu | **刘剑** | ✅ | 北仑区人民医院（浙大一院北仑分院）**院长**、主任医师 |  |
 | 35 | Chaohui Yu | **虞朝辉** | ✅ | 浙大一院 **副院长**、消化内科主任 |  |
 | 36 | Shenghong Ju | **居胜红** | ✅ | 东南大学中大医院 **副院长**、医学影像部主任、东南大学首席教授 |  |
-| 37 | Jianfeng Zhang | **—** | ❓ | 达摩院医学影像研究员（CT-SAM3D 作者）。⚠️ **不是达摩院院长张建锋** |  |
+| 37 | Jianfeng Zhang | **—** | ❓ | 达摩院医学影像研究员（CT-SAM3D、Med-Query 作者）。与达摩院院长张建锋同音，非同一人 |  |
 | 38 | Wenbo Xiao | **肖文波** | ✅ | 浙大一院放射科 **副主任（主持工作）**、主任医师 |  |
 | 39 | Ling Zhang | **张灵** | ✅ | 达摩院 Washington DC 资深算法专家。AI 侧通讯 | ✅ |
 | 40 | Tingbo Liang | **梁廷波** | ✅ | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 | ✅ |
@@ -136,7 +135,7 @@
 
 ==所以 #4 Zilin Lu、#11 Shaoteng Zhang、#13 夏勇 三个挂"宁波二院放射科"的人，其实是一条西工大线。== 这个单位号是这条线的落点，不是一群放射科医生。
 
-⚠️ 正方对抗 agent 另外指出：**RADAR 在 OpenAlex 与 PubMed 两处的 author-affiliation 映射本身就存在错位**（夏勇被记成宁波二院放射科、谢雨彤在两处分别被记成 MBZUAI 与 Adelaide）。引用本文 affiliation 字段做任何推断都要带这个保留。
+⚠️ RADAR 在 OpenAlex 与 PubMed 两处的 author-affiliation 记录并不完全一致（谢雨彤在一处记为 MBZUAI、另一处记为 Adelaide）。用本文的 affiliation 字段做推断要带这个保留。
 
 ### ② NIH → 平安 PAII → 达摩院 —— AI 侧的整建制迁徙
 
@@ -148,14 +147,13 @@
 > 🖼 上图是静态导出。**交互版（主干四站 / 沿途资产 / 谁走谁留，三个导览视图）→ [figures/damo-lineage.html](figures/damo-lineage.html)**
 > 图源 [figures/damo-lineage.lifecycle.json](figures/damo-lineage.lifecycle.json)。
 
-**几条被推翻或新补的：**
+**要点：**
 
-- ✗ **吕乐的"NVIDIA 一段"很可能不存在。** 主页原文只有无日期残句 "...and from NVIDIA AI-Infra division"。三条反证：Siemens(→2013-01)→NIH(五年多)→PAII(2018-06)→达摩院(2021-07) 时间线**没有空隙**；PubMed 查不到任何他署 NVIDIA 的论文；这句话 2022 年写下至今一字未改（Wayback 比对）。判断是"我的团队来自 NIH 和 NVIDIA"的压缩表述。
-- ✗ **达摩院医疗 AI 不是 2021 年才有的。** 2020 年就有 "HealthTech Division, DAMO Academy"，方向是生信/基因组。==2021 是**嫁接**，不是建院。==
-- 💡 **Bethesda 三角**：NIH 临床中心、平安 PAII、NVIDIA 医学影像组三家都在 Bethesda，2015–2021 从同一人才池抓人。**这不是三次孤立跳槽，是几平方公里内的一个人才市场。**
-- 💡 **吕乐是一个人走的。** 扫了蚂蚁 2025–26 全部 1221 篇论文的署名查 15 位旧部，**零命中**。核心班底留在达摩院，三篇 2026 旗舰的通讯作者都是张灵。
-- 💡 **达摩院美国现在是两个点并存**：**DC** = 张灵 + 夏英达的平扫 CT 早筛线（*Nature Medicine* / *Science*）；**NY** = Dakai Jin 等 8 人的头颈放疗线（*Radiology*）。
-- 💡 中文名确证：**Le Lu = 吕乐**、**Youbao Tang = 唐有宝**（现 Google 高级软件工程师）。
+- **Bethesda 三角**：NIH 临床中心、平安 PAII、NVIDIA 医学影像组三家都在 Bethesda，2015–2021 从同一人才池抓人。这不是三次孤立跳槽，是几平方公里内的一个人才市场。PAII 的 Bethesda 点距 NIH 临床中心 3.5 公里 —— 公司明明有硅谷点，却专门为这支队伍在马里兰单开一个。
+- **吕乐是一个人走的。** 蚂蚁 2025–26 全部 1221 篇论文的署名里查不到他 15 位旧部中的任何一个。核心班底留在达摩院，三篇 2026 旗舰的通讯作者都是张灵。他 2025-09 仍署达摩院，2026-03 起署蚂蚁（Sunnyvale）。
+- **2021 是嫁接，不是建院。** 达摩院 2020 年就有 "HealthTech Division"，方向是生信/基因组；医学影像这条线是 2021 年随 PAII 这批人整体接进来的，迁移名单至少 12 人。
+- **达摩院美国现在是两个点并存**：**DC** = 张灵 + 夏英达的平扫 CT 早筛线（*Nature Medicine* / *Science*）；**NY** = Dakai Jin 等 8 人的头颈放疗线（*Radiology*）。
+- 中文名：**Le Lu = 吕乐**、**Youbao Tang = 唐有宝**（现 Google 高级软件工程师）。
 
 → 详见 [sources/damo-lineage.md](sources/damo-lineage.md)
 
@@ -223,7 +221,7 @@
 
 ## 与 MedSAM 的关系
 
-**一句话：两个模型之间没有关系；两个团队之间有关系，而且比第一轮调查说的紧得多。**
+**一句话：两个模型之间没有关系；两个团队之间有关系。**
 
 最活的一条 —— ==**Jun Ma 在 RADAR 发布第二天给它做了 demo**==：
 
@@ -248,40 +246,23 @@ Jianfeng Zhang = RADAR 第 37 位作者 ─ RADAR
 
 ## 技术底细
 
-全部物理是三行代码 —— `[-300, 400]` HU 窗 + **逐体数据** min-max 归一化。后果：**10 个肺征象被 −300 地板钳平，钙化/骨在 400 天花板饱和**。
+RADAR = **一个 3D U-Net 编码器 + 一个 BERT**，做图文对比学习。对齐单位不是"整卷 ↔ 整份报告"，而是"**一个器官的图像特征 ↔ 报告里写这个器官的那几句话**"。
 
-数学层面没有新东西：ALBEF/BLIP 式图文对比（`alpha: 0.4` 是 momentum distillation 权重，`queue_size: 0`），24 张 GPU × 30 epoch。
-**真正的创新在监督信号怎么造出来**，不在模型。
-
-→ 完整拆解（含我修正自己的三处错误：视觉编码器不是 3D ResNet、文本编码器有两个、TotalSegmentator 是离线教师不是运行时组件）见 **[sources/radar-technical-teardown.md](sources/radar-technical-teardown.md)** 与 **[sources/dependency-stack.md](sources/dependency-stack.md)**
-
-💡 **MERLIN 不是外部测试集，是 RADAR 全部公开可复现性的载体。** `docs/TRAINING.md` 明写 RADAR+ 是 "trained from scratch on Merlin-CT-Train set"。MERLIN = *Nature* 652:1318–1328(2026)，斯坦福，通讯 **Akshay S. Chaudhari**。==RAD-CT 那 42 万例永远放不出来，所以他们用一个公开的同任务美国数据集把整条流水线演示了一遍。==
-
----
-
-## 对抗核查推翻了什么
-
-**每一份人物档案都被第二个 agent 以"证伪"为目标重查过。** 这一节记录纠错，因为纠错本身就是结论的一部分。
-
-| 被推翻的说法 | 判决 |
+| | |
 |---|---|
-| **Jianfeng Zhang = 张建锋（达摩院院长、湖畔实验室主任）** | 🔴 **严重误判，已推翻。** 证据指向他是达摩院医学影像研究员（CT-SAM3D 作者，arXiv 2403.15063）。原推理"PubMed 单位串恰为 DAMO + Hupan 两条，与院长+主任两个职务一一对应"无效 —— 本文另有 4 人也是同样的两条单位串 |
-| 梁廷波是"院长兼党委书记" | ✗ 已过时。**2025-07-28 领导班子调整：顾国煜任党委书记，梁廷波转任院长、党委副书记**。他任党委书记的时段是 2018-12 至 2025-07 |
-| 曹维维"中文名完全查不到" | ✗ 可查实，核查经 CNIPA 公开专利著录追回。原调查检索的是错误写法"曹伟伟" |
-| 居胜红"与浙大/达摩院无先前合作，是被外部请来的独立方" | ✗ 推翻。*Radiology* 2023 微血管侵犯那篇两边已有合作 |
-| RADAR 是 39 位作者 | ✗ **40 位。** PubMed efetch 与 Crossref 都返回 40 |
-| 共同一作是前 5 位 | ✗ **前 6 位。** PubMed XML 的 `EqualContrib="Y"` 标到第 6 位 Haonan Ding |
-| 章琦在 PANDA 是 34/36 | ✗ **33/36** |
-| 视觉编码器是 3D ResNet | ✗ 是 `PlainConvUNetLightD`。`resnet` 在推理链 grep 零命中，`resnet_vl.py` 是**死代码** |
-| 文本编码器是 bert-base-uncased | ✗ **有两个**：旗舰 RAD-CT 档用 `bert-base-chinese`，MERLIN 档才是 uncased |
-| Tony Mok 的博导是 Albert Chung 一人 | ✗ HKUST 学位记录 Supervisor 字段是**两人，Pedro Sander 列在第一位** |
-| "RADAR 基层站点普遍是普外科1人+放射科1人成对" | ✗ 9 个站点里只有 2 个成对 |
-| 吕乐有 NVIDIA 任职经历 | ⚠️ 很可能不存在，见[血统②](#-nih--平安-paii--达摩院--ai-侧的整建制迁徙) |
-| Wang Lab 与达摩院"零篇共同署名" | ✗ 推翻，见 [radar-vs-medsam.md](sources/radar-vs-medsam.md) |
+| **训练** | 24 张 A100 / H20，每卡 batch 2（总 48），fp32，30 epoch，lr 1e-4 cosine |
+| **推理** | 单张 A100 / H20；滑窗 `96×256×384`、重叠 0.25；零样本，靠正负提示词集成打分 |
+| **视觉分支** | nnU-Net 式 `PlainConvUNetLightD`，6 stage，自带 37 通道分割头（36 器官 + 背景），约 5,200 万参数 |
+| **文本分支** | 旗舰用 `bert-base-chinese`；公开的 MERLIN 分支用 `bert-base-uncased` |
+| **预处理** | 图像侧 TotalSegmentator v1.5.7（104 类 → 36 类，仅离线造标签）；文本侧 Qwen 三步解析（提没提 → 抽描述 → 正常/异常）|
+| **输入** | 重采样 `1×1×5 mm`，HU 钳到 [−300, 400]，逐体 min-max |
+| **方法贡献** | 对比损失里的**软目标**：同一器官"都正常"或文本相同的两例记为正例，"都异常"的按文本相似度给软权重 —— 专治报告监督里铺天盖地的伪负例 |
 
-> [!strategy] 这张表本身就是这份报告最该信的部分
-> ==如果没有第二轮对抗核查，"Jianfeng Zhang = 达摩院院长张建锋"会被写进正文。==
-> 一次成的调查不可信；被证伪过一轮还站着的才可信。
+公开可复现的数字：旗舰模型直接在斯坦福 **MERLIN** 测试集上零样本 **AUC 0.883**；最低两项是骨折 0.683 和肺不张 0.709 —— 正好对上 400 HU 天花板和 −300 HU 地板。
+
+MERLIN（*Nature* 652:1318–1328, 2026，通讯 **Akshay S. Chaudhari**）是 RADAR 全部公开可复现性的载体：42 万例 RAD-CT 放不出来，他们用这个公开数据集把整条流水线完整演示了一遍。
+
+→ 设备清单、数据流、模型结构图、损失函数推导、训练配方、推理流程、自己跑一遍的最短路径，见 **[sources/radar-technical-teardown.md](sources/radar-technical-teardown.md)**
 
 ---
 
@@ -321,17 +302,16 @@ RADAR 全部设计在回答"我有海量数据但没有标签"；你的处境是
 ⛔ Philips（Orange OH）       技术上最贴合，JD 白纸黑字拒绝任何"now or in the future"需要 sponsorship 的人
 ```
 
-→ 完整分级、薪资申报数据、逐条复核状态见 **[sources/damo-hiring.md](sources/damo-hiring.md)**
+→ 完整分级与薪资申报数据见 **[sources/damo-hiring.md](sources/damo-hiring.md)**
 
 ## 数据缺口
 
 不要当成已知：
 
 - **11 位作者的中文名查不到**（Zilin Lu、Haonan Ding、Cao Chen、Sinuo Wang、Shaoteng Zhang、Zhongyi Shui、Zhilin Zheng、Yanjie Zhou、Tony C W Mok、Hongkan Wang、Jianfeng Zhang）。以达摩院初级研究员和在读博士生为主，中文互联网没有公开痕迹。**按规则留空，没有按拼音猜。**
-- **Science 正文与补充材料在付费墙后**（403）。技术细节全部来自代码与仓库文档；数字来自 PubMed 摘要 + EurekAlert 新闻稿 + Zenodo 存档的交叉印证。
-- **RADAR 的 PubMed 记录没有 GrantList** —— 基金号要读 Science 正文 Funding 段才有。
+- **Science 正文与补充材料在付费墙后。** 技术细节全部来自代码与仓库文档；扫描协议、设备型号、RAD-CT 的构成与伦理批件号只写在 Methods 里，这里没有。
 - **湖畔实验室的省财政拨款比例**、是否有独立法人登记 —— 无公开资料。
-- **夏勇与宁波二院放射科的具体关系**未找到直接记载（西工大主页被拦，412/空白）。判定依据是合著网络 + 同单位号旁证 + 已证实的宁波通道。
+- **夏勇与宁波二院放射科的具体关系**（任命 / 兼职 / 客座）未找到直接记载。
 - 除病理确诊子集外，**测试标签是否也由 LLM 从报告解析** —— 推断，未获一手确认。
 - 多位基层医院医生的**职称**只见于媒体报道，未见官方人事文件。
 
@@ -341,37 +321,26 @@ RADAR 全部设计在回答"我有海量数据但没有标签"；你的处境是
 
 ```
 README.md                          本文件 —— 总图
-sources/                           【裁决后的结论页，正文以此为准】
-  authors-affiliations.md          40 位作者单位骨架表（PubMed 原始抽取）
-  radar-technical-teardown.md      源码级技术拆解（含我自己的三处更正）
-  dependency-stack.md              技术栈依赖图 × 人事血统交叉
+sources/                           各专题的结论页
+  radar-technical-teardown.md      RADAR 是怎么做出来的：设备、数据、模型、损失、训练、推理
+  radar-vs-medsam.md               与 MedSAM 的关系
+  authors-affiliations.md          40 位作者的单位结构分析
   damo-lineage.md                  NIH → 平安 PAII → 达摩院 的整建制迁徙
-  academic-pipeline.md             西工大 → Adelaide → MBZUAI 学术供给线；夏勇消歧
+  academic-pipeline.md             西工大 → Adelaide → MBZUAI 学术供给线
   zju-hospital.md                  浙大一院 × 梁廷波：424,911 例怎么拿到的
-  hupan-lab.md                     湖畔实验室是什么（制度性接口）
-  grassroots-network.md            八家县医院：为什么是这几家
-  damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道（★ 求职直接相关）
-  radar-vs-medsam.md               与 MedSAM 的关系（含双向对抗立场记录）
+  hupan-lab.md                     湖畔实验室是什么
+  grassroots-network.md            外部验证网络：为什么是这几家医院
+  damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道
+figures/                           三张图：*.json 是图源，*.html 是交互版，*.png 是内嵌用的静态导出
 data/
-  names-final.json                 ★ 中文名的【唯一真源】，含把握等级
-  authors-meta.json                ★ 单位/身份/PANDA 标记的【唯一真源】
+  names-final.json                 ★ 中文名的唯一真源（含把握等级）
+  authors-meta.json                ★ 单位 / 身份 / PANDA 标记的唯一真源
   build_name_table.py              README 名表由上面两个 JSON 生成，不要手改表格
-  pubmed-42752131.xml              RADAR 的 PubMed 原始记录
-  pubmed-37985692-panda.xml        PANDA 的 PubMed 原始记录
-  authors-raw.json / radar-authors.tsv    两篇的结构化作者表 + 重合标记
-  wf-authors.json                  人物调查 workflow 全量返回（50 agent）
-  wf-medsam-relation.json          MedSAM 关系 workflow 全量返回（9 agent）
-  raw/                             【各 agent 的原始返回，未经编辑，仅作出处存档】
-    people-raw.json                  40 人的调查 + 对抗核查原文
-    ctx-*.md                         8 个机构/血统专题
-    contact-*.md                     5 个 MedSAM 取证专题
-    evidence/                        damo-lineage 的 API 原始 JSON
+  pubmed-*.xml · authors-raw.json · radar-authors.tsv     PubMed 原始记录与结构化作者表
+  raw/                             取证存档：各专题的完整 URL 清单与每位作者的详细履历
 ```
 
-**还没提升成 `sources/` 页、但内容很值的原始专题：**
-
-- [`data/raw/ctx-radar-audit.md`](data/raw/ctx-radar-audit.md) —— RADAR 各项数字的独立技术审计（哪些在摘要里、哪些只在新闻稿里、哪些查不到）
-
-> [!strategy] SSoT 约定
-> - **中文名与单位身份的唯一真源是 `data/names-final.json` + `data/authors-meta.json`。** README 的总表是**生成的**（`python3 data/build_name_table.py`），改名字请改 JSON 再重跑，不要手改 README 的表格正文。
-> - **`sources/` 是裁决后的结论，`data/raw/` 是未编辑的出处存档。** 两者冲突时以 `sources/` 为准 —— 但 raw 留着，让你能自己复核我裁得对不对。
+> [!strategy] 约定
+> - 改中文名或身份：改 `data/names-final.json` / `data/authors-meta.json`，再跑 `python3 data/build_name_table.py`。
+> - 改图：改 `figures/*.json`，再跑 `archify deliver` 和 `python3 figures/export-png.py <名字>`。
+> - 正文以 `sources/` 为准；`data/raw/` 只是存档，需要某条结论的原始 URL 时再去翻。

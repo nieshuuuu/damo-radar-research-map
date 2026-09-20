@@ -34,22 +34,20 @@ Chrome headless `--screenshot`（`--force-device-scale-factor=2` 出 2× 高清�
 
 ## 验收状态
 
-两张图都通过 archify showcase 的全部 9 项 artifact 检查（0 错误 0 警告），以及
-1440×900 / 1600×1000 / 1920×1080 / 2048×1320 四档桌面视口的浏览器 overflow 检查（`*.visual-check.json` 是收据）。
+三张图都通过 archify showcase 的全部 9 项 artifact 检查（0 错误 0 警告），以及 1440×900 / 1600×1000 / 1920×1080 / 2048×1320 四档桌面视口的浏览器 overflow 检查（`*.visual-check.json` 是收据），导出的 PNG 逐张看过。
+自动检查只管溢出与走线，不管空白和美观 —— 改完图务必看一眼导出的 PNG。
 
-**自动化浏览器证据 ≠ 人眼审美复核。** 后者我做了（看了导出的 PNG），并因此改掉了谱系图第一版
-两行之间空一整条、标题折两行的问题 —— 这类问题自动检查全过，只有看图才能发现。
-
-## lifecycle 那张图的两个坑
+## 改 lifecycle 图时的几何约束
 
 - **非 `main`/`terminal` 的 lane 全部挤在同一条带里。** 想要三条独立带，第三条的 lane id 必须字面叫 `terminal`。
-- **`terminal` lane 的 col N 对齐 main 的 col N+2。** 对不上源列的节点会画出斜穿其他节点的长线——Holger Roth 从 NIH（main col 0）走，没有可对齐的列，所以他在图上被删掉、事实留在卡片里。
+- **`terminal` lane 的 col N 对齐 main 的 col N+2。** 节点要放在它的源列正下方，否则连线会斜穿别的节点。main col 0/1 下面没有可对齐的列。
 - 渲染器**总会预留第三条带**。只定义两条 lane 时它会画一条空的「03 / Outcomes」（还是英文）。要么填满，要么就会看见一块空白。
-- `left` 节点掉出竖直可用区时用负 `yOffset` 往上拉；这个值和 `viewBox[1]` 互相牵制，我是网格搜出 `H=592 / yOffset=-44` 才同时过 validate 和 overflow 的。
+- 节点掉出竖直可用区时用负 `yOffset` 往上拉；这个值和 `viewBox[1]` 互相牵制，当前是 `H=592 / yOffset=-44`。
 
 ## 已知取舍
 
 - 中文副标题被压到 6–9 个字，是为了满足 archify 的 6px 最小投影字号要求；被删掉的细节
   （比如 DeepLesion 的完整作者名单）移进了图下方的卡片，没有丢。
-- 谱系图里**故意不画** DeepLesion → RADAR 的箭头：画了就暗示有数据通路，而事实是只有人跨过去。
+- 谱系图里**不画** DeepLesion → RADAR 的箭头：画了就暗示有数据通路，而事实是只有人跨过去。
+- 迁徙图里没有 Holger Roth 的节点（NIH → NVIDIA，不在这支队伍的主干上），他在卡片里。
 - `*.visual-check.*.png` 与 `*.visual-check.html` 是可重生的副产品，已在 `.gitignore` 里排除。

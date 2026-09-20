@@ -1,6 +1,6 @@
 # 浙大一院 × 梁廷波：424,911 例是怎么拿到的
 
-> 裁决后的结论页。**完整取证与全部 URL 在 [../data/raw/ctx-zju-hospital.md](../data/raw/ctx-zju-hospital.md)**（agent 原始返回，未编辑）。
+> 完整 URL 清单见 [../data/raw/ctx-zju-hospital.md](../data/raw/ctx-zju-hospital.md)。
 > 核对日期：2026-09-20。
 
 ---

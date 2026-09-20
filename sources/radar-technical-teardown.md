@@ -1,19 +1,331 @@
-# RADAR 技术拆解 —— 源码级
+# RADAR 是怎么做出来的 —— 设备、数据、模型、训练、推理
 
-> 全部结论来自**直接读代码和调 API**，不是读论文摘要或新闻稿。每条都标了出处行号或命令。
-> 核对日期：2026-09-20。仓库快照：`alibaba-damo-academy/damo-radar`，最后一次 push `2026-09-18T01:50:18Z`，343 stars，Apache-2.0。
+> 全部来自**直接读代码、读仓库文档、调 API**：`alibaba-damo-academy/damo-radar`（Apache-2.0）、HuggingFace `radar-generalist/RADAR`、PyPI、GitHub API。
+> Science 正文与补充材料在付费墙后，扫描协议、设备型号、伦理批件这类**只写在 Methods 里的信息这里没有**，各处已标明。
+> 核对日期：2026-09-20。
 
 ---
 
 ## 一句话
 
-RADAR 是 **ALBEF/BLIP 式的图文对比学习**，跑在 **3D ResNet + BERT-base** 上，用 **TotalSegmentator 的器官 mask 做 anatomy-aware pooling**，监督信号是 **Qwen 解析出来的报告标签**。全部成像物理是三行代码。
+RADAR = **一个 3D U-Net 编码器 + 一个 BERT**，用**图文对比学习**对齐；对齐的单位不是"整卷 CT ↔ 整份报告"，而是"**一个器官的图像特征 ↔ 报告里写这个器官的那几句话**"。器官怎么圈出来：模型自带一个 37 通道的分割头。报告怎么拆到器官：用 Qwen 解析。
+==模型零件全是现成的，新东西是监督信号的造法和损失函数里的软目标。==
 
 ---
 
-## ① 全部的物理：三行
+## ① 需要什么设备
 
-`RADAR_inference/inference_demo.py`，`__getitem__` 里：
+### 算力
+
+| 环节 | 官方写明的配置 | 出处 |
+|---|---|---|
+| **训练** | **24 张 GPU（A100 或 H20）**，每卡 batch 2，总 batch 48，**fp32**（`amp: False`），30 epoch | `docs/TRAINING.md` + `radar_config.yaml` |
+| 多卡启动 | `torchrun --nproc_per_node=8 train.py`（即 3 台 8 卡机）| `docs/TRAINING.md` |
+| **推理** | **单张 A100 或 H20 即可**；大规模推理建议多卡 `torchrun --nproc_per_node=8` | `docs/INFERENCE.md` |
+| 预处理（分割教师）| TotalSegmentator v1.5.7，每卷一次 GPU 推理 | `docs/PREPROCESS.md` |
+| 预处理（报告解析）| **不需要本地 GPU**，调 DashScope/Qwen API（按 token 付费）| 同上 |
+
+> [!insight] 这个量级放在今天很小
+> 24 张卡 × 30 epoch、不开混合精度、batch 48。==卡点从来不是算力，是 42 万份带报告的 CT。==
+> 显存占用官方没写。输入 patch 是 `96 × 256 × 384` 的单通道 3D 体，fp32、U-Net 六个 stage，A100/H20（80/96 GB 级）是他们实际用的卡；更小的卡能不能跑，仓库里没有任何说法。
+
+### 模型体积（HuggingFace `radar-generalist/RADAR` 的实际文件）
+
+| 文件 | 大小 | 是什么 |
+|---|---:|---|
+| `checkpoint_radar_pretrain.pth` | **1,566 MB** | 旗舰：RAD-CT（浙大一院 42 万例）上预训练 |
+| `checkpoint_radar_plus.pth` | 1,651 MB | RADAR+：在公开的 Merlin-CT-Train 上从零训练 |
+| `checkpoint_radar_plus_finetuned_on_merlin.pth` | 1,651 MB | 旗舰权重在 MERLIN 上微调 |
+| `checkpoint_unet.pth` | 208 MB | 只含视觉分支（U-Net）的预训练权重，训练 RADAR+ 时用来初始化 |
+| `bert-base-chinese/` | 412 MB | 旗舰用的中文文本编码器 |
+| `bert-base-uncased/` | 440 MB | MERLIN 分支用的英文文本编码器 |
+
+208 MB ÷ 4 字节 ≈ **5,200 万参数**的视觉分支（估算）；两份 BERT-base 各约 1.1 亿参数（在线一份 + 动量副本一份），这就是 checkpoint 1.5 GB 的主要来源。
+
+### 软件环境
+
+```
+Python 3.10 · torch>=1.10 · transformers==4.25 · timm==0.4.12 · fairscale==0.4.4
+monai · batchgenerators · SimpleITK · nibabel · nltk · huggingface_hub
+```
+
+`transformers==4.25` 这类老版本 pin 是跟着 LAVIS 走的。环境只需要一个 conda env：
+
+```bash
+conda create -n radar python=3.10 && conda activate radar
+pip install -r requirements.txt
+cd download_scripts && python download_checkpoints.py && python download_auxiliary_data.py
+```
+
+### 成像设备这一侧
+
+- 输入是**增强腹部 CT**，NIfTI 格式。覆盖范围实际是**胸腹**：146 个征象里含 10 个肺、3 个肋骨、2 个心脏、1 个骶骨。
+- 重采样到 `1 × 1 × 5 mm` 之后才进模型，所以**原始层厚 ≤5 mm 即可**，薄层重建没有额外收益。
+- ==扫描仪厂商/型号、kVp、对比剂期相、重建核 —— 公开材料里全都没有==（在 Science Methods 里）。外部中心已知的只有两家：余杭一院 256 排、绩溪县医院 GE 64 排 128 层（见 [grassroots-network.md](grassroots-network.md)）。
+
+---
+
+## ② 数据：三个数据集各管什么
+
+| 数据集 | 规模 | 语言 | 公开吗 | 在 RADAR 里的角色 |
+|---|---|---|---|---|
+| **RAD-CT** | 424,911 次检查 → 150 万图文对 → **1500 万 anatomy-wise 图文对** | 中文 | ✗ 永不公开 | 旗舰模型的训练集（浙大一院）|
+| 内部真实世界评测 | 39,160 例 | 中文 | ✗ | AUC 0.913（95% CI 0.911–0.915）的来源 |
+| **MERLIN** | 15,331 例腹部 CT + 报告 | 英文 | ✓ Stanford AIMI | ① 旗舰模型的**外部测试集** ② RADAR+ 的**公开训练集** |
+
+**MERLIN 是 RADAR 全部公开可复现性的载体。** RAD-CT 放不出来，所以他们用这个公开的同任务数据集把整条流水线完整演示了一遍：发布的 TotalSegmentator mask 跑的是斯坦福的 CT，Qwen 解析的是斯坦福的英文报告，`checkpoint_radar_plus.pth` 就是在它上面从零训出来的。
+
+MERLIN 本身：*Nature* **652:1318–1328**（2026），40 位作者全部斯坦福，一作 Louis Blankemeier，通讯 **Akshay S. Chaudhari**，代码与权重 MIT 许可。
+
+---
+
+## ③ 预处理：把"一卷 CT + 一份报告"变成"36 份器官级图文对"
+
+```
+┌─ 图像侧 ────────────────────────────────────────────────────────┐
+│ 原始 CT (NIfTI)                                                  │
+│   → TotalSegmentator v1.5.7      104 类解剖结构 mask             │
+│   → process_img_mask.py          合并成 36 个主要结构            │
+│   → 重采样                       图像和 mask 都到 [1, 1, 5] mm   │
+└─────────────────────────────────────────────────────────────────┘
+┌─ 文本侧（三步全是调 LLM）──────────────────────────────────────┐
+│ 原始报告                                                         │
+│   → check_organ_mention.py   (qwen_plus)  这份报告提没提这个器官 │
+│   → report_parsing.py        (qwen_max)   抽出写该器官的那几句   │
+│   → report_parsing_normal.py              该器官是 正常 / 异常   │
+└─────────────────────────────────────────────────────────────────┘
+        ↓
+每个病人得到：{器官名: 描述文本} + {器官名: normal/abnormal} + 整份报告
+```
+
+**36 个解剖结构**（代码里以中文字符串写死）：肾上腺、主动脉、竖脊肌、脑、锁骨、大肠、十二指肠、食管、面部、股骨、胆囊、臀肌、心脏、髋关节、肱骨、髂动脉、髂静脉、髂腰肌、下腔静脉、肾、肝、肺、胰腺、门静脉、肺动脉、肋骨、骶骨、肩胛骨、小肠、脾、胃、气管、膀胱、颈椎、腰椎、胸椎。
+
+**成本分两档是刻意的**：高频的"提没提"过滤用便宜的 `qwen_plus`，低频的结构化抽取用贵的 `qwen_max`。Qwen 属于阿里云而不是达摩院，RADAR 是跨事业部调商业 API；文档说可换成任何其他 LLM。
+
+**第三步 normal/abnormal 是给损失函数用的**，专门用来压假阴性（见 ⑤）。报告里没提到的器官，文本直接填 `normal.`。
+
+### TotalSegmentator 在这里的角色：离线教师
+
+它**只在造训练标签时用一次**，推理时完全不调用 —— 模型自己带分割头（见 ④）。
+钉在 v1.5.7（2023-10-17 发布；v2.0.0 是 2023-09-26，当前 PyPI 2.18.0）是因为训练数据全是按 v1 形状的 mask 对齐的，换版本等于换 pooling 几何，要重跑全部预处理并重训。
+
+| 你要做的事 | 要装 TotalSegmentator v1.5.7 吗 |
+|---|---|
+| 跑发布的 checkpoint 推理 | ✗ 不需要 |
+| 在 MERLIN 上复现 | ✗ 不需要（他们发布了处理好的 mask，HF 上分 part00/01/02）|
+| 用自己的数据重新预处理/重训 | ✓ 需要。依赖 `nnunet-customized==1.2` + `batchgenerators==0.21`，必须单独开环境 |
+
+💡 顺带：v2 才有的 `tissue_types` 任务（`subcutaneous_fat` / `skeletal_muscle` / `torso_fat`）v1 里没有，且是非商用许可。做脂肪/肌肉组成只能走 v2 以上。
+
+---
+
+## ④ 模型结构
+
+```
+CT patch  1 × 96 × 256 × 384          报告文本（器官级 或 整份）
+      │                                      │
+┌─────▼──────────────────────┐        ┌──────▼──────────────┐
+│ VisionBranch                │        │ BERT-base           │
+│ PlainConvUNetLightD         │        │ max 512 token       │
+│ 6 stage                     │        │ 取 [CLS]            │
+│ [32,64,128,256,320,320] 通道│        └──────┬──────────────┘
+│                             │               │ Linear 768→256
+│  ├─ 分割头: 37 通道          │               ▼
+│  │   (36 器官 + 背景)        │          text_feat (256-d)
+│  │   argmax → pred_mask      │
+│  │                           │
+│  └─ 最深三层 skip 特征        │
+│      1×1×1 Conv → 256-d      │
+│      展平成三组 token         │
+└─────┬──────────────────────┘
+      │ pred_mask 经 max_pool3d 变成"哪些 token 属于器官 k"的布尔标记
+      ▼
+┌────────────────────────────────────────────┐
+│ 器官 k 的 ROI 池化                          │
+│  query = 可学习的 query_tokens[k] (256-d)   │
+│  key/value = 三个尺度里属于器官 k 的 token  │
+│  MultiheadAttention(4 头, dropout 0.1)      │
+│  → vision_projs[k] : Linear 256→256         │  ← 36 个器官各有自己的投影层
+└─────┬──────────────────────────────────────┘
+      ▼
+  image_feat_k (256-d)   ←── 对比学习 ──→   text_feat
+```
+
+### 视觉分支：nnU-Net 的编码器 + 砍薄的解码器
+
+```python
+"n_stages": 6,
+"features_per_stage": [32, 64, 128, 256, 320, 320],
+"kernel_sizes": [[1,3,3],[1,3,3],[3,3,3],[3,3,3],[3,3,3],[3,3,3]],
+"strides":      [[1,1,1],[1,2,2],[1,2,2],[2,2,2],[2,2,2],[2,2,2]],
+"n_conv_per_stage":         [2,2,2,2,2,2],   # 编码器：标准 nnU-Net
+"n_conv_per_stage_decoder": [1,1,1,1,1],     # 解码器：每级只留一层卷积
+"norm_op": BatchNorm3d,  "nonlin": ReLU,  "deep_supervision": True
+```
+
+- 前两个 stage 的卷积核是 `[1,3,3]`、前三个 stage 的 z 向 stride 是 1 —— **专门适配 5 mm 层厚的各向异性体**：浅层只做面内卷积，z 方向等到面内降够了才开始降。
+- 解码器被砍到每级一层卷积：==它不需要一个好的分割器，只需要一个能把标签贴对的粗分割器 + 一组好的编码器特征。==
+- 整个 `dynamic_network_architectures/` 是从 MIC-DKFZ 的库 vendored 进来的，RADAR 自己加的只有 `unet_lightdecoder.py` 和 `unet_decoder_light.py`。
+
+### 三个尺度的 token 与解剖标记
+
+最深三层 skip 的累积 stride 分别是 `(2,8,8)` / `(4,16,16)` / `(8,32,32)`。预测出的 mask 用**同样大小的核**做 `max_pool3d`：
+
+```python
+F.max_pool3d(masks, kernel_size=(2, 8, 8),   stride=(2, 8, 8))     # → organ_token_flags3
+F.max_pool3d(masks, kernel_size=(4, 16, 16), stride=(4, 16, 16))   # → organ_token_flags2
+F.max_pool3d(masks, kernel_size=(8, 32, 32), stride=(8, 32, 32))   # → organ_token_flags1
+organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
+```
+
+池化核等于编码器的累积步长，所以**每个 token 恰好对应一块体素**；只要这块体素里有一个属于器官 k，这个 token 就算器官 k 的。最后一行直接**拿 mask 的整数标签当数组下标** —— 模型需要的不是"一块区域"，是"第 k 号器官在哪"。
+
+在 `[1,1,5]` mm 下，最深层一个 token = **40 mm(z) × 32 mm × 32 mm**。
+
+### 文本分支
+
+| checkpoint | 文本编码器 |
+|---|---|
+| 旗舰 `checkpoint_radar_pretrain.pth`（中文报告）| **`bert-base-chinese`** |
+| RADAR+（MERLIN 英文报告）| `bert-base-uncased` |
+
+取 `[CLS]` 向量过 `Linear(768→256)`。另有一份**动量副本**（momentum 0.995），只用来算文本之间的相似度（见 ⑤），不参与图文对齐本身。
+
+---
+
+## ⑤ 损失函数：真正的方法贡献在这里
+
+总损失 = **对比损失 + 分割 Dice 损失**。训练时**奇偶迭代交替**两种对比学习：
+
+```
+偶数步（radar_plus=True 时）→ 整图对比：整卷特征 ↔ 整份报告      ← RADAR+ 的"全局对齐"
+奇数步                     → 器官级对比：器官 k 特征 ↔ 器官 k 的描述   ← RADAR 的核心
+```
+
+### 器官级对比：逐器官各算一次 InfoNCE
+
+对每个器官 k，在全部 GPU 上 `all_gather` 出该器官的所有 (图像特征, 文本特征) 对，算双向相似度矩阵 `sim_i2t / sim_t2i`（除以可学习温度，初值 0.07，钳在 [0.001, 0.5]），再对 36 个器官的损失**求和**。
+
+两个筛选条件决定一个样本进不进某个器官的损失：
+
+1. **器官必须完整** —— 模型自己预测的 mask 不碰 patch 的六个边界面。被裁掉一半的肝不参与对齐。
+2. **这个 batch 里该器官至少有一例异常** —— 全是"正常"的器官这一步不算，没有可学的对比。
+
+### 软目标：同一器官的"正常"不互相排斥
+
+标准 InfoNCE 把 batch 里除自己以外的样本全当负例。但两个病人的肝都写着"正常"，把他们推开是错的。RADAR 把目标矩阵改成：
+
+```
+sim_targets = 对角线 1
+            + [两例都 normal]                               → 记为正例
+            + [两例文本逐字相同]                             → 记为正例
+            + [两例都 abnormal] × softmax(动量BERT的文本相似度)  → 按相似程度给软权重
+  然后逐行归一化
+```
+
+> [!insight] 这三行才是 RADAR 在模型层面的新东西
+> 报告监督天然带大量"伪负例"（绝大多数器官在绝大多数病人身上是正常的）。==normal/abnormal 标记 + 文本-文本软相似度，就是为了不让模型把"同样正常"或"同样是脂肪肝"的两个病人强行推开。==
+> 预处理第三步花钱调 LLM 判 normal/abnormal，钱就花在这里。
+
+### 分割损失
+
+分割头的 37 通道 softmax 输出对 TotalSegmentator 的 mask（最近邻降采样到输出尺寸）算 **soft Dice**（不含背景）。它和对比损失直接相加，没有权重系数。
+
+---
+
+## ⑥ 训练配方
+
+| 项 | 值 |
+|---|---|
+| 框架 | LAVIS 的整个子树搬进仓库后改名（`lavis/models/radar_models/`）；模型注册名 `radar_pretrain` |
+| 输入 | pad 到至少 `96×256×384` → **中心裁剪** `96×256×384` → HU 钳位 → 逐体 min-max 到 [0,1] |
+| HU 窗 | 旗舰（RAD-CT）**[−300, 400]**；MERLIN 分支跟随 MERLIN 的设定用 **[−1000, 1000]** |
+| 优化 | `init_lr 1e-4` → cosine → `min_lr 1e-6`，warmup 3000 步（起点 1e-6），weight decay 0.05 |
+| 规模 | 30 epoch，总 batch 48，fp32，seed 42 |
+| 队列 | `queue_size: 0` —— ALBEF 原有的 57,600 负例队列被关掉，只用跨卡 `all_gather` 的 in-batch 负例 |
+| 开关 | `radar_plus: True` 开全局对齐；`radar_ft: True` 从旗舰权重微调（只加载视觉侧，**文本编码器不加载** —— 因为中文换英文）|
+
+微调时，全局对齐那一支的参数（`query_tokens_whole`、`attention_whole`、`vision_projs_whole`）直接**用第 0 号器官的权重初始化**。
+
+快速验证流水线能跑（仓库自带 4 例 demo 数据，不用下全量）：
+
+```bash
+cd RADAR_train && python train.py
+```
+
+全量训练要改 `lavis/datasets/datasets/caption_datasets.py:79` 的 `vis_root`，并先用 `process_img.py` 把 MERLIN 原图重采样到 `[1,1,5]`。
+
+---
+
+## ⑦ 推理：零样本，靠正负提示词打分
+
+RADAR 没有分类头。146 个征象每个都是"**这个器官的图像特征，更像阳性描述还是阴性描述**"。
+
+```
+① 整卷 → 重采样 [1,1,5] → HU 钳位 + min-max → 裁掉全零区域（z 外扩 5、面内外扩 20）
+② 滑窗过分割头    roi = 96×256×384, overlap = 0.25, sw_batch_size = 1
+                  各窗的 seg 概率三线性插值回原尺寸、重叠处取平均 → argmax → 全卷 mask
+③ 对每个器官      以该器官 mask 为中心，裁一个 96×256×384 的窗
+                  → ROI 注意力池化 → 器官特征 (256-d)
+④ 对该器官的每个征象
+                  text_feat = 预先算好的 [若干阴性提示词 ; 若干阳性提示词] 嵌入
+                  sim = image_feat · text_featᵀ / temp
+                  阳性组取均值、阴性组取均值 → softmax([neg, pos]) → 取 pos 作为该征象的分数
+⑤ 写 CSV：每个征象一个阳性分数
+```
+
+- 提示词嵌入是**离线算好**的：`ckpt/infer_text_embedding_radar.pt`（旗舰）/ `infer_text_embedding_merlin.pt`，推理时不跑 BERT。每个征象是**多条提示词的集成**（prompt ensemble）。
+- 任何一维超过 1000 体素的体数据会被直接跳过。
+- 146 个征象名和中英对照表**硬编码在 `inference_demo.py`** 里，换征象表要改代码。
+
+```bash
+cd RADAR_inference && python inference_demo.py        # 单卡，自带一个 demo NIfTI
+# → RADAR_infer_results_demo.csv
+```
+
+MERLIN 测试集上用的是 MERLIN 官方发布的提示词，保证和别的模型可比。
+
+---
+
+## ⑧ 146 个征象、18 个器官
+
+从 `inference_demo.py` 的 `self.test_items` 直接数：
+
+```
+大肠 18   肝 18    肾 14    胆囊 14   小肠 13   肺 10
+胰腺 10   脾 8     肾上腺 6  胃 6     膀胱 6    十二指肠 5
+食管 5    主动脉 4  肋骨 3   门静脉 3  心脏 2    骶骨 1        合计 146
+```
+
+征象粒度示例：`肝_肝细胞癌`、`肝_脂肪肝`、`肝_肝内胆管扩张`、`胰腺_胰管扩张`、`大肠_阑尾炎`、`小肠_梗阻`、`主动脉_主动脉夹层`、`门静脉_栓塞`、`肺_气胸`。
+
+---
+
+## ⑨ 公开可查的性能数字
+
+**仓库里能复现的（MERLIN）：**
+
+| 模型 | 设定 | AUC |
+|---|---|---:|
+| RADAR（旗舰）| RAD-CT 训练，**直接**在 MERLIN 测试集上零样本 | **0.883**（21 个征象平均）|
+| RADAR+ | Merlin-CT-Train 上从零训练 | 0.888（anatomy）|
+| RADAR+ | 旗舰权重在 Merlin-CT-Train 上微调 | **0.918**（anatomy）/ 0.876（all）|
+
+旗舰模型在 MERLIN 上的逐项 AUC：腹主动脉瘤 0.990、肠梗阻 0.970、脾大 0.968、胸腔积液 0.957、肾囊肿 0.943、胰腺萎缩 0.936、胆囊结石 0.919、肝脂肪变 0.892 …… 最低的两项是**肺不张 0.709** 和**骨折 0.683**。
+
+**论文里的（内部数据，无法独立复现）：** 146 征象平均 AUC 0.913（对照视觉-语言模型 0.776）；8 个外部中心 0.895；训练时排除的急腹症 0.904；26 位放射科医生、14 个中心的 reader study，人机协同敏感度提高约 10%。
+
+| 结论 | 证据强度 | 理由 |
+|---|---|---|
+| MERLIN 上 0.883 | **强** | 公开数据 + 公开权重 + 公开脚本，任何人可重跑 |
+| reader study（26 人 / 14 中心）| **强** | 规模真实，Science 摘要原文 |
+| 急腹症 0.904 | **强** | 训练时排除，干净的分布外测试 |
+| 8 外部中心 0.895 | 中强 | 泛化信号真实；但外部中心 8/10 在浙大一院自己的体系内 |
+| 146 征象平均 0.913 | 弱 | 患病率差几个数量级，均值被常见又明显的征象拉高 |
+
+---
+
+## ⑩ 物理层面的三条边界
 
 ```python
 image[image > 400] = 400
@@ -21,328 +333,94 @@ image[image < -300] = -300
 image = (image - image.min()) / (image.max() - image.min() + 1e-8)
 ```
 
-==一个 [−300, 400] HU 窗，然后**逐体数据** min-max 归一化。==
-
-> [!strategy] 先问这一步扔掉了什么，再问模型还能剩下什么
-> HU 是标定过的物理量（相对水的线性衰减系数 ×1000）。min-max 用的是**这一卷自己**的 min/max，不是窗的固定边界 —— 绝对 HU 标度在进网络之前就没了。
-> 实践中腹部 CT 几乎总有空气（−1000 → 钳到 −300）和骨/对比剂（>400 → 钳到 400），所以 min/max 通常就是 −300/400。但这是**巧合成立**，不是设计保证。视野裁得紧、没有空气的体数据会让映射漂移。
-
-### 后果，逐条对到征象表
-
-从 `inference_demo.py` 的 `self.test_items` 里数出来的（命令见 §③）：
-
-| 被窗口毁掉的通道 | 受影响的征象数 | 例子 |
+| 边界 | 机制 | 后果 |
 |---|---|---|
-| **地板 −300 HU**：肺实质 −700～−900 HU 全部钳平 | **10 个肺征象** | 肺_气胸、肺_结节、肺_斑片影、肺_膨胀不全 |
-| **天花板 400 HU**：骨与钙化全部饱和 | 至少 8 个 | 主动脉_钙化、脾_钙化、肾_肾（盂）结石、肋骨_骨折、肋骨_骨质破坏、骶骨_骨炎、肝_肝内钙化灶、胆囊_结节状致密影 |
+| **地板 −300 HU** | 肺实质 −700～−900 HU、空气 −1000 HU 全部钳到 −300 | 气胸与正常肺在输入里数值相同；10 个肺征象只能靠几何推 |
+| **天花板 400 HU** | 钙化、骨、浓对比剂全部饱和 | "钙化"退化成"有没有饱和体素"，密度大小的信息没有了 |
+| **逐体 min-max** | 归一化用的是这一卷自己的 min/max | 绝对 HU 标度不进网络 |
+| **z 向各向异性** | 5 mm 层厚 + 最深 token 40×32×32 mm | 一个 8 mm 病灶 ≈ 最深 token 体积的 1/125 |
 
-✗ 气胸（−1000 HU 的空气）和正常肺实质在输入里**是同一个值**。模型要认出气胸，只能靠塌陷肺边缘的几何，不能靠密度。
-✗ "钙化"这个征象退化成"有没有饱和体素"，密度大小的信息没有了。
+MERLIN 上最低的两项正好对上：**骨折 0.683**（天花板）、**肺不张 0.709**（地板）。
 
-> [!insight] 这不是吹毛求疵，这是这条路线的定义特征
-> RADAR 把 CT 当灰度图。它能做到 0.913 的平均 AUC 恰恰说明：**大部分常见腹部征象不需要定量密度就能认出来**。反过来说，凡是需要定量密度的（脂肪分数、碘浓度、材料组成），这条路线在原理上到不了。
-
----
-
-## ② 几何预处理
-
-同一个 `__getitem__`：
-
-```
-ref_spacing = (1.0, 1.0, 5.0)        # 重采样到 1×1×5 mm
-transforms.Resized(..., mode="trilinear")
-→ 裁掉全零区域，d 方向外扩 5，hw 方向外扩 20
-→ pad 到 [96, 256, 384]
-```
-
-- **5 mm 层厚。** 小于 5 mm 的结构在输入里不存在。任何关于小病灶的性能声明都要按这个读。
-- 96 层 × 5 mm = **480 mm** 的 z 覆盖。
-- 推理时用**滑窗**（`forward_test_win`），多窗结果对每个器官取平均：`np.concatenate(probs).mean(0)[1]`。
+> [!insight] 这不是缺陷，是这条路线的定义
+> RADAR 把 CT 当成一张**带解剖标签的灰度图**。它能到 0.913，恰恰说明大部分常见腹部征象不需要定量密度。
+> ==反过来，凡是需要定量密度的（脂肪分数、碘浓度、材料组成、部分容积边界），输入里已经没有那个信息了 —— 原理上到不了，不是工程没做好。==
 
 ---
 
-## ③ 146 / 18 —— 从代码数出来的，不是从摘要抄的
+## ⑪ 依赖的健康状况
 
-```bash
-curl -sL "https://raw.githubusercontent.com/alibaba-damo-academy/damo-radar/main/RADAR_inference/inference_demo.py" > radar_inf.py
-python3 - <<'PY'
-import re, collections
-src = open('radar_inf.py', encoding='utf-8').read()
-m = re.search(r"self\.test_items = \[(.*?)\]\n", src, re.S)
-items = re.findall(r"'([^']+)'", m.group(1))
-print("n findings:", len(items))
-c = collections.Counter(i.split('_')[0] for i in items)
-print("n organs:", len(c))
-for k, v in c.most_common(): print(f"  {k}: {v}")
-PY
-```
-
-输出：
-
-```
-n findings: 146
-n organs: 18
-  大肠: 18   肝: 18   肾: 14   胆囊: 14   小肠: 13   肺: 10
-  胰腺: 10   脾: 8    肾上腺: 6  胃: 6    膀胱: 6   十二指肠: 5
-  食管: 5    主动脉: 4  肋骨: 3   门静脉: 3  心脏: 2   骶骨: 1
-```
-
-✓ 和摘要里的"18 anatomical structures and 146 imaging findings"完全对上。
-
-⚠️ 注意 **"腹部 CT"里含 10 个肺征象、3 个肋骨、2 个心脏、1 个骶骨** —— 覆盖范围实际是胸腹，不是纯腹部。
-
-⚠️ 征象名与英文映射都**硬编码在推理脚本里**（`self.english_mapping`，一个 146 项的中英词典）。这不是从配置读的，是写死的。想换征象表就得改代码。
-
----
-
-## ④ 模型与训练配置
-
-`RADAR_train/radar_config.yaml` 全文关键项：
-
-```yaml
-model:
-  arch: radar_pretrain
-  med_config_path: "../ckpt/bert-base-uncased/config.json"
-  max_txt_len: 512
-  queue_size: 0
-  alpha: 0.4
-  radar_plus: True
-run:
-  task: image_text_pretrain
-  init_lr: 1e-4      min_lr: 1e-6     warmup_steps: 3000
-  max_epoch: 30      weight_decay: 0.05
-  batch_size_train: 2   # 注释：we using 24 GPU with a total batch size of 48
-  amp: False         seed: 42
-```
-
-| 项 | 值 | 说明 |
-|---|---|---|
-| 框架 | **LAVIS**（Salesforce，BSD-3） | `arch: radar_pretrain` 是 LAVIS 的模型注册名。⚠️ LAVIS 已于 **2026-09-18 归档**，比 RADAR 最后一次 push 晚 8 小时 |
-| 视觉编码器 | **`PlainConvUNetLightD`**（nnU-Net 血统）| 见下方更正 —— **不是 3D ResNet** |
-| 文本编码器 | 旗舰档 **`bert-base-chinese`**；MERLIN 档 `bert-base-uncased`，max 512 token | 见下方更正 —— **有两个** |
-| `alpha: 0.4` | ALBEF 的 **momentum distillation** 权重 | 不是什么新东西 |
-| `queue_size: 0` | **关掉了 MoCo 式队列** | 纯 in-batch 负样本 |
-| 训练规模 | 24 张 GPU，总 batch 48，30 epoch | 以现在的标准算**很小** |
-| `amp: False` | 不用混合精度 | |
-
-### ⚠️ 更正一：视觉编码器不是 3D ResNet
-
-我最初照着 Acknowledgements 里的 "3D-ResNets-PyTorch" 写成 3D ResNet。==错了。==
-
-```bash
-curl -sL ".../RADAR_inference/inference_demo.py" | grep -ci resnet          # → 0
-curl -sL ".../RADAR_inference/.../vision_branch.py" | grep -ci resnet       # → 0
-```
-
-`vision_branch.py:35` 实例化的是：
-
-```python
-arch_class_name="dynamic_network_architectures.architectures.unet_lightdecoder.PlainConvUNetLightD",
-arch_kwargs={
-    "n_stages": 6,
-    "features_per_stage": [32, 64, 128, 256, 320, 320],
-    "strides": [[1,1,1], [1,2,2], [1,2,2], [2,2,2], [2,2,2], [2,2,2]],
-    "n_conv_per_stage":          [2,2,2,2,2,2],
-    "n_conv_per_stage_decoder":  [1,1,1,1,1],     # ← 解码器被砍薄，这是他们对 nnU-Net 架构库的唯一改动
-}
-```
-
-`resnet_vl.py` 确实在仓库里、确实是 kenshohara 血统，但**从未被调用 —— 死代码**。README 的致谢和 `THIRD_PARTY_LICENSES.md` 里那份 MIT 全文，对应的是一个没人用的文件。
-
-💡 由此 `max_pool3d` 那三个核也有了解释：`strides` 逐级累乘 = `(2,8,8)` / `(4,16,16)` / `(8,32,32)`，与 `vision_branch.py:140/146/152` 三个 `kernel_size` **精确相等**。
-==所以 40×32×32 mm 不是额外的粗化，是编码器最深层的固有分辨率。==
-
-### ⚠️ 更正二：文本编码器有两个，旗舰那个是中文 BERT
-
-| checkpoint | 训练数据 | 文本编码器 | 出处 |
+| 依赖 | 归属 | 用得多深 | 状态（2026-09-20）|
 |---|---|---|---|
-| `checkpoint_radar_pretrain.pth` | **RAD-CT**（浙大一院 42 万例，中文报告）| **`bert-base-chinese`** | `docs/INFERENCE.md:23` |
-| `checkpoint_radar_plus.pth` | **Merlin-CT-Train**（Stanford，英文报告）| `bert-base-uncased` | `docs/TRAINING.md` + `radar_config.yaml` |
-
-我之前只看了 `radar_config.yaml`，那是 MERLIN 那一支的配置。
-
-> [!insight] 数学层面没有新东西
-> 损失是 InfoNCE + 交叉熵。骨干全是现成的（nnU-Net 的编码器 + BERT + LAVIS 的对比学习框架）。
-> **真正的创新在监督信号怎么造出来**，不在模型。
+| **LAVIS** | Salesforce，BSD-3 | 整个子树搬进仓库改名；ALBEF 的超参原样保留 | ⚠️ **2026-09-18 已归档**，最后一次实质提交 2024-11-18 |
+| **dynamic-network-architectures**（nnU-Net）| MIC-DKFZ，Apache-2.0 | 整包 vendored + 自加两个轻解码器文件 | ✅ 活跃 |
+| **MONAI** | Project-MONAI，Apache-2.0 | 只用了 4 个符号：`transforms`、`dense_patch_slices` 等纯几何工具 | ✅ 活跃 |
+| **3D-ResNets-PyTorch** | kenshohara，MIT | 致谢里列了，`resnet_vl.py` 在仓库里但**推理链和训练链都没有 import** | 2021-01 后无更新 |
+| **TotalSegmentator v1.5.7** | 巴塞尔大学医院，Apache-2.0 | 仅离线造标签 | v1 线已停；当前 2.18.0 |
+| **Qwen / DashScope** | 阿里云，商业 API | 仅离线解析报告 | 可替换为任意 LLM |
 
 ---
 
-## ⑤ 监督信号：这才是论文的贡献
+## ⑫ 许可
 
-`docs/PREPROCESS.md` 写得很直白，两条外部依赖**都不在仓库里**：
-
-| 依赖 | 类型 | 用途 |
-|---|---|---|
-| **TotalSegmentator v1.5.7** | 开源分割工具 | 生成 104 个解剖结构的原始 mask |
-| **DashScope / Qwen** | LLM API | 报告解析（`check_organ_mention.py`、`report_parsing.py`、`report_parsing_normal.py`）|
-
-流程：
-
-```
-原始 CT
-  → TotalSegmentator v1.5.7 出 104 类 mask
-  → process_img_mask.py 合并成 36 个主要解剖结构
-  → 重采样到 [1, 1, 5] mm
-  → 与 Qwen 解析出的器官级报告标签配对
-  → 1500 万 anatomy-wise 图文对，零人工标注
-```
-
-⚠️ 报告解析脚本里要填 `dashscope.api_key = "YOUR_DASHSCOPE_API_KEY"` —— 复现需要阿里云账号。文档说"any other LLM can be substituted"。
-💡 两档成本分级：`check_organ_mention.py` 用 `qwen_plus`（高频过滤），`report_parsing.py` 用 `qwen_max`（结构化抽取）。
-⚠️ 另：**Qwen 属于阿里云，不属于达摩院**。RADAR 调 Qwen 是跨事业部调商业 API，不是内部工具。
-
-### 💡 最大的一条：MERLIN 不是外部测试集，是 RADAR 全部公开可复现性的载体
-
-我最初把 MERLIN 当成"外部验证用的公开数据集"。==它的角色比这大得多。==
-
-`docs/TRAINING.md` 第 3 行原文："training RADAR/RADAR+ on **Merlin-CT-Train set** from scratch"。
-`checkpoint_radar_plus.pth` 的说明："trained from scratch on Merlin-CT-Train set"。
-
-仓库里躺着的全是 MERLIN 的东西：`data/merlin_data_train_demo/`、`ckpt/merlin_report_organ_*.json`、`infer_text_embedding_merlin.pt`、`inference_merlin_testset.py`、`calc_metrics_merlin_testset.py`；预处理脚本的参数直接叫 `--root-dir /path/to/merlin_data_root`。他们还在 HuggingFace 上发了自己跑的 MERLIN 训练 mask（part00/01/02）。
-
-```
-RAD-CT（浙大一院 42 万例，中文报告）  →  永远不可能放出来
-      ↓  同一套流水线
-MERLIN（Stanford 15,331 例，英文报告）→  公开、可下载、可复现
-```
-
-==他们发布的那批 TotalSegmentator v1.5.7 mask，跑的是**斯坦福的 CT**；Qwen 解析的是**斯坦福的英文报告**。== 用一个公开的同任务美国数据集，把整条流水线完整演示了一遍。
-
-**MERLIN 是什么**：*Nature* **652:1318–1328**(2026)，40 位作者**全部斯坦福**，一作 Louis Blankemeier，通讯 **Akshay S. Chaudhari**，15,331 例腹部 CT + 报告，代码与权重 **MIT** 许可。
-💡 Chaudhari 就是之前 PI scouting 里评过的那位（[[project_pi_chaudhari_mimi_2026_09]]）。==RADAR 能有一条公开可复现路径，靠的是他那个组的开放数据。==
-
-### ⚠️ 重要更正：TotalSegmentator 是**教师**，不是**运行时组件**
-
-> [!strategy] 先看推理时到底调用了什么，再判断依赖有多重
-
-读 `RADAR_inference/dynamic_network_architectures/vision_branch.py`（160 行），`VisionBranch` **自带一个分割网络**：
-
-```python
-# line 35
-arch_class_name="dynamic_network_architectures.architectures.unet_lightdecoder.PlainConvUNetLightD",
-# line 54
-output_channels=37,          # 36 个解剖结构 + 背景
-# line 63
-self.organs = [ ... ]
-# line 113-115  —— 推理时自己预测 mask，不读外部 mask
-pred_mask = torch.softmax(pred_logit, 1)
-pred_mask = pred_mask.argmax(1)
-y = pred_mask
-```
-
-==**推理时 RADAR 跑的是自己这个 37 通道 U-Net，根本不调用 TotalSegmentator。**==
-TotalSegmentator v1.5.7 只出现在 `docs/PREPROCESS.md` 里，用来**离线生成训练标签**。README 也明说："The pretrained masks we release already went through the TotalSegmentator step, so you only need TotalSegmentator if you want to preprocess your own images from scratch."
-
-对应修正 §⑥ 里"真正的成本是安装"那句：
-
-| 你要做的事 | 需要装 TotalSegmentator v1.5.7 吗 |
-|---|---|
-| 跑 RADAR 发布的 checkpoint 做推理 | ✗ **完全不需要** |
-| 在 MERLIN 上复现他们的外部测试 | ✗ 不需要（他们发布了处理好的 mask）|
-| 用**自己的**数据重新预处理 / 重训 | ✓ 需要，这时才会撞上 `nnunet-customized==1.2` 那套 2022 年的依赖 |
-
-### 池化核决定了分割精度根本不重要
-
-同一文件 line 138–158，预测出的 mask 被 `F.max_pool3d` 三档下采样成 token 级布尔标记：
-
-```python
-kernel_size=(2, 8, 8)      # → organ_token_flags3
-kernel_size=(4, 16, 16)    # → organ_token_flags2
-kernel_size=(8, 32, 32)    # → organ_token_flags1
-organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
-```
-
-最粗那一档，**一个 token 覆盖 8×32×32 个体素**。在 `[1, 1, 5]` mm 的 spacing 下就是 **40 mm(z) × 32 mm × 32 mm**。
-
-> [!insight] RADAR 对分割的要求是"标签别搞错、大致位置别飘"，不是"边界准"
-> 边界级的 Dice 改进在 max-pool 到 40×32×32 mm 之后被完全吃掉。==这解释了为什么钉住 v1.5.7 的代价比看上去还小 —— 升级分割器的收益在数学上接近零。==
-> 注意 `organ_token_flags1[i][unique_values.long() - 1]` 这一行：它**直接拿 mask 的整数标签当数组下标**去对齐器官文本。所以 RADAR 需要的不是"一块区域"，是"索引为 k 的那块是肝"。这一点在 [radar-vs-medsam.md](radar-vs-medsam.md) §能不能换成 MedSAM2 里是决定性的。
-
----
-
-## ⑥ TotalSegmentator 钉在 v1.5.7 —— 钉的是一条已死分支的末端
-
-PyPI 上传时间（`curl -sL https://pypi.org/pypi/TotalSegmentator/json`）：
-
-```
-2023-05-16   1.5.6
-2023-09-26   2.0.0          ← v2 主线开始
-2023-10-17   1.5.7          ← RADAR 钉的这个，比 v2.0.0 晚三周
-2025-01-17   2.5.0
-2026-08-12   2.18.0         ← 当前 PyPI 最新
-```
-
-GitHub weights tag：`v3.0.0-weights` 发布于 **2026-09-07**，比 RADAR 仓库最后一次 push（2026-09-18）早 11 天。
-
-> [!strategy] 先判断这是懒还是对，再判断值不值得换
-> **钉住是对的。** v2 的 breaking changes 原文：「all models have been retrained」，分割结果会和 v1 不同。RADAR 用这些 mask 做 pooling 区域，42 万次检查的图文对齐全建在 v1 形状的区域上。推理时换 v2 的 mask → pooling 几何与训练分布失配。要换就得重跑全部预处理 + 重训。
-
-**换了能赚多少？** 逐条算：
-
-| v2 的改进 | 对 RADAR 有用吗 |
-|---|---|
-| 新增 33 类（颅骨、甲状腺、四肢骨、颈动脉…） | ✗ 几乎全在腹部之外，只有 prostate 沾边 |
-| 104 → 117 类 | ✗ RADAR 反正要合并成 36 类 |
-| 修正 liver / spleen / kidney / aorta 的标注系统误差 | ✓ **唯一真能赚到的** —— 这四个都在 36 类里 |
-| 边界级 Dice 提升 | ✗ 重采样到 5 mm 层厚基本抹平 |
-| colon / small_bowel 的 GT 问题 | ✗ **v2 自己把它列在 still open problems 里，没修** |
-
-⚠️ 最后一行很要命：RADAR 四种病理确诊癌症里的**结直肠癌**，正好踩在 v2 明确没修的那条上。
-
-**安装成本只在"用自己的数据重训"这条路上才出现**（见上一节的更正表）。v1.5.7 的 `setup.py` 依赖：
-
-```python
-'nnunet-customized==1.2',      # 2022 年的 nnU-Net v1 私有 fork
-'batchgenerators==0.21',
-'SimpleITK',  'fury',  'xvfbwrapper',  'rt_utils',
-```
-
-2026 年要跑起来必须单独开环境，和 RADAR 自己的 `transformers==4.25`（跟随 LAVIS 的 pin）不在一个世界。
-✓ 但如果你只是跑发布的 checkpoint，这一整段与你无关。
-
-💡 顺带：`tissue_types` 任务（`subcutaneous_fat` / `skeletal_muscle` / `torso_fat`）是 **v2 才加的**，v1 完全没有，且是 v2 里少数**非商用许可**的任务之一。做脂肪/肌肉组成的工作只能走 v2 或 v3。
-
----
-
-## ⑦ 许可：代码和权重不一样
-
-| 位置 | 许可 |
+| | |
 |---|---|
 | GitHub 代码 | **Apache-2.0** |
-| HuggingFace checkpoint（`radar-generalist`） | **CC BY-NC-SA 4.0** —— 禁商用 + 相同方式共享 |
+| HuggingFace 权重 | **CC BY-NC-SA 4.0** —— 禁商用 + 相同方式共享 |
+| MERLIN 数据 | Stanford AIMI 的数据使用协议；代码/权重 MIT |
 
-README 顶部的 badge 写的是 CC BY-NC-SA；仓库 `LICENSE` 文件是 Apache-2.0。==研究复现没问题，进产品线不行。==
-
----
-
-## ⑧ 数字的可信度分层
-
-| 结论 | 证据强度 | 理由 |
-|---|---|---|
-| 四种癌病理确诊子集 AUC 0.891–0.984 | **强** | 病理是独立金标准，不是报告标签 |
-| 26 位医生 / 14 个中心的 reader study | **强** | 规模真实；人机协同 sensitivity +约 10%、阅片时间 −30%+ |
-| 急腹症（训练时排除）AUC 0.904 | **强** | 干净的 out-of-distribution 测试 |
-| 8 个外部中心 AUC 0.895 vs 内部 0.913 | **中强** | 掉得少，泛化信号真实；但外部中心全是县区级医院（见 [grassroots-network.md](grassroots-network.md)）|
-| **146 个征象平均 AUC 0.913** | **弱** | 患病率差几个数量级，均值被脂肪肝/肝囊肿/胆囊结石这类常见又一眼可见的拉高 |
-| 对照基线"最好的 VLM" 0.776 | **弱** | 大概率是没在这个量级腹部 CT 上训过的域外模型（**推断**，待核实）|
-| 除病理子集外的测试标签 | **存疑** | 大概率也是 LLM 从报告解析的 → AUC 衡量的是"与当班医生写了什么一致"，医生漏写 = 负例（**推断**，待核实）|
+==研究复现没问题，进产品线不行。==
 
 ---
 
-## 与 Shu 工作的关系
+## ⑬ 想自己跑一遍：最短路径
 
-> [!insight] RADAR 的 146 个征象里有"脂肪肝"，输出是一个二值概率
-> 它靠的是**与报告文字一致**。Shu 的 water/lipid material decomposition 输出的是**带误差预算的 lipid fraction**。
-> ==没有任何一份放射报告会写"脂肪分数 0.62"—— 报告监督这条路在原理上到不了那里。==
-> 这不是落后，是护城河：报告是定性的，物理量是定量的，两者不可互推。
+```
+A. 只看效果（1 张 A100/H20，约 2 GB 权重）
+   pip install -r requirements.txt → download_checkpoints.py → python inference_demo.py
 
-值得抄的是**评估的形式**，不是模型：独立金标准子集（病理／体模真值）+ 多读者 reader study + 外部中心。这三件事在几百例的规模上照样立得住。
+B. 在公开数据上复现 0.883（需申请 MERLIN）
+   下载 MERLIN → transform_report_to_json.py / transform_label_to_json.py
+   → python inference_merlin_testset.py → python calc_metrics_merlin_testset.py
+
+C. 在 MERLIN 上训练 RADAR+（官方用 24 卡；卡少就是慢，batch 变小会影响 in-batch 负例数量）
+   下载 HF 上的 resized_masks part00-02 并合并 → process_img.py 重采样原图
+   → 改 caption_datasets.py:79 → torchrun --nproc_per_node=8 train.py
+
+D. 换成自己的数据（这一步才需要 TotalSegmentator v1.5.7 + LLM API）
+   TotalSegmentator v1.5.7 → process_img_mask.py → 三个 report 解析脚本 → 同 C
+```
+
+⚠️ D 这条路对**报告语言**敏感：文本编码器要和报告语言匹配（中文 `bert-base-chinese` / 英文 `bert-base-uncased`），换语言时视觉侧权重可以继承，文本侧必须重训。
+
+---
+
+## 对 Shu 的工作意味着什么
+
+**可以直接拿走的：解剖单元化。** 用现成的自动分割器把整卷 CT 切成解剖单元，所有下游量在单元上汇总 —— 这一步不含任何学习参数。几百例的材料分解数据可以照做：water/lipid/protein 分数、噪声、误差预算按解剖结构汇总，统计功效从"几百个 ROI"变成"几百 × N 个单元"，同时去掉手画 ROI 的读者间变异。
+
+**不能拿走的：它对分割精度的态度。** RADAR 把 mask 池化到 40×32×32 mm 照样工作，因为它只要"这堆 token 属于肝"。材料分解里，==边界就是部分容积效应，边界就是信号本身==。
+
+**值得抄的是软目标的思路。** "同样正常的两例不该互相排斥" —— 任何用弱标签做对比学习的场景都会遇到同一个问题。
+
+**报告监督到不了定量物理量。** 146 个征象里有"脂肪肝"，输出是一个与报告文字一致的概率。没有任何一份放射报告会写"脂肪分数 0.62"。
+
+---
+
+## 公开材料里查不到的
+
+- 扫描仪型号、kVp、对比剂期相、重建核、原始层厚分布
+- RAD-CT 的时间跨度、来自哪几家医院、伦理批件号
+- 146 个征象各自的阳性例数
+- 对照的视觉-语言模型具体是哪几个
+- 训练实际用时、显存占用
+- 旗舰模型训练时是否开了 `radar_plus`（发布的 `radar_config.yaml` 是 MERLIN 分支的配置）
 
 ---
 
 ## See Also
 
-- [authors-affiliations.md](authors-affiliations.md) —— 39 位作者的单位原文
-- [damo-lineage.md](damo-lineage.md) —— 达摩院医疗 AI 的血统
 - [radar-vs-medsam.md](radar-vs-medsam.md) —— 与 MedSAM 的关系
+- [grassroots-network.md](grassroots-network.md) —— 外部验证中心
+- [../data/raw/dependency-stack-evidence.md](../data/raw/dependency-stack-evidence.md) —— 依赖核查的原始命令与输出
 - [../README.md](../README.md)

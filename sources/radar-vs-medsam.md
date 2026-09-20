@@ -1,22 +1,18 @@
 # RADAR ↔ MedSAM：到底什么关系
 
-> 方法：7 个取证 agent + 2 个**对抗立场** agent（一个专门证明"联系被低估"，一个专门证明"联系被高估"），最后由我逐条裁决并亲手复核关键证据。
-> 两个立场互相纠错，各推翻了对方和自己的若干条结论 —— 下面 §5 记录了这个过程，因为**纠错本身就是结论的一部分**。
-> 核对日期：2026-09-20。
+> 证据来自 GitHub / HuggingFace API、Crossref、OpenAlex、PubMed 与两边仓库的源码。核对日期：2026-09-20。
 
 ---
 
 ## 一句话
 
-**两个模型之间没有关系；两个团队之间有关系，而且比第一轮调查说的紧得多。**
-
-把这两句混成一句就会出错 —— 正方错在后半句，反方错在前半句。
+**两个模型之间没有关系；两个团队之间有关系。** 这两句要分开说。
 
 ---
 
 ## ① 最活的一条：Jun Ma 在 RADAR 发布第二天给它做了 demo
 
-这是本次调查挖到的最硬、也最新的事实。==两天前刚发生的。==
+==RADAR 发布后第二天的事。==
 
 ```
 2026-09-18          用户 jizhang02 在 damo-radar 开 issue #1 "Online tool?"
@@ -25,7 +21,7 @@
                           ↑ 建完 Space 到贴出来，间隔 32 分钟
 ```
 
-我自己复核过，不是转述：
+可复核：
 
 ```bash
 curl -sL "https://api.github.com/repos/alibaba-damo-academy/damo-radar/issues/1/comments"
@@ -43,20 +39,16 @@ Space 元数据：`author: junma`，`sdk: gradio`，`title: "RADAR Abdominal CT 
 
 ## ② 人事连接链：两跳，首跳是真实共同署名
 
-第一轮的"共同作者取证" agent 给出的结论是 **零篇共同署名**。==这个结论是错的。== 它只逐一排查了 10 个预先点名的人（Le Lu、Ling Zhang、Ke Yan、Yingda Xia、Jiawen Yao、Summers、Roth、Xiaosong Wang、Harrison、Yuille），从没枚举过达摩院医学影像组的实际员工名单 —— **搜索空间设错了，不是检索失败**。
-
-对抗 agent 抓到了漏网的那条。我复核后确认：
-
 ```
 Bo Wang / Jun Ma
    │  FLARE22 挑战赛报告  Lancet Digital Health 6(11):e815, 2024
    │  DOI 10.1016/S2589-7500(24)00154-7
-   │  Crossref 全表 37 位作者：#1 Jun Ma · #33 Heng Guo · #37 Bo Wang
+   │  Crossref 作者表共 37 位：#1 Jun Ma · #33 Heng Guo · #37 Bo Wang
    ▼
 Heng Guo（达摩院）
    │  Med-Query: Steerable Parsing of 9-DoF Medical Anatomies, IEEE JBHI 2024
    │  DOI 10.1109/JBHI.2024.3461951
-   │  五位作者全部 raw affiliation = "DAMO Academy, Alibaba Group, Hangzhou, China"
+   │  五位作者全部署 "DAMO Academy, Alibaba Group, Hangzhou, China"
    │  Heng Guo · Jianfeng Zhang · Ke Yan · Le Lü · Minfeng Xu
    ▼
 Jianfeng Zhang  = RADAR 第 37 位作者（达摩院 + 湖畔实验室）
@@ -66,19 +58,7 @@ RADAR
 
 **路径长度 2，首跳是同一个作者表里的直接共同署名，全程在腹部 CT 解析这一个子领域内。**
 
-### ⚠️ 两个 agent 在这条上打架，我裁了
-
-反方查 Europe PMC，说该文作者表里"没有任何一条 raw affiliation 含 Alibaba 或 DAMO"，据此判定达摩院根本没在这篇论文里出现过。
-
-我两边都拉了：
-
-| 来源 | 作者数 | Heng Guo 在不在 |
-|---|---:|---|
-| Europe PMC | **29** | ✗ 不在（表被截断，#28 甚至是空的）|
-| **Crossref**（出版方权威记录）| **37** | ✓ **在，第 33 位** |
-
-==反方是在一张残表上论证的。裁决：正方成立，共同署名确实存在。==
-但反方有一点仍然对：**两个来源的 affiliation 字段都是空的**，所以 Heng Guo 在**那一篇**上署的什么单位，公开元数据里查不到。他的达摩院身份来自 Med-Query（`alibaba-damo-academy` 官方仓库 + JBHI 正文 affiliation），不是来自 FLARE22 那篇。
+⚠️ 查这篇的作者表要用 **Crossref**（37 位）。Europe PMC 的记录被截断到 29 位，Heng Guo 不在里面。两个来源的 affiliation 字段都是空的，所以他在这一篇上署的单位查不到 —— 他的达摩院身份来自 Med-Query。
 
 ### 机构级而非个人级：达摩院确实参加了 FLARE22
 
@@ -89,29 +69,23 @@ Code   : https://github.com/alibaba-damo-academy/Med_Query
 Docker : docker pull miccaiflare/damomia
 ```
 
-✓ 代码仓库在**达摩院官方 org 下**，不是个人 fork。反方主张的"个人/实习生层面参赛"站不住。
+✓ 代码仓库在**达摩院官方 org 下**，不是个人 fork —— 这是机构层面的参赛。
 
 反向也成立：达摩院的 **Alice（ICCV 2023）** 用 FLARE22 的 2000 例无标注 CT 做预训练。
 **→ 这是双向的基础设施关系：达摩院的系统被放在 Wang Lab 策划的数据和指标下评测；Wang Lab 策划的数据反过来喂了达摩院的预训练。**
 
 ---
 
-## ③ 论文层面：模型零关系，但"零互引"也是错的
+## ③ 论文层面：模型零关系，团队之间有零星互引
 
-反方做了这份调查里最扎实的一件事：用 Crossref 取 RADAR 的 60 条正文参考文献，**52 个 DOI 全部送 OpenAlex 解析出标题逐条读过，另外 8 条 unstructured 逐字读过**。
-
-结果：
+RADAR 的 60 条正文参考文献（Crossref 取，52 个 DOI 逐条解析 + 8 条 unstructured 逐字读）：
 
 ✗ 没有 SAM · 没有 MedSAM · 没有 MedSAM2 · 没有 DeepLesion · 没有 FLARE · 没有 AbdomenCT-1K
 ✓ 分割侧只引 **nnU-Net**（10.1038/s41592-020-01008-z）和 **TotalSegmentator**（10.1148/ryai.230024）
 
-但反方在复核过程中**自己发现了对自己不利的一条**，并主动交了出来：
+唯一沾边的一条：RADAR 引用了 **PANORAMA**（*Lancet Oncology* 2025, DOI 10.1016/S1470-2045(25)00567-4），该文 144 位作者里有 **Jun Ma、Bo Wang、Alan Yuille**。引的是"胰腺癌检测的既有临床证据"，不是 Wang Lab 的技术。
 
-> RADAR 引用了 **PANORAMA**（*Lancet Oncology* 2025, DOI 10.1016/S1470-2045(25)00567-4），该文 144 位作者里同时有 **Jun Ma、Bo Wang、Alan Yuille**。
-
-所以准确表述是：==**RADAR 从未引用 MedSAM / MedSAM2 / FLARE 的任何技术工作，但引用了一篇 Wang Lab 参与的 144 人国际挑战赛共识报告**——引的是"胰腺癌检测的既有临床证据"，不是 Wang Lab 的技术。==
-
-反向也有一条：**MedSAM2 引了 PANDA**（其作者含 Ling Zhang、Le Lu、Qi Zhang、Tingbo Liang —— RADAR 的 AI 侧资深作者、一作、末位通讯全在内）。但 `[3]` 在 MedSAM2 正文只出现两次，都是列举性质，**零比较、零基线、零讨论**。
+反向：**MedSAM2 引了 PANDA**（作者含 Ling Zhang、Le Lu、Qi Zhang、Tingbo Liang），但在正文只出现两次，都是列举性质，零比较、零基线、零讨论。
 
 还有一条容易漏的：**RADAR 的第 2 作者 Jianpeng Zhang 领衔的综述**（*Computer Science Review* 2025, DOI 10.1016/j.cosrev.2024.100721，223 条参考文献）**引用了 MedSAM**，共同作者 Qi Wu、Yutong Xie、Yong Xia 全是 RADAR 作者。
 → "论文没引"不等于"团队不关注"。
@@ -132,13 +106,13 @@ Docker : docker pull miccaiflare/damomia
 
 **DeepLesion 提出的核心命题是：医院日常留下的痕迹就是免费的大规模监督。** 两条线是这一个命题的两个投影 —— 一个榨几何，一个榨语义。
 
-⚠️ 但"共同祖先"不等于"有关系"。反方的反驳成立：
+⚠️ 但"共同祖先"不等于"有关系"：
 
 - DeepLesion 被引 **587 次**。按"用了 DeepLesion 就算有关系"的标准，587 个研究组全都和达摩院有关系。
 - 判定关系的正确检验是**反向**：RADAR 用了 Wang Lab 的什么？→ **零**。整仓 grep 零命中，60 条参考文献零命中。
 - ==一条只能单向承重的桥不是桥。==
 
-**但反方也承认了一条比原材料更强的：** RADAR 作者 Jianfeng Zhang 与 **Ke Yan、Le Lu 在 Med-Query 上直接共同署名**。所以"RADAR 团队 ↔ DeepLesion 作者"不是间接的人员流动，是直接的共同发表。
+**另一方面，** RADAR 作者 Jianfeng Zhang 与 **Ke Yan、Le Lu 在 Med-Query 上直接共同署名**。所以"RADAR 团队 ↔ DeepLesion 作者"不是间接的人员流动，是直接的共同发表。
 → 只不过这条通向**达摩院内部**，不通向多伦多。
 
 ### 顺带澄清一个极易混淆的点
@@ -231,29 +205,7 @@ organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
 
 ---
 
-## ⑧ 两个立场的对抗记录
-
-留这一节是因为**纠错过程本身比结论更有信息量**。
-
-| 被推翻的说法 | 谁提的 | 谁推翻的 | 判决 |
-|---|---|---|---|
-| "两阵营零篇共同署名" | 取证 agent | 正方 | ✗ 推翻。FLARE22 Lancet Digital Health，Crossref 37 人表 |
-| "Heng Guo 在那篇上署了达摩院" | 正方 | 反方 | ⚠️ 部分推翻。两个来源 affiliation 字段都是空的 |
-| "该文作者表里没有任何 Alibaba" | 反方 | **我** | ✗ 推翻。反方用的 Europe PMC 表被截断到 29 人 |
-| "唯一穿透两边的人是 Alan Yuille" | 取证 agent | 正方 | ✗ 推翻。Heng Guo 那条更短且主题连贯；Yuille 与 Bo Wang 的 6 篇是 2017–2020 的人脸检测/年龄估计 |
-| "RADAR 对 Wang Lab 引用为零" | 取证 agent | **反方（自曝）** | ✗ 推翻。RADAR 引了 PANORAMA，Jun Ma + Bo Wang 都在作者表 |
-| "达摩院是个人/实习生层面参赛 FLARE22" | 反方 | **我** | ✗ 推翻。获奖页列的是 `alibaba-damo-academy` 官方 org 仓库 |
-| "DeepLesion 人事链构成 RADAR↔MedSAM 的连接" | 取证 agent | 反方 | ✓ 反方成立。587 次引用，且桥只单向承重 |
-| "两个模型有被低估的技术关系" | 正方立场 | **正方自己** | ✓ 正方主动否证自己。零代码依赖、零权重复用、双向数据集空集 |
-
-**两个立场最后收敛到同一句话：**
-> ==两个**团队**之间有被低估的实质联系；两个**模型**之间没有。==
-
----
-
-## ⑨ 重大人事变动（影响对"Wang Lab"这个词的理解）
-
-⚠️ 这条会改变你对这条线的判断：
+## ⑧ Wang Lab 的人事现状
 
 | | |
 |---|---|
@@ -271,7 +223,7 @@ organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
 
 ---
 
-## ⑩ 对 Shu 的启示
+## ⑨ 对 Shu 的启示
 
 > [!strategy] 两条路线都不能直接移植，但**可移植的东西不是同一个**
 
@@ -314,7 +266,6 @@ Dice 只能回答"我省了你多少标注工"，而标注工不是临床科室�
 - FLARE22 那篇的 Declaration of interests 原文（Lancet 站点 403）未读到。Heng Guo 在**那一篇**上的署名单位，公开元数据为空。
 - RADAR 上线三天，被引 **0**。目前没有任何第三方 benchmark 或综述把两者并置 —— "类别错误"的论证是关于当下文献状态的，不是关于未来的。
 - MedSAM2 只有 arXiv v1，无同行评议版本。
-- ⚠️ 正方指出 **RADAR 在 OpenAlex 与 PubMed 两处的 author-affiliation 映射都存在错位**，点名 `Yong Xia` 被记为 "Department of Radiology, Ningbo No. 2 Hospital"。这与人物调查那条线的消歧问题是同一个 → 见 [academic-pipeline.md](academic-pipeline.md)。
 
 ---
 
@@ -322,5 +273,5 @@ Dice 只能回答"我省了你多少标注工"，而标注工不是临床科室�
 
 - [radar-technical-teardown.md](radar-technical-teardown.md) —— RADAR 源码级拆解
 - [authors-affiliations.md](authors-affiliations.md) —— 40 位作者骨架表
-- [../data/raw/](../data/raw/) —— 各 agent 的原始返回（未经我编辑）
+- [../data/raw/](../data/raw/) —— 取证存档（完整 URL）
 - [../README.md](../README.md)
