@@ -2,12 +2,12 @@
   "schema_version": 1,
   "diagram_type": "dataflow",
   "meta": {
-    "title": "一个命题的两个投影：DeepLesion → MedSAM2 与 RADAR",
+    "title": "一个命题的两个投影：MedSAM2 与 RADAR",
     "locale": "zh-CN",
     "quality_profile": "showcase",
     "viewBox": [
       1050,
-      520
+      400
     ],
     "views": [
       {
@@ -75,7 +75,7 @@
       "label": "自由文本报告",
       "sublabel": "写完就存进 PACS",
       "stage": 0,
-      "row": 2,
+      "row": 1,
       "tag": "无坐标"
     },
     {
@@ -93,7 +93,7 @@
       "label": "RAD-CT",
       "sublabel": "浙大一院 424,911 次",
       "stage": 1,
-      "row": 2,
+      "row": 1,
       "tag": "永不公开"
     },
     {
@@ -111,7 +111,7 @@
       "label": "Qwen 解析报告",
       "sublabel": "器官级标签 · 零标注",
       "stage": 2,
-      "row": 2,
+      "row": 1,
       "tag": "换的是量纲"
     },
     {
@@ -129,7 +129,7 @@
       "label": "RADAR",
       "sublabel": "达摩院 · 146 征象",
       "stage": 3,
-      "row": 2,
+      "row": 1,
       "tag": "权重 CC BY-NC-SA"
     }
   ],

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="archify 2.17.0-dev.1">
-  <title>一个命题的两个投影：DeepLesion → MedSAM2 与 RADAR</title>
+  <title>一个命题的两个投影：MedSAM2 与 RADAR</title>
   <script>
     // Resolve the theme before first paint so light-preference users don't
     // see a dark flash. The toolbar script below re-applies with UI state.
@@ -5081,7 +5081,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
            data-preset-badge-blueprint="蓝图 / 修订 01"
            data-preset-badge-editorial="编辑风格 / 现场笔记">
         <div class="pulse-dot"></div>
-        <h1>一个命题的两个投影：DeepLesion → MedSAM2 与 RADAR</h1>
+        <h1>一个命题的两个投影：MedSAM2 与 RADAR</h1>
       </div>
     </div>
 
@@ -5130,8 +5130,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     <!-- Main Diagram -->
     <div class="diagram-container" data-detail-level="read"
          data-preset-badge-editorial-plate="ARCHIFY / 图版 04">
-      <svg viewBox="0 0 1050 520" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
-        <title id="archify-diagram-title">一个命题的两个投影：DeepLesion → MedSAM2 与 RADAR</title>
+      <svg viewBox="0 0 1050 400" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
+        <title id="archify-diagram-title">一个命题的两个投影：MedSAM2 与 RADAR</title>
         <desc id="archify-diagram-description">由 Archify 生成的数据流图。</desc>
         <!-- Definitions -->
         <defs>
@@ -5156,26 +5156,26 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <rect width="100%" height="100%" fill="url(#grid)" />
 
         <!-- Data Stages -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="0" x="16" y="46" width="168" height="400" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="0" x="16" y="46" width="168" height="280" rx="10" class="c-lane" stroke-width="1"/>
         <text x="100" y="68" class="t-dim" font-size="9" font-weight="600" text-anchor="middle">01 / 医院日常留下的痕迹</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="1" x="231" y="46" width="168" height="400" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="1" x="231" y="46" width="168" height="280" rx="10" class="c-lane" stroke-width="1"/>
         <text x="315" y="68" class="t-dim" font-size="9" font-weight="600" text-anchor="middle">02 / 变成数据集</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="2" x="446" y="46" width="168" height="400" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="2" x="446" y="46" width="168" height="280" rx="10" class="c-lane" stroke-width="1"/>
         <text x="530" y="68" class="t-dim" font-size="9" font-weight="600" text-anchor="middle">03 / 升级成监督信号</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="3" x="661" y="46" width="168" height="400" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="stage" data-composition-frame-id="3" x="661" y="46" width="168" height="280" rx="10" class="c-lane" stroke-width="1"/>
         <text x="745" y="68" class="t-dim" font-size="9" font-weight="600" text-anchor="middle">04 / 今天的产物</text>
 
         <!-- Flow paths -->
         <path data-edge-from="recist" data-edge-to="deeplesion" data-edge-label="从 PACS 里挖出来" data-edge-key="0" data-edge-id="recist-mined" data-composition-points="156,157;259,157" d="M 156 157 L 259 157" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="reports" data-edge-to="radct" data-edge-label="从 PACS 里挖出来" data-edge-key="1" data-edge-id="reports-mined" data-composition-points="156,385;259,385" d="M 156 385 L 259 385" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="reports" data-edge-to="radct" data-edge-label="从 PACS 里挖出来" data-edge-key="1" data-edge-id="reports-mined" data-composition-points="156,271;259,271" d="M 156 271 L 259 271" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         <path data-edge-from="deeplesion" data-edge-to="mask3d" data-edge-label="32,735 个病灶" data-edge-key="2" data-edge-id="to-mask" data-composition-points="371,157;474,157" d="M 371 157 L 474 157" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="radct" data-edge-to="qwen" data-edge-label="42 万份中文报告" data-edge-key="3" data-edge-id="to-qwen" data-composition-points="371,385;474,385" d="M 371 385 L 474 385" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="radct" data-edge-to="qwen" data-edge-label="42 万份中文报告" data-edge-key="3" data-edge-id="to-qwen" data-composition-points="371,271;474,271" d="M 371 271 L 474 271" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         <path data-edge-from="mask3d" data-edge-to="medsam2" data-edge-label="455k image-mask 对" data-edge-key="4" data-edge-id="mask-out" data-composition-points="586,157;689,157" d="M 586 157 L 689 157" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="qwen" data-edge-to="radar" data-edge-label="1500 万 anatomy-wise 对" data-edge-key="5" data-edge-id="label-out" data-composition-points="586,385;689,385" d="M 586 385 L 689 385" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="medsam2" data-edge-to="radar" data-edge-label="Jun Ma 在 RADAR 发布次日做了 demo" data-edge-key="6" data-edge-id="junma-demo" data-composition-points="745,186;745,356" d="M 745 186 L 745 356" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="qwen" data-edge-to="radar" data-edge-label="1500 万 anatomy-wise 对" data-edge-key="5" data-edge-id="label-out" data-composition-points="586,271;689,271" d="M 586 271 L 689 271" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="medsam2" data-edge-to="radar" data-edge-label="Jun Ma 在 RADAR 发布次日做了 demo" data-edge-key="6" data-edge-id="junma-demo" data-composition-points="745,186;745,242" d="M 745 186 L 745 242" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
 
         <!-- Nodes -->
         <g id="node-recist" data-node-id="recist" data-node-label="RECIST 长径/垂直径" tabindex="0" role="button" aria-label="聚焦RECIST 长径/垂直径，随手画的十字, 01 / 医院日常留下的痕迹" aria-pressed="false" data-node-kind="database" data-node-sublabel="随手画的十字" data-node-tag="2D 标记" data-node-context="01 / 医院日常留下的痕迹">
@@ -5193,15 +5193,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <g id="node-reports" data-node-id="reports" data-node-label="自由文本报告" tabindex="0" role="button" aria-label="聚焦自由文本报告，写完就存进 PACS, 01 / 医院日常留下的痕迹" aria-pressed="false" data-node-kind="database" data-node-sublabel="写完就存进 PACS" data-node-tag="无坐标" data-node-context="01 / 医院日常留下的痕迹">
           <title>自由文本报告 · 写完就存进 PACS · 01 / 医院日常留下的痕迹 · 无坐标</title>
-          <rect x="44" y="356" width="112" height="58" rx="6" class="c-mask"/>
-          <rect x="44" y="356" width="112" height="58" rx="6" class="c-database" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(50 362) scale(0.6875)">
+          <rect x="44" y="242" width="112" height="58" rx="6" class="c-mask"/>
+          <rect x="44" y="242" width="112" height="58" rx="6" class="c-database" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(50 248) scale(0.6875)">
             <ellipse cx="8" cy="4" rx="5" ry="2"/>
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="100" y="377" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">自由文本报告</text>
-          <text data-detail="context" x="100" y="393" class="t-muted" font-size="7" text-anchor="middle">写完就存进 PACS</text>
-        <text data-detail="fine" x="100" y="403" class="t-database" font-size="7" text-anchor="middle">无坐标</text>
+          <text data-node-label="" data-detail-anchor="" x="100" y="263" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">自由文本报告</text>
+          <text data-detail="context" x="100" y="279" class="t-muted" font-size="7" text-anchor="middle">写完就存进 PACS</text>
+        <text data-detail="fine" x="100" y="289" class="t-database" font-size="7" text-anchor="middle">无坐标</text>
         </g>
 
         <g id="node-deeplesion" data-node-id="deeplesion" data-node-label="NIH DeepLesion" tabindex="0" role="button" aria-label="聚焦NIH DeepLesion，Ke Yan · 吕乐 · Summers, 02 / 变成数据集" aria-pressed="false" data-node-kind="database" data-node-sublabel="Ke Yan · 吕乐 · Summers" data-node-tag="公开 · 32k CT" data-node-context="02 / 变成数据集">
@@ -5219,15 +5219,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <g id="node-radct" data-node-id="radct" data-node-label="RAD-CT" tabindex="0" role="button" aria-label="聚焦RAD-CT，浙大一院 424,911 次, 02 / 变成数据集" aria-pressed="false" data-node-kind="database" data-node-sublabel="浙大一院 424,911 次" data-node-tag="永不公开" data-node-context="02 / 变成数据集">
           <title>RAD-CT · 浙大一院 424,911 次 · 02 / 变成数据集 · 永不公开</title>
-          <rect x="259" y="356" width="112" height="58" rx="6" class="c-mask"/>
-          <rect x="259" y="356" width="112" height="58" rx="6" class="c-database" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(265 362) scale(0.6875)">
+          <rect x="259" y="242" width="112" height="58" rx="6" class="c-mask"/>
+          <rect x="259" y="242" width="112" height="58" rx="6" class="c-database" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(265 248) scale(0.6875)">
             <ellipse cx="8" cy="4" rx="5" ry="2"/>
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="315" y="377" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">RAD-CT</text>
-          <text data-detail="context" x="315" y="393" class="t-muted" font-size="7" text-anchor="middle">浙大一院 424,911 次</text>
-        <text data-detail="fine" x="315" y="403" class="t-database" font-size="7" text-anchor="middle">永不公开</text>
+          <text data-node-label="" data-detail-anchor="" x="315" y="263" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">RAD-CT</text>
+          <text data-detail="context" x="315" y="279" class="t-muted" font-size="7" text-anchor="middle">浙大一院 424,911 次</text>
+        <text data-detail="fine" x="315" y="289" class="t-database" font-size="7" text-anchor="middle">永不公开</text>
         </g>
 
         <g id="node-mask3d" data-node-id="mask3d" data-node-label="3D mask 升级" tabindex="0" role="button" aria-label="聚焦3D mask 升级，人在回路补成 3D, 03 / 升级成监督信号" aria-pressed="false" data-node-kind="backend" data-node-sublabel="人在回路补成 3D" data-node-tag="仍靠人手" data-node-context="03 / 升级成监督信号">
@@ -5244,14 +5244,14 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <g id="node-qwen" data-node-id="qwen" data-node-label="Qwen 解析报告" tabindex="0" role="button" aria-label="聚焦Qwen 解析报告，器官级标签 · 零标注, 03 / 升级成监督信号" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="器官级标签 · 零标注" data-node-tag="换的是量纲" data-node-context="03 / 升级成监督信号">
           <title>Qwen 解析报告 · 器官级标签 · 零标注 · 03 / 升级成监督信号 · 换的是量纲</title>
-          <rect x="474" y="356" width="112" height="58" rx="6" class="c-mask"/>
-          <rect x="474" y="356" width="112" height="58" rx="6" class="c-cloud" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(480 362) scale(0.6875)">
+          <rect x="474" y="242" width="112" height="58" rx="6" class="c-mask"/>
+          <rect x="474" y="242" width="112" height="58" rx="6" class="c-cloud" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(480 248) scale(0.6875)">
             <path d="M4.3 12.5h7.3a2.4 2.4 0 0 0 .2-4.8 4 4 0 0 0-7.5-1.3A3.1 3.1 0 0 0 4.3 12.5Z"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="530" y="377" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">Qwen 解析报告</text>
-          <text data-detail="context" x="530" y="393" class="t-muted" font-size="7" text-anchor="middle">器官级标签 · 零标注</text>
-        <text data-detail="fine" x="530" y="403" class="t-cloud" font-size="7" text-anchor="middle">换的是量纲</text>
+          <text data-node-label="" data-detail-anchor="" x="530" y="263" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">Qwen 解析报告</text>
+          <text data-detail="context" x="530" y="279" class="t-muted" font-size="7" text-anchor="middle">器官级标签 · 零标注</text>
+        <text data-detail="fine" x="530" y="289" class="t-cloud" font-size="7" text-anchor="middle">换的是量纲</text>
         </g>
 
         <g id="node-medsam2" data-node-id="medsam2" data-node-label="MedSAM2" tabindex="0" role="button" aria-label="聚焦MedSAM2，Toronto · 可提示分割, 04 / 今天的产物" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Toronto · 可提示分割" data-node-tag="代码+权重 Apache-2.0" data-node-context="04 / 今天的产物">
@@ -5268,14 +5268,14 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <g id="node-radar" data-node-id="radar" data-node-label="RADAR" tabindex="0" role="button" aria-label="聚焦RADAR，达摩院 · 146 征象, 04 / 今天的产物" aria-pressed="false" data-node-kind="backend" data-node-sublabel="达摩院 · 146 征象" data-node-tag="权重 CC BY-NC-SA" data-node-context="04 / 今天的产物">
           <title>RADAR · 达摩院 · 146 征象 · 04 / 今天的产物 · 权重 CC BY-NC-SA</title>
-          <rect x="689" y="356" width="112" height="58" rx="6" class="c-mask"/>
-          <rect x="689" y="356" width="112" height="58" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(695 362) scale(0.6875)">
+          <rect x="689" y="242" width="112" height="58" rx="6" class="c-mask"/>
+          <rect x="689" y="242" width="112" height="58" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(695 248) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="745" y="377" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">RADAR</text>
-          <text data-detail="context" x="745" y="393" class="t-muted" font-size="7" text-anchor="middle">达摩院 · 146 征象</text>
-        <text data-detail="fine" x="745" y="403" class="t-backend" font-size="7" text-anchor="middle">权重 CC BY-NC-SA</text>
+          <text data-node-label="" data-detail-anchor="" x="745" y="263" class="t-primary" font-size="10" font-weight="600" text-anchor="middle">RADAR</text>
+          <text data-detail="context" x="745" y="279" class="t-muted" font-size="7" text-anchor="middle">达摩院 · 146 征象</text>
+        <text data-detail="fine" x="745" y="289" class="t-backend" font-size="7" text-anchor="middle">权重 CC BY-NC-SA</text>
         </g>
 
         <!-- Flow labels -->
@@ -5285,9 +5285,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="fine" x="207.5" y="158" class="t-dim" font-size="7" text-anchor="middle">几何痕迹</text>
         </g>
         <g data-detail="context" data-edge-from="reports" data-edge-to="radct" data-edge-label="从 PACS 里挖出来" data-edge-key="1" data-edge-id="reports-mined">
-          <rect x="162.3" y="364" width="90.4" height="27" rx="4" class="c-mask"/>
-          <text x="207.5" y="375" class="t-backend" font-size="8" text-anchor="middle">从 PACS 里挖出来</text>
-        <text data-detail="fine" x="207.5" y="386" class="t-dim" font-size="7" text-anchor="middle">语义痕迹</text>
+          <rect x="162.3" y="250" width="90.4" height="27" rx="4" class="c-mask"/>
+          <text x="207.5" y="261" class="t-backend" font-size="8" text-anchor="middle">从 PACS 里挖出来</text>
+        <text data-detail="fine" x="207.5" y="272" class="t-dim" font-size="7" text-anchor="middle">语义痕迹</text>
         </g>
         <g data-detail="context" data-edge-from="deeplesion" data-edge-to="mask3d" data-edge-label="32,735 个病灶" data-edge-key="2" data-edge-id="to-mask">
           <rect x="384.65" y="136" width="75.7" height="27" rx="4" class="c-mask"/>
@@ -5295,9 +5295,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="fine" x="422.5" y="158" class="t-dim" font-size="7" text-anchor="middle">2D → 3D</text>
         </g>
         <g data-detail="context" data-edge-from="radct" data-edge-to="qwen" data-edge-label="42 万份中文报告" data-edge-key="3" data-edge-id="to-qwen">
-          <rect x="379.75" y="364" width="85.5" height="27" rx="4" class="c-mask"/>
-          <text x="422.5" y="375" class="t-backend" font-size="8" text-anchor="middle">42 万份中文报告</text>
-        <text data-detail="fine" x="422.5" y="386" class="t-dim" font-size="7" text-anchor="middle">文本 → 标签</text>
+          <rect x="379.75" y="250" width="85.5" height="27" rx="4" class="c-mask"/>
+          <text x="422.5" y="261" class="t-backend" font-size="8" text-anchor="middle">42 万份中文报告</text>
+        <text data-detail="fine" x="422.5" y="272" class="t-dim" font-size="7" text-anchor="middle">文本 → 标签</text>
         </g>
         <g data-detail="context" data-edge-from="mask3d" data-edge-to="medsam2" data-edge-label="455k image-mask 对" data-edge-key="4" data-edge-id="mask-out">
           <rect x="587.4" y="136" width="100.2" height="27" rx="4" class="c-mask"/>
@@ -5305,9 +5305,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="fine" x="637.5" y="158" class="t-dim" font-size="7" text-anchor="middle">像素级精确</text>
         </g>
         <g data-detail="context" data-edge-from="qwen" data-edge-to="radar" data-edge-label="1500 万 anatomy-wise 对" data-edge-key="5" data-edge-id="label-out">
-          <rect x="575.15" y="417" width="124.7" height="27" rx="4" class="c-mask"/>
-          <text x="637.5" y="428" class="t-backend" font-size="8" text-anchor="middle">1500 万 anatomy-wise 对</text>
-        <text data-detail="fine" x="637.5" y="439" class="t-dim" font-size="7" text-anchor="middle">语义级丰富</text>
+          <rect x="575.15" y="303" width="124.7" height="27" rx="4" class="c-mask"/>
+          <text x="637.5" y="314" class="t-backend" font-size="8" text-anchor="middle">1500 万 anatomy-wise 对</text>
+        <text data-detail="fine" x="637.5" y="325" class="t-dim" font-size="7" text-anchor="middle">语义级丰富</text>
         </g>
         <g data-detail="context" data-edge-from="medsam2" data-edge-to="radar" data-edge-label="Jun Ma 在 RADAR 发布次日做了 demo" data-edge-key="6" data-edge-id="junma-demo">
           <rect x="658.15" y="189" width="173.7" height="27" rx="4" class="c-mask"/>
@@ -5317,18 +5317,18 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <!-- Legend -->
         <g data-legend="" data-legend-bridge="">
-          <text x="40" y="464" class="t-primary" font-size="12" font-weight="650">图例</text>
-          <g data-legend-semantic-kind="emphasis" data-legend-x="40" data-legend-baseline="484" data-legend-width="83">
-            <path d="M 40 481 L 74 481" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-            <text x="83" y="484" class="t-muted" font-size="10" font-weight="500">主要数据</text>
+          <text x="40" y="344" class="t-primary" font-size="12" font-weight="650">图例</text>
+          <g data-legend-semantic-kind="emphasis" data-legend-x="40" data-legend-baseline="364" data-legend-width="83">
+            <path d="M 40 361 L 74 361" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+            <text x="83" y="364" class="t-muted" font-size="10" font-weight="500">主要数据</text>
           </g>
-          <g data-legend-semantic-kind="dashed" data-legend-x="145" data-legend-baseline="484" data-legend-width="93">
-            <path d="M 145 481 L 179 481" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
-            <text x="188" y="484" class="t-muted" font-size="10" font-weight="500">异步批处理</text>
+          <g data-legend-semantic-kind="dashed" data-legend-x="145" data-legend-baseline="364" data-legend-width="93">
+            <path d="M 145 361 L 179 361" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+            <text x="188" y="364" class="t-muted" font-size="10" font-weight="500">异步批处理</text>
           </g>
-          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="数据存储" data-legend-x="260" data-legend-baseline="484" data-legend-width="83">
-            <rect x="260" y="476" width="14" height="9" rx="2" class="c-database" stroke-width="1"/>
-            <text x="282" y="484" class="t-muted" font-size="10" font-weight="500">数据存储</text>
+          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="数据存储" data-legend-x="260" data-legend-baseline="364" data-legend-width="83">
+            <rect x="260" y="356" width="14" height="9" rx="2" class="c-database" stroke-width="1"/>
+            <text x="282" y="364" class="t-muted" font-size="10" font-weight="500">数据存储</text>
           </g>
         </g>
       </svg>
