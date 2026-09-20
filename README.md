@@ -69,6 +69,8 @@
 | <img src="photos/thumbs/40-tingbo-liang.jpg" width="80"> | **[梁廷波 Tingbo Liang](members/40-tingbo-liang.md)** | 40 | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 |
 <!-- MEMBERS:END -->
 
+其余 25 位作者（达摩院初级研究员与在读学生 8 人、浙大一院临床团队 8 人、外部验证医院 9 人）合在一页：**[members/others.md](members/others.md)**。
+
 ---
 
 ## 40 位作者中文名总表
@@ -81,40 +83,40 @@
 | 1 | [Qi Zhang](members/01-qi-zhang.md) | **章琦** | ✅ | 浙大一院肝胆胰外科 教授/主任医师/博导；**院党委副书记**。共一 | ✅ |
 | 2 | [Jianpeng Zhang](members/02-jianpeng-zhang.md) | **张建鹏** | ✅ | 达摩院 Staff Algorithm Engineer；**西工大夏勇门下**。共一，技术侧主力 |  |
 | 3 | [Weiwei Cao](members/03-weiwei-cao.md) | **曹维维** | ✅ | 达摩院医疗 AI（湖畔）。共一 |  |
-| 4 | Zilin Lu | — | ❓ | **西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU |  |
-| 5 | Wanxing Chang | **常琬星** | ✅ | 达摩院算法工程师。共一 |  |
-| 6 | Haonan Ding | — | ❓ | 浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一 |  |
-| 7 | Cao Chen | — | ❓ | 浙大一院肝胆胰外科，推断为章琦组研究生/在培医师 |  |
-| 8 | Zhi Li | **李志** | ✅ | 浙大一院放射科 主治医师 |  |
-| 9 | Xing Xue | **薛星** | ✅ | 浙大一院放射科（ORCID 自述 2018-08 起受雇） |  |
-| 10 | Sinuo Wang | — | ❓ | Adelaide AIML 博士生 + 达摩院实习（推断） |  |
-| 11 | Shaoteng Zhang | — | ❓ | **西工大计算机学院在读博士**，达摩院实习 |  |
+| 4 | [Zilin Lu](members/others.md) | — | ❓ | **西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU |  |
+| 5 | [Wanxing Chang](members/others.md) | **常琬星** | ✅ | 达摩院算法工程师。共一 |  |
+| 6 | [Haonan Ding](members/others.md) | — | ❓ | 浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一 |  |
+| 7 | [Cao Chen](members/others.md) | — | ❓ | 浙大一院肝胆胰外科，推断为章琦组研究生/在培医师 |  |
+| 8 | [Zhi Li](members/others.md) | **李志** | ✅ | 浙大一院放射科 主治医师 |  |
+| 9 | [Xing Xue](members/others.md) | **薛星** | ✅ | 浙大一院放射科（ORCID 自述 2018-08 起受雇） |  |
+| 10 | [Sinuo Wang](members/others.md) | — | ❓ | Adelaide AIML 博士生（导师吴琦、谢雨彤），在达摩院实习 |  |
+| 11 | [Shaoteng Zhang](members/others.md) | — | ❓ | **西工大计算机学院在读博士**，达摩院实习 |  |
 | 12 | [Yutong Xie](members/12-yutong-xie.md) | **谢雨彤** | ✅ | MBZUAI 计算机视觉系 **助理教授**；西工大 2016 级直博，**导师夏勇** |  |
 | 13 | [Yong Xia](members/13-yong-xia.md) | **夏勇** | ✅ | ⚠️ **西北工业大学计算机学院长聘教授、博导、副院长** —— 论文只标了「宁波市第二医院放射科」 |  |
 | 14 | [Qi Wu](members/14-qi-wu.md) | **吴琦** | ✅ | Adelaide AIML 副教授，V3A Lab 主任 |  |
-| 15 | Zhongyi Shui | — | ❓ | 浙大-西湖大学联合培养博士生（推断） |  |
+| 15 | [Zhongyi Shui](members/others.md) | — | ❓ | 浙大-西湖大学联合培养博士生（推断） |  |
 | 16 | [Xi Li](members/16-xi-li.md) | **李玺** | ✅ | 浙大计算机学院 教授、**求是特聘教授** |  |
-| 17 | Zhilin Zheng | — | ❓ | 达摩院算法研究员（2022 起持续正式署名，非实习） |  |
-| 18 | Yanjie Zhou | — | ❓ | 达摩院算法研究员；论文另写作 Yan-Jie Zhou |  |
+| 17 | [Zhilin Zheng](members/others.md) | — | ❓ | 达摩院算法研究员（2022 起持续正式署名，非实习） |  |
+| 18 | [Yanjie Zhou](members/others.md) | — | ❓ | 达摩院算法研究员；论文另写作 Yan-Jie Zhou |  |
 | 19 | [Tony C W Mok](members/19-tony-c-w-mok.md) | — | ❓ | 香港人，署名 **Tony Chi Wing MOK**；达摩院算法工程师；HKUST 博士（导师 **Pedro Sander + Albert C.S. Chung** 两人） |  |
 | 20 | [Yingda Xia](members/20-yingda-xia.md) | **夏英达** | ✅ | 达摩院 **Washington DC**；JHU Alan Yuille 门下 | ✅ |
-| 21 | Hongkan Wang | — | ❓ | 浙大一院肝胆胰外科，深度参与早期临床试验（GCP） |  |
+| 21 | [Hongkan Wang](members/others.md) | — | ❓ | 浙大一院肝胆胰外科，深度参与早期临床试验（GCP） |  |
 | 22 | [Xianghua Ye](members/22-xianghua-ye.md) | **叶香华** | ✅ | 浙大一院放疗科 **副主任**、主任医师 |  |
-| 23 | Tao Ma | **马涛** | ✅ | 浙大一院肝胆胰外科主任医师；**兵团第一师医院党委副书记兼院长**、中组部第十一批援疆领队 |  |
-| 24 | Jie Peng | **彭杰** | ✅ | 兵团第一师医院 医学影像中心主任、副主任医师 |  |
-| 25 | Xiaoguang Wang | **王晓光** | ✅ | 嘉兴一院 **党委委员、副院长**、主任医师 |  |
-| 26 | Jian Ding | **丁健** | ✅ | 嘉兴一院放射科 **副主任**、副主任医师 |  |
-| 27 | Yuming Gao | **高玉明** | ✅ | 绩溪县人民医院 **院长**、主任医师 |  |
-| 28 | Huazhen Ye | **叶华震** | ✅ | 景宁县人民医院放射科 **副主任（主持工作）** |  |
-| 29 | Yiping Liu | **刘义平** | ✅ | 嵊州市人民医院放射科 **主任**、主任医师 |  |
-| 30 | Dongjie Chen | **陈东杰** | 🟡 | 海宁市人民医院普外科三（肝胆胰脾疝）。职称未查到 |  |
-| 31 | Zhaomin Ni | **倪兆敏** | ✅ | 安吉县人民医院放射科 主任医师 |  |
-| 32 | Jianwen Ning | **宁建文** | ✅ | 浙大一院急诊科；**浙大一院安吉分院党委副书记、院长** |  |
-| 33 | Wei Zhang | **张微** | ✅ | 浙大一院肝胆胰外科主任医师、肝移植中心副主任；兼良渚分院 |  |
-| 34 | Jian Liu | **刘剑** | ✅ | 北仑区人民医院（浙大一院北仑分院）**院长**、主任医师 |  |
+| 23 | [Tao Ma](members/others.md) | **马涛** | ✅ | 浙大一院肝胆胰外科主任医师；**兵团第一师医院党委副书记兼院长**、中组部第十一批援疆领队 |  |
+| 24 | [Jie Peng](members/others.md) | **彭杰** | ✅ | 兵团第一师医院 医学影像中心主任、副主任医师 |  |
+| 25 | [Xiaoguang Wang](members/others.md) | **王晓光** | ✅ | 嘉兴一院 **党委委员、副院长**、主任医师 |  |
+| 26 | [Jian Ding](members/others.md) | **丁健** | ✅ | 嘉兴一院放射科 **副主任**、副主任医师 |  |
+| 27 | [Yuming Gao](members/others.md) | **高玉明** | ✅ | 绩溪县人民医院 **院长**、主任医师 |  |
+| 28 | [Huazhen Ye](members/others.md) | **叶华震** | ✅ | 景宁县人民医院放射科 **副主任（主持工作）** |  |
+| 29 | [Yiping Liu](members/others.md) | **刘义平** | ✅ | 嵊州市人民医院放射科 **主任**、主任医师 |  |
+| 30 | [Dongjie Chen](members/others.md) | **陈东杰** | 🟡 | 海宁市人民医院普外科三（肝胆胰脾疝）。职称未查到 |  |
+| 31 | [Zhaomin Ni](members/others.md) | **倪兆敏** | ✅ | 安吉县人民医院放射科 主任医师 |  |
+| 32 | [Jianwen Ning](members/others.md) | **宁建文** | ✅ | 浙大一院急诊科；**浙大一院安吉分院党委副书记、院长** |  |
+| 33 | [Wei Zhang](members/others.md) | **张微** | ✅ | 浙大一院肝胆胰外科主任医师、肝移植中心副主任；兼良渚分院 |  |
+| 34 | [Jian Liu](members/others.md) | **刘剑** | ✅ | 北仑区人民医院（浙大一院北仑分院）**院长**、主任医师 |  |
 | 35 | [Chaohui Yu](members/35-chaohui-yu.md) | **虞朝辉** | ✅ | 浙大一院 **副院长**、消化内科主任 |  |
 | 36 | [Shenghong Ju](members/36-shenghong-ju.md) | **居胜红** | ✅ | 东南大学中大医院 **副院长**、医学影像部主任、东南大学首席教授 |  |
-| 37 | Jianfeng Zhang | — | ❓ | 达摩院医学影像研究员（CT-SAM3D、Med-Query 作者）。与达摩院院长张建锋同音，非同一人 |  |
+| 37 | [Jianfeng Zhang](members/others.md) | — | ❓ | 达摩院医学影像研究员（CT-SAM3D、Med-Query 作者）。与达摩院院长张建锋同音，非同一人 |  |
 | 38 | [Wenbo Xiao](members/38-wenbo-xiao.md) | **肖文波** | ✅ | 浙大一院放射科 **副主任（主持工作）**、主任医师 |  |
 | 39 | [Ling Zhang](members/39-ling-zhang.md) | **张灵** | ✅ | 达摩院 Washington DC 资深算法专家。AI 侧通讯 | ✅ |
 | 40 | [Tingbo Liang](members/40-tingbo-liang.md) | **梁廷波** | ✅ | 浙大一院 **院长、党委副书记**；全国人大代表。末位通讯 | ✅ |
@@ -365,8 +367,8 @@ sources/                           各专题的结论页
   hupan-lab.md                     湖畔实验室是什么
   grassroots-network.md            外部验证网络：为什么是这几家医院
   damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道
-members/                           15 位核心作者每人一页
-photos/                            头像（出处见各成员页「来源」）· face-sheet.jpg · thumbs/ · build_face_sheet.py
+members/                           15 位核心作者每人一页 + others.md（其余 25 位，由 _parts/build.py 从 6 个片段生成）
+photos/                            头像（出处见各成员页「来源」）· others/ · face-sheet.jpg · thumbs/ · build_face_sheet.py
 figures/                           六张图：*.json 是图源，*.html 是交互版，*.png 是内嵌用的静态导出
 data/
   names-final.json                 ★ 中文名的唯一真源（含把握等级）

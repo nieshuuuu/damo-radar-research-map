@@ -9,8 +9,8 @@ rows = ['| # | 英文 | 中文 | 把握 | 单位 · 身份 | PANDA |', '|---:|--
 roster = {str(r['pos']): r for r in json.load(open(ROOT/'data/raw/people/_roster.json', encoding='utf-8'))}
 for pos in sorted(names, key=int):
     n, m = names[pos], meta.get(pos, {})
-    page = f"members/{roster[pos]['slug']}.md" if pos in roster else None
-    if page: n = dict(n, en=f"[{n['en']}]({page})")
+    page = f"members/{roster[pos]['slug']}.md" if pos in roster else "members/others.md"
+    n = dict(n, en=f"[{n['en']}]({page})")
     cn = f"**{n['cn']}**" if n['cn'] and n['cn'] != '—' else '—'
     mk = {'✅ 确认':'✅','🟡 可能':'🟡','❓ 未知':'❓'}.get(n['conf'], '❓')
     rows.append(f"| {pos} | {n['en']} | {cn} | {mk} | {m.get('role','')} | {'✅' if m.get('panda') else ''} |")

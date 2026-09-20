@@ -1,0 +1,166 @@
+{
+ "batch": "浙大一院肝胆胰外科团队",
+ "people": [
+  {
+   "radar_position": 6,
+   "english_name": "Haonan Ding",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "浙大一院肝胆胰外科**硕士生**（ORCID employments）。共一",
+   "research": {
+    "english_name": "Haonan Ding",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "查不到。已检索并全部落空：(1) Google 中文检索 \"丁浩南\" + 浙江大学 / 肝胆胰 / 章琦 / 研究生 —— 返回的全部是无关同名人（山东大学口腔医学院 2019 推免名单中的丁浩南、暨南大学国际能源学院本科生丁浩南、安徽科技学院建筑学丁浩南、成都理工大学丁浩南、融通基金联系人丁浩南），没有任何一条指向浙大一院；(2) 百度检索 \"丁浩南 浙大一院\"（https://www.baidu.com/s?wd=丁浩南%20浙大一院）返回的是情感号小说与网络文学内容，无医学人物；(3) 浙大一院官网肝胆胰外科专家名录 86 人全名单（AJAX 接口 https://www.zy91.com/content/get_doctor?page=1..6&cid=60&cur=15&dept_id=5）中只有\"丁超峰\"，无任何\"丁浩*\"；(4) 其 ORCID 记录 https://orcid.org/0009-0003-2297-1887 的 other-names 字段为空。注意：\"丁浩南\"只是拼音最常见的写法之一，同样可能是丁昊楠/丁浩楠/丁皓南等，无任何中文来源可证，按规则留空。",
+    "affiliation": "浙江大学医学院附属第一医院 肝胆胰外科（单位编号 1，RADAR 论文中唯一单位）；ORCID 登记的雇主为 Zhejiang University，院系写作 The First Affiliated Hospital, Zhejiang University School of Medicine",
+    "role_title": "硕士研究生（Master's Student）。依据：ORCID 公开记录的 employments 条目 role-title = \"Master's Student\"，start-date = 2023-09，end-date 为空（即截至 ORCID 最后更新仍在读）。该记录为本人认领（claimed=true，verified-email=true），属自述但可信度较高。",
+    "education": "仅知在读阶段：2023 年 9 月起在浙江大学医学院附属第一医院读硕士（ORCID employments）。本科院校、专业、具体导师姓名均未查到——ORCID 的 educations 段为空，PubMed/Google/百度均无学位论文或个人主页。导师为谁未获直接证据；按合著网络推断（见 lineage 与 uncertainties）。",
+    "career_timeline": "2023-09：入学浙江大学医学院附属第一医院，硕士研究生（ORCID employments，start 2023-09，无终止日期）。\n2025-04：以第 13/33 位作者发表 International Journal of Surgery 的 HCC 人工智能诊断模型论文（PMID 39878177），通讯为章琦与梁廷波。\n2025（npj Precision Oncology，PMID 41238794）：第 8/27 位，CT 影像组学预测肝细胞癌肿瘤微坏死的多中心研究。\n2026（Nature Communications，PMID 41748561）：第 13/21 位，肿瘤相关 CD19+ 巨噬细胞与肝癌免疫抑制微环境。\n2026-09-17：Science RADAR 论文，第 6/40 位，且被 PubMed 标注为共同贡献作者（见 radar_role）。\n（以上 4 篇是 PubMed 中确属本人的全部记录；ORCID 只自行登记了其中 2 篇。）",
+    "research_focus": "肝细胞癌的临床人工智能与影像组学（术前增强 CT 预测肿瘤微坏死、整合临床+影像+外周免疫特征的 HCC 检出模型），兼做肝癌肿瘤免疫微环境的基础实验（CD19+ 巨噬细胞）。属于\"临床医生做 AI 应用\"这一路线，不是成像物理、不做重建或算法底层。",
+    "key_publications": [
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 6/40 位，PubMed XML 标注 EqualContrib=\"Y\"（共同第一作者，唯一来自临床侧的共一）",
+     "Construction of an artificially intelligent model for accurate detection of HCC by integrating clinical, radiological, and peripheral immunological features | International Journal of Surgery, 2025 (PMID 39878177) | 第 13/33 位",
+     "Predicting tumor micronecrosis in hepatocellular carcinoma using pretreatment contrast-enhanced CT radiomics model: a multi-center study | npj Precision Oncology, 2025 (PMID 41238794) | 第 8/27 位",
+     "Tumor-associated CD19+ macrophages induce immunosuppressive microenvironment in hepatocellular carcinoma | Nature Communications, 2026 (PMID 41748561) | 第 13/21 位"
+    ],
+    "metrics": "ORCID: 0009-0003-2297-1887（本人认领、邮箱已验证，仅自登记 2 篇）。无 Google Scholar 公开主页（未检索到）。Semantic Scholar 作者 id 2343286910 显示 6 篇 / 14 次引用 / h-index 2，但该条目错误合并了南京医科大学口腔科的 Haonan Ding 论文与一篇木结构工程论文，因此 S2 的引用数与 h 指数不可直接使用。以 PubMed 为准：本人共 4 篇，全部为中间作者或共一，累计引用量很低（2026 年发表的两篇尚未累积引用）。",
+    "lineage": "浙大一院肝胆胰外科 梁廷波（Tingbo Liang）—— 章琦（Qi Zhang）体系的在读研究生。判断依据：其 4 篇论文的通讯作者全部是 qi.zhang@zju.edu.cn（章琦）与 liangtingbo@zju.edu.cn（梁廷波），且每篇都与同一批固定合作者（王阳阳 Yangyang Wang、Cao Chen、Yuquan Zhang、Wanyue Cao、Hongbin Ge）共同署名。该体系上游可追到浙大一院郑树森院士的肝胆胰/移植学派，但丁本人与郑树森无直接共著。以上导师归属为\"推断\"，因为无任何官方页面写明其导师姓名。",
+    "radar_role": "推断：浙大一院临床侧的共同第一作者，负责临床数据/报告标注与临床评估环节。三条依据：(1) 作者位次第 6/40，紧跟 4 位达摩院算法人员之后，是共同贡献作者中唯一只挂浙大一院肝胆胰外科单一单位的人；(2) PubMed 下载的原始 XML（本地 /Users/shunie/Developer/damo-radar-research-map/data/pubmed-42752131.xml）显示 EqualContrib=\"Y\" 标在第 1–6 位（Qi Zhang、Jianpeng Zhang、Weiwei Cao、Zilin Lu、Wanxing Chang、Haonan Ding）；(3) 其既往 4 篇全部是 HCC 的临床 AI/影像组学与临床队列工作，没有任何算法或工程产出。具体是做报告清洗、金标准判读还是读者研究组织，论文正文未能获取（science.org 返回 403），无法进一步确认。",
+    "panda_overlap": "不在 PANDA（Nat Med 2023, PMID 37985692）作者名单内。已用本地 PANDA XML 逐一比对 36 位作者（Kai Cao、Yingda Xia、Jiawen Yao … Qi Zhang、Tingbo Liang、Ling Zhang、Jianping Lu），无 Haonan Ding。PANDA 中来自浙大一院的只有章琦(Qi Zhang)与梁廷波(Tingbo Liang)。与达摩院其他论文的重合：与 Yingda Xia、Ling Zhang 仅在 RADAR 一篇上同列。",
+    "interest_to_shu": "无。他是临床医学硕士生，做的是肝癌临床 AI 应用（影像组学特征 + 报告级监督），不碰成像物理、不做材料分解、能谱或光子计数 CT，与 Shu 的方向没有技术交集，职级上也无法提供博后或职位。唯一的旁证价值是：他说明了 RADAR 这类\"临床报告弱监督\"路线上，临床侧共一可以由在读硕士担任——即这条赛道的门槛在数据和组织，不在算法。",
+    "uncertainties": "1）中文名完全未获证实，已按规则留空，不给任何推测写法。\n2）共同第一作者身份存在口径冲突：PubMed 原始 XML 把 EqualContrib 标在第 1–6 位（含丁），而本任务提供的作者行只在前 5 位（Qi Zhang、Jianpeng Zhang、Weiwei Cao、Zilin Lu、Wanxing Chang）标了 \"#\"。我无法打开 Science 原文核对脚注（https://www.science.org/doi/10.1126/science.aec6129 返回 HTTP 403）。建议后续用 PDF 或作者贡献声明确认；本条以 PubMed XML 为准但标为待核。\n3）导师、本科院校、硕士专业方向均为未知；\"章琦门下\"为合著网络推断，非官方信息。\n4）同名清理：PubMed 中 \"Ding Haonan\" 共 17 条，其中 13 条属完全不同的人（南京医科大学第一附属医院口腔科的 Haonan Ding 有 6 篇、武汉理工大学交通学院、浙江农林大学竹产业研究院、江苏师范大学物理、光纤传感、珠江水质建模各 1–2 篇），已按单位逐条剔除，不要用 \"Ding Haonan[Author]\" 的原始计数做指标。\n5）ORCID 的在读状态截至其最后更新（2026 年），是否已毕业未知。\n6）已检索但无结果的来源：百度网页（后触发验证码，未破解）、百度学术（返回空白页）、Bing（本环境返回完全无关结果）、搜狗与 DuckDuckGo（均要求验证码，按规则未处理）、好大夫在线拼音子域 dinghaonan.haodf.com（404）。"
+   }
+  },
+  {
+   "radar_position": 7,
+   "english_name": "Cao Chen",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "浙大一院肝胆胰外科，推断为章琦组研究生/在培医师",
+   "research": {
+    "english_name": "Cao Chen",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "查不到。检索记录：(1) Google \"陈操\" + 浙江大学 + (肝胆胰 OR 肝癌 OR 章琦 OR 梁廷波) —— 全部命中的是完全不同的人：中国疾病预防控制中心病毒病预防控制所的陈操（朊病毒/克雅病/新冠变异株监测，见四川省疾控 https://www.sccdc.cn 与中华预防医学会奖励名单）、湖南麻阳县高村镇党委书记陈操、北京市科委项目负责人陈操操、网络小说人物陈操之，没有一条把\"陈操\"与浙大一院肝胆胰外科绑定；(2) 百度 \"陈操\" 浙大一院 肝胆胰外科（https://www.baidu.com/s?wd=陈操%20浙大一院%20肝胆胰外科）返回的是医院科室介绍与其他医生（陈伟、章爱斌等），无陈操；(3) 浙大一院官网肝胆胰外科 86 人专家名录中姓陈者为陈康杰、陈琦、陈荣高、陈怡文、陈伟，无陈操；(4) ORCID expanded-search（given-names:Cao AND family-name:Chen AND affiliation-org-name:Zhejiang）num-found=0。\"陈操\"虽是 Cao Chen 最直白的拼法，但无任何中文来源可证，按规则留空。",
+    "affiliation": "浙江大学医学院附属第一医院 肝胆胰外科（单位编号 1，RADAR 论文中唯一单位）",
+    "role_title": "未查到公开职称。推断为章琦课题组的研究生或住院/在培医师：他自 2023 年起连续以中间作者出现在该组论文中，但不在浙大一院官网\"专家介绍\"名录（该名录只收录副主任医师及以上，共 86 人），也没有 ORCID、没有任何个人主页或出诊信息。属推断，未证实。",
+    "education": "完全未知。未找到本科/硕士/博士院校、专业、年份或导师的任何公开记录（Google、百度、ORCID、PubMed 作者页均无）。",
+    "career_timeline": "2023（Annals of Surgical Oncology，PMID 37249723）：第 8/13 位，胰腺囊性肿瘤低通量基因组测序分型，末位作者梁廷波。\n2023（Journal of Hepatocellular Carcinoma，PMID 37521028）：第 4/11 位，含肿瘤微坏死的 HCC 术后生存预测模型。\n2024（Cancer Letters，PMID 38272344）：第 3/22 位，把肿瘤微坏死并入 HCC 分期系统的多中心回顾研究。\n2025（International Journal of Surgery，PMID 39878177）：第 12/33 位，HCC 人工智能检出模型。\n2025（npj Precision Oncology，PMID 41238794）：第 5/27 位，CT 影像组学预测肿瘤微坏死。\n2025（Journal of Controlled Release，PMID 40902670）：第 15/18 位，苯丙哌林磷酸盐纳米重定位用于胰腺癌化疗。\n2026（Hepatobiliary & Pancreatic Diseases International，PMID 41421923）：第 5/8 位，肿瘤微坏死是肝癌肝切除后预后不良标志。\n2026（Nature，PMID 42457964）：第 8/35 位，GPC3 靶向 dnTGFβRII 装甲 CAR-T 治疗肝细胞癌。\n2026-09-17（Science，PMID 42752131）：第 7/40 位，RADAR。",
+    "research_focus": "肝细胞癌\"肿瘤微坏死（tumor micronecrosis）\"这条主线——从病理标志物→分期系统→术前 CT 影像组学预测，四篇连做；兼及胰腺囊性肿瘤基因组分型与胰腺癌纳米给药。固定搭档是第一作者王阳阳（Yangyang Wang）。属临床病理-影像关联研究，不涉成像物理。",
+    "key_publications": [
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 2026 | 第 7/40 位",
+     "GPC3-specific dnTGFβRII-armoured CAR T cells for hepatocellular carcinoma | Nature 2026 (PMID 42457964) | 第 8/35 位",
+     "Optimizing hepatocellular carcinoma disease staging systems by incorporating tumor micronecrosis: A multi-institutional retrospective study | Cancer Letters 2024 (PMID 38272344) | 第 3/22 位",
+     "Predicting tumor micronecrosis in hepatocellular carcinoma using pretreatment contrast-enhanced CT radiomics model | npj Precision Oncology 2025 (PMID 41238794) | 第 5/27 位",
+     "Low-Pass Genomic Sequencing Reveals Novel Subtypes of Pancreatic Cystic Neoplasms | Annals of Surgical Oncology 2023 (PMID 37249723) | 第 8/13 位"
+    ],
+    "metrics": "无 ORCID（ORCID API 搜索 num-found=0）。无 Google Scholar 公开主页。Semantic Scholar 作者 id 2218499096 显示 11 篇 / 21 次引用 / h-index 3，但该条目混入了一篇 2022 年 Psychosomatic Medicine Research 的新冠生活质量论文，疑似另一位同名者，故 S2 指标不可直接采信。以 PubMed 按单位筛选为准：确属本人的论文 8 篇，全部为中间作者，无第一或通讯作者论文。",
+    "lineage": "浙大一院 梁廷波 —— 章琦 体系。依据：8 篇论文的末位/通讯作者全部是章琦（qi.zhang@zju.edu.cn）或梁廷波（liangtingbo@zju.edu.cn），并与王阳阳、Hongbin Ge、Xu Sun、Mao Ye 等同组成员长期共署。该体系的上游是浙大一院郑树森院士开创的肝胆胰外科与器官移植学派。具体师承（谁是他的导师）无直接证据，属推断。",
+    "radar_role": "推断：浙大一院临床侧的数据/标注贡献者。依据是作者位次紧随共一组之后（第 7/40，仅次于共一丁浩南），单位为肝胆胰外科单一单位，且其既往全部工作都是临床队列的病理-影像标注类研究（肿瘤微坏死的病理判读与 CT 对照）——这正是 RADAR 训练/评测所需的报告与金标准整理能力。具体分工论文正文未获取（science.org 403），未证实。",
+    "panda_overlap": "不在 PANDA（PMID 37985692）作者名单。已逐条比对 PANDA 全部 36 位作者，无 Cao Chen。注意 PANDA 里也没有任何 Chen 姓的浙大一院作者。与达摩院其他论文的重合：他与达摩院团队（Yingda Xia、Ling Zhang）只在 RADAR 一篇上同列；与浙大一院侧的 Nature CAR-T 论文（2026）共享同一批临床作者（Hongkan Wang 等），说明他和王宏侃同属章琦的临床研究班底。",
+    "interest_to_shu": "无。研究内容是肝癌病理-影像关联与临床队列，用的是现成影像组学特征，不触及 CT 成像物理、材料分解或能谱。职级未知且几乎确定低于或平于 Shu，没有招人或推荐能力。",
+    "uncertainties": "1）中文名未获证实，留空。\"陈操\"为最可能拼法但无中文来源支撑，明确不写入。\n2）职称/学生阶段为推断（不在专家名录 + 无 ORCID + 持续中间作者位 → 研究生或在培医师），未证实。是否已存在于医院但因职级低而不上官网，无法从公开渠道确认；这是本条最大缺口。\n3）教育背景、导师、年龄段、性别全部未知。\n4）同名风险极高且已造成干扰：PubMed \"Chen Cao[Author] AND Zhejiang[Affiliation]\" 返回 103 条，绝大多数不是本人；中国疾控中心病毒病所的陈操（朊病毒、新冠）是国内学界另一位知名同名人，两人毫无关系，切勿合并。我用 \"Chen Cao[Author] AND Hepatobiliary[Affiliation]\" 收敛到 10 条后再逐条核单位，其中 PMID 37244055（Virology，HPV 阴茎癌，武汉）仍是另一人，已剔除。\n5）Nature CAR-T 论文（PMID 42457964）中他的第 8/35 位是我从 PubMed XML 直接算出的，可信；但该论文与 RADAR 中的 Cao Chen 是否同一人，依据是单位完全一致（浙大一院肝胆胰外科）且同组，属高可信推断而非直接确认。\n6）已尝试失败的来源：百度（触发验证码）、搜狗/DuckDuckGo（验证码）、Bing（本环境返回无关结果）、好大夫拼音子域 chencao.haodf.com（404）、百度学术（空白）。"
+   }
+  },
+  {
+   "radar_position": 21,
+   "english_name": "Hongkan Wang",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "浙大一院肝胆胰外科，深度参与早期临床试验（GCP）",
+   "research": {
+    "english_name": "Hongkan Wang",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "未获证实。唯一相关线索（不足以定名）：Google 检索 \"王宏侃\" 浙江大学附属第一医院，命中易贤网转载的《2016年浙江大学附属第一医院招聘生物技术科目考试大纲》（http://www.ynpxrz.com，2016-01-25，来源标注为浙江大学附属第一医院），其附带的\"2016年浙大一院入围笔试人员名单\"中出现\"王宏侃 男\"。我已打开该页读取全文确认该姓名确在名单内。但该名单是全院各岗位数百人的笔试入围名单，既未写科室、也未写是否录用，因此不满足\"单位+职务+研究方向完全吻合\"的标准。反证性检索：Google \"王宏侃\" +（肠道菌群 OR 便秘 OR 结直肠 OR 外科 OR 医师 OR 肝胆胰）返回 \"did not match any documents\"；单查 \"王宏侃\" 的其他结果全是湖州佳利食品有限公司监事、陕西业余围棋选手、以及起名网站生成的名字，与医学无关。浙大一院官网肝胆胰外科 86 人专家名录中姓王者为王卫利、王冀、王北、王凯冰，无王宏*。按规则留空。",
+    "affiliation": "浙江大学医学院附属第一医院 肝胆胰外科（单位编号 1，RADAR 论文中唯一单位）。历史署名还出现过 Drum Tower Hospital, Medical School of Nanjing University（南京鼓楼医院，见 SciProfiles 作者页与 PMID 28785152）。",
+    "role_title": "未查到公开职称。推断为浙大一院肝胆胰外科的临床/研究型医师，且深度参与早期临床试验（GCP）：他同时出现在两项首次人体/I 期试验的 JCO 摘要上（C-CAR031 GPC3 CAR-T、WBC100 c-Myc 降解剂），这类摘要的中段作者通常是入组与随访的主治层医师。不在医院官网专家名录（该名录只到副主任医师），故职称应低于副主任医师，或为研究序列。属推断。",
+    "education": "未查到。无 ORCID（ORCID expanded-search given-names:Hongkan AND family-name:Wang，num-found=0），无个人主页、无学位论文记录。从发表轨迹可推断其早期（2016–2018）在南京体系（李宁 Ning Li、管文贤 Wen-Xian Guan 的胃肠/结直肠与肠道菌群方向）受过训练，后回到或转入浙大一院肝胆胰外科——但这是从合著网络反推，不是查到的履历。",
+    "career_timeline": "2016-01（线索，未证实同一人）：\"王宏侃\"出现在浙大一院 2016 年公开招聘入围笔试人员名单（易贤网转载院方文件）。\n2016（Nutrients，PMID 27690093）：第 5/9 位，益生菌合生元治疗慢传输型便秘随机对照试验，署名浙大一院，末位作者李宁。\n2017（World Journal of Surgical Oncology，PMID 28069031）：第 3/9 位，结直肠术后 CRP/白蛋白比值预测并发症，署名浙大一院。\n2017（Scientific Reports，PMID 28348415）：第 6/12 位，慢传输型便秘患者粪菌对胃肠动力的调节。\n2018（World Journal of Gastroenterology，PMID 28785152）：署名南京大学医学院附属鼓楼医院，末位作者管文贤，胃癌术后血清白蛋白下降预测短期并发症。\n2018（Current Pharmaceutical Biotechnology，PMID 29804531）：第 4/6 位，肠道菌群-5-羟色胺与胃肠动力综述，末位作者王先法。\n【2019–2023 公开发表空窗期】\n2024（JCO 摘要，JCO.2024.42.16_suppl.4019）：C-CAR031（GPC3 靶向 TGFβRIIDN 装甲自体 CAR-T）晚期 HCC I 期试验，第一作者 Q Zhang（章琦）。\n2025（JCO 摘要）：小分子 c-Myc 降解剂 WBC100 实体瘤首次人体试验。\n2025（npj Precision Oncology，PMID 41238794）：第 17/27 位，CT 影像组学预测肿瘤微坏死。\n2026（Nature，PMID 42457964）：第 9/35 位，GPC3 靶向 dnTGFβRII 装甲 CAR-T 治疗肝细胞癌（即 C-CAR031 的正刊版）。\n2026-09-17（Science，PMID 42752131）：第 21/40 位，RADAR。",
+    "research_focus": "两段截然不同：前期（2016–2018）是胃肠/结直肠外科方向——肠道菌群、慢传输型便秘、术后并发症的炎症指标预测；后期（2024–2026）转入肝胆胰外科的细胞治疗与早期临床试验——GPC3 CAR-T 治疗肝细胞癌、c-Myc 降解剂首次人体试验，并参与肝癌影像组学与 RADAR。贯穿两段的共同点是\"临床试验与队列的执行端\"，不是实验室或算法端。",
+    "key_publications": [
+     "GPC3-specific dnTGFβRII-armoured CAR T cells for hepatocellular carcinoma | Nature 2026 (PMID 42457964) | 第 9/35 位，末位作者梁廷波",
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 2026 | 第 21/40 位",
+     "Phase I study of C-CAR031, a GPC3-specific TGFβRIIDN armored autologous CAR-T, in patients with advanced HCC | Journal of Clinical Oncology 2024 (会议摘要, JCO.2024.42.16_suppl.4019) | 中段作者，第一作者 Q Zhang（章琦）",
+     "Efficacy of Synbiotics in Patients with Slow Transit Constipation: A Prospective Randomized Trial | Nutrients 2016 (PMID 27690093) | 第 5/9 位",
+     "Potential role of fecal microbiota from patients with slow transit constipation in the regulation of gastrointestinal motility | Scientific Reports 2017 (PMID 28348415) | 第 6/12 位"
+    ],
+    "metrics": "无 ORCID。无 Google Scholar 公开主页。Semantic Scholar 作者 id 2108874965：9 篇 / 459 次引用 / h-index 6——这是四人中指标最高的，但要注意引用量主要由 2024 年 JCO 的 C-CAR031 摘要（被引约 70 次）和 2026 Nature 贡献，且早期肠道菌群三篇（Nutrients、Sci Rep、WJG）本身引用不低；S2 把 2016–2018 南京/浙大一院那批与 2024–2026 浙大一院那批合并为同一人，我认为合并正确（姓名极罕见，PubMed 全库只有 8 条），但仍须视为未经独立验证的合并。ResearchGate 页面显示 5 篇 / 61 次引用 / 356 次阅读（口径不同）。",
+    "lineage": "两段师承。前段：南京体系——与葛小龙（Xiaolong Ge）、丁超（Chao Ding）、田宏亮（Hongliang Tian）长期共署，末位作者为李宁（Ning Li，原南京军区总医院/东部战区总医院普通外科研究所，中国肠道微生态与肠衰竭治疗的代表人物）与管文贤（Wen-Xian Guan，南京鼓楼医院普外科），另有一篇末位为王先法（Xianfa Wang）。后段：浙大一院——梁廷波/章琦的肝胆胰外科与细胞治疗团队，与 Cao Chen、Qihan Fu、Yinan Shen、Wanyue Cao 同班底。这条\"李宁肠道微生态 → 梁廷波肝胆胰细胞治疗\"的跨学派迁移是本人档案中最有意思的一点，但迁移的时间与方式（是否读博、是否人才引进）未获直接证据，属推断。",
+    "radar_role": "推断：浙大一院临床侧的病例/评估贡献者，很可能负责与临床试验队列相关的数据整理或临床终点核对。依据：(1) 位次第 21/40，正好处于达摩院算法作者段与外部合作医院段的交界处，前面是 Yingda Xia（达摩院），后面是 Xianghua Ye（浙大一院放疗科）与 Tao Ma（浙大一院肝胆胰外科+新疆兵团一师医院）——即浙大一院本院临床各科段；(2) 他在 RADAR 之外的近期工作全部是浙大一院肝癌病人的临床试验与影像组学，具备病例级数据组织经验。具体分工未获证实（正文 403）。",
+    "panda_overlap": "不在 PANDA（PMID 37985692）作者名单。已逐条核对 36 位作者。与达摩院其他论文重合：仅 RADAR 一篇。与浙大一院内部的重合更紧：他与 Cao Chen 同时出现在 2026 Nature CAR-T（第 8、9 位相邻）、2025 npj Precision Oncology、2026 Science RADAR 三篇上，说明两人是章琦临床班底中配合固定的一对。",
+    "interest_to_shu": "无。方向是肝癌细胞治疗与临床试验执行，与 CT 成像物理、材料分解、光子计数完全不交叉；也没有招募或推荐 Shu 的位置。",
+    "uncertainties": "1）中文名未证实。易贤网 2016 年浙大一院招聘入围名单中的\"王宏侃\"只提供了\"某年某人应聘过该院\"，既无科室也无录用结果，不满足定名标准，故仍标 unknown。若要坐实，需要浙大一院人事公示的拟录用名单、或一篇同时印有中文名与英文拼音的中文期刊论文。\n2）\"2016–2018 的 Hongkan Wang\" 与 \"2024–2026 的 Hongkan Wang\" 是否同一人：我判断是（PubMed 全库仅 8 条该姓名记录，且 2016–2017 三篇的单位就写作浙大一院），但这是合并推断，没有 ORCID 或主页可以锁定。若实际是两个人，其 459 次引用与 h=6 会被高估。\n3）PMID 28785152（WJG 2018）他署名鼓楼医院而非浙大一院，是否属进修/联合培养期间，未证实。\n4）2019–2023 存在约五年的发表空窗，原因未知（可能在读学位、临床规培或未发表英文论文）。\n5）职称、学历、导师、年龄全部未知。\n6）已尝试失败的来源：百度（验证码）、搜狗/DuckDuckGo（验证码）、Bing（本环境返回无关结果）、ORCID 搜索（无记录）、好大夫拼音子域 wanghongkan.haodf.com（404）、浙大一院官网专家名录（无此人）。"
+   }
+  },
+  {
+   "radar_position": 33,
+   "english_name": "Wei Zhang",
+   "chinese_name": "张微",
+   "chinese_name_confidence": "✅ 确认",
+   "paper_affiliations": [
+    "Department of Hepatobiliary and Pancreatic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China.",
+    "Department of General Surgery, The First People's Hospital of Yuhang District, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "浙大一院肝胆胰外科主任医师、肝移植中心副主任；兼良渚分院",
+   "research": {
+    "english_name": "Wei Zhang",
+    "chinese_name": "张微",
+    "chinese_name_confidence": "confirmed",
+    "chinese_name_evidence": "通过\"医院官网中文页 → 其自述代表作 → PubMed 英文署名\"的双向闭环确认，并有第三方报道佐证。\n(1) 浙大一院官网医生页 https://www.zy91.com/department/doctor/74/335 ：\"张微 … 科室：肝胆胰外科；性别：女；最高学历、学位：博士；职称：主任医师；院内职务：肝移植中心副主任 … 浙江大学移植医学硕士生导师 … 美国耶鲁大学移植免疫博士后，从事器官移植临床20年 … 研究方向：肝癌肝移植，肝移植术后胆道并发症，移植感染与排斥\"。该页\"研究成果\"栏由她本人列出：\"Ding J, Xu K, Sun S, Qian C, Yin S, Xie H, Zhou L, Zheng S, **Zhang W**. SOCS1 blocks G1-S transition in hepatocellular carcinoma by reducing the stability of the CyclinD1/CDK4 complex in the nucleus. Aging (Albany NY) 2020;12(4):3962-3975.\" 与 \"**Zhang W**, Fung J. Limitations of current liver transplant immunosuppressive regimens: renal considerations. HBPD INT 2017;16(1):27-32.\"\n(2) 该 Aging 论文 PubMed PMID 32096766 的末位作者英文名正是 **Wei Zhang**，单位 \"Division of Hepatobiliary and Pancreatic Surgery, Department of Surgery, First Affiliated Hospital, School of Medicine, Zhejiang University\" 及郑树森的多器官联合移植重点实验室；HBPD INT 2017 那篇对应 PMID 28119255。即官网中文名\"张微\" ↔ PubMed 英文名 \"Wei Zhang\" 同一单位直接对应。\n(3) RADAR 中该作者的双单位（浙大一院肝胆胰外科 + 杭州市余杭区第一人民医院普外科）由潮新闻报道坐实：https://tidenews.com.cn/news.html?id=3342288 《一家区级医院如何突围？张微与余杭一院的进阶之路》（2026-01-07）：\"2024年5月1日，张微从位于杭州市中心的浙大一院庆春院区出发，向西北驶向良渚 … 作为美国耶鲁大学移植免疫博士后、浙大一院肝脏移植中心副主任 … 来到浙大一院良渚分院（余杭一院）\"、\"摆在医院新任党委书记张微眼前的\"。另有微信公众号文《浙一人在良渚 | 在改革中破浪前行——记余杭一院党委书记张微》（2025-01-07）：\"2024年，浙大一院良渚分院（余杭区第一人民医院）迎来了新的领航者——党委书记张微\"。\n(4) 独立交叉验证：她本人两篇 2026 年通讯作者论文的主题与官网研究方向逐条吻合——PMID 42116830（急诊 ABO 血型不相容肝移植，终点是弥漫性肝内胆道狭窄 ↔ \"肝移植术后胆道并发症\"）与 PMID 41579937（肝移植围手术期毛霉菌病的 mNGS 早期诊断 ↔ \"移植感染\"），两篇她均为末位作者，后者留通讯邮箱 1307018@zju.edu.cn，且合作者中有余杭区第一人民医院的 Jiameng Qi。\n注意：字是\"微\"不是\"伟/玮/巍\"，这一点必须以官网页面为准；同样地本文 Qi Zhang 是\"章琦\"（见官网名录\"章琦 教授、主任医师、博导 / 浙大一院党委副书记\"及网易等中文报道\"梁廷波教授、章琦教授、肖文波教授\"），不是\"张倩\"——正好印证拼音反推不可用。",
+    "affiliation": "浙江大学医学院附属第一医院 肝胆胰外科 / 肝移植中心（单位编号 1）；杭州市余杭区第一人民医院（浙大一院良渚分院）普外科（单位编号 23）。两院为\"区院共建\"、由浙大一院全面托管的关系（潮新闻报道原文）。",
+    "role_title": "浙大一院肝胆胰外科主任医师、肝移植中心副主任、浙江大学移植医学硕士生导师；2024 年 5 月起兼任浙大一院良渚分院（杭州市余杭区第一人民医院）党委书记。女，博士。",
+    "education": "博士（学位授予单位与年份官网未写明）。2004–2006 年美国耶鲁大学医学院血管生理及移植医学专业博士后；2007 年赴法国南特大学医学院附属医院 INSERM 国家重点实验室访问学者。注：耶鲁博后的起止年份与南特访学年份来自第三方平台\"博禾医生\"对医院官网公示信息的转载，浙大一院官网本身只写\"美国耶鲁大学移植免疫博士后\"而未列年份，故年份一项为次级来源。本科/硕士院校与导师姓名均未查到。",
+    "career_timeline": "约 2004/2005 年起：从事器官移植临床（浙大一院官网\"从事器官移植临床20年\"；潮新闻\"此前二十多年里，她是站在'医学塔尖'的人之一\"）。\n2004–2006：美国耶鲁大学医学院，血管生理与移植医学博士后。\n2007：法国南特大学医学院附属医院 INSERM 国家重点实验室访问学者。\n2014：J Hepatol 61:809-815《Safe use of liver grafts from HBsAg positive donors in liver transplantation》第 3 位作者（末位郑树森）——该文已于 2026 年被撤稿（撤稿声明 PMID 42285819）。该 Wei Zhang 是否即张微为推断，见 uncertainties。\n2015：主持浙江省自然科学基金 LY15H160017（活性氧诱导 SOCS1 甲基化在肝细胞癌发生中的机制）。\n2016：Int J Clin Pract 第一作者（外周血 CD4+ 细胞 ATP 活性预测 DCD 肝移植后肝癌复发，末位郑树森）。\n2017：HBPD INT 与 John Fung 合著综述，第一作者（PMID 28119255）。\n2018 起：主持国家自然科学基金面上项目 81773070（ROS-MAPK-SOCS1 通路在肝移植术后肝癌复发中的机制）。\n2020：Aging 通讯作者（PMID 32096766）。\n2024-05-01：离开浙大一院庆春院区，赴良渚，任浙大一院良渚分院（余杭区第一人民医院）党委书记。\n2026-01-07：余杭一院通过浙江省二级甲等综合性医院等级评审。\n2026：International Journal of Infectious Diseases（PMID 41579937）与 Therapeutics and Clinical Risk Management（PMID 42116830）两篇末位/通讯作者论文。\n2026-09-17：Science RADAR，第 33/40 位。",
+    "research_focus": "肝移植临床与移植免疫：肝癌肝移植、肝移植术后胆道并发症、移植感染与排斥；基础侧做 ROS–MAPK–SOCS1 通路与肝癌发生/移植后复发（SOCS1 通过降低核内 CyclinD1/CDK4 复合物稳定性阻断 G1-S 转换）。近两年的实证工作偏向移植术后并发症管理：急诊 ABO 不相容肝移植的利妥昔单抗脱敏疗效与胆道狭窄代价、mNGS 早期诊断肝移植围手术期毛霉菌病。转任区级医院书记后，工作重心明显转向医院管理（制度重塑、创伤/胸痛/卒中三大中心建设、重症前移、党建与下乡义诊）。",
+    "key_publications": [
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 33/40 位（浙大一院肝胆胰外科 + 余杭区第一人民医院普外科双单位）",
+     "Metagenomic next-generation sequencing enables early detection and outcome improvement in perioperative mucormycosis after liver transplantation | International Journal of Infectious Diseases, 2026 (PMID 41579937) | 末位/通讯作者，邮箱 1307018@zju.edu.cn",
+     "Outcome of Emergent ABO-Incompatible Liver Transplantation is Acceptable but at the Cost of Higher Diffuse Intrahepatic Biliary Stricture | Therapeutics and Clinical Risk Management, 2026 (PMID 42116830) | 末位/通讯作者",
+     "SOCS1 blocks G1-S transition in hepatocellular carcinoma by reducing the stability of the CyclinD1/CDK4 complex in the nucleus | Aging (Albany NY) 2020;12(4):3962-3975 (PMID 32096766) | 通讯（末位）作者",
+     "Limitations of current liver transplant immunosuppressive regimens: renal considerations | Hepatobiliary & Pancreatic Diseases International 2017;16(1):27-32 (PMID 28119255) | 第一作者，与 John Fung 合著"
+    ],
+    "metrics": "未查到 ORCID（RADAR 论文中她无 ORCID 标识）、未查到 Google Scholar 公开主页。医院官网自述\"第一作者的文章累计影响因子达 31.347\"（浙大一院官网 doctor/74/335，属自述数据）。Semantic Scholar 作者 id 2267067869 显示 19 篇 / 58 引用 / h=4，但该条目严重污染——混入了土壤微生物、非小细胞肺癌、基因编辑猪异种移植等完全无关的 Wei Zhang 论文，**不可使用**。基金：国家自然科学基金面上项目 81773070、浙江省自然科学基金 LY15H160017（均为主持，官网列出）。学术任职：中华医学会器官移植分会移植感染学组委员、围手术管理学组委员；中国医师协会器官移植分会移植管理委员会秘书长兼委员。",
+    "lineage": "浙大一院郑树森院士的肝移植谱系。证据：她的第一作者与通讯作者论文中多次以郑树森（Shusen Zheng）为末位作者（Int J Clin Pract 2016、Aging 2020），并共同署名卫生部多器官联合移植研究重点实验室、中国医学科学院器官移植诊治重点实验室等郑树森体系的平台；同期共署者包括叶于富、耿磊、严盛、王伟林、周琳、谢海洋等浙大一院移植核心成员。海外一支：美国耶鲁大学移植免疫博士后（2004–2006），并与 John Fung（美国移植外科名家、原克利夫兰诊所/芝加哥大学）合作发表免疫抑制方案综述。目前在梁廷波—章琦主政的浙大一院体系内，并被派往托管的区级医院任党委书记。跟随迁移：2024 年 5 月从庆春院区迁至良渚分院。",
+    "radar_role": "推断：RADAR 外部验证网络中\"区级医院节点\"的负责人与接口。三条依据：(1) 她是全文唯一同时挂浙大一院肝胆胰外科与余杭区第一人民医院普外科的作者，而余杭一院正是浙大一院全面托管的良渚分院；(2) 作者位次第 33/40，正落在论文后段的外部合作医院集群（嘉兴、绩溪、景宁、嵊州、海宁、安吉、北仑等县市级医院）之中，其定位与该段其他基层医院作者一致；(3) 她本人是该院党委书记，具备调动本院影像/病例数据与组织院内验证的行政权限。她不太可能参与算法或标注细节——她的全部学术产出都是移植临床。具体分工论文正文未获取（science.org 403），未证实。",
+    "panda_overlap": "不在 PANDA（Nat Med 2023, PMID 37985692）作者名单。已逐条比对全部 36 位作者，PANDA 中的浙大一院作者只有 Qi Zhang（章琦）与 Tingbo Liang（梁廷波）。与达摩院其他论文的重合：无，RADAR 是她与达摩院体系的唯一交集。",
+    "interest_to_shu": "基本无，但是四人中唯一有一点条件性价值的。她不做成像物理、不做定量 CT，不可能提供博后位置，方向上与材料分解/光子计数/冠脉周围脂肪零交集。可能的价值只在一种假设情境下成立：若 Shu 将来需要中国侧的临床 CT 数据或一个可落地的多中心验证站点，她作为托管型区级医院的党委书记 + 浙大一院主任医师，是\"数据与场地的行政入口\"型人物，而非学术合作者。以 Shu 2026 年 9 月毕业找工作/博后的当前目标衡量，优先级应判为最低，不建议投入联系成本。",
+    "uncertainties": "1）中文名\"张微\"我判定为 confirmed，但要写清推理链条：官网中文页(张微) → 其自认代表作 Aging 2020 与 HBPD INT 2017 → PubMed 对应论文的英文署名 Wei Zhang 且单位一致（这一步是直接的英文名↔中文名对应）；再由\"浙大一院肝胆胰外科 + 余杭区第一人民医院\"双单位 + 她本人 2026 年两篇末位作者论文的主题与官网研究方向逐条吻合，推定 RADAR 中的 Wei Zhang 即她。最后一跳（RADAR 那位就是她）仍是推断而非直接见证，残余风险来自\"Wei Zhang\"是极高频重名、且浙大一院肝胆胰外科有 9 个病区 340 余张床位、人员众多。若要 100% 坐实，需要 Science 原文的作者单位脚注或中文通稿逐一列名。\n2）耶鲁博后年份（2004–2006）与南特访学年份（2007）来自第三方平台\"博禾医生\"转载医院官网，我未能在 zy91.com 页面上直接读到这两个年份，属次级来源。\n3）2014 年 J Hepatol 那篇于 2026 年被撤稿（PMID 42285819，撤稿声明作者依次为 Songfeng Yu、Jun Yu、Wei Zhang、Longyu Cheng、Yufu Ye、Lei Geng、Zhiyong Yu、Sheng Yan、Lihua Wu、Weilin Wang、Shusen Zheng）。其中第 3 位 Wei Zhang 是否即张微，我未获直接证据——单位（浙大一院肝胆胰外科）与时间窗吻合、她当时确在郑树森团队，因此\"很可能是同一人\"属推断，**不应作为已证实的事实使用**；撤稿原因我也未核查。\n4）\"1307018@zju.edu.cn\" 是浙大工号邮箱，我未能独立验证其归属（百度搜该邮箱只返回浙大邮件系统首页）；它与张微的对应是靠论文单位与主题推得。\n5）她是否在 RADAR 之外参与过任何影像 AI 工作：未查到，推测无。\n6）性别为女（官网\"性别：女\"、潮新闻用\"她\"），与常被默认的男性外科医生形象不同，记录以免后续误用。\n7）本次调查的检索环境限制：WebSearch 预算在开始前已耗尽；百度与搜狗在若干次查询后触发滑块/点字验证码（按规则未尝试破解）；Bing 在本环境返回的是与查询完全无关的结果（德国市政、洛杉矶社区学院），不可用；DuckDuckGo HTML/lite 端点均返回验证挑战；百度学术返回空页；science.org 返回 403。最终可用的检索通道是 Google（浏览器）、浙大一院官网及其 AJAX 接口、PubMed E-utilities、ORCID 公开 API、Semantic Scholar Graph API、潮新闻与易贤网页面。"
+   }
+  }
+ ],
+ "verify": {
+  "name_verdict": "confirmed",
+  "corrected_chinese_name": "张微",
+  "name_evidence": "独立重查，结论与原调查一致：RADAR 第 33/40 位作者 Wei Zhang（单位 1 浙大一院肝胆胰外科 + 单位 23 杭州市余杭区第一人民医院普外科）= 张微。证据链有四条互相独立的支点，且关键的\"余杭\"这一环是原调查没有给出的（原文被截断，我无法看到其后半段，故按全新调查处理）：\n\n(1) 浙大一院官网医生库（AJAX 接口，我本人抓取）https://www.zy91.com/content/get_doctor?page=1&cid=60&cur=15&dept_id=5 —— 肝胆胰外科全科 86 人名单中，姓张者为 张珉/张微/张匀/张文瑾/张宇/张骋/张维晨/张晓雨，其中唯一拼音为 \"Zhang Wei\" 的是\"张微\"。其记录原文：{\"title\":\"张微\",\"dept_id\":\"5\",\"sex\":2,\"xuexi\":\"博士\",\"zhicheng\":\"主任医师\",\"zhiwu\":\"肝移植中心副主任\",\"content\":\"浙江大学移植医学硕士生导师，主任医师，浙江大学附属第一医院肝脏移植中心副主任，美国耶鲁大学移植免疫博士后，从事器官移植临床20年…\"}。\n\n(2) 同一官网页面的\"研究成果\"栏由她本人自述，直接给出中文名↔英文署名的闭环：「Zhang W, Zhong H, Zhuang L, Yu J, Xu X, Wang W, Zhang M, Zhou L, Zheng S. Peripheral blood CD4(+) cell ATP activity measurement to predict HCC recurrence post-DCD liver transplant. Int J Clin Pract 2016」以及「Ding J, … Zhou L, Zheng S, Zhang W. SOCS1 blocks G1-S transition in hepatocellular carcinoma… Aging (Albany NY) 2020」。即\"张微\"在英文文献中签作 Zhang W / Wei Zhang，末位作者位、郑树森体系。\n\n(3) 决定性的一环——\"余杭\"。百度检索 https://www.baidu.com/s?wd=%E4%BD%99%E6%9D%AD%E4%B8%80%E9%99%A2%20%E5%85%9A%E5%A7%94%E4%B9%A6%E8%AE%B0%20%E5%BC%A0%E5%BE%AE%20%E8%82%9D%E7%A7%BB%E6%A4%8D 返回三条彼此独立的中文来源：\n   · 杭州市余杭区人民政府站（2024-11-06，《杭州市余杭区第一人民医院(浙大一院良渚分院)》）院领导名单原文：「张微 党委书记／张磊 院长、党委副书记／张建峰 党委副书记、副院长…」；\n   · 余杭一院公众号（2025-01-07）《浙一人在良渚 | 在改革中破浪前行——记余杭一院党委书记张微》原文：「2024年，浙大一院良渚分院(余杭区第一人民医院)迎来了新的领航者——党委书记张微。」标题\"浙一人在良渚\"直接点明其浙大一院出身；\n   · 余杭一院公众号（2026-01-09）《一家区级医院如何突围？张微与余杭一院的进阶之路》原文：「2024年5月1日，张微从位于杭州市中心的浙大一院庆春院区出发，向西北驶向良渚，这是她职业生涯…」。\n   这三条把\"浙大一院肝胆胰外科\"与\"余杭区第一人民医院\"这一对单位在同一个人身上锁死，正是 RADAR 单位 1+23 的组合。\n\n(4) 交叉验证英文署名与该身份：PubMed 41579937（Int J Infect Dis 2026，肝移植围术期毛霉病的 mNGS 早期检测）中 Wei Zhang 为末位通讯作者，邮箱 1307018@zju.edu.cn，单位\"Department of Hepatobiliary and Pancreatic Surgery … ; Liver Transplant Center, the First Affiliated Hospital, Zhejiang University School of Medicine\"；PubMed 42116830（Ther Clin Risk Manag 2026，急诊 ABO 血型不合肝移植）同样是 Wei Zhang 末位、同一双单位。主题（肝移植术后并发症）与\"肝移植中心副主任、擅长肝移植围手术期管理与术后并发症\"完全吻合。\n\n补充履历（来自 99健康网/有来医生/妙手医生转载的官网公示，三站一致）：张微，女，1994.9–1999.6 浙江大学医学院临床医学 MD；2002.9–2007.6 浙江大学医学院 PhD；2004.1–2006.1 美国耶鲁大学医学院血管生理及移植医学；2007.4–2007.6 法国南特大学 INSERM 访学。主持 NSFC 面上 81773070、浙江省自然科学基金 LY15H160017。中国医师协会器官移植分会移植管理委员会秘书长兼委员、中华医学会器官移植分会移植感染学组委员。\n\n说明：受本环境限制，余杭区政府页与微信公众号页无法直接打开（浏览器对 yuhang.gov.cn / mp.weixin.qq.com 的导航被拒，WebFetch 对 yuhang.gov.cn 超时），(3) 的三条均为百度结果页上的标题+摘要原文。但三条来源彼此独立（政府站／医院公众号两篇／余杭时报数字报 2025-08-19「余杭一院党委书记…院党委书记张微的身影准时出现在办公室」），且与 (1)(2)(4) 完全自洽，我认为足以判 confirmed。若要做到\"打开原始页面\"级别的硬证据，需要人工访问 yuhang.gov.cn 的医院概况页。",
+  "identity_collision_risk": "存在，而且是本批四人中最高的，但可被\"肝胆胰外科 + 余杭一院\"这一对单位唯一解开。\n\n已查实的同名异人：\n1. **张伟，主治医师，口腔专业，杭州市余杭区第一人民医院**（百度健康医生卡片，\"医师执业证1203****71，平台已验证，医生简介：2006.8月参加工作，从事口腔专业\"）。此人在 PubMed 上正是以 **Wei Zhang** 署名：PMID 42181670（Cytotechnology 2026，桔梗提取物抗牙周炎），单位 \"Department of Stomatology, The First People's Hospital of Yuhang District, Hangzhou, 311100 China\"。**这是与 RADAR 单位 23 字面完全相同的另一个 Wei Zhang**——如果只凭\"余杭区第一人民医院 + Wei Zhang\"去反查，极可能抓错人。区分点：RADAR 的 Wei Zhang 写的是普外科(General Surgery)且同时挂浙大一院肝胆胰外科；口腔科那位只挂余杭一院。\n2. **张薇，博士，副主任医师，西湖大学医学院附属杭州市第一人民医院产科副主任**（百度结果）——拼音亦作 Wei Zhang / Zhang Wei，杭州同城，须排除。\n3. PubMed `Yuhang[Affiliation] AND Zhang W[Author]` 返回 27 条、`\"Yuhang\"[Affiliation] AND \"Zhang Wei\"[Author]` 返回 13 条，横跨口腔、普外、药剂、中医多个科室，绝不可用姓名计数做任何指标。\n4. PMID 42463581（Cell Death Differ 2026）中的 Wei Zhang 属南京中医药大学，与本人无关。\n5. 反向检查：PANDA（PMID 37985692）36 位作者中**没有任何 Wei Zhang**（我用本地 XML 全量列出核对过：Kai Cao…Qi Zhang, Tingbo Liang, Ling Zhang, Jianping Lu），所以不存在\"把 PANDA 的 Zhang 缝进来\"的风险。\n6. 浙大一院肝胆胰外科 86 人名单中另有 张匀(Zhang Yun)、张宇(Zhang Yu)、张骋、张维晨、张晓雨、张文瑾、张珉——拼音均不与 Zhang Wei 冲突，故\"科室内唯一 Zhang Wei = 张微\"成立。唯一残余缺口：该名单未必包含住院医师层级的人（它确实收了主治医师沈艺南、副主任护师卞丽芳、副主任技师邓壮，所以覆盖面比原调查以为的宽，但仍不保证穷尽）。不过由于 RADAR 的第二单位\"余杭一院\"已被中文来源独立锁定到张微，这个缺口不影响结论。",
+  "factual_errors": [
+   "【丁浩南 uncertainties #2，伪造的矛盾】原调查称\"PubMed 原始 XML 把 EqualContrib 标在第 1–6 位（含丁），而本任务提供的作者行只在前 5 位标了 #\"，并据此列为待核冲突。实际上任务给出的作者行写的是「…Wanxing Chang # 4 5, Haonan Ding # 1, Cao Chen 1…」——丁浩南**带 # 号**。PubMed XML（/Users/shunie/Developer/damo-radar-research-map/data/pubmed-42752131.xml，我已复核：第 1–6 位 EqualContrib=\"Y\"）与作者行完全一致，共同第一作者就是 6 位。此\"口径冲突\"不存在，应从 uncertainties 中删除。",
+   "【丁浩南 key_publications，事实错误】称丁浩南是 RADAR 共一中\"唯一来自临床侧的共一\"。错：共一第 1 位 Qi Zhang（章琦）单位就是浙大一院肝胆胰外科 + 浙江省胰腺疾病重点实验室 + 教育部胰腺疾病国际合作联合实验室，同属临床侧。正确表述是：6 位共一中有 2 位来自浙大一院临床侧（章琦、丁浩南），4 位来自达摩院/湖畔/浙大计院体系。",
+   "【陈操 role_title + 王宏侃 role_title，前提错误】两人的职级推断都建立在\"浙大一院官网专家名录只收录副主任医师及以上，共 86 人\"这个前提上。该前提是错的：我抓取的同一份 86 人名单里包含 **沈艺南 主治医师**、**卞丽芳 副主任护师**、**邓壮 副主任技师**、**马思聪 百人计划研究员**、**吴奇 研究员**、**徐敏 \"百人计划\"研究员（临床医学）**。名单并非\"副高及以上\"门槛，因此\"不在名单 → 必为研究生或在培医师\"这条推理链失效，陈操与王宏侃的职级推断需降级为纯粹未知。",
+   "【王宏侃 career_timeline，年份错误】把 PMID 28785152 记为 2018 年。PubMed 记录为 World J Gastroenterol **2017**（我用 efetch 复核：<PubDate><Year>2017</Year>，7 位作者）。",
+   "【王宏侃 career_timeline + uncertainties #3，单位归属无依据】称他在 PMID 28785152 上\"署名南京大学医学院附属鼓楼医院\"。该文 PubMed/EuropePMC 只收录了首条单位字符串，其原文为「Zhi-Jian Liu, Shi-Chao Ai, Feng Sun, Li Chen, Wen-Xian Guan, Department of Gastrointestinal Surgery, Nanjing Drum Tower Hospital…」——**这串字符明确只把 Liu ZJ、Ai SC、Sun F、Chen L、Guan WX 五人列为鼓楼医院，Ge XL 与 Wang HK 两人被排除在外**。PubMed 把首条 affiliation 挂给了全部作者，这是索引假象，不是证据。因此\"他曾署名鼓楼医院\"以及由此推出的\"进修/联合培养\"整条线索目前没有依据，须撤回或改为\"单位不详，需查 WJG 原文的完整作者单位表\"。"
+  ],
+  "unsupported_claims": [
+   "【丁浩南 radar_role】\"负责临床数据/报告标注与临床评估环节\"——仅由作者位次与既往论文主题倒推，Science 正文与作者贡献声明未获取（science.org 403）。原文已自标\"推断\"，但 key_publications 与 interest_to_shu 里又当成事实使用（\"唯一来自临床侧的共一\"）。",
+   "【丁浩南 lineage】\"章琦门下的在读研究生\"——纯合著网络倒推，无任何官方导师页、研究生名录或学位论文佐证。ORCID 的 educations 段为空这一点原文已承认。",
+   "【陈操 radar_role】\"浙大一院临床侧的数据/标注贡献者\"——同上，位次+既往主题倒推，无正文依据。",
+   "【陈操 uncertainties #5】\"Nature CAR-T 论文中的 Cao Chen 与 RADAR 中的 Cao Chen 是同一人\"——依据只是单位字符串相同。我复核 PMID 42457964 第 8 位 Cao Chen 单位确为浙大一院肝胆胰外科 + MOE 联合实验室，与 RADAR 一致；这条合并可信度高，但仍属推断而非确认，原文的标注是恰当的。",
+   "【王宏侃 metrics】Semantic Scholar 作者 id 2108874965 的 \"9 篇 / 459 次引用 / h-index 6\"，以及\"2024 年 JCO 的 C-CAR031 摘要被引约 70 次\"——没有给出 S2 API 的调用 URL 或返回值；且该指标建立在\"2016–2018 的 Hongkan Wang 与 2024–2026 的 Hongkan Wang 是同一人\"这个未经验证的合并上（原文 uncertainties #2 已承认）。注：我查 PubMed `\"Wang Hongkan\"[Author]` 仅 7 条（42752131, 42457964, 41238794, 29804531, 28348415, 28069031, 27690093），加上以 Wang HK 索引的 28785152 共 8 条，与原文\"全库只有 8 条\"吻合。",
+   "【王宏侃 lineage】\"李宁肠道微生态 → 梁廷波肝胆胰细胞治疗\"的跨学派迁移叙事，以及\"这类摘要的中段作者通常是入组与随访的主治层医师\"这一职级推断——全部来自合著网络与经验假设，无履历文件。且该叙事的起点（他在南京受训）依赖上面已被推翻的\"署名鼓楼医院\"。",
+   "【王宏侃 education】\"早期（2016–2018）在南京体系受过训练，后回到或转入浙大一院\"——同上，且与事实相反的证据是：2016 Nutrients（27690093）、2017 WJSO（28069031）、2017 Sci Rep（28348415）三篇他署名的就是浙大一院，说明他从一开始就在杭州，\"南京受训后回浙江\"的方向可能是反的。",
+   "【丁浩南 metrics / 陈操 metrics】Semantic Scholar 作者 id 2343286910、2218499096 的篇数/引用/h-index，同样未附 API URL；原文已正确指出这两个 S2 条目混入了同名异人，但既然判定不可用，就不应再把数字写进 metrics 正文。"
+  ],
+  "additions": "[\"【最重要的一条：余杭区第一人民医院 = 浙大一院良渚分院】百度百科与杭州市余杭区人民政府站均载：「杭州市余杭区第一人民医院（浙江大学医学院附属第一医院良渚分院）位于杭州市余杭区良渚街道康良街1260号，是浙江大学医学院附属第一医院与余杭区政府合作共建的三级综合性医院……核定床位600张」。也就是说，RADAR 的单位 23 并不是一家独立的外院，而是浙大一院自己的合作共建分院，且院党委书记正是从浙大一院庆春院区派驻过去的本文作者张微本人（2024-05-01 上任）。这对论文\\\"多中心外部验证\\\"的独立性是实质性的削弱，应当写进调查正文。\", \"【同一模板不止余杭一家】RADAR 里带\\\"浙大一院 + 外院\\\"双单位的另一位是第 23 位 Tao Ma（马涛，浙大一院肝胆胰外科 + 新疆生产建设兵团第一师医院普外科）。马涛同样在浙大一院肝胆胰外科 86 人名录中（主任医师）。即外部站点的对接人普遍是浙大一院派出/挂职的自己人，而不是当地医院原生团队。这一条可以和余杭那条合起来写成\\\"外部中心的独立性\\\"小节。\", \"【张微在 RADAR 之外的独立学术身份】她是 2026 年两篇浙大一院肝移植论文的末位通讯作者：PMID 41579937（Int J Infect Dis，肝移植围术期毛霉病 mNGS）通讯邮箱 1307018@zju.edu.cn；PMID 42116830（Ther Clin Risk Manag，急诊 ABO 血型不合肝移植）。两篇的共同作者含金鹏波(Pingbo Jin)、张运涛(Yuntao Zhang)，以及一位署名余杭一院药剂科的 Jiameng Qi——后者是浙大一院↔余杭一院人员流动的又一个旁证。\", \"【张微完整履历】女；1994.9–1999.6 浙江大学医学院临床医学 MD；2002.9–2007.6 浙江大学医学院 PhD；2004.1–2006.1 美国耶鲁大学医学院血管生理及移植医学；2007.4–2007.6 法国南特大学医学院 INSERM 国家重点实验室访问学者；现任浙大一院肝胆胰外科主任医师、肝脏移植中心副主任、浙江大学移植医学硕士生导师；2024-05-01 起任余杭一院（浙大一院良渚分院）党委书记。主持 NSFC 面上项目 81773070（ROS-MAPK-SOCS1 通路在肝移植术后肝癌复发中的机制）、浙江省自然科学基金 LY15H160017。学会职务：中国医师协会器官移植分会移植管理委员会秘书长兼委员、中华医学会器官移植分会移植感染学组委员、围手术管理学组委员。研究主线是肝移植免疫与术后并发症（SOCS1/ROS、移植感染与排斥、胆道并发症），**完全不碰成像物理/重建/能谱**。\", \"【她不是\\\"实验室负责人\\\"但确是一院之长级人物】原调查若按\\\"外院中层医生\\\"定位会低估她：她是余杭一院的党委书记（一把手级），同时是浙大一院硕导。在 RADAR 的作者序列里她排第 33 位，属于\\\"站点负责人\\\"而非\\\"干活的人\\\"，这一点对理解 RADAR 的组织方式有意义。\", \"【RADAR 元数据复核（本地 XML）】Science 393(6817):eaec6129，DOI 10.1126/science.aec6129，电子出版 2026-09-17，作者 40 位，EqualContrib=\\\"Y\\\" 标在第 1–6 位。Wei Zhang 为第 33/40 位，双单位 1+23。以上均与原调查一致。\", \"【一处应当自查的履历矛盾】浙大一院官网与各医疗聚合站同时写着\\\"2002.9–2007.6 浙江大学医学院 PhD\\\"和\\\"2004.1–2006.1 美国耶鲁大学……博士后\\\"。博士后不可能早于博士学位，耶鲁那两年实质上应是博士期间的联合培养/访问研究，\\\"耶鲁移植免疫博士后\\\"是她本人简历里的说法。若调查报告要写这一句，须原样引用并标明是自述，不要当成已核实的学历。\", \"【职称口径打架】妙手医生页把她写作\\\"副主任医师\\\"，浙大一院官网与 99健康网写\\\"主任医师\\\"。以官网为准（主任医师），聚合站信息滞后。\"]",
+  "notes": "【核查范围说明】本次给我的 JSON 在 Wei Zhang 条目的 chinese_name_evidence 处被截断（止于\"(1) 浙大一院官网\"），因此我对 Wei Zhang 采取的是**从零独立重查**而非逐句比对；结论与原调查给出的名字（张微）一致，且我补上了原调查可能缺失的\"余杭\"那一环。对丁浩南/陈操/王宏侃三人，我做的是抽查式证伪，未逐条重跑。\n\n【我复核过并未找到反证的项】\n- 丁浩南、陈操、王宏侃三人中文名\"查不到\"的判断：我认同留空。我额外验证了浙大一院肝胆胰外科 86 人名录中确实没有\"丁浩*\"（只有丁超峰）、没有\"陈操\"（姓陈者为陈康杰、陈琦、陈荣高、陈怡文、陈伟）、没有\"王宏*\"（姓王者为王卫利、王冀、王北、王凯冰）。三条\"未找到反证\"。\n- PANDA 作者名单：我用本地 /Users/shunie/Developer/damo-radar-research-map/data/pubmed-37985692-panda.xml 全量列出 36 位作者复核，四人均不在内，浙大一院侧只有 Qi Zhang 与 Tingbo Liang。原调查正确。\n- 作者位次：丁浩南 6/40、陈操 7/40、王宏侃 21/40 与 PMID 39878177（陈操 12/33、丁浩南 13/33）、41238794（陈操 5/27、丁浩南 8/27、王宏侃 17/27）、41748561（丁浩南 13/21）、42457964（陈操 8/35、王宏侃 9/35）我全部用 eutils efetch 逐条数过，**全对**。这部分原调查很扎实。\n- 余杭一院普外科在 PubMed 上的既有作者是任杭军(Hangjun Ren)、高山(Shan Gao)、朱冬杰、朱建、沈连强、朱明、任雪峰、杨一斐、刘永红等，其中没有任何 Wei Zhang——进一步说明 RADAR 里那条余杭普外科署名是\"派驻/挂职\"性质，而非当地常驻发表者。\n\n【方法上的坑，供下一轮参考】\n- 本会话 WebSearch 配额（200 次）已耗尽；Bing（curl 与 WebFetch 都返回完全无关的 Chrome 下载页）、DuckDuckGo（验证码）、curl 直连百度（返回空）全部不可用。**唯一可用的中文检索通道是浏览器面板 navigate 到 https://www.baidu.com/s?wd=... 再 get_page_text**，这条路很稳，原调查报告的\"百度触发验证码\"在浏览器面板里并不成立。建议把这条写进项目的工具笔记。\n- 浏览器面板对 yuhang.gov.cn、mp.weixin.qq.com、baidu.com/link?url=... 的导航会被拒，所以拿不到真实落地页 URL，只能引用百度结果页的标题+摘要原文。这是本次证据的唯一弱点。\n- 浙大一院官网的医生 AJAX 接口 https://www.zy91.com/content/get_doctor?page=N&cid=60&cur=15&dept_id=5 （dept_id=5 为肝胆胰外科）可直接 curl，返回含 sex/xuexi/zhicheng/zhiwu/自述代表作的完整 JSON，是本次最有价值的硬来源，建议把抓到的 86 人全量 JSON 存进 data/raw/ 做长期依据。\"]"
+ }
+}

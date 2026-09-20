@@ -115,6 +115,15 @@ RADAR 的 60 条正文参考文献（Crossref 取，52 个 DOI 逐条解析 + 8 
 **另一方面，** RADAR 作者 Jianfeng Zhang 与 **Ke Yan、Le Lu 在 Med-Query 上直接共同署名**。所以"RADAR 团队 ↔ DeepLesion 作者"不是间接的人员流动，是直接的共同发表。
 → 只不过这条通向**达摩院内部**，不通向多伦多。
 
+### 达摩院有自己的"可提示 3D 分割"：CT-SAM3D
+
+MedSAM2 要解决的那个问题，达摩院内部有一套自己的答案：**CT-SAM3D**（*Towards a Comprehensive, Efficient and Promptable Anatomic Structure Segmentation Model using 3D Whole-body CT Scans*，arXiv 2403.15063，AAAI 2025）。1204 例 CT、107 个全身解剖结构，点提示的 3D 分割；代码 [`alibaba-damo-academy/ct-sam3d`](https://github.com/alibaba-damo-academy/ct-sam3d)，Apache-2.0。
+
+作者：**Heng Guo**（一作）、**Jianfeng Zhang**、Jiaxing Huang、**Tony C. W. Mok**、Dazhou Guo、Ke Yan、吕乐、Dakai Jin、Minfeng Xu。
+==第二、第四作者就是 RADAR 的 #37 和 [#19](../members/19-tony-c-w-mok.md)；一作 Heng Guo 就是 ② 那条人事链的中间人。==
+
+所以"RADAR 为什么不用 MedSAM"有一个更简单的解释：做 RADAR 的这批人手里有自己的同类模型，而 RADAR 的流水线又根本不需要可提示分割（见 ⑦）。
+
 ### 顺带澄清一个极易混淆的点
 
 达摩院自己有一个叫 **SAM** 的东西：**Self-supervised Anatomical eMbedding**（IEEE TMI 2022，`alibaba-damo-academy/self-supervised-anatomical-embedding-v2`）。

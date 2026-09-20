@@ -7,7 +7,7 @@
 - **论文单位**：Australian Institute for Machine Learning, Adelaide University（论文单位 9；全篇只给了这一条，没给达摩院）
 - **现职**：Adelaide University AIML **博士生**。导师两位，V3ALab 个人页原文写明 "Under the supervision of A/Prof. Qi Wu and Dr. Yutong Xie" —— 即 [吴琦](14-qi-wu.md)（#14）与 [谢雨彤](12-yutong-xie.md)（#12），两人都在 RADAR 作者表里
 - **背景**：
-  - 2021 Adelaide 电气与电子工程（Autonomous Systems）荣誉学士；2023 同校人工智能与机器学习硕士；2022 获 Executive Dean's Recognition of Academic Excellence（以上四条均出自 V3ALab 官方个人页）
+  - 2021 Adelaide 电气与电子工程（Autonomous Systems）荣誉学士；2023 同校人工智能与机器学习硕士；2022 获 Executive Dean's Recognition of Academic Excellence（以上均出自 V3ALab 官方个人页）
   - 2023：随 RoboBreizh 队在法国波尔多拿下 **RoboCup@Home SSPL 世界冠军**；同年 RoboNLU（RoboCup 2023）**第一作者**
   - 2024-04 起转医学视觉-语言：PairAug（CVPR 2024，第 3 位，与谢雨彤、夏勇、吴琦同文）
   - 2025-01 起连续三篇的署名单位**直接写 DAMO Academy**（fVLM 里单位栏只有达摩院一条，无 Adelaide）：fVLM、Boosting Vision Semantic Density（ANM）、放射报告生成的强化学习（2026-03，同篇有 Zilin Lu、曹维维、Wanxing Chang、夏勇、[张灵](39-ling-zhang.md)、[张建鹏](02-jianpeng-zhang.md)）——达摩院实习或访问身份「推断」

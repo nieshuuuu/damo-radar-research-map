@@ -1,0 +1,209 @@
+{
+ "batch": "达摩院初级研究员 A",
+ "people": [
+  {
+   "radar_position": 4,
+   "english_name": "Zilin Lu",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China."
+   ],
+   "settled_role": "**西工大计算机学院在读博士**，达摩院实习。共一。ORCID 教育栏写 NWPU",
+   "research": {
+    "english_name": "Zilin Lu",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "查不到任何中文权威来源把\"Zilin Lu\"与具体汉字对应。已检索：(1) 西北工业大学教师个人主页 https://teacher.nwpu.edu.cn/yongxia.html —— 服务器对非浏览器请求返回 HTTP 412，浏览器渲染为空白，无法读取夏勇主页上的学生名单；(2) 西工大 pure 科研门户 https://pure.nwpu.edu.cn —— 被 Cloudflare 人机验证拦截（按规则不做验证码）；(3) 百度中文检索多组关键词（\"夏勇 西北工业大学 博士生 医学视觉问答\"、\"夏勇 课题组 成员 博士生 名单\"、\"西工大 夏勇 MICCAI 2023 病理图像 弱监督\"）—— 只检索到该组其他学生的中文名（廖泽慧、胡诗帅、叶艺文、陈梓杨、贾灏哲、白晓宇、张建鹏、陈嘉艺、潘永生），没有任何一条把他们与 Zilin Lu 这个拼音挂钩；(4) 西工大新闻网/计算机学院新闻（中国青年报、澎湃转载）同样只有中文名、没有英文对照；(5) 中文专利检索未命中。按硬性规则，拼音反推（陆子琳/卢子林/鲁子霖…）属于错误做法，故留空。可确认存在性的英文证据：Google Scholar 个人页 https://scholar.google.com/citations?user=ngPgM1QAAAAJ 原文\"Zilin Lu · Northwestern Polytechnical University · Verified email at mail.nwpu.edu.cn · computer vision, medical image analysis\"；OpenReview 档案 ~Zilin_Lu2 原文\"PhD student, School of Computer Science and Engineering, Northwest Polytechnical University\"，确认邮箱 @mail.nwpu.edu.cn。",
+    "affiliation": "论文署名：Alibaba DAMO Academy（阿里巴巴达摩院，杭州）+ Department of Radiology, Ningbo No. 2 Hospital（宁波市第二医院放射科）。真实学术归属：西北工业大学计算机学院（School of Computer Science and Engineering, NWPU），夏勇教授课题组博士生。ORCID 0000-0003-2437-283X 的 education 条目只有一条：Northwestern Polytechnical University。",
+    "role_title": "西北工业大学计算机学院在读博士研究生；在达摩院医疗 AI 团队实习（arXiv:2603.04022 脚注原文：\"The work was done during Zilin's internship at DAMO Academy.\"）。RADAR 论文中带 † 标记，属于 6 位共同第一作者之一（作者第 4 位）。",
+    "education": "博士：西北工业大学计算机学院，导师夏勇（Yong Xia，1978年7月生，西工大长聘教授、博导、原计算机学院副院长，现人工智能学院，邮箱 yxia@nwpu.edu.cn，国家级青年人才）。入学年份未查实——最早以西工大署名的论文是 MICCAI 2022 workshop 的 M²F（第一作者），推断入学不晚于 2021—2022 年（推断）。本科/硕士院校未查到可靠证据。注意：OpenAlex 把一位华南理工大学脑机接口方向的 Zilin Lu（与周亚军、李远清合作，IEEE TNSRE 2023、ICARCV 2022）和一位航空航天方向的 Zilin Lu（AIAA Scitech 2021，与 Borja Martos 合作）合并进了同一个作者 ID A5100647576；但本人 Google Scholar 页面（15 篇）完全不含这些论文，因此判定为 OpenAlex 的同名合并错误，不能据此认定他本科在华南理工。",
+    "career_timeline": "2022：MICCAI MMMI workshop 发表 M²F（第一作者，西工大署名），这是可确认的最早论文。2023：CVPR 2023 PEFAT（第 3 作者）。2024：MICCAI 2024 两篇（Spot the Difference 第一作者；Reciprocal Collaboration 第 2 作者）。2024—2025：IEEE TMI 连发多篇（Consistency-Guided Differential Decoding、Segment Together、Bridging the Semantic Gap 第一作者、Harnessing Text Insights）、IJCV 2025 PICK、JBHI 2025 PathBot。2026：IEEE TIP（Decoupling Target Semantics）；arXiv:2603.04022 第一作者（达摩院实习期间完成的放射报告生成强化学习工作）；2026-09-17 Science RADAR 共同第一作者。达摩院实习起止时间未查到（unknown）。",
+    "research_focus": "半监督/弱监督医学图像分割与分类、医学视觉问答（Medical VQA）、视觉—语言对齐、放射报告生成的强化学习。从 2022 年的多模态胶质瘤诊断预后，到 2024—2025 年以文本为锚点的分割与 VQA，再到 2026 年的报告生成 RL，主线是\"用文本/语言信号去补医学影像标注的不足\"——这正好是 RADAR 的方法论内核。",
+    "key_publications": [
+     "Bridging the Semantic Gap in Medical Visual Question Answering With Prompt Learning | IEEE Transactions on Medical Imaging 2025 | 第 1 作者（被引 15）",
+     "Spot the Difference: Difference Visual Question Answering with Residual Alignment | MICCAI 2024 (LNCS) | 第 1 作者（被引 17）",
+     "M²F: A Multi-modal and Multi-task Fusion Network for Glioma Diagnosis and Prognosis | MICCAI MMMI Workshop 2022 | 第 1 作者（被引 13）",
+     "Rethinking the Efficiency and Effectiveness of Reinforcement Learning for Radiology Report Generation | arXiv:2603.04022, 2026 | 第 1 作者（达摩院实习成果，通讯 Jianpeng Zhang）",
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 4 作者，共同第一作者（†）",
+     "PEFAT: Boosting Semi-Supervised Medical Image Classification via Pseudo-Loss Estimation and Feature Adversarial Training | CVPR 2023 | 第 3 作者（被引 105，全组引用最高的一篇）",
+     "Segment Together: A Versatile Paradigm for Semi-Supervised Medical Image Segmentation | IEEE TMI 2025 | 第 3 作者（被引 104）",
+     "PICK: Predict and Mask for Semi-supervised Medical Image Segmentation | IJCV 2025 | 第 2 作者（被引 96）"
+    ],
+    "metrics": "Google Scholar（https://scholar.google.com/citations?user=ngPgM1QAAAAJ ，2026-09-20 抓取）：总被引 601，h-index 12，i10-index 13，验证邮箱 mail.nwpu.edu.cn。ORCID: 0000-0003-2437-283X（10 条 work）。OpenAlex A5100647576 给出 works 18 / cited 401 / h 8，但该 ID 混入了同名他人，数值不可用——以 Google Scholar 为准。这四人里他的学术指标最高。",
+    "lineage": "谱系：西北工业大学夏勇（Yong Xia）课题组 →（实习）阿里达摩院医疗 AI 团队（张建鹏 Jianpeng Zhang 线）。夏勇本人 1997 年考入西工大教育实验学院，2001/2004/2007 在西工大拿学士/硕士/博士（CCF 优博、全国优博提名），2007 年起在悉尼大学做博士后，回国后建起西工大医学影像智能计算组（空天地海一体化大数据应用技术国家工程实验室 / SAIIP 实验室）。关键的一层是：RADAR 的核心作者张建鹏（达摩院高级算法专家）本身就是夏勇的博士生（西工大计算机学院新闻 2020-10-26：\"博士生张建鹏在基于多序列 CMR 的心肌病理分割挑战赛（MyoPS2020）获得国际季军\"），谢雨彤（Yutong Xie，现 MBZUAI 助理教授）也出自同一条线。所以 Zilin Lu 属于\"夏勇 → 张建鹏（师兄，已在达摩院）→ 招师弟来实习\"的典型闭环。日常合作最紧密的同门是曾清杰（Qingjie Zeng）、卢梦康（Mengkang Lu，均为拼音，中文名同样未查实）。",
+    "radar_role": "Science 官网作者信息页明示的 CRediT 角色（原文）：\"Roles: Data curation, Formal analysis, Validation, and Writing - original draft.\"（数据策管、形式分析、验证、原始稿撰写）。他有 † 标记 = 6 位共同第一作者之一，但没有 Software 角色——推断：他不是主力写训练代码的人，而是负责 RAD-CT 数据集的整理清洗、评测分析与初稿撰写；结合他自己 2026 年那篇放射报告生成 RL 的第一作者论文，推断他在 RADAR 里承担的是报告文本侧/诊断评测这一块（此为推断，论文未拆分到这个粒度）。",
+    "panda_overlap": "不在 PANDA（Nat Med 2023, PMID 37985692）作者列表里——已用 PubMed efetch 拉取 PANDA 全部 36 位作者逐一核对，无 Zilin Lu。与达摩院其他论文的重合：arXiv:2603.04022（第一作者，与 Ruifeng Yuan、Weiwei Cao、Wanxing Chang、Sinuo Wang、Ling Zhang、Jianpeng Zhang 合作）。未见他出现在达摩院\"平扫 CT + AI\"那条 Nature Medicine 系列（胰腺癌 PANDA、胃癌 GRAPE 等）里。",
+    "interest_to_shu": "直接价值很低。他是医学视觉—语言模型/半监督分割方向的在读博士，和 Shu 的 CT 成像物理（材料分解、水脂分解、光子计数 CT、冠脉周围脂肪）没有方法论交集：他处理的是重建后图像 + 报告文本，不碰投影域、不碰能谱、不碰噪声统计。他既没有招人权限，也不在美国。唯一的间接价值有两点：(1) 他是\"高校博士生 → 大厂实习 → 顶刊共同一作\"这条路径的活样本，如果 Shu 想理解中国医疗 AI 工业界怎么吸收学术劳动力，他是干净的案例；(2) 他 2026 年那篇报告生成 RL 的方法（诊断多样性采样、数据质量优于数量）如果 Shu 将来要给 PVAT/材料分解结果配自动化报告或评测，可以当参考。不建议作为联系对象。",
+    "uncertainties": "1. 中文名完全未知——不猜。2. 【本批次最重要的异常，已多源交叉验证】他在 Science 上的第二单位印的是\"Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang\"（宁波市第二医院放射科），而不是西北工业大学。这不是 PubMed 的解析错误：Crossref 原始数据（api.crossref.org/works/10.1126/science.aec6129）与 Science 官网作者页完全一致，且同一写法在该组另外两篇预印本上重复出现——arXiv:2607.09135（Super-Generalist，Shaoteng Zhang 挂 DAMO + \"Department of Radiology, Ningbo No. 2 Hospital\"）和 arXiv:2603.04022（Zilin Lu 挂 DAMO + \"Ningbo No.2 Hospital, China\"，同篇里 Yong Xia 也只挂 Ningbo No.2 Hospital，但通讯邮箱写的是 yxia@nwpu.edu.cn）。也就是说，这是作者自己反复选择的署名，不是排版事故。原因未查实；可能性（均为推断，无证据）：西工大与宁波市第二医院存在某种联合实验室/临床研究基地；或与西工大宁波研究院有关；或为规避某些发表/合作限制而使用临床合作单位署名。结论：**Zilin Lu 的真实学术单位是西北工业大学，宁波市第二医院放射科这个署名需要保留疑问**。3. 关于第 4 条同名消歧规则里的 Yong Xia：本文的 Yong Xia 就是西北工业大学的夏勇教授，不是另一个人。证据链：arXiv:2603.04022 的通讯作者脚注原文\"Corresponding author: yxia@nwpu.edu.cn\"，而该 ID 在论文正文里署名单位写的是\"Ningbo No.2 Hospital\"；同时 Zilin Lu 与 Shaoteng Zhang 都是夏勇的西工大博士生，三人共用同一个署名单位。所以\"宁波市第二医院放射科的 Yong Xia\"与\"西工大做医学影像 AI 的夏勇\"是同一人，学界另有一位独立的宁波放射科医生的假设不成立。4. 他的本科/硕士背景未知。OpenAlex 把华南理工脑机接口的 Zilin Lu 和 AIAA 航空的 Zilin Lu 合并进了他的 ID，我判定是合并错误（依据：他本人 Google Scholar 15 篇里完全没有这两类论文），但也不能 100% 排除\"他本科确实在华南理工做过 BCI 只是没放进 Scholar\"——保留不确定。5. 达摩院实习的起止时间、是否已转正、是否已毕业，均未查到。6. 未找到他的个人主页、GitHub 或知乎。",
+    "links": [
+     "https://www.science.org/doi/10.1126/science.aec6129",
+     "https://orcid.org/0000-0003-2437-283X",
+     "https://scholar.google.com/citations?user=ngPgM1QAAAAJ",
+     "https://openreview.net/profile?id=~Zilin_Lu2",
+     "https://arxiv.org/abs/2603.04022",
+     "https://api.crossref.org/works/10.1126/science.aec6129",
+     "https://www.researchgate.net/profile/Zilin-Lu-2"
+    ]
+   }
+  },
+  {
+   "radar_position": 5,
+   "english_name": "Wanxing Chang",
+   "chinese_name": "常琬星",
+   "chinese_name_confidence": "✅ 确认",
+   "paper_affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "达摩院算法工程师。共一",
+   "research": {
+    "english_name": "Wanxing Chang",
+    "chinese_name": "常琬星",
+    "chinese_name_confidence": "confirmed",
+    "chinese_name_evidence": "本人个人主页 https://changwxx.github.io/ 页面顶端原文逐字：\"Wanxing Chang (常琬星)\"，紧接下一句\"I'm a final-year master student in Computer Science at ShanghaiTech University. Previously, I received my B.S. in Biomedical Engineering at University of Electronic Science and Technology of China (UESTC). I am interested in Open-World Learning and Optimal Transport.\"，页面同时挂出 Email / Google Scholar / GitHub / 知乎 四个链接。该主页地址由她本人的 ORCID 0009-0004-0253-1830 的 researcher-url 字段\"Homepage\"直接给出，ORCID 同时登记邮箱 changwx99@gmail.com、Google Scholar 07BLeI8AAAAJ、DBLP pid 332/1430 —— 即\"英文名 ↔ 中文名\"的对应来自她自己维护、且与 ORCID 官方档案互证的主页，属于第一手直接证据。",
+    "affiliation": "阿里巴巴达摩院（Alibaba DAMO Academy，杭州）+ 湖畔实验室（Hupan Laboratory，杭州）。Google Scholar 个人页机构栏写\"Alibaba DAMO Academy\"，验证邮箱域名 alibaba-inc.com（= 已入职阿里，非实习生身份）。此前：上海科技大学信息科学与技术学院。",
+    "role_title": "达摩院算法工程师/研究员（具体职级未查到）。RADAR 论文中带 † 标记，6 位共同第一作者之一（作者第 5 位）。同时是 RADAR 开源代码 Zenodo 存档记录 https://zenodo.org/records/21271172 仅列出的 3 位 creator 之一（Zhang, Jianpeng；Cao, Weiwei；Chang, Wanxing）—— 即她是 RADAR 代码的三位实际作者之一。",
+    "education": "本科：电子科技大学（UESTC）生物医学工程（B.S. in Biomedical Engineering）。硕士：上海科技大学信息科学与技术学院 计算机科学（主页自述 final-year master student，年份未写明）。导师：石野（Ye Shi）与汪婧雅（Jingya Wang）——她两篇 NeurIPS 的合作者固定为 Ye Shi + Jingya Wang，石野的中文名由上科大官网直接给出（页面标题原文\"Ye Shi 石野 / Tenure-track Assistant Professor 研究员、博导 (SIST, ShanghaiTech University), Email: shiye@shanghaitech.edu.cn\"，YesAI 可信与通用智能实验室负责人）；Jingya Wang 的中文名\"汪婧雅\"来自上科大新闻稿\"信息学院汪婧雅教授为通讯作者，信息学院石野教授也参与了研究工作\"，属于同一实验室语境下的间接对应（标记为推断，非直接英↔中对照）。",
+    "career_timeline": "本科：电子科技大学生物医学工程（年份未查到）。硕士：上海科技大学 SIST，2022 年 NeurIPS Spotlight（Unified Optimal Transport Framework for Universal Domain Adaptation，Top 5%）、2023 年 NeurIPS（CSOT）均以上科大身份发表。约 2024 年：出现在达摩院论文里（arXiv 2024-12 的 Pixel-Mamba 与 Cell Clouds，合作者为达摩院病理组 Zhongwei Qiu、Hanqing Chao、Ke Yan、Dakai Jin、Le Lu），推断为硕士毕业入职达摩院（推断）。2025：ICCV 2025 Pixel-Mamba；NeurIPS 2025/2026 Relieving the Over-Aggregating Effect in Graph Transformers。2026：Nature Communications（脂肪肝多模态 AI）；ACL 2026 CT-FineBench；arXiv 多篇（AtomiMed、Disease-Centric VLP、RadSight、Super-Generalist、Adaptive Recurrent Message Passing、Graph-aware LoRA）；2026-09-17 Science RADAR 共同第一作者。",
+    "research_focus": "两条并行主线。(1) 理论出身：最优传输（Optimal Transport）+ 开放世界学习——通用域自适应、带噪标签学习，这是她上科大时期的核心，也是她引用最高的工作。(2) 达摩院之后：3D CT 视觉—语言预训练与评测（CT-FineBench 报告生成评测基准、AtomiMed 原子级事实核查、Disease-Centric VLP、RadSight），以及病理全切片分析（Pixel-Mamba）。同时还在和中科院计算所 Shuhui Wang / Qingming Huang 线继续做图神经网络+LLM 的工作。她是这批人里唯一\"理论工具（OT）→ 医学多模态工程\"跨过来的。",
+    "key_publications": [
+     "Unified Optimal Transport Framework for Universal Domain Adaptation | NeurIPS 2022 Spotlight (Top 5%) | 第 1 作者（Google Scholar 被引 144，她的代表作）",
+     "CSOT: Curriculum and Structure-Aware Optimal Transport for Learning with Noisy Labels | NeurIPS 2023 | 第 1 作者（被引 34）",
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 5 作者，共同第一作者（†），且为代码三作者之一",
+     "Multi-modal AI for opportunistic screening, staging and progression risk stratification of steatotic liver disease | Nature Communications 17:1562, 2026 | 第 3 作者（被引 17）",
+     "CT-FineBench: A Diagnostic Fidelity Benchmark for Fine-Grained Evaluation of CT Report Generation | ACL 2026 | 第 2 作者",
+     "Bridging Local Inductive Bias and Long-Range Dependencies with Pixel-Mamba for End-to-End Whole Slide Image Analysis | ICCV 2025 | 第 4 作者",
+     "Relieving the Over-Aggregating Effect in Graph Transformers | NeurIPS 2025 | 第 2 作者"
+    ],
+    "metrics": "Google Scholar（https://scholar.google.com/citations?user=07BLeI8AAAAJ ，2026-09-20 抓取）：总被引 211，h-index 4，i10-index 3，机构栏\"Alibaba DAMO Academy\"，验证邮箱 alibaba-inc.com。ORCID: 0009-0004-0253-1830（仅登记 3 条 work，未及时更新）。DBLP: https://dblp.org/pid/332/1430.html 。引用高度集中在两篇 NeurIPS 上（144+34=178，占 84%）。",
+    "lineage": "谱系：电子科技大学生物医学工程（本科）→ 上海科技大学信息学院 石野（Ye Shi）/ 汪婧雅（Jingya Wang）组，最优传输 + 开放世界学习（石野本人是上科大 YesAI 可信与通用智能实验室负责人，2026 年还创办了瞬适科技 instadapt）→ 阿里达摩院医疗 AI。进入达摩院后她的合作网络明显分两支：一支是病理/CT 影像的\"Le Lu（吕乐）—Ke Yan—Dakai Jin—Zhongwei Qiu\"美国+杭州组，一支是 RADAR 的\"Ling Zhang—Jianpeng Zhang—Weiwei Cao\"组。她是少数同时跨两支的人。另外还保留着和中科院计算所 Shuhui Wang、Qingming Huang 的图学习合作，说明她没有被完全吸进医疗影像。",
+    "radar_role": "Science 官网作者信息页明示的 CRediT 角色（原文）：\"Roles: Data curation, Formal analysis, Investigation, Methodology, Resources, Software, Validation, Visualization, Writing - original draft, and Writing - review & editing.\" —— 十项角色，与第二作者 Jianpeng Zhang（14 项，含 Supervision/Funding）和第三作者 Weiwei Cao（9 项）同一梯队，且**是全文 40 位作者里仅有的三位带 Software 角色的人之一**（另两位是 Jianpeng Zhang 和 Weiwei Cao）。这与 Zenodo 代码存档只署这三人完全吻合。结论：她是 RADAR 的主力工程实现者之一，不是挂名。",
+    "panda_overlap": "不在 PANDA（Nat Med 2023, PMID 37985692）里——已逐一核对 PANDA 全部 36 位作者，无 Wanxing Chang；时间上也不可能（她约 2024 年才入职达摩院）。与达摩院其他工作的重合很密集：Nature Communications 2026 脂肪肝多模态 AI（与 Yuan Gao、Ke Yan、Le Lu、Jiawen Yao、Xianghua Ye 等 PANDA 系人马同框）、ICCV 2025 Pixel-Mamba、ACL 2026 CT-FineBench、arXiv 的 AtomiMed / RadSight / Disease-Centric VLP / Super-Generalist 共 4 篇 —— 她几乎出现在达摩院 2026 年所有 CT 视觉语言模型的论文里，是这条线上的固定工程节点。",
+    "interest_to_shu": "直接价值低，但这四个人里最值得 Shu 看一眼的一个，原因是方法论而不是人脉。她的底子是最优传输和带噪标签学习——把\"两个分布怎么对齐\"当成一个带结构约束的传输问题来解。Shu 的材料分解本质上也是一个分布对齐/病态反问题（水—脂—蛋白分数在噪声下的最优估计、仿真到真实扫描仪的迁移、off-model blob），CSOT 那套\"课程式 + 结构感知的 OT\"在处理\"仿真标定迁移到真实 NAEOTOM/Canon 数据\"的域偏移上，是一个 Shu 目前没在用的工具。她也是 RADAR 真正写代码的人之一，如果将来要复现 RADAR 或问工程细节，她是正确的对象而不是通讯作者。但：她没有招人权限、在中国、不做成像物理、不碰能谱或重建。作为求职/博后去向：无价值。作为技术参考人：中等。",
+    "uncertainties": "1. 中文名已确认（她本人主页写明），但性别、出生年、具体职级均未查到。2. 本硕的起止年份均未查到——主页只写\"final-year master student\"没写年份，只能推断她约 2024 年硕士毕业入职达摩院（依据：第一篇达摩院署名论文是 2024 年 12 月的 arXiv 预印本），这是推断。3. 导师认定：石野（Ye Shi）和汪婧雅（Jingya Wang）是从她两篇 NeurIPS 的固定共同作者推断的，她主页没有写\"advisor\"字样，严格说这是\"合作者\"而非\"导师\"的直接证据（推断）。4. Jingya Wang → 汪婧雅 的中文对应来自上科大一则新闻稿的语境匹配，不是直接的英↔中对照，标为推断。5. 她个人主页的信息明显已经过期（还写着在读硕士），而 Google Scholar 已改成达摩院，两者矛盾以 Scholar + 论文署名为准。6. OpenAlex 的 A5066605043 声称 28 篇，其中把同一篇算了多次（arXiv 版 + 会议版 + Zenodo 版），实际独立工作约 15 篇，与 Google Scholar 一致。7. 她主页上的知乎链接未打开核验。",
+    "links": [
+     "https://changwxx.github.io/",
+     "https://orcid.org/0009-0004-0253-1830",
+     "https://scholar.google.com/citations?user=07BLeI8AAAAJ",
+     "https://dblp.org/pid/332/1430.html",
+     "https://zenodo.org/records/21271172",
+     "https://www.science.org/doi/10.1126/science.aec6129",
+     "https://sist.shanghaitech.edu.cn/"
+    ]
+   }
+  },
+  {
+   "radar_position": 11,
+   "english_name": "Shaoteng Zhang",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China."
+   ],
+   "settled_role": "**西工大计算机学院在读博士**，达摩院实习",
+   "research": {
+    "english_name": "Shaoteng Zhang",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "未找到任何把\"Shaoteng Zhang\"与汉字对应的中文来源。已检索：(1) 西工大教师主页 teacher.nwpu.edu.cn/yongxia.html（HTTP 412 / 浏览器空白）；(2) pure.nwpu.edu.cn 他的论文页（https://pure.nwpu.edu.cn 上 TPRO 与 TransWS 两篇都能查到，作者栏只印英文\"Shaoteng Zhang; Jianpeng Zhang; Yutong Xie; Yong Xia\"，院系栏印中文\"计算机学院\"，但没有作者中文名）；(3) 百度中文多组检索（\"西工大 夏勇 课题组 博士生 MICCAI 2023 病理图像 弱监督 分割\"等）只返回该组其他学生的中文名，无对应；(4) Bing 英文检索\"Shaoteng Zhang 西北工业大学 博士\"返回无关结果；(5) 中文专利检索未命中。按硬性规则留空。可确认存在性的英文证据：Google Scholar 个人页 https://scholar.google.com/citations?user=YCdOvPcAAAAJ 原文\"Shaoteng Zhang · Northwestern Polytechnical University · Verified email at mail.nwpu.edu.cn · CV, medical image\"；OpenReview 档案 ~Shaoteng_Zhang1 原文\"PhD student, Northwest Polytechnical University Xi'an. Joined October 2022.\"，确认邮箱 @mail.nwpu.edu.cn；ORCID 0009-0005-4976-6351 名字栏填的是小写缩写\"st zhang\"，employment 条目\"Northwestern Polytechnical University\"。",
+    "affiliation": "论文署名：Alibaba DAMO Academy（阿里巴巴达摩院，杭州）+ Department of Radiology, Ningbo No. 2 Hospital（宁波市第二医院放射科）。真实学术归属：西北工业大学计算机学院，夏勇教授课题组博士生。",
+    "role_title": "西北工业大学计算机学院在读博士研究生（OpenReview 档案显示 2022 年 10 月注册，推断 2021 或 2022 级）；在达摩院医疗 AI 团队实习/合作（未见明文\"internship\"脚注，但署名模式与 Zilin Lu 完全一致——推断同为实习生）。RADAR 论文第 11 位作者，无 † 标记，不是共同第一作者。",
+    "education": "博士：西北工业大学计算机学院，导师夏勇（Yong Xia）。本科/硕士院校未查到。注意：OpenAlex 的 A5024569575 把三个不同的 Shaoteng Zhang 合并了——中国矿业大学的岩石力学方向（热损伤砂岩，Acta Geophysica 2022、Bull Eng Geol Environ 2021）、中科院大学的微分几何方向（Frontiers of Mathematics 2021，与 Xiaoxiang Jiao 合作常曲率极小二球面）、以及本人。依据是他本人 Google Scholar 只列 4 篇，全部是医学影像。因此不能据 OpenAlex 认定他曾在中国矿业大学或国科大。",
+    "career_timeline": "2022：MICCAI MLMI workshop 发表 TransWS（第一作者，与 Jianpeng Zhang、Yong Xia）。2022-10：注册 OpenReview，身份\"PhD student, NWPU\"。2023：MICCAI 2023 发表 TPRO（第一作者，被引 43，他目前引用最高的一篇）。2025：MICCAI 2025 Reframing Universal Lesion Segmentation as a Large-Organ Lesion Segmentation Task（第 3 作者，与白晓宇 Xiaoyu Bai、Ziyang Chen、Yong Xia；该篇未出现在他 Scholar 页上，归属为高度可能但未 100% 确认）。2026-07-10：arXiv:2607.09135 Super-Generalist 第一作者——这是 RADAR 的直接后续工作（把通用模型和专科分割模型融合），通讯作者是 Yong Xia + Jianpeng Zhang。2026-09-17：Science RADAR 第 11 作者。",
+    "research_focus": "弱监督/文本提示驱动的病理图像分割（TransWS、TPRO），近两年转向通用医学影像理解与\"通才—专才协同\"（Super-Generalist）。主线是\"怎么用更弱的监督信号（文本提示、图像级标签、分割专家先验）去训分割/诊断模型\"。他是这批人里唯一从数字病理切片（WSI）入手、再转到 CT 的。",
+    "key_publications": [
+     "TPRO: Text-Prompting-Based Weakly Supervised Histopathology Tissue Segmentation | MICCAI 2023 (LNCS) | 第 1 作者（被引 43）",
+     "TransWS: Transformer-Based Weakly Supervised Histology Image Segmentation | MICCAI MLMI Workshop 2022 | 第 1 作者（被引 16）",
+     "Super-Generalist: Towards Comprehensive and Accurate Medical Image Understanding via Generalist–Specialist Synergy | arXiv:2607.09135, 2026 | 第 1 作者（RADAR 的后续工作，通讯 Yong Xia + Jianpeng Zhang）",
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 11 作者",
+     "Reframing Universal Lesion Segmentation as a Large-Organ Lesion Segmentation Task | MICCAI 2025 (LNCS) | 第 3 作者（归属为高度可能，未在其 Scholar 页确认）"
+    ],
+    "metrics": "Google Scholar（https://scholar.google.com/citations?user=YCdOvPcAAAAJ ，2026-09-20 抓取）：总被引 59，h-index 2，i10-index 2，验证邮箱 mail.nwpu.edu.cn，仅列 4 篇。ORCID: 0009-0005-4976-6351（只登记 1 条 work，即 Science）。OpenAlex A5024569575 的 works 10 / cited 66 / h 5 因混入同名他人不可用。四人里学术指标最低，属于\"刚上路\"的阶段——但第一作者的 Super-Generalist 若中稿会大幅改变这个画面。",
+    "lineage": "与 Zilin Lu 同门：西北工业大学夏勇（Yong Xia）课题组 →（实习）阿里达摩院。他的血统比 Zilin Lu 更\"纯\"：他最早的两篇（TransWS 2022、TPRO 2023）的第二作者就是 Jianpeng Zhang（张建鹏，夏勇的博士毕业生、现达摩院高级算法专家），也就是说他从入学第一年起就一直在师兄张建鹏的直接带教下做课题，达摩院对他来说是\"师兄的组\"而不是外部实习单位。这条\"夏勇 → 张建鹏 → 新博士生\"的传带链条，是 RADAR 作者表里西工大侧人力的全部来源（夏勇本人 + Zilin Lu + Shaoteng Zhang，三人共用同一个宁波市第二医院的署名）。",
+    "radar_role": "Science 官网作者信息页明示的 CRediT 角色（原文）：\"Roles: Formal analysis, Validation, and Visualization.\"（形式分析、验证、可视化）三项，没有 Data curation、没有 Software、没有 Writing。在 40 位作者里属于偏后的贡献梯队。推断：他负责的是模型评测阶段的统计分析与图表制作，不参与数据构建和代码主干（此为推断，依据是角色组合与他的作者位次）。结合他随后以第一作者发 Super-Generalist，推断他在 RADAR 项目中的实际收获是\"拿到数据和 pipeline 之后独立做下一篇\"。",
+    "panda_overlap": "不在 PANDA（Nat Med 2023, PMID 37985692）里——已逐一核对 PANDA 全部 36 位作者，无 Shaoteng Zhang。与达摩院其他论文的重合仅有一处：arXiv:2607.09135 Super-Generalist（第一作者）。未见于达摩院 Nature Medicine 系列。",
+    "interest_to_shu": "无。他是弱监督病理分割转医学通用模型的在读博士，引用 59、h=2，方向、地理位置、职权都与 Shu 无交集，不做任何成像物理。唯一勉强能说的：他的 TPRO 用文本提示（text prompt）做弱监督分割的思路，和 Shu 在 PVAT 边界问题上\"没有真值标注怎么办\"这个困境是同一类问题的两种答案（他用语言先验，Shu 用物理先验+仿真）；但这属于读一篇论文的价值，不是认识一个人的价值。建议：不作为联系对象。",
+    "uncertainties": "1. 中文名完全未知——不猜。2. 与 Zilin Lu 完全相同的署名异常：Science 上他的第二单位是\"Department of Radiology, Ningbo No. 2 Hospital\"而非西北工业大学，且这一写法在 arXiv:2607.09135（他自己是第一作者的预印本）上被原样重复——原文\"Shaoteng Zhang, Affiliation: DAMO Academy, Alibaba Group; Affiliation: Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China\"。既然他是那篇的第一作者、署名是他自己填的，就排除了排版事故的可能，属于该课题组的有意选择。原因未查实（见 Zilin Lu 条目下的同一条说明）。3. 入学年份只能从 OpenReview\"Joined October 2022\"推断为 2021 或 2022 级（推断）。4. 本科/硕士背景未知；OpenAlex 的中国矿业大学、国科大数学条目判定为同名合并错误，但未 100% 排除。5. MICCAI 2025 那篇的归属未在他 Scholar 页得到确认（Scholar 页只有 4 篇），标为高度可能。6. 他是否已从实习转为达摩院正式员工、是否已毕业，未查到。7. 未找到个人主页或 GitHub；ORCID 名字栏填的是\"st zhang\"，说明档案是他本人草草建立的，信息量极低。",
+    "links": [
+     "https://www.science.org/doi/10.1126/science.aec6129",
+     "https://orcid.org/0009-0005-4976-6351",
+     "https://scholar.google.com/citations?user=YCdOvPcAAAAJ",
+     "https://openreview.net/profile?id=~Shaoteng_Zhang1",
+     "https://arxiv.org/abs/2607.09135",
+     "https://pure.nwpu.edu.cn/"
+    ]
+   }
+  },
+  {
+   "radar_position": 17,
+   "english_name": "Zhilin Zheng",
+   "chinese_name": "",
+   "chinese_name_confidence": "❓ 未知",
+   "paper_affiliations": [
+    "Alibaba DAMO Academy, Hangzhou, Zhejiang, China.",
+    "Hupan Laboratory, Hangzhou, Zhejiang, China."
+   ],
+   "settled_role": "达摩院算法研究员（2022 起持续正式署名，非实习）",
+   "research": {
+    "english_name": "Zhilin Zheng",
+    "chinese_name": "",
+    "chinese_name_confidence": "unknown",
+    "chinese_name_evidence": "未找到任何把\"Zhilin Zheng\"与汉字对应的中文来源。已检索：(1) 华东师范大学 pure 门户 https://pure.ecnu.edu.cn 上他的两篇论文页，作者栏只印英文\"Zhilin Zheng; Li Sun\"，院系栏印中文\"通信与电子工程学院\"，无作者中文名；(2) 百度中文检索\"Zhilin Zheng 华东师范大学 孙力 VAE\"—— 返回的是他导师孙力（Li Sun）的中文资料，没有他本人；(3) 达摩院/阿里官方中文稿（凤凰网、新浪财经、人民网健康、ZAKER、今日头条等对 RADAR 的报道）只点名了张建鹏（Jianpeng Zhang，\"达摩院高级算法专家\"），没有提到其他算法作者；(4) 他没有 ORCID 以外的任何个人主页、GitHub 或知乎；(5) 中文专利检索未命中。按硬性规则留空。他的存在性由 ORCID 0000-0002-2439-9162 确认（ACM DL 的 Deep Attention Learning 论文页原文\"Zhilin Zheng, DAMO Academy, Alibaba Group, Hangzhou, China, https://orcid.org/0000-0002-2439-9162\"），该 ORCID 的 education 条目为\"East China Normal University\"。早年论文里他用的学生邮箱是 51171214020@stu.ecnu.edu.cn（见 arXiv 版 CVPR 2019 论文首页）。",
+    "affiliation": "阿里巴巴达摩院（Alibaba DAMO Academy，杭州）+ 湖畔实验室（Hupan Laboratory，杭州）。此前：平安科技（PingAn Technology / PAII Inc.）、华东师范大学通信与电子工程学院 上海市多维度信息处理重点实验室。",
+    "role_title": "达摩院算法工程师/研究员（具体职级未查到，但从 2022 年起持续以达摩院正式署名发论文，非实习生——与 Zilin Lu / Shaoteng Zhang 不同）。RADAR 论文第 17 位作者，无 † 标记。",
+    "education": "硕士：华东师范大学 通信与电子工程学院 / 上海市多维度信息处理重点实验室，导师孙力（Li Sun，ECNU 通信与电子工程学院副教授，西安交通大学博士，研究方向计算机视觉、图像处理、机器学习，邮箱 sunli@ee.ecnu.edu.cn）。学号前缀 51171214020 中的\"5117\"按华东师大学号规则推断为 2017 年入学（推断）。本科院校未查到。",
+    "career_timeline": "2019（ECNU）：CVPR 2019 Disentangling Latent Space for VAE by Label Relevant/Irrelevant Dimensions，第一作者，被引 73——这是他至今最有影响的工作。2020（ECNU）：ICIP 2020 Disentangling the Spatial Structure and Style in Conditional VAE（第 3 作者）。2021（平安）：ICCV 2021 Bridging the Gap between Label- and Reference-based Synthesis in Multi-attribute Image-to-Image Translation，IEEE CS 论文页明确标注他的单位为\"PingAn Technology\"；同年 IPMI/MICCAI 线的 Knowledge Distillation with Adaptive Asymmetric Label Sharpening for Semi-supervised Fracture Detection in Chest X-rays（与 Le Lu、Shun Miao 等 PAII 团队）。2023（达摩院）：Radiology 2023 Artificial Intelligence to Predict Lymph Node Metastasis at CT in Pancreatic Ductal Adenocarcinoma。2025：Nature Medicine 2025-09 AI-based large-scale screening of gastric cancer from noncontrast CT imaging（PMID 40555751，**第 3 作者 / 共 58 位作者**，单位 Hupan Laboratory + DAMO Academy）；BMC Medicine 2025-10 幽门螺杆菌内镜 AI（第 4 作者）；MICCAI 线的 Deep Attention Learning for Pre-operative Lymph Node Metastasis Prediction in Pancreatic Cancer。2026：Radiology: Artificial Intelligence 2026-01 Gastric Neoplasm Detection at Contrast-enhanced CT with Deep Learning（第 6/20 作者）；Medical Image Analysis 2026-11 内镜多示例学习（第 5/16 作者）；arXiv RadSight、TumorChain；2026-09-17 Science RADAR 第 17 作者。",
+    "research_focus": "早期（ECNU）：生成模型的表征解耦——VAE 隐空间按\"标签相关/标签无关\"维度拆分、条件 VAE 的空间结构与风格分离、多属性图像到图像翻译。转入产业界后：医学影像的深度学习诊断——胰腺癌淋巴结转移预测、胃癌平扫 CT 大规模筛查、胃肿瘤增强 CT 检出、内镜多示例学习、放射多模态理解。他是四人中唯一真正做过生成模型/表征解耦理论的人，也是唯一横跨 CT 与内镜两种模态的人。",
+    "key_publications": [
+     "Disentangling Latent Space for VAE by Label Relevant/Irrelevant Dimensions | CVPR 2019 | 第 1 作者（被引 73；ECNU 时期代表作）",
+     "AI-based large-scale screening of gastric cancer from noncontrast CT imaging | Nature Medicine, 2025 Sep (PMID 40555751) | 第 3 作者 / 共 58 位（达摩院\"平扫 CT + AI\"系列中的胃癌篇，即 GRAPE 线）",
+     "Artificial Intelligence to Predict Lymph Node Metastasis at CT in Pancreatic Ductal Adenocarcinoma | Radiology, 2023 Jan | 作者之一",
+     "Bridging the Gap between Label- and Reference-based Synthesis in Multi-attribute Image-to-Image Translation | ICCV 2021 | 第 1 作者（署名单位 PingAn Technology）",
+     "Gastric Neoplasm Detection at Contrast-enhanced CT with Deep Learning | Radiology: Artificial Intelligence, 2026 Jan | 第 6 作者 / 共 20 位",
+     "Learning from Limited phenotype-level annotations for promoting multiple instance learning in endoscopy | Medical Image Analysis, 2026 Nov | 第 5 作者 / 共 16 位",
+     "An expert-level generalist AI for abdominal CT diagnosis | Science 393(6817):eaec6129, 2026 | 第 17 作者",
+     "RadSight: Towards Perceptually Reliable Multimodal Radiology Image Understanding | arXiv:2607.22293, 2026 | 第 6 作者（代码开源于 alibaba-damo-academy/damo-RadSight）"
+    ],
+    "metrics": "无可用的个人 Google Scholar 页（搜索未找到，四人中唯一没有的）。ORCID: 0000-0002-2439-9162，仅登记 7 条 work。OpenAlex 的 A5025166983 把他与至少四位同名者合并（浙大四院神经内科的 Zhilin Zheng 做特发性震颤/脊髓小脑共济失调、诺丁汉大学心理系的视觉研究者、大连海军舰艇学院的流体力学研究者、环境工程的重金属浸出研究者），其 works 47 / cited 857 / h 12 的数值**不可用**。可核实的硬指标：CVPR 2019 一作被引 73（Google Scholar 引文计数，经 Google 搜索结果确认）；Nature Medicine 2025 第 3 作者位次（PubMed 原始数据）。综合推断其真实 h-index 在 6—8 量级（推断）。",
+    "lineage": "谱系是四人里最有意思的一条：华东师范大学 孙力（Li Sun）组，生成模型/表征解耦（2017—2020）→ 平安科技 / PAII Inc.，跟着吕乐（Le Lu）、缪顺（Shun Miao）做医学影像（2021）→ 阿里巴巴达摩院（2022 起至今）。关键在第二跳与第三跳的连续性：吕乐（Le Lu）本人正是 2020—2021 年前后从 PAII Labs（平安美国研究院）转任阿里达摩院医疗 AI 负责人的，Zhilin Zheng 的迁移轨迹与吕乐完全同步——他不是独立跳槽到阿里，而是**跟随吕乐这条人马整体迁移**的一员。这也解释了为什么他会出现在 PANDA 之后的整条\"平扫 CT + AI\"产品线（胰腺→胃→内镜）上，而 RADAR 的西工大侧三人（夏勇、Zilin Lu、Shaoteng Zhang）完全不在那条线上。达摩院医疗 AI 因此可以看作两支血统的合流：**吕乐/张玲（Ling Zhang）的 PAII—霍普金斯系**（PANDA、GRAPE、Yingda Xia、Zhilin Zheng）与**夏勇的西工大系**（张建鹏、曹伟伟、Zilin Lu、Shaoteng Zhang），RADAR 是两支第一次在 Science 正刊上合署的产物。",
+    "radar_role": "Science 官网作者信息页明示的 CRediT 角色（原文）：\"Roles: Formal analysis, Investigation, and Visualization.\"（形式分析、调查、可视化）三项 —— 与 Yanjie Zhou、Tony C.W. Mok、Yingda Xia 完全相同的角色组合，这四人在作者表里是连续的第 17—20 位。推断：这是达摩院内部\"非本项目主力、但被抽调来做评测分析与图表\"的一组资深工程师，Zhilin Zheng 在其中提供的是胃/腹部病灶检测方面的既有经验与外部验证数据侧的支持（此为推断，论文未拆分到这个粒度）。他不带 Software、不带 Data curation、不带 Writing，说明与代码主干和数据集构建无关。",
+    "panda_overlap": "**不在** PANDA（Nat Med 2023, PMID 37985692）作者列表里——已用 PubMed efetch 拉取 PANDA 全部 36 位作者逐一核对，无 Zhilin Zheng。但他深度嵌在 PANDA 的同一条产品线与同一批人里：Nature Medicine 2025 胃癌平扫 CT 筛查（第 3/58 位，与 PANDA 同为吕乐/张玲体系）、Radiology 2023 胰腺癌淋巴结转移（与 PANDA 的上海长海医院 Kai Cao、Chengwei Shao、Yun Bian、Xu Fang 同组）、Radiol AI 2026 胃肿瘤检出、MedIA 2026 内镜 MIL、BMC Med 2025 幽门螺杆菌内镜 AI、arXiv RadSight/TumorChain。可以说他是达摩院医疗 AI 里横跨\"胰腺—胃—内镜—通用影像\"四条线的少数常驻人员之一。",
+    "interest_to_shu": "直接价值：无。他在杭州、是企业算法工程师、没有招人权限、做的是重建后图像的诊断模型，与 Shu 的 CT 成像物理毫无交集。间接价值有一点，但属于\"读人\"而非\"用人\"：他的职业轨迹（华师大生成模型硕士 → 平安 → 跟着吕乐进达摩院 → 五年内挂上 Nature Medicine 第 3 作者和 Science）是中国医疗 AI 产业界\"跟对人比选对题重要\"的样本；如果 Shu 要理解为什么达摩院能在五年里连发 4 篇 Nature Medicine 加 1 篇 Science，答案不在某个算法上，而在吕乐把整支 PAII 队伍整体搬过来这件事上——他是这支队伍的一个可验证节点。另外他早年的 VAE 隐空间解耦（把表征拆成\"标签相关\"与\"标签无关\"维度）在概念上与 Shu 做的材料分解（把 HU 拆成水/脂/蛋白通道）是同一种\"把混合信号拆成可解释分量\"的思路，但一个是学出来的、一个是物理约束出来的，借鉴价值有限。不建议作为联系对象。",
+    "uncertainties": "1. 中文名完全未知——不猜。四人中他最难查：没有个人主页、没有 Google Scholar、没有 GitHub、ORCID 只填了 7 条。2. **同名污染极严重**，这是本条目的头号风险。至少存在五位 Zhilin Zheng：(a) 本人（ECNU → 平安 → 达摩院，CV/医学影像）；(b) 浙江大学医学院附属第四医院神经内科的 Zhilin Zheng（特发性震颤、脊髓小脑共济失调、SCA3，PMID 36696007 等，单位\"Department of Neurology, The Fourth Affiliated Hospital, Zhejiang University School of Medicine, Yiwu\"）；(c) 诺丁汉大学心理学院的 Zhilin Zheng（微眼跳抑制，Exp Brain Res 2026）；(d) 大连海军舰艇学院的 Zhilin Zheng（方柱绕流，Phys Fluids 2026 / Ocean Eng 2026）；(e) 环境工程方向的 Zhilin Zheng（飞灰重金属生物浸出，J Hazard Mater 2026）。OpenAlex 把它们全合并了，所以**任何引用 OpenAlex 指标的结论都必须作废**。我区分的依据是每篇论文的原始署名单位（PubMed/Crossref 原始 affiliation 字段），不是作者 ID。3. ECNU 入学年份 2017 是从学号前缀推断的（推断）。4. 他从 ECNU 到平安、从平安到达摩院的确切年份未查到——只能用论文署名单位变化划界（2021 年 ICCV 署名 PingAn Technology，2023 年 Radiology 起署名 DAMO），中间是否有空档未知。5. \"跟随吕乐从 PAII 整体迁移\"这一条是**推断**，依据是时间吻合 + 他 2021 年的合作者（Le Lu、Shun Miao、Yirui Wang、Kang Zheng）整体都是 PAII 班底、且这批人此后也都出现在达摩院论文里；没有任何一条公开来源明文陈述他的跳槽过程。6. 他在达摩院的职级、是否带团队，未查到。7. 他的本科院校未查到。",
+    "links": [
+     "https://www.science.org/doi/10.1126/science.aec6129",
+     "https://orcid.org/0000-0002-2439-9162",
+     "https://pure.ecnu.edu.cn/",
+     "https://pubmed.ncbi.nlm.nih.gov/40555751/",
+     "https://github.com/alibaba-damo-academy/damo-RadSight",
+     "https://arxiv.org/abs/2607.22293",
+     "https://www.researchgate.net/profile/Zhilin-Zheng-2187448731"
+    ]
+   }
+  }
+ ],
+ "verify": {
+  "name_verdict": "confirmed",
+  "corrected_chinese_name": "常琬星",
+  "name_evidence": "本批次只有 Wanxing Chang 给出了中文名，我独立重查后判定 confirmed，且证据链比原调查给的更硬：\n\n1) 论文端锚点（不是靠拼音、不是靠聚合站）：Crossref 原始记录 https://api.crossref.org/works/10.1126/science.aec6129 中第 5 位作者原文为 `{\"ORCID\":\"https://orcid.org/0009-0004-0253-1830\",\"authenticated-orcid\":true,\"given\":\"Wanxing\",\"family\":\"Chang\",\"affiliation\":[\"Alibaba DAMO Academy, Hangzhou, Zhejiang, China.\",\"Hupan Laboratory, Hangzhou, Zhejiang, China.\"]}`。注意 authenticated-orcid = true，即该 ORCID 是作者本人在投稿系统里认证过的，不是编辑代填。\n\n2) ORCID 官方 API https://pub.orcid.org/v3.0/0009-0004-0253-1830/record 返回：name = Wanxing Chang；email = changwx99@gmail.com；researcher-urls 三条，原文为 (\"Homepage\", \"https://changwxx.github.io/\")、(\"Google Scholar\",\"https://scholar.google.com/citations?user=07BLeI8AAAAJ&hl=zh-CN\")、(\"DBLP\",\"https://dblp.org/pid/332/1430.html\")；works 仅 3 条（Nat Commun 2026 脂肪肝、CSOT NeurIPS 2023、UniOT NeurIPS 2022）。\n\n3) 该 ORCID 自己指向的个人主页 https://changwxx.github.io/ 抓取后逐字原文：「Wanxing Chang (常琬星) I'm a final-year master student in Computer Science at ShanghaiTech University. Previously, I received my B.S. in Biomedical Engineering at University of Electronic Science and Technology of China (UESTC). I am interested in Open-World Learning and Optimal Transport.」\n\n因此「英文名 ↔ 中文名」的对应不是从外部中文来源猜的，而是从论文作者本人认证的 ORCID → 本人维护的主页，闭环第一手。原调查这条结论成立。\n\n另外两人（Zilin Lu、Shaoteng Zhang）留空 unknown 是正确处理，我未找到任何可用的英↔中对照，也不做拼音反推。",
+  "identity_collision_risk": "低（对 常琬星 这一条几乎不存在），但要分方向说清楚：\n\n- 「名→人」方向零风险：中文名来自论文 ORCID 所指向的本人主页，不是从中文库里按名字捞出来再往论文上套，所以不存在「另一个常琬星被误认成本文作者」的可能。\n- 「人→名」方向（世上是否另有同名的常琬星）本次无法做中文全网扫描：本会话 WebSearch 配额已耗尽（200/200），DuckDuckGo 返回人机验证（按规则未做验证码），Bing 返回的是洗衣去渍类无关结果。但没有任何结论依赖这个方向，故不影响判定。\n- Google Scholar 指标不是同名异人抓错：07BLeI8AAAAJ 页面机构栏「Alibaba DAMO Academy」、验证邮箱 alibaba-inc.com，且该 ID 正是她 ORCID 自己登记的；页面 15 条论文与 RADAR/达摩院/上科大合作网完全吻合。总被引 211、h-index 4、i10-index 3 我复核一致。\n- 真正有同名风险的是 Zilin Lu，而原调查已经抓到了，我把它坐实了：OpenAlex A5100647576 的 affiliations 字段原文含 `Northwestern Polytechnical University [2026,2025,2024,2023,2022]`、`Institute of Flight [2021]`、`South China University of Technology [2023,2022]`、`Ningbo No. 2 Hospital [2026]`、`Alibaba Group (China) [2026]` —— 航空（Institute of Flight）与华南理工（脑机接口）确实被合并进同一 ID，故 works 18 / cited 401 / h 8 这组数字作废，应以 Google Scholar ngPgM1QAAAAJ 的 601 / h12 / i10 13 为准（我复核一致）。原调查判断正确。\n- Yong Xia 的同名消歧：本文的 Yong Xia 就是西北工业大学夏勇，已用比原调查更硬的证据坐实（见 additions 第 1 条）。不存在「宁波放射科另有一位 Yong Xia」的情形。",
+  "factual_errors": [
+   "【引证错配，结论不受影响】原调查 Zilin Lu 的 uncertainties 第 3 条写：『arXiv:2603.04022 的通讯作者脚注原文\"Corresponding author: yxia@nwpu.edu.cn\"』。实际抓取 https://arxiv.org/html/2603.04022v1 ，该文通讯脚注原文是『Corresponding to Jianpeng Zhang(). The work was done during Zilin's internship at DAMO Academy. E-mail jianpeng.zhang0@gmail.com』，Yong Xia 在这篇里只是普通作者、单位印『Ningbo No.2 Hospital, China』，没有留邮箱。yxia@nwpu.edu.cn 这句出现在另一篇：https://arxiv.org/html/2607.09135v1 （Super-Generalist），原文『Yong Xia † thanks: Corresponding author: yxia@nwpu.edu.cn , jianpeng.zhang0@gmail.com  Affiliation: Department of Radiology, Ningbo No. 2 Hospital, Ningbo, Zhejiang, China』。即：证据是真的，但被挂到了错误的 DOI/arXiv 号上。",
+   "【计数错误，轻微】原调查两处称 Zilin Lu 的 Google Scholar『15 篇』（用于论证 OpenAlex 合并错误）。实际抓取 https://scholar.google.com/citations?user=ngPgM1QAAAAJ 页面当前列出 16 条。论证本身仍成立（16 条里确实没有任何脑机接口或 AIAA 航空论文），只是数字不准。",
+   "【文献署名列举不全】原调查 panda_overlap 写 arXiv:2603.04022 的合作者为『Ruifeng Yuan、Weiwei Cao、Wanxing Chang、Sinuo Wang、Ling Zhang、Jianpeng Zhang』，漏了 Zhongyu Wei 与 Yong Xia。arXiv API 返回的完整作者序为 Zilin Lu, Ruifeng Yuan, Weiwei Cao, Wanxing Chang, Zhongyu Wei, Sinuo Wang, Yong Xia, Ling Zhang, Jianpeng Zhang。漏掉 Yong Xia 尤其可惜，因为这正是『夏勇—达摩院』那条线的直接证据。"
+  ],
+  "unsupported_claims": [
+   "【本次无法交叉验证，但也未被证伪】两人条目里以『Science 官网作者信息页明示的 CRediT 角色（原文）』给出的角色清单（Zilin Lu 四项；Wanxing Chang 十项），以及『全文 40 位作者里仅有三位带 Software 角色』这一强判断。我无法独立核实：https://www.science.org/doi/10.1126/science.aec6129 对非浏览器请求返回 HTTP 403；Crossref 原始记录里 40 位作者的 role 字段一律只有 [{\"vocabulary\":\"crossref\",\"role\":\"author\"}]，不含 CRediT 细分；r.jina.ai 代理返回 401。旁证方向一致：Zenodo 代码存档 https://zenodo.org/api/records/21271172 的 creators 恰为三人 Zhang Jianpeng / Cao Weiwei / Chang Wanxing，与『三位 Software』吻合。建议在成稿里把这些角色标注为『单一来源（Science 官网），未二次核验』。",
+   "『Google Scholar 验证邮箱域名 alibaba-inc.com（= 已入职阿里，非实习生身份）』—— 这个推断链断掉了：阿里的实习生同样会拿到 @alibaba-inc.com 账号，邮箱域名不能区分正式员工与实习生。她已入职这个结论我认为大概率成立，但支撑它的应该是别的证据（Scholar 机构栏写 Alibaba DAMO Academy、2024-12 起连续以达摩院署名发论文、个人主页自 2024-07 起停更），而不是邮箱域名。原文却把邮箱当成了判据。",
+   "『达摩院算法工程师/研究员（具体职级未查到）』—— 职位名本身也无来源。所有可查材料只说明机构是 Alibaba DAMO Academy，没有任何一处写她的岗位或职级。建议改写成『达摩院研究人员（岗位名称未查实）』。",
+   "导师认定：石野（Ye Shi）/ 汪婧雅（Jingya Wang）。原调查已自标为推断，我确认这个自我标注是必要的——她主页 https://changwxx.github.io/ 全文（我抓取的 5569 字节完整页面）没有 advisor/supervisor 字样，只列两篇 NeurIPS 的共同作者 Ye Shi、Jingya Wang。我能独立确认的只有石野的中文名与单位：https://sist.shanghaitech.edu.cn/shiye_en/main.htm 原文『石野 英文信息 Ye Shi Assistant Professor Graduated School: University of Technology Sydney, Australia ... E-mail: shiye@shanghaitech.edu.cn』。我未找到任何列出 Wanxing Chang 为其学生的实验室页面（本次无搜索引擎可用，故属『未找到』而非『不存在』）。『汪婧雅』↔Jingya Wang 的对应我本次完全无法验证，建议在成稿里降级或标注单一来源。",
+   "『张建鹏（Jianpeng Zhang）本身就是夏勇的博士生』这条谱系断言，我无法访问其所引的西工大计算机学院新闻页（本次无搜索、无法定位该 URL）。间接旁证与之相容：Shaoteng Zhang 的 TPRO（MICCAI 2023）作者序为 S Zhang, J Zhang, Y Xie, Y Xia（典型的 学生—师兄—师兄—导师 排布），Super-Generalist 由 Yong Xia 与 Jianpeng Zhang 共同通讯。建议标为『强旁证，原始新闻稿未复核』。",
+   "Zilin Lu『入学不晚于 2021—2022 年』。OpenAlex 记录的 NWPU 归属年份最早为 2022，与该推断相容但不能证明入学年份；原文已标推断，保持即可。"
+  ],
+  "additions": "[\"【替换掉那条被错引的证据：Yong Xia 同一人，有更硬的铁证】RADAR 上 Yong Xia 的 ORCID 是 0000-0001-9273-2847（Crossref 原始记录）。用该 ORCID 反查 Crossref：https://api.crossref.org/works?filter=orcid:0000-0001-9273-2847 返回 total-results = 111，其中包括 SESV（IEEE TMI 2020）、M3Net（Pattern Recognition 2019）、MFI-Net（JBHI 2022，单位字段原文『National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, School of Computer Science and Engineering, Northwestern Polytechnical University, Xi'an, Shaanxi, China』）、Disease-Image-Specific Learning（IEEE TPAMI 2021，同样 NWPU 单位）等。同一个 ORCID 在 10.1126/science.aec6129 上的单位字段却只有『Department of Radiology, Ningbo No. 2 Hospital』。这是同一人的直接身份证据（作者认证的持久标识符），比原调查用的『另一篇预印本的通讯邮箱』强一个量级，建议正文改用这条。\", \"【共同一作名单有权威第二来源】PubMed efetch（PMID 42752131）的 XML 里带 EqualContrib 属性：Qi Zhang、Jianpeng Zhang、Weiwei Cao、Zilin Lu、Wanxing Chang、Haonan Ding 六人 EqualContrib=\\\"Y\\\"，其余 34 人为空。也就是说『6 位共同第一作者』不必只依赖 Science 网页上的 †，PubMed 独立复核通过。同时确认 Shaoteng Zhang（第 11 位）不是共同一作——原调查（截断部分）如果把他也写成共同一作，那是错的。\", \"【常琬星硕士毕业时间的硬证据，原调查只写了『推断』】她主页 changwxx.github.io 的仓库提交历史（GitHub API）最后一次提交是 2024-07-10『Update email』，此前为 2024-07-04、2024-01-28、2023-12-21、2023-12-11（first commit）。即『final-year master student』这句话写于 2024 年上半年且此后再未更新——这把她的硕士在读末年钉在 2023-2024 学年，比原调查『约 2024 年硕士毕业入职』的纯推断多了一条时间证据。\", \"【她挂达摩院单位的最早可查记录】Research Square 预印本 10.21203/rs.3.rs-5783643/v1（posted 2025-02-11，即 Nature Communications 那篇脂肪肝论文的预印本）在 Crossref 里她的署名原文是 `Wan Xing Chang, affiliation: [\\\"Alibaba Damo Academy\\\"]`；更早的 arXiv:2412.16715（Cell Clouds，2024-12-21）已有她参与。两条合起来支持『2024 年下半年进入达摩院』。注意该预印本把她的名拆成了『Wan Xing』，检索时容易漏。\", \"【Zilin Lu 的 NWPU 归属可独立坐实，不必只靠 Google Scholar】用其 ORCID 0000-0003-2437-283X 反查 Crossref（https://api.crossref.org/works?filter=orcid:0000-0003-2437-283X ，total 7），除 Science 那篇外六篇期刊论文的单位字段一律是 NWPU（多数印全称『National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, School of Computer Science and Engineering, Northwestern Polytechnical University, Xi'an, China』）。『Ningbo No. 2 Hospital』这个署名只出现在 Science 这一篇（期刊论文层面），另在两篇 arXiv 预印本上出现。这反而更支持原调查的结论：真实学术单位是西工大。\", \"【Shaoteng Zhang 的 ORCID 也指向西工大】ORCID 0009-0005-4976-6351（Crossref 记录里 RADAR 第 11 位作者）姓名字段登记为『st zhang』，employments 只有一条：Northwestern Polytechnical University。Google Scholar YCdOvPcAAAAJ：NWPU、验证邮箱 mail.nwpu.edu.cn、总被引 59、h-index 2、i10 2，仅 4 条论文（TPRO MICCAI 2023 被引 43、TransWS 2022 被引 16、RADAR、Super-Generalist）。可用于补全被截断的那一条。\", \"【PANDA 交叉核对我独立重做了一遍】PubMed efetch PMID 37985692 的 36 位作者里，姓 Lu 的只有 Yimei Lu / Hong Lu / Le Lu / Jianping Lu，姓 Chang 的为零，姓 Zhang 的只有 Tingting / Rong / Qi / Ling。三人均不在 PANDA，原调查无误。\", \"【一条轻微的反向信号，供保留】她的 GitHub 资料 https://api.github.com/users/changwxx 在 2026-09-05 仍显示 location = 『Shanghai, China』（name = Wanxing Chang，blog 指向该主页）。达摩院这条线在杭州。GitHub 的 location 字段很少有人更新，不足以推翻任何结论，但如果成稿里要写『她人在杭州』，这条要么回避要么注明存在冲突。\", \"【一条被原调查自己怀疑、但其实是对的】Wanxing Chang 的 key_publications 把『Relieving the Over-Aggregating Effect in Graph Transformers』写成 NeurIPS 2025，而 Google Scholar 把它归在 2026 年。以 arXiv 为准原调查是对的：arXiv API 返回该文 published 2025-10-24，comment 原文『Accepted by NeurIPS 2025』，作者序 Junshu Sun, Wanxing Chang, Chenxue Yang, Qingming Huang, Shuhui Wang（她第 2 作者，与原文一致）。这里不要因为 Scholar 的年份而去改它。\"]",
+  "notes": "总评：这批调查的质量比我预期高。硬性规则被遵守得很好——两个查不到中文名的人老老实实留了空，没有做拼音反推；Zilin Lu 的 OpenAlex 同名合并问题是他们自己发现并正确处理的；『宁波市第二医院』这个异常署名也是真的、且被他们多源确认过。我没有找到任何一条足以判 wrong_name 或 downgrade 的反证。\n\n逐项对照核查重点：\n\n1. 中文名对不对 —— 常琬星 confirmed，且证据是第一手闭环（认证 ORCID → 本人主页）。另两人留空正确。**未找到反证。**\n\n2. 履历时间线有无跨机构矛盾 —— 未发现矛盾。常琬星：上科大硕士（主页停更于 2024-07）→ 2024-12 起以达摩院署名发论文，衔接连贯，无重叠。Zilin Lu：2022 起 NWPU 署名（OpenAlex 年份、Crossref 单位字段一致）+ 达摩院实习（arXiv:2603.04022v1 脚注原文『The work was done during Zilin's internship at DAMO Academy.』——这条我逐字复核过，原文无误），实习与在读并行，不构成冲突。**未找到反证。**\n\n3. 引用数是否抓错同名页面 —— 没有。两个 Scholar ID 我都直接抓了原始 HTML 复核：Wanxing Chang 211 / h4 / i10 3，Zilin Lu 601 / h12 / i10 13，与原调查一字不差；两个页面的论文列表与合作网（Q Zeng、Y Xia、M Lu / Ye Shi、Jingya Wang、Le Lu 线）都与 RADAR 语境自洽。Zilin Lu 那几条被引数我也逐条核了：PEFAT 105（第 3 作者）、Segment Together 104（第 3）、PICK 96（第 2）、Spot the Difference 17（第 1）、Bridging the Semantic Gap 15（第 1）、M²F 13（第 1），全部正确。Wanxing Chang 的 UniOT 144（第 1）、CSOT 34（第 1）、Nat Commun 17（第 3）、CT-FineBench 第 2、Pixel-Mamba 第 4，也全部正确。唯一要提醒的是原调查自己已经说过的：OpenAlex 的数字作废。\n\n4. 师承是不是从合著倒推的 —— 是，两处都是（石野/汪婧雅之于常琬星；夏勇之于 Zilin Lu 的那层『张建鹏是夏勇博士生』）。前者原调查已自标推断，处理得当；后者引了西工大新闻稿但我无法复核该 URL。夏勇本人是 Zilin Lu 导师这点没问题（ORCID education 条目、六篇论文同单位同通讯）。\n\n5. 有没有把两个同名的人缝在一起 —— 没有。相反，原调查是主动拆开的那一方（OpenAlex 那条），判断正确，我用 affiliations 年份字段坐实了。\n\n6. 重要遗漏 —— 有两处值得补：(a) Yong Xia 同一人的证据应该换成 ORCID 反查 Crossref 的 111 篇（见 additions 第 1 条），现用的那条引错了出处；(b) 共同一作名单应补上 PubMed EqualContrib 这个第二来源，并明确 Shaoteng Zhang **不是**共同一作。另外没有发现任何一人其实是实验室负责人或已离职的迹象。\n\n本次核查的能力边界，请在成稿里照实写：\n- WebSearch 配额已在本会话用尽（200/200），DuckDuckGo 返回人机验证（未做验证码），Bing 对中文人名查询返回无关结果 —— 因此所有中文来源的独立复查（百度、知网、高校新闻）本轮**没有做成**。中文名结论之所以仍能 confirmed，是因为它根本不依赖中文检索。\n- www.science.org 对非浏览器请求 403，CRediT 角色无法二次核验；Zhihu 403；DBLP 已上 Anubis 人机验证（未绕过）；西工大 teacher.nwpu.edu.cn 的 412 问题原调查已记录，我未重试。\n- 实际打通并用于取证的接口：Crossref works + ORCID 过滤、pub.orcid.org v3.0、PubMed eutils efetch、export.arxiv.org API、arxiv.org/html 全文、Zenodo API、GitHub API、OpenAlex authors、scholar.google.com（直接 HTML 抓取成功）、changwxx.github.io、sist.shanghaitech.edu.cn。\n\n给下一步的一条建议：如果要给 Zilin Lu 和 Shaoteng Zhang 补中文名，最有希望的不是搜索引擎，而是 (a) 西工大研究生院的学位论文/答辩公示 PDF，(b) MICCAI/CVPR 中文媒体报道里的获奖名单，(c) 中国知网作者页（两人都有中文期刊论文的可能性不高，但夏勇组的综述类中文文章会带学生）。在拿到其中任一条直接对照之前，继续留空是正确的。"
+ }
+}

@@ -67,7 +67,7 @@ MBZUAI 计算机视觉系             ← 现职：助理教授（独立 PI）
 | 13 | **夏勇** Yong Xia | 西工大计算机学院长聘教授、博导、副院长 | **源头**。张建鹏、谢雨彤、Zilin Lu、Shaoteng Zhang 都出自这里 |
 | 12 | **谢雨彤** Yutong Xie | MBZUAI 助理教授（2025-01 起）；此前 Adelaide AIML 博士后 | **中转站的产物，现已独立**。V3ALab 页面把她列在 Alumni |
 | 14 | **吴琦** Qi Wu | Adelaide 副教授，**V3ALab（Vision, Ask, Answer, Act）Director**；AIML 视觉与语言领域主任 | **中转站的主人**。方向：Image Captioning / Visual Question Answering |
-| 10 | **Sinuo Wang** | 吴琦的**博士生**（V3ALab People 页 "PhD Students" 名单直接列着） | ==**Adelaide → 达摩院的人肉管道本身**== |
+| 10 | **Sinuo Wang** | 吴琦与谢雨彤共同指导的**博士生**（V3ALab 官方个人页） | ==**Adelaide → 达摩院的人肉管道本身**== |
 | 2 | **张建鹏** Jianpeng Zhang | 达摩院 Staff Algorithm Engineer | 西工大出身，已落地达摩院 |
 
 ### Sinuo Wang 这一条最说明问题
@@ -75,7 +75,7 @@ MBZUAI 计算机视觉系             ← 现职：助理教授（独立 PI）
 - V3ALab People 页把她列在 PhD Students；同页 Alumni 里列着 "Yutong Xie, Postdoctoral Research Fellow"
 - 论文旁证：**PairAug (CVPR 2024)** = Yutong Xie, Qi Chen, **Sinuo Wang**, …, **Yong Xia**, **Qi Wu**（放射报告图文对增强 —— 和 RADAR 同一个技术问题）；**MedCutMix (2026)** = Sinuo Wang 一作、Qi Wu 末位
 - ==她 2025–2026 有两篇论文的单位**直接写 `DAMO Academy, Alibaba Group`**==（*Boosting Vision Semantic Density…*、*Rethinking the Efficiency and Effectiveness of RL for Radiology Report Generation*）
-- 更早：郑州大学网络空间安全学院本科
+- 本科和硕士都在 Adelaide：电气与电子工程（Autonomous Systems）荣誉学士 → 2023 年人工智能与机器学习硕士；博士导师是**吴琦与谢雨彤**两人（V3ALab 官方个人页原文）
 
 > [!insight] 供给线是真实的，而且是双向的
 > 西工大出人 → Adelaide 做博后/博士 → 回流达摩院做实习/正式岗。
@@ -96,7 +96,7 @@ MBZUAI 计算机视觉系             ← 现职：助理教授（独立 PI）
 - 夏勇与宁波二院放射科的**具体关系**（任命/兼职/客座）无直接记载
 - 吴琦的 **ARC DECRA Fellow** 身份只见于二手来源（conferences.com.au），未经官方核实
 - Zilin Lu、Shaoteng Zhang 的**中文名**查不到（西工大在读博士，中文互联网无公开痕迹）
-- Sinuo Wang 的**中文名**查不到
+- Sinuo Wang、Zhongyi Shui、Yanjie Zhou 的**中文名**查不到
 
 ---
 
