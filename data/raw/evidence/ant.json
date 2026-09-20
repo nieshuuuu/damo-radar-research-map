@@ -1,0 +1,2097 @@
+[
+ {
+  "pmid": "42735311",
+  "year": "2026",
+  "journal": "Proc Natl Acad Sci U S A",
+  "title": "Human preferences are susceptible to covertly misaligned AI advice.",
+  "authors": [
+   {
+    "name": "Sahand Sabour",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   },
+   {
+    "name": "June M Liu",
+    "aff": [
+     "The State Key Laboratory of Brain and Cognitive Sciences, Department of Psychology, The University of Hong Kong, Hong Kong Special Administrative Region 999077, China.",
+     "Laboratory of Neuropsychology and Human Neuroscience, Department of Psychology, The University of Hong Kong, Hong Kong Special Administrative Region 999077, China."
+    ]
+   },
+   {
+    "name": "Siyang Liu",
+    "aff": [
+     "The Language and Information Technologies Group, Department of Computer Science and Engineering, University of Michigan, Ann Arbor, MI 48109."
+    ]
+   },
+   {
+    "name": "Chris Z Yao",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   },
+   {
+    "name": "Shiyao Cui",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   },
+   {
+    "name": "Wen Zhang",
+    "aff": [
+     "Department of Psychology, University of International Relations, Haidian District, Beijing 100091, China."
+    ]
+   },
+   {
+    "name": "Xuanming Zhang",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   },
+   {
+    "name": "Yaru Cao",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China.",
+     "Neural Engineering Center, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen 518055, China."
+    ]
+   },
+   {
+    "name": "Advait Bhat",
+    "aff": [
+     "The Behavioral Data Science Group, Paul G. Allen School of Computer Science and Engineering, University of Washington, Seattle, WA 98195."
+    ]
+   },
+   {
+    "name": "Jian Guan",
+    "aff": [
+     "Ant Research Natural Language Processing, Ant Group, Beijing 100081, China."
+    ]
+   },
+   {
+    "name": "Wei Wu",
+    "aff": [
+     "Ant Research Natural Language Processing, Ant Group, Beijing 100081, China."
+    ]
+   },
+   {
+    "name": "Rada Mihalcea",
+    "aff": [
+     "The Language and Information Technologies Group, Department of Computer Science and Engineering, University of Michigan, Ann Arbor, MI 48109."
+    ]
+   },
+   {
+    "name": "Hongning Wang",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   },
+   {
+    "name": "Tim Althoff",
+    "aff": [
+     "The Behavioral Data Science Group, Paul G. Allen School of Computer Science and Engineering, University of Washington, Seattle, WA 98195."
+    ]
+   },
+   {
+    "name": "Tatia M C Lee",
+    "aff": [
+     "The State Key Laboratory of Brain and Cognitive Sciences, Department of Psychology, The University of Hong Kong, Hong Kong Special Administrative Region 999077, China.",
+     "Laboratory of Neuropsychology and Human Neuroscience, Department of Psychology, The University of Hong Kong, Hong Kong Special Administrative Region 999077, China."
+    ]
+   },
+   {
+    "name": "Minlie Huang",
+    "aff": [
+     "The Conversational AI Group, Department of Computer Science and Technology, Institute for Artificial Intelligence, Tsinghua University, Beijing 100084, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "42655837",
+  "year": "2026",
+  "journal": "Vet Sci",
+  "title": "A Descriptive Analysis of Morbidity Patterns Among Insured Pet Cats in China Based on Insurance Claims.",
+  "authors": [
+   {
+    "name": "Kaixin Zhang",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China."
+    ]
+   },
+   {
+    "name": "Chang Wang",
+    "aff": [
+     "Ant Group, Hangzhou 310023, China."
+    ]
+   },
+   {
+    "name": "Richard Laven",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China.",
+     "Täwharau Ora-School of Veterinary Science, Massey University, Palmerston North 4442, New Zealand."
+    ]
+   },
+   {
+    "name": "Baiyu Li",
+    "aff": [
+     "Ant Group, Hangzhou 310023, China."
+    ]
+   },
+   {
+    "name": "Meng Li",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China."
+    ]
+   },
+   {
+    "name": "D Aaron Yang",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China.",
+     "Täwharau Ora-School of Veterinary Science, Massey University, Palmerston North 4442, New Zealand."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "42463045",
+  "year": "2026",
+  "journal": "Ann Oncol",
+  "title": "A multimodal deep learning model for preoperative prediction of post-operative complications in gastric cancer.",
+  "authors": [
+   {
+    "name": "P A Ding",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "S Yang",
+    "aff": [
+     "Ant Healthcare (AFU), Ant Group, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "L J Meng",
+    "aff": [
+     "Research Center and Tumor Research Institute of the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "S Chen",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "S P Li",
+    "aff": [
+     "Intelligent Information Technology Research Center, Jingchu University of Technology, Jingmen, Hubei, China; Jingmen Cryptometry Application Technology Research Center, Jingmen, Hubei, China."
+    ]
+   },
+   {
+    "name": "H H Guo",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "J X Yang",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "S Ma",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Y H Yang",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "K X Gao",
+    "aff": [
+     "Department of Anorectal Surgery, Cangzhou People's Hospital, Cangzhou, Hebei, China."
+    ]
+   },
+   {
+    "name": "R J Gu",
+    "aff": [
+     "School of Chinese Medicine and School of Integrated Chinese and Western Medicine, Nanjing University of Chinese Medicine, Nanjing, Jiangsu, China; Department of Gastroenterology and Hepatology, Jinling Hospital, Medical School of Nanjing University, Nanjing, Jiangsu, China."
+    ]
+   },
+   {
+    "name": "L L Zhang",
+    "aff": [
+     "Department of General Surgery, Renmin Hospital of Wuhan University, Wuhan, Hubei, China."
+    ]
+   },
+   {
+    "name": "Y L Chen",
+    "aff": [
+     "Department of General Surgery, The Second Affiliated Hospital of Xingtai Medical College, Xingtai, Hebei, China."
+    ]
+   },
+   {
+    "name": "Y L Shi",
+    "aff": [
+     "Department of General Surgery, The Fifth Affiliated Hospital of Anhui Medical University, Fuyang, Anhui, China."
+    ]
+   },
+   {
+    "name": "H Long",
+    "aff": [
+     "Department of Gastrointestinal Surgery, The First Affiliated Hospital of University of South China, Hengyang, Hunan, China."
+    ]
+   },
+   {
+    "name": "Z J Xia",
+    "aff": [
+     "Department of General, Visceral, and Transplant Surgery, Ludwig-Maximilians-University Munich, Munich, Germany."
+    ]
+   },
+   {
+    "name": "N Meng",
+    "aff": [
+     "Department of General Surgery, Shijiazhuang People's Hospital, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "X L Li",
+    "aff": [
+     "Department of General Surgery, Baoding Central Hospital, Baoding, Hebei, China."
+    ]
+   },
+   {
+    "name": "Z J Guo",
+    "aff": [
+     "Department of General Surgery, Hengshui People's Hospital, Hengshui, Hebei, China."
+    ]
+   },
+   {
+    "name": "X Han",
+    "aff": [
+     "College of Biomedical Engineering, Sichuan University, Chengdu, Sichuan, China. Electronic address: xiao_han@scu.edu.cn."
+    ]
+   },
+   {
+    "name": "Q Zhao",
+    "aff": [
+     "The Third Department of Surgery, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China; Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. Electronic address: zhaoqun@hebmu.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "42426002",
+  "year": "2026",
+  "journal": "Nat Commun",
+  "title": "A unified vision-language model for precision oncology and biomarker prediction in neuroblastoma.",
+  "authors": [
+   {
+    "name": "Jin Zhu",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China.",
+     "Department of Pathology, College of Basic Medicine, Molecular Medicine Diagnostic and Testing Center, Chongqing Medical University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Ruizhen Hu",
+    "aff": [
+     "Shenzhen International Graduate School, Tsinghua University, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Sen Yang",
+    "aff": [
+     "Ant Group, Sunnyvale, CA, USA."
+    ]
+   },
+   {
+    "name": "Qing Sun",
+    "aff": [
+     "Department of Pediatrics, Peking University First Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhenzhen Zhao",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Juan Cao",
+    "aff": [
+     "Department of Pathology, Shenzhen Children's Hospital, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Peiying Pan",
+    "aff": [
+     "Department of Pathology, Guiyang Maternal and Child Health Care Hospital, Guiyang, China."
+    ]
+   },
+   {
+    "name": "Kun Wang",
+    "aff": [
+     "Department of Pathology, Guiyang Maternal and Child Health Care Hospital, Guiyang, China."
+    ]
+   },
+   {
+    "name": "Liyan Cui",
+    "aff": [
+     "Pathology Department, Inner Mongolia Maternity and Child Health Care Hospital, Hohhot, China."
+    ]
+   },
+   {
+    "name": "Hongping Tang",
+    "aff": [
+     "Department of Pathology, Shenzhen Maternity and Child Healthcare Hospital, Southern Medical University, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Qianqian Fang",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Sijin Jiang",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Linli Lei",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Wenjian Zhang",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Jiajun Xie",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Shuo Kang",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Dongyuan Xiao",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Ming Xiao",
+    "aff": [
+     "Department of Pathology, College of Basic Medicine, Molecular Medicine Diagnostic and Testing Center, Chongqing Medical University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Xuan Zhai",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Yuntao Jia",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Junyang Chen",
+    "aff": [
+     "Shenzhen International Graduate School, Tsinghua University, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Wei Yuan",
+    "aff": [
+     "College of Biomedical Engineering, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Xiao Han",
+    "aff": [
+     "College of Biomedical Engineering, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "Ant Group, Sunnyvale, CA, USA."
+    ]
+   },
+   {
+    "name": "Junhan Zhao",
+    "aff": [
+     "Department of Biomedical Informatics, Harvard Medical School, Boston, MA, USA.",
+     "Department of Pediatrics, University of Chicago, Chicago, IL, USA.",
+     "Comprehensive Cancer Center, University of Chicago Medicine, Chicago, IL, USA."
+    ]
+   },
+   {
+    "name": "Xiyue Wang",
+    "aff": [
+     "Department of Radiation Oncology, Stanford University School of Medicine, Palo Alto, CA, USA."
+    ]
+   },
+   {
+    "name": "Yi Li",
+    "aff": [
+     "Shenzhen International Graduate School, Tsinghua University, Shenzhen, China. liyi@sz.tsinghua.edu.cn."
+    ]
+   },
+   {
+    "name": "Jinxi Xiang",
+    "aff": [
+     "Department of Radiation Oncology, Stanford University School of Medicine, Palo Alto, CA, USA. xiangjx@stanford.edu."
+    ]
+   },
+   {
+    "name": "Biyue Zhu",
+    "aff": [
+     "Children's Hospital of Chongqing Medical University, National Clinical Research Center for Children and Adolescents' Health and Diseases, Ministry of Education Key Laboratory of Child Development and Disorders, International Science and Technology Cooperation Base of Child Development and Critical Disorders, Chongqing Municipal Health Commission Key Laboratory of Children's Vital Organ Development and Diseases, Chongqing, China. biyuezhu@hospital.cqmu.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "42331209",
+  "year": "2026",
+  "journal": "J Biomed Inform",
+  "title": "Beyond Accuracy: Safety-Centered guidelines for the evaluation of LLM-based therapy recommendation systems for chronic multimorbidity patients.",
+  "authors": [
+   {
+    "name": "Yicong Wu",
+    "aff": [
+     "Computer Science Department, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Ting Chen",
+    "aff": [
+     "The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Irit Hochberg",
+    "aff": [
+     "Hillel Yaffe Medical Center, Hadera, Israel; Bruce Rappaport Faculty of Medicine, Technion, Haifa, Israel."
+    ]
+   },
+   {
+    "name": "Zhoujian Sun",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Ruth Edry",
+    "aff": [
+     "Bruce Rappaport Faculty of Medicine, Technion, Haifa, Israel; Rambam Medical Center, Haifa, Israel."
+    ]
+   },
+   {
+    "name": "Zhengxing Huang",
+    "aff": [
+     "Computer Science Department, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Mor Peleg",
+    "aff": [
+     "Department of Information Systems, University of Haifa, Haifa, Israel. Electronic address: morpeleg@is.haifa.ac.il."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "42000031",
+  "year": "2026",
+  "journal": "Vet J",
+  "title": "Retrospective survival analysis of feline lower urinary tract disease in China using insurance data.",
+  "authors": [
+   {
+    "name": "Kaixin Zhang",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China."
+    ]
+   },
+   {
+    "name": "Richard Laven",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China; Täwharau Ora - School of Veterinary Science, Massey University, Palmerston North 4442, New Zealand."
+    ]
+   },
+   {
+    "name": "Chang Wang",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Baiyu Li",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Meng Li",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China. Electronic address: limeng@njau.edu.cn."
+    ]
+   },
+   {
+    "name": "D Aaron Yang",
+    "aff": [
+     "College of Veterinary Medicine, Nanjing Agricultural University, Nanjing 210095, China; Täwharau Ora - School of Veterinary Science, Massey University, Palmerston North 4442, New Zealand. Electronic address: d.a.yang@njau.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41986314",
+  "year": "2026",
+  "journal": "Nat Commun",
+  "title": "A deep learning-based digital biopsy for predicting early recurrence in gastric cancer.",
+  "authors": [
+   {
+    "name": "Ping'an Ding",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. ding_ping_an@hebmu.edu.cn.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. ding_ping_an@hebmu.edu.cn.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. ding_ping_an@hebmu.edu.cn."
+    ]
+   },
+   {
+    "name": "Sheng Chen",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "School of Clinical Medicine, Hebei University, Baoding, Hebei, China."
+    ]
+   },
+   {
+    "name": "Honghai Guo",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Sen Yang",
+    "aff": [
+     "Ant Group, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Xiyue Wang",
+    "aff": [
+     "College of Biomedical Engineering, Sichuan University, Chengdu, Sichuan, China."
+    ]
+   },
+   {
+    "name": "Xiao Han",
+    "aff": [
+     "College of Biomedical Engineering, Sichuan University, Chengdu, Sichuan, China."
+    ]
+   },
+   {
+    "name": "Jiaxuan Yang",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Haotian Wu",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Jiaxiang Wu",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Yuan Tian",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Wenqian Ma",
+    "aff": [
+     "Department of Endoscopy, The Fourth Hospital of Hebei Medical University, Shijiazhuang, China."
+    ]
+   },
+   {
+    "name": "Xiaolong Li",
+    "aff": [
+     "Department of General Surgery, Baoding Central Hospital, Baoding, Hebei, China."
+    ]
+   },
+   {
+    "name": "Zhenjiang Guo",
+    "aff": [
+     "Department of General Surgery, Hengshui People's Hospital, Hengshui, Hebei, China."
+    ]
+   },
+   {
+    "name": "Renjun Gu",
+    "aff": [
+     "School of Chinese Medicine & School of Integrated Chinese and Western Medicine, Nanjing University of Chinese Medicine, Nanjing, Jiangsu, China.",
+     "Department of Gastroenterology and Hepatology, Jinling Hospital, Medical School of Nanjing University, Nanjing, Jiangsu, China."
+    ]
+   },
+   {
+    "name": "Lilong Zhang",
+    "aff": [
+     "Department of General Surgery, Renmin Hospital of Wuhan University, Wuhan, Hubei, China."
+    ]
+   },
+   {
+    "name": "Ning Meng",
+    "aff": [
+     "Department of General Surgery, Shijiazhuang People's Hospital, Shijiazhuang, Hebei, China."
+    ]
+   },
+   {
+    "name": "Yueping Liu",
+    "aff": [
+     "Department of Pathology, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. liuyp@hebmu.edu.cn."
+    ]
+   },
+   {
+    "name": "Lingjiao Meng",
+    "aff": [
+     "Research Center and Tumor Research Institute of the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. ljmeng@hebmu.edu.cn."
+    ]
+   },
+   {
+    "name": "Qun Zhao",
+    "aff": [
+     "The Third Department of Surgery, the Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. zhaoqun@hebmu.edu.cn.",
+     "Hebei Key Laboratory of Precision Diagnosis and Comprehensive Treatment of Gastric Cancer, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. zhaoqun@hebmu.edu.cn.",
+     "Big Data Analysis and Mining Application for Precise Diagnosis and Treatment of Gastric Cancer Hebei Provincial Engineering Research Center, The Fourth Hospital of Hebei Medical University, Shijiazhuang, Hebei, China. zhaoqun@hebmu.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41663720",
+  "year": "2026",
+  "journal": "NPJ Digit Med",
+  "title": "Toward integrated sleep health: multimodal AI in Hang Hao Meng agent.",
+  "authors": [
+   {
+    "name": "Mingjian Cai",
+    "aff": [
+     "Affiliated Mental Health Center & Hangzhou Seventh People's Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Sugai Liang",
+    "aff": [
+     "Affiliated Mental Health Center & Hangzhou Seventh People's Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Shuai Zhen",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Siwei Wei",
+    "aff": [
+     "Affiliated Mental Health Center & Hangzhou Seventh People's Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Tao Sun",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Junwei Liu",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Hongjing Mao",
+    "aff": [
+     "Affiliated Mental Health Center & Hangzhou Seventh People's Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China. 13777861972@163.com."
+    ]
+   },
+   {
+    "name": "Junhang Zhang",
+    "aff": [
+     "Affiliated Mental Health Center & Hangzhou Seventh People's Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China. 13757155899@163.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41613994",
+  "year": "2025",
+  "journal": "Front Big Data",
+  "title": "Deep learning-enabled hybrid systems for accurate recognition of text in seal images.",
+  "authors": [
+   {
+    "name": "Keke Zhang",
+    "aff": [
+     "College of Artificial Intelligence and Big Data, Chongqing Polytechnic University of Electronic Technology, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Mingyu Guan",
+    "aff": [
+     "College of Three Gorges Artificial Intelligence, Chongqing Three Gorges University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Chao Wu",
+    "aff": [
+     "College of Computer Science, Chongqing University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Yutong Li",
+    "aff": [
+     "College of Computer Science, Chongqing University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Qingguo Lü",
+    "aff": [
+     "College of Computer Science, Chongqing University, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Yi Liu",
+    "aff": [
+     "Chongqing Ant Consumer Finance Co. Ltd., Ant Group, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Yi Wang",
+    "aff": [
+     "Chongqing Ant Consumer Finance Co. Ltd., Ant Group, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Wei Wang",
+    "aff": [
+     "Chongqing Ant Consumer Finance Co. Ltd., Ant Group, Chongqing, China."
+    ]
+   },
+   {
+    "name": "Wei Zhang",
+    "aff": [
+     "College of Artificial Intelligence and Big Data, Chongqing Polytechnic University of Electronic Technology, Chongqing, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41497892",
+  "year": "2026",
+  "journal": "Health Inf Sci Syst",
+  "title": "Hierarchical agent reflection for aligning LLM reasoning with clinical diagnostic processes.",
+  "authors": [
+   {
+    "name": "Xinda Wang",
+    "aff": [
+     "School of Software Technology, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaotong Li",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Deng Zhao",
+    "aff": [
+     "Machine Intelligence Department, Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Kehua Feng",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Lei Liang",
+    "aff": [
+     "Machine Intelligence Department, Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Zhiqiang Zhang",
+    "aff": [
+     "Machine Intelligence Department, Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Keyan Ding",
+    "aff": [
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Huajun Chen",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Bo Wan",
+    "aff": [
+     "Department of Dermatology, Renji Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Qiang Zhang",
+    "aff": [
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, China.",
+     "ZJU-UIUC Institute, Zhejiang University, Hangzhou, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41315671",
+  "year": "2025",
+  "journal": "NPJ Digit Med",
+  "title": "Enhancing clinical documentation with voice processing and large language models: a study on the LAOS system.",
+  "authors": [
+   {
+    "name": "Yupeng Xu",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Huixun Jia",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Maolin Wang",
+    "aff": [
+     "City University of Hong Kong, Hong Kong, China."
+    ]
+   },
+   {
+    "name": "Jie Feng",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xun Xu",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Haiyan Wang",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Jieqiong Chen",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Zheng Zheng",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Xiaoyan Yang",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Yue Shen",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Jian Wang",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Chenyi Zhuang",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Peng Wei",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Ruocheng Guo",
+    "aff": [
+     "City University of Hong Kong, Hong Kong, China."
+    ]
+   },
+   {
+    "name": "Xiangyu Zhao",
+    "aff": [
+     "City University of Hong Kong, Hong Kong, China."
+    ]
+   },
+   {
+    "name": "Junxiang Fan",
+    "aff": [
+     "Department of Information, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China. junxiang.fan@shgh.cn."
+    ]
+   },
+   {
+    "name": "Xiaodong Sun",
+    "aff": [
+     "Department of Ophthalmology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, National Clinical Research Center for Eye Diseases, Shanghai Key Laboratory of Fundus Diseases, Shanghai Engineering Center for Visual Science and Photomedicine, Shanghai Gene Therapy Center, Shanghai, China. xdsun@sjtu.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41203608",
+  "year": "2025",
+  "journal": "Nat Commun",
+  "title": "Physical activity levels may impact on the risk of premature mortality in people with epilepsy.",
+  "authors": [
+   {
+    "name": "Lingjie Fan",
+    "aff": [
+     "College of Computer Science, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Shengyi Liu",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Junhan Zhao",
+    "aff": [
+     "Department of Biomedical Informatics, Harvard Medical School, Boston, MA, USA. junhanzv@uchicago.edu.",
+     "Department of Pediatrics, University of Chicago, Chicago, IL, USA. junhanzv@uchicago.edu.",
+     "Department of Surgery, Massachusetts General Hospital, Boston, MA, USA. junhanzv@uchicago.edu."
+    ]
+   },
+   {
+    "name": "Xiyue Wang",
+    "aff": [
+     "College of Computer Science, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Yanyi Nie",
+    "aff": [
+     "College of Computer Science, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Farah Qaderi",
+    "aff": [
+     "Department of Surgery, Massachusetts General Hospital, Boston, MA, USA."
+    ]
+   },
+   {
+    "name": "Qibo Su",
+    "aff": [
+     "College of Computer Science, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Zihua He",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Sen Yang",
+    "aff": [
+     "Ant Group, Sunnyvale, CA, USA."
+    ]
+   },
+   {
+    "name": "Tong Yi",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Jiaqi Wang",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Cairong Zhu",
+    "aff": [
+     "Department of Epidemiology and Health Statistics, West China School of Public Health and West China Fourth Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Josemir W Sander",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China.",
+     "UCL Queen Square Institute of Neurology, London, UK."
+    ]
+   },
+   {
+    "name": "Dong Zhou",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China. zhoudong66@yahoo.de."
+    ]
+   },
+   {
+    "name": "Tao Lin",
+    "aff": [
+     "College of Computer Science, Sichuan University, Chengdu, China. lintao@scu.edu.cn."
+    ]
+   },
+   {
+    "name": "Jinmei Li",
+    "aff": [
+     "Department of Neurology, West China Hospital, Sichuan University, Chengdu, China. lijinmei@wchscu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "41197449",
+  "year": "2025",
+  "journal": "Bioorg Chem",
+  "title": "PDL1-inhi.predictor: a two-tiered machine learning framework for predicting and prioritizing PDL1 inhibitors.",
+  "authors": [
+   {
+    "name": "Huiyan Ying",
+    "aff": [
+     "Institute for Molecular Medicine Finland (FIMM), HiLIFE, University of Helsinki, Helsinki, Finland. Electronic address: huiyan.ying@helsinki.fi."
+    ]
+   },
+   {
+    "name": "Junting Liu",
+    "aff": [
+     "Affiliated Ant Group, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Weikaixin Kong",
+    "aff": [
+     "Institute for Molecular Medicine Finland (FIMM), HiLIFE, University of Helsinki, Helsinki, Finland; Department of Molecular and Cellular Pharmacology, School of Pharmaceutical Sciences, Peking University Health Science Center, Beijing, China. Electronic address: kong.weikaixin@helsinki.fi."
+    ]
+   },
+   {
+    "name": "Xiangwei Xu",
+    "aff": [
+     "Affiliated Yongkang First People's Hospital and School of Pharmaceutical Sciences, Hangzhou Medical College, Hangzhou, Zhejiang, China. Electronic address: xuxiangwei@hmc.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "40874816",
+  "year": "2025",
+  "journal": "Brief Bioinform",
+  "title": "MuST: multiple-modality structure transformation for single-cell spatial transcriptomics.",
+  "authors": [
+   {
+    "name": "Zelin Zang",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China.",
+     "Centre for Artificial Intelligence and Robotics (CAIR), HKISI-CAS, 310000."
+    ]
+   },
+   {
+    "name": "Liangyu Li",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China."
+    ]
+   },
+   {
+    "name": "Yongjie Xu",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China."
+    ]
+   },
+   {
+    "name": "Chenrui Duan",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China."
+    ]
+   },
+   {
+    "name": "Yue Shen",
+    "aff": [
+     "Ant Group, Hangzhou, 310000, China."
+    ]
+   },
+   {
+    "name": "Yi Sun",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China."
+    ]
+   },
+   {
+    "name": "Zhen Lei",
+    "aff": [
+     "Centre for Artificial Intelligence and Robotics (CAIR), HKISI-CAS, 310000.",
+     "State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), Institute of Automation, University of Chinese Academy of Sciences (CASIA), 17W, Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, 999077, Hong Kong.",
+     "School of Artificial Intelligence, University of Chinese Academy of Sciences (UCAS), Beijing 100049, China.",
+     "School of Computer Science and Engineering, the Faculty of Innovation Engineering, Macau University of Science and Technology, Macau 999078, China."
+    ]
+   },
+   {
+    "name": "Stan Z Li",
+    "aff": [
+     "Westlake Institute for Advanced Studies, Westlake University, HangZhou, 310000, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "40528890",
+  "year": "2025",
+  "journal": "Innovation (Camb)",
+  "title": "Unleashing the potential of remote sensing foundation models via bridging data and computility islands.",
+  "authors": [
+   {
+    "name": "Yansheng Li",
+    "aff": [
+     "School of Remote Sensing and Information Engineering, Wuhan University, Wuhan 430079, China."
+    ]
+   },
+   {
+    "name": "Jieyi Tan",
+    "aff": [
+     "School of Remote Sensing and Information Engineering, Wuhan University, Wuhan 430079, China."
+    ]
+   },
+   {
+    "name": "Bo Dang",
+    "aff": [
+     "School of Remote Sensing and Information Engineering, Wuhan University, Wuhan 430079, China."
+    ]
+   },
+   {
+    "name": "Mang Ye",
+    "aff": [
+     "School of Computer Science, Wuhan University, Wuhan 430072, China."
+    ]
+   },
+   {
+    "name": "Sergey A Bartalev",
+    "aff": [
+     "Space Research Institute, Russian Academy of Sciences, Moscow 119421, Russia."
+    ]
+   },
+   {
+    "name": "Stanislav Shinkarenko",
+    "aff": [
+     "Space Research Institute, Russian Academy of Sciences, Moscow 119421, Russia."
+    ]
+   },
+   {
+    "name": "Linlin Wang",
+    "aff": [
+     "School of Remote Sensing and Information Engineering, Wuhan University, Wuhan 430079, China."
+    ]
+   },
+   {
+    "name": "Yingying Zhang",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Lixiang Ru",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Xin Guo",
+    "aff": [
+     "Shanghai Academy of Artificial Intelligence for Science, Shanghai 200232, China."
+    ]
+   },
+   {
+    "name": "Liangqi Yuan",
+    "aff": [
+     "College of Engineering, Purdue University, West Lafayette, IN 47907, USA."
+    ]
+   },
+   {
+    "name": "Lei Yu",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Jingdong Chen",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "Ming Yang",
+    "aff": [
+     "Ant Group, Hangzhou 310013, China."
+    ]
+   },
+   {
+    "name": "José Marcato Junior",
+    "aff": [
+     "Faculty of Engineering, Architecture, and Urbanism and Geography, Federal University of Mato Grosso do Sul, Campo Grande 79070-900, Brazil."
+    ]
+   },
+   {
+    "name": "Yongjun Zhang",
+    "aff": [
+     "School of Remote Sensing and Information Engineering, Wuhan University, Wuhan 430079, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39896372",
+  "year": "2024",
+  "journal": "PeerJ Comput Sci",
+  "title": "Enhancing sentiment analysis of online comments: a novel approach integrating topic modeling and deep learning.",
+  "authors": [
+   {
+    "name": "Yan Zhu",
+    "aff": [
+     "School of Design and Art, Shanghai Dianji University, Shanghai, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Rui Zhou",
+    "aff": [
+     "School of Design and Art, Shanghai Dianji University, Shanghai, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Gang Chen",
+    "aff": [
+     "Infrastructure Technology Business Group, Ant Group, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Baili Zhang",
+    "aff": [
+     "School of Computer Science and Engineering, Southeast University, Nanjing, Jiangsu, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39776850",
+  "year": "2024",
+  "journal": "Patterns (N Y)",
+  "title": "Integration of large language models and federated learning.",
+  "authors": [
+   {
+    "name": "Chaochao Chen",
+    "aff": [
+     "Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaohua Feng",
+    "aff": [
+     "Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Yuyuan Li",
+    "aff": [
+     "Zhejiang University, Hangzhou, China.",
+     "Hangzhou Dianzi University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Lingjuan Lyu",
+    "aff": [
+     "Sony AI, Tokyo, Japan."
+    ]
+   },
+   {
+    "name": "Jun Zhou",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaolin Zheng",
+    "aff": [
+     "Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Jianwei Yin",
+    "aff": [
+     "Zhejiang University, Hangzhou, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39686517",
+  "year": "2025",
+  "journal": "Clin Implant Dent Relat Res",
+  "title": "Automated Segmentation of Graft Material in 1-Stage Sinus Lift Based on Artificial Intelligence: A Retrospective Study.",
+  "authors": [
+   {
+    "name": "Yue Xi",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaoxia Li",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Zhikang Wang",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Chuanji Shi",
+    "aff": [
+     "Ant Group Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaoru Qin",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Qifeng Jiang",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Guoli Yang",
+    "aff": [
+     "Stomatology Hospital, School of Stomatology, Zhejiang University School of Medicine, Zhejiang Provincial Clinical Research Center of Oral Diseases, Key Laboratory of Oral Biomedical Research of Zhejiang Province, Cancer Center of Zhejiang University, Hangzhou, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39616931",
+  "year": "2025",
+  "journal": "Neural Netw",
+  "title": "Graph Batch Coarsening framework for scalable graph neural networks.",
+  "authors": [
+   {
+    "name": "Shengzhong Zhang",
+    "aff": [
+     "Fudan University, 220 Handan Road, Shanghai, 200433, China. Electronic address: szzhang17@fudan.edu.cn."
+    ]
+   },
+   {
+    "name": "Yimin Zhang",
+    "aff": [
+     "Ant Group, 447 Nanquan North Road, Shanghai, 200120, China."
+    ]
+   },
+   {
+    "name": "Bisheng Li",
+    "aff": [
+     "Alibaba Group, 699 Wangshang Road, Hangzhou, 310052, China."
+    ]
+   },
+   {
+    "name": "Wenjie Yang",
+    "aff": [
+     "Fudan University, 220 Handan Road, Shanghai, 200433, China."
+    ]
+   },
+   {
+    "name": "Min Zhou",
+    "aff": [
+     "Huawei Technologies Co., Ltd., Huawei Industrial Base, Shenzhen, 518129, China."
+    ]
+   },
+   {
+    "name": "Zengfeng Huang",
+    "aff": [
+     "Fudan University, 220 Handan Road, Shanghai, 200433, China. Electronic address: zengfenghuang@fudan.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39316950",
+  "year": "2024",
+  "journal": "Neural Netw",
+  "title": "Beyond smoothness: A general optimization framework for graph neural networks with negative Laplacian regularization.",
+  "authors": [
+   {
+    "name": "Zhengpin Li",
+    "aff": [
+     "School of Data Science, Fudan University, China."
+    ]
+   },
+   {
+    "name": "Mengzhe Jia",
+    "aff": [
+     "School of Data Science, Fudan University, China."
+    ]
+   },
+   {
+    "name": "Zheng Wei",
+    "aff": [
+     "Tiansuan Lab, Ant Group, China."
+    ]
+   },
+   {
+    "name": "Jian Wang",
+    "aff": [
+     "School of Data Science, Fudan University, China. Electronic address: jian_wang@fudan.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39108708",
+  "year": "2024",
+  "journal": "iScience",
+  "title": "A radiogenomic clinical decision support system to inform individualized treatment in advanced nasopharyngeal carcinoma.",
+  "authors": [
+   {
+    "name": "Xue-Liang Fang",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China.",
+     "Department of Otolaryngology, Peking Union Medical College Hospital, Research Units of New Technologies of Endoscopic Surgery in Skull Base Tumor (2018RU003), Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, China."
+    ]
+   },
+   {
+    "name": "Lian-Zhen Zhong",
+    "aff": [
+     "Ant Group, Hangzhou, China.",
+     "CAS Key Laboratory of Molecular Imaging, Institute of Automation, Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wei Jiang",
+    "aff": [
+     "Department of Radiation Oncology, Affiliated Hospital of Guilin Medical University, Key Laboratory of Oncology (Guilin Medical University), Education Department of Guangxi Zhuang Autonomous Region, Guilin, China."
+    ]
+   },
+   {
+    "name": "Cheng-Long Huang",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Yuan Lei",
+    "aff": [
+     "Department of Radiation Oncology, Guangdong Provincial People's Hospital, Guangdong Academy of Medical Sciences, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Si-Qi Tang",
+    "aff": [
+     "Department of Radiation Oncology, The First People's Hospital of Foshan, Foshan, China."
+    ]
+   },
+   {
+    "name": "Qing-Jie Li",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Li-Zhi Liu",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Li Tian",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Ying-Qin Li",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Yu-Pei Chen",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Li Lin",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Rui Guo",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Wen-Fei Li",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Jie Tian",
+    "aff": [
+     "CAS Key Laboratory of Molecular Imaging, Institute of Automation, Chinese Academy of Sciences, Beijing, China.",
+     "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Na Liu",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Di Dong",
+    "aff": [
+     "CAS Key Laboratory of Molecular Imaging, Institute of Automation, Chinese Academy of Sciences, Beijing, China.",
+     "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Jun Ma",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Ling-Long Tang",
+    "aff": [
+     "Department of Radiation Oncology, Sun Yat-sen University Cancer Center, the State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangdong Key Laboratory of Nasopharyngeal Carcinoma Diagnosis and Therapy, Center for Precision Medicine of Sun Yat-sen University, Guangzhou, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39080274",
+  "year": "2024",
+  "journal": "Nat Commun",
+  "title": "Retrosynthesis prediction with an iterative string editing model.",
+  "authors": [
+   {
+    "name": "Yuqiang Han",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, 310027, China.",
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, 311200, China."
+    ]
+   },
+   {
+    "name": "Xiaoyang Xu",
+    "aff": [
+     "Polytechnic Institute, Zhejiang University, Hangzhou, 310015, China."
+    ]
+   },
+   {
+    "name": "Chang-Yu Hsieh",
+    "aff": [
+     "Innovation Institute for Artificial Intelligence in Medicine of Zhejiang University, College of Pharmaceutical Sciences, Zhejiang University, Hangzhou, 310018, China."
+    ]
+   },
+   {
+    "name": "Keyan Ding",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, 310027, China.",
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, 311200, China."
+    ]
+   },
+   {
+    "name": "Hongxia Xu",
+    "aff": [
+     "Innovation Institute for Artificial Intelligence in Medicine of Zhejiang University, College of Pharmaceutical Sciences, Zhejiang University, Hangzhou, 310018, China.",
+     "Liangzhu Laboratory, Zhejiang University School of Medicine, Hangzhou, 311121, China."
+    ]
+   },
+   {
+    "name": "Renjun Xu",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, 310027, China.",
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, 311200, China."
+    ]
+   },
+   {
+    "name": "Tingjun Hou",
+    "aff": [
+     "Innovation Institute for Artificial Intelligence in Medicine of Zhejiang University, College of Pharmaceutical Sciences, Zhejiang University, Hangzhou, 310018, China. tingjunhou@zju.edu.cn."
+    ]
+   },
+   {
+    "name": "Qiang Zhang",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, 310027, China. qiang.zhang.cs@zju.edu.cn.",
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, 311200, China. qiang.zhang.cs@zju.edu.cn."
+    ]
+   },
+   {
+    "name": "Huajun Chen",
+    "aff": [
+     "College of Computer Science and Technology, Zhejiang University, Hangzhou, 310027, China. huajunsir@zju.edu.cn.",
+     "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Hangzhou, 311200, China. huajunsir@zju.edu.cn.",
+     "Zhejiang-University-Ant-Group Joint Center for Knowledge Graphs, Hangzhou, 310000, China. huajunsir@zju.edu.cn.",
+     "Hangzhou Institute of Medicine Chinese Academy of Science, Hangzhou, 310023, China. huajunsir@zju.edu.cn."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "38184865",
+  "year": "2024",
+  "journal": "Comput Biol Med",
+  "title": "Transformer guided self-adaptive network for multi-scale skin lesion image segmentation.",
+  "authors": [
+   {
+    "name": "Chao Xin",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: xinchao_tech@163.com."
+    ]
+   },
+   {
+    "name": "Zhifang Liu",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: sodasnowy@163.com."
+    ]
+   },
+   {
+    "name": "Yizhao Ma",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: 741534213@qq.com."
+    ]
+   },
+   {
+    "name": "Dianchen Wang",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: 343326862@qq.com."
+    ]
+   },
+   {
+    "name": "Jing Zhang",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: 496180702@qq.com."
+    ]
+   },
+   {
+    "name": "Lingzhi Li",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: lilingzhi912@163.com."
+    ]
+   },
+   {
+    "name": "Qiongyan Zhou",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: zhou.qiongyan@163.com."
+    ]
+   },
+   {
+    "name": "Suling Xu",
+    "aff": [
+     "The First Affiliated Hospital of Ningbo University, Ningbo, 315211, China. Electronic address: xusuling@nbu.edu.cn."
+    ]
+   },
+   {
+    "name": "Yingying Zhang",
+    "aff": [
+     "Ant Group, 310099, China. Electronic address: qichu.zyy@antgroup.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "38152698",
+  "year": "2023",
+  "journal": "IEEE Trans Dependable Secure Comput",
+  "title": "Trust Beyond Border: Lightweight, Verifiable User Isolation for Protecting In-Enclave Services.",
+  "authors": [
+   {
+    "name": "Wenhao Wang",
+    "aff": [
+     "State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Weijie Liu",
+    "aff": [
+     "Indiana University Bloomington."
+    ]
+   },
+   {
+    "name": "Hongbo Chen",
+    "aff": [
+     "Indiana University Bloomington."
+    ]
+   },
+   {
+    "name": "XiaoFeng Wang",
+    "aff": [
+     "Indiana University Bloomington."
+    ]
+   },
+   {
+    "name": "Hongliang Tian",
+    "aff": [
+     "Ant Group."
+    ]
+   },
+   {
+    "name": "Dongdai Lin",
+    "aff": [
+     "State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "36719576",
+  "year": "2023",
+  "journal": "Environ Sci Pollut Res Int",
+  "title": "The impacts of air pollution on immigrants' settlement intention in China.",
+  "authors": [
+   {
+    "name": "Baoxi Li",
+    "aff": [
+     "School of Business, Hubei University, Wuhan, 430062, China. baoxilee@qq.com.",
+     "Antai College of Economics and Management, Shanghai Jiao Tong University, Shanghai, China. baoxilee@qq.com.",
+     "Ant Group Research Institute, Shanghai, China. baoxilee@qq.com."
+    ]
+   },
+   {
+    "name": "Jing Huang",
+    "aff": [
+     "School of Business, Hubei University, Wuhan, 430062, China.",
+     "Research Center of Open Economy, Hubei University, Wuhan, China."
+    ]
+   },
+   {
+    "name": "Yuan Zhang",
+    "aff": [
+     "School of Business, Hubei University, Wuhan, 430062, China.",
+     "Research Center of Open Economy, Hubei University, Wuhan, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "36618627",
+  "year": "2022",
+  "journal": "Front Plant Sci",
+  "title": "Wheat yield estimation using remote sensing data based on machine learning approaches.",
+  "authors": [
+   {
+    "name": "Enhui Cheng",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "College of Resource and Environment, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Bing Zhang",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "College of Resource and Environment, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Dailiang Peng",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "International Research Center of Big Data for Sustainable Development Goals, Beijing, China."
+    ]
+   },
+   {
+    "name": "Liheng Zhong",
+    "aff": [
+     "Ant Group, Beijing, China."
+    ]
+   },
+   {
+    "name": "Le Yu",
+    "aff": [
+     "Ministry of Education Key Laboratory for Earth System Modeling, Department of Earth System Science, Institute for Global Change Studies, Tsinghua University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yao Liu",
+    "aff": [
+     "Land Satellite Remote Sensing Application Center, Ministry of Natural Resources of China, Beijing, China."
+    ]
+   },
+   {
+    "name": "Chenchao Xiao",
+    "aff": [
+     "Land Satellite Remote Sensing Application Center, Ministry of Natural Resources of China, Beijing, China."
+    ]
+   },
+   {
+    "name": "Cunjun Li",
+    "aff": [
+     "Information Technology Research Center, Beijing Academy of Agriculture and Forestry Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Xiaoyi Li",
+    "aff": [
+     "Aerospace ShuWei High Tech. Co., Ltd., Beijing, China."
+    ]
+   },
+   {
+    "name": "Yue Chen",
+    "aff": [
+     "Aerospace ShuWei High Tech. Co., Ltd., Beijing, China."
+    ]
+   },
+   {
+    "name": "Huichun Ye",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "International Research Center of Big Data for Sustainable Development Goals, Beijing, China."
+    ]
+   },
+   {
+    "name": "Hongye Wang",
+    "aff": [
+     "Cultivated Land Quality Monitoring and Protection center, Ministry of Agriculture and Rural Affairs, Beijing, China."
+    ]
+   },
+   {
+    "name": "Ruyi Yu",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Jinkang Hu",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "College of Resource and Environment, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   },
+   {
+    "name": "Songlin Yang",
+    "aff": [
+     "1Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China.",
+     "College of Resource and Environment, University of Chinese Academy of Sciences, Beijing, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35936980",
+  "year": "2022",
+  "journal": "Comput Intell Neurosci",
+  "title": "NTM-Based Skill-Aware Knowledge Tracing for Conjunctive Skills.",
+  "authors": [
+   {
+    "name": "Qiang Huang",
+    "aff": [
+     "School of Information Science and Engineering, Lanzhou University, Lanzhou 730000, China."
+    ]
+   },
+   {
+    "name": "Wei Su",
+    "aff": [
+     "School of Information Science and Engineering, Lanzhou University, Lanzhou 730000, China."
+    ]
+   },
+   {
+    "name": "Yuantao Sun",
+    "aff": [
+     "Ant Group, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Tianyuan Huang",
+    "aff": [
+     "School of Information Science and Engineering, Lanzhou University, Lanzhou 730000, China."
+    ]
+   },
+   {
+    "name": "Juntai Shi",
+    "aff": [
+     "School of Information Science and Engineering, Lanzhou University, Lanzhou 730000, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35886144",
+  "year": "2022",
+  "journal": "Int J Environ Res Public Health",
+  "title": "Mental States: A Key Point in Scam Compliance and Warning Compliance in Real Life.",
+  "authors": [
+   {
+    "name": "Xin Wen",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   },
+   {
+    "name": "Liang Xu",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   },
+   {
+    "name": "Jie Wang",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   },
+   {
+    "name": "Yuan Gao",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   },
+   {
+    "name": "Jiaming Shi",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   },
+   {
+    "name": "Ke Zhao",
+    "aff": [
+     "Ant Group, Shanghai 200120, China."
+    ]
+   },
+   {
+    "name": "Fuyang Tao",
+    "aff": [
+     "Ant Group, Shanghai 200120, China."
+    ]
+   },
+   {
+    "name": "Xiuying Qian",
+    "aff": [
+     "Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou 310027, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35018203",
+  "year": "2022",
+  "journal": "Peer Peer Netw Appl",
+  "title": "Updatable privacy-preserving ",
+  "authors": [
+   {
+    "name": "Songyang Wu",
+    "aff": [
+     "The State Key Laboratory of Integrated Service Networks, Xidian University, Xi'an, 710071 China."
+    ]
+   },
+   {
+    "name": "Wenju Xu",
+    "aff": [
+     "The State Key Laboratory of Integrated Service Networks, Xidian University, Xi'an, 710071 China."
+    ]
+   },
+   {
+    "name": "Zhiyong Hong",
+    "aff": [
+     "Facility of Intelligence Manufacture, Wuyi University, Jiangmen, 529020 China."
+    ]
+   },
+   {
+    "name": "Pu Duan",
+    "aff": [
+     "Ant Group, Hangzhou, 310000 China."
+    ]
+   },
+   {
+    "name": "Benyu Zhang",
+    "aff": [
+     "Ant Group, Hangzhou, 310000 China."
+    ]
+   },
+   {
+    "name": "Yupu Hu",
+    "aff": [
+     "The State Key Laboratory of Integrated Service Networks, Xidian University, Xi'an, 710071 China."
+    ]
+   },
+   {
+    "name": "Baocang Wang",
+    "aff": [
+     "The State Key Laboratory of Integrated Service Networks, Xidian University, Xi'an, 710071 China."
+    ]
+   }
+  ]
+ }
+]

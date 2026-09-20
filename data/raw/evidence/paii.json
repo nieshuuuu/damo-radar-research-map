@@ -1,0 +1,2338 @@
+[
+ {
+  "pmid": "42692939",
+  "year": "2026",
+  "journal": "Comput Biol Med",
+  "title": "Corrigendum to \"Dynamic HRV monitoring and machine learning predict NYHA improvements in acute heart failure Patients\" [Comput. Biol. Med. 189 (2025) 109995].",
+  "authors": [
+   {
+    "name": "Ying Shi",
+    "aff": [
+     "Chinese PLA Medical School, Beijing, China; Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Xiu Zhang",
+    "aff": [
+     "Rehabilitation Medicine Center and Institute of Rehabilitation Medicine, West China Hospital, Sichuan University, Chengdu, 610041, China."
+    ]
+   },
+   {
+    "name": "Chenbin Ma",
+    "aff": [
+     "School of Biological Science and Medical Engineering, Beihang University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yue Zhang",
+    "aff": [
+     "Chinese PLA Medical School, Beijing, China; Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, Santa Clara, CA, United States."
+    ]
+   },
+   {
+    "name": "Wei Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Muyang Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Qing Zhang",
+    "aff": [
+     "Department of Cardiology, West China Hospital of Sichuan University, Chengdu, Sichuan Province, China."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China. Electronic address: zhengbozhang@126.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "40804187",
+  "year": "2025",
+  "journal": "NPJ Digit Med",
+  "title": "GRACE-ICU: A multimodal nomogram-based approach for illness severity assessment of older adults in the ICU.",
+  "authors": [
+   {
+    "name": "Xiaoli Liu",
+    "aff": [
+     "Medical Innovation Research Department, Chinese PLA General Hospital, 100853, Beijing, China.",
+     "School of Biological Science and Medical Engineering, Beihang University, 100191, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wesley Yeung",
+    "aff": [
+     "Department of Cardiology, National University Heart Centre, 119074, Singapore, Singapore."
+    ]
+   },
+   {
+    "name": "Ziyue Chen",
+    "aff": [
+     "Laboratory for Computational Physiology, Institute for Medical Engineering and Science, Massachusetts Institute of Technology, 02139, Massachusetts, USA.",
+     "Genome Institute of Singapore, Agency for Science, Technology and Research (A*STAR), 138672, Singapore, Singapore."
+    ]
+   },
+   {
+    "name": "Sicheng Hao",
+    "aff": [
+     "Laboratory for Computational Physiology, Institute for Medical Engineering and Science, Massachusetts Institute of Technology, 02139, Massachusetts, USA.",
+     "Department of Medicine, Duke University, 27708, North Carolina, USA."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, 94306, California, USA."
+    ]
+   },
+   {
+    "name": "Xiaowei Sun",
+    "aff": [
+     "Medical Supplies Center, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Chao Liu",
+    "aff": [
+     "Department of Critical Care Medicine, The First Medical Center, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhi Mao",
+    "aff": [
+     "Department of Critical Care Medicine, The First Medical Center, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Muyang Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen Therapy, the First Medical Center, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wei Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen Therapy, the First Medical Center, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Desen Cao",
+    "aff": [
+     "Department of Biomedical Engineering, Chinese PLA General Hospital, 100853, Beijing, China."
+    ]
+   },
+   {
+    "name": "Mengling Feng",
+    "aff": [
+     "Saw Swee Hock School of Public Health and the Institute of Data Science, National University of Singapore, 117549, Singapore, Singapore. ephfm@nus.edu.sg."
+    ]
+   },
+   {
+    "name": "Deyu Li",
+    "aff": [
+     "School of Biological Science and Medical Engineering, Beihang University, 100191, Beijing, China. deyuli@buaa.edu.cn."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Medical Innovation Research Department, Chinese PLA General Hospital, 100853, Beijing, China. zhangzhengbo@301hospital.com.cn.",
+     "School of Biological Science and Medical Engineering, Beihang University, 100191, Beijing, China. zhangzhengbo@301hospital.com.cn."
+    ]
+   },
+   {
+    "name": "Leo Anthony Celi",
+    "aff": [
+     "Laboratory for Computational Physiology, Institute for Medical Engineering and Science, Massachusetts Institute of Technology, 02139, Massachusetts, USA.",
+     "Division of Pulmonary, Critical Care and Sleep Medicine, Beth Israel Deaconess Medical Center, 02215, Massachusetts, USA.",
+     "Department of Biostatistics, Harvard T.H. Chan School of Public Health, 02115, Massachusetts, USA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "40624389",
+  "year": "2026",
+  "journal": "J Imaging Inform Med",
+  "title": "Radiographic Bone Texture Analysis using Deep Learning Models for Early Rheumatoid Arthritis Diagnosis.",
+  "authors": [
+   {
+    "name": "Yun-Ju Huang",
+    "aff": [
+     "Division of Rheumatology, Allergy and Immunology, Chang Gung Memorial Hospital, No.5, Fuxing St., Guishan District, Taoyuan, 333, Taiwan.",
+     "School of Medicine, Chang Gung University, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Chiung-Hung Lin",
+    "aff": [
+     "Division of Pulmonology, Chang Gung Memorial Hospital, Taoyuan, Taiwan.",
+     "School of Medicine, Chang Gung University, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Shun Miao",
+    "aff": [
+     "PAII Labs, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Kang Zheng",
+    "aff": [
+     "PAII Labs, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Labs, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Yuhang Lu",
+    "aff": [
+     "PAII Labs, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Chihung Lin",
+    "aff": [
+     "Center for Artificial Intelligence in Medicine, Chang Gung Memorial Hospital, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Chang-Fu Kuo",
+    "aff": [
+     "Division of Rheumatology, Allergy and Immunology, Chang Gung Memorial Hospital, No.5, Fuxing St., Guishan District, Taoyuan, 333, Taiwan. zandis@gmail.com.",
+     "School of Medicine, Chang Gung University, Taoyuan, Taiwan. zandis@gmail.com.",
+     "Center for Artificial Intelligence in Medicine, Chang Gung Memorial Hospital, Taoyuan, Taiwan. zandis@gmail.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "40058080",
+  "year": "2025",
+  "journal": "Comput Biol Med",
+  "title": "Dynamic HRV Monitoring and Machine Learning Predict NYHA Improvements in Acute Heart Failure Patients.",
+  "authors": [
+   {
+    "name": "Ying Shi",
+    "aff": [
+     "Chinese PLA Medical School, Beijing, China; Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Xiu Zhang",
+    "aff": [
+     "Department of Cardiology, West China Hospital of Sichuan University, Chengdu, Sichuan Province, China."
+    ]
+   },
+   {
+    "name": "Chenbin Ma",
+    "aff": [
+     "School of Biological Science and Medical Engineering, Beihang University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yue Zhang",
+    "aff": [
+     "Chinese PLA Medical School, Beijing, China; Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, Santa Clara, CA, United States."
+    ]
+   },
+   {
+    "name": "Wei Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Muyang Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Qing Zhang",
+    "aff": [
+     "Department of Cardiology, West China Hospital of Sichuan University, Chengdu, Sichuan Province, China."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Center for Artificial Intelligence, Chinese PLA General Hospital, Beijing, China. Electronic address: zhengbozhang@126.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "39891164",
+  "year": "2025",
+  "journal": "BMC Med Inform Decis Mak",
+  "title": "Exploring the assessment of post-cardiac valve surgery pulmonary complication risks through the integration of wearable continuous physiological and clinical data.",
+  "authors": [
+   {
+    "name": "Lixuan Li",
+    "aff": [
+     "Medical Innovation Research Division, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yuekong Hu",
+    "aff": [
+     "Department of Rehabilitation Medicine, West China Tianfu Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, USA."
+    ]
+   },
+   {
+    "name": "Zeruxin Luo",
+    "aff": [
+     "Department of Rehabilitation Medicine Center, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Jiachen Wang",
+    "aff": [
+     "General Hospital of Tibet Military Region, Lhasa, China."
+    ]
+   },
+   {
+    "name": "Wenqing Wang",
+    "aff": [
+     "Medical Innovation Research Division, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Xiaoli Liu",
+    "aff": [
+     "Medical Innovation Research Division, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yuqiang Wang",
+    "aff": [
+     "Department of Cardiovascular Surgery, West China Hospital, Sichuan University, Chengdu, China."
+    ]
+   },
+   {
+    "name": "Yong Fan",
+    "aff": [
+     "Medical Innovation Research Division, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Pengming Yu",
+    "aff": [
+     "Department of Rehabilitation Medicine Center, West China Hospital, Sichuan University, Chengdu, China. 13438201451@126.com."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Medical Innovation Research Division, Chinese PLA General Hospital, Beijing, China. zhengbozhang@126.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "37876457",
+  "year": "2023",
+  "journal": "Heliyon",
+  "title": "CLART: A cascaded lattice-and-radical transformer network for Chinese medical named entity recognition.",
+  "authors": [
+   {
+    "name": "Yinlong Xiao",
+    "aff": [
+     "Faculty of Information Technology, Beijing University of Technology, Beijing 100124, China."
+    ]
+   },
+   {
+    "name": "Zongcheng Ji",
+    "aff": [
+     "PAII Inc., CA 94087, United States of America."
+    ]
+   },
+   {
+    "name": "Jianqiang Li",
+    "aff": [
+     "Faculty of Information Technology, Beijing University of Technology, Beijing 100124, China."
+    ]
+   },
+   {
+    "name": "Qing Zhu",
+    "aff": [
+     "Faculty of Information Technology, Beijing University of Technology, Beijing 100124, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "36130956",
+  "year": "2022",
+  "journal": "Sci Rep",
+  "title": "Graph-based representation for identifying individual travel activities with spatiotemporal trajectories and POI data.",
+  "authors": [
+   {
+    "name": "Xinyi Liu",
+    "aff": [
+     "Spatial Computing and Data Mining Lab, Department of Geography, University of Wisconsin-Madison, Madison, 53706, USA."
+    ]
+   },
+   {
+    "name": "Meiliu Wu",
+    "aff": [
+     "Spatial Computing and Data Mining Lab, Department of Geography, University of Wisconsin-Madison, Madison, 53706, USA."
+    ]
+   },
+   {
+    "name": "Bo Peng",
+    "aff": [
+     "Spatial Computing and Data Mining Lab, Department of Geography, University of Wisconsin-Madison, Madison, 53706, USA.",
+     "PAII Inc., Palo Alto, 94306, USA."
+    ]
+   },
+   {
+    "name": "Qunying Huang",
+    "aff": [
+     "Spatial Computing and Data Mining Lab, Department of Geography, University of Wisconsin-Madison, Madison, 53706, USA. qhuang46@wisc.edu."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "36105296",
+  "year": "2022",
+  "journal": "Front Physiol",
+  "title": "Enhancing instantaneous oxygen uptake estimation by non-linear model using cardio-pulmonary physiological and motion signals.",
+  "authors": [
+   {
+    "name": "Zhao Wang",
+    "aff": [
+     "Medical School of Chinese PLA, Beijing, China."
+    ]
+   },
+   {
+    "name": "Qiang Zhang",
+    "aff": [
+     "School of Life Science, Beijing Institute of Technology, Beijing, China."
+    ]
+   },
+   {
+    "name": "Ke Lan",
+    "aff": [
+     "Beijing SensEcho Science and Technology Co Ltd, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, Santa Clara, CA, United States."
+    ]
+   },
+   {
+    "name": "Xiaolin Gao",
+    "aff": [
+     "Institute of Sports Science, General Administration of Sport of China, Beijing, China."
+    ]
+   },
+   {
+    "name": "Anshuo Wu",
+    "aff": [
+     "The Paul G. Allen School of Computer Science and Engineering, University of Washington, Seattle, WA, United States."
+    ]
+   },
+   {
+    "name": "Yi Xin",
+    "aff": [
+     "School of Life Science, Beijing Institute of Technology, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Center for Artificial Intelligence in Medicine, Chinese PLA General Hospital, Beijing, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "36066369",
+  "year": "2023",
+  "journal": "Radiology",
+  "title": "Artificial Intelligence to Predict Lymph Node Metastasis at CT in Pancreatic Ductal Adenocarcinoma.",
+  "authors": [
+   {
+    "name": "Yun Bian",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Zhilin Zheng",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Xu Fang",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Hui Jiang",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Mengmeng Zhu",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Jieyu Yu",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Haiyan Zhao",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Ling Zhang",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Jiawen Yao",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Jianping Lu",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   },
+   {
+    "name": "Chengwei Shao",
+    "aff": [
+     "From the Departments of Radiology (Y.B., X.F., M.Z., J. Yu, H.Z., J.L., C.S.) and Pathology (H.J.), Changhai Hospital, 168 Changhai Road, Shanghai 200433, China; Ping An Technology, Shanghai, China (Z.Z.); and PAII Inc, Bethesda, Md (L.Z., J. Yao, L.L.)."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35979264",
+  "year": "2022",
+  "journal": "World J Gastroenterol",
+  "title": "Accurate and generalizable quantitative scoring of liver steatosis from ultrasound images ",
+  "authors": [
+   {
+    "name": "Bowen Li",
+    "aff": [
+     "Research and Development, PAII Inc., Bethesda, MD 20817, United States."
+    ]
+   },
+   {
+    "name": "Dar-In Tai",
+    "aff": [
+     "Department of Gastroenterology and Hepatology, Chang Gung Memorial Hospital, Linkou Medical Center, Taoyuan 33305, Taiwan. tai48978@cgmh.org.tw."
+    ]
+   },
+   {
+    "name": "Ke Yan",
+    "aff": [
+     "Research and Development, PAII Inc., Bethesda, MD 20817, United States."
+    ]
+   },
+   {
+    "name": "Yi-Cheng Chen",
+    "aff": [
+     "Department of Gastroenterology and Hepatology, Chang Gung Memorial Hospital, Linkou Medical Center, Taoyuan 33305, Taiwan."
+    ]
+   },
+   {
+    "name": "Cheng-Jen Chen",
+    "aff": [
+     "Department of Gastroenterology and Hepatology, Chang Gung Memorial Hospital, Linkou Medical Center, Taoyuan 33305, Taiwan."
+    ]
+   },
+   {
+    "name": "Shiu-Feng Huang",
+    "aff": [
+     "Division of Molecular and Genomic Medicine, National Health Research Institute, Taoyuan 33305, Taiwan."
+    ]
+   },
+   {
+    "name": "Tse-Hwa Hsu",
+    "aff": [
+     "Department of Gastroenterology and Hepatology, Chang Gung Memorial Hospital, Linkou Medical Center, Taoyuan 33305, Taiwan."
+    ]
+   },
+   {
+    "name": "Wan-Ting Yu",
+    "aff": [
+     "Department of Gastroenterology and Hepatology, Chang Gung Memorial Hospital, Linkou Medical Center, Taoyuan 33305, Taiwan."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Research and Development, Ping An Insurance Group, Shenzhen 518001, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Lu Le",
+    "aff": [
+     "Research and Development, PAII Inc., Bethesda, MD 20817, United States."
+    ]
+   },
+   {
+    "name": "Adam P Harrison",
+    "aff": [
+     "Research and Development, PAII Inc., Bethesda, MD 20817, United States."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35852311",
+  "year": "2022",
+  "journal": "Hepatol Commun",
+  "title": "A flexible three-dimensional heterophase computed tomography hepatocellular carcinoma detection algorithm for generalizable and practical screening.",
+  "authors": [
+   {
+    "name": "Chi-Tung Cheng",
+    "aff": [
+     "Department of Trauma and Emergency SurgeryChang Gung Memorial Hospital at LinkouChang Gung UniversityLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Jinzheng Cai",
+    "aff": [
+     "PAII Inc.BethesdaMarylandUSA."
+    ]
+   },
+   {
+    "name": "Wei Teng",
+    "aff": [
+     "Department of Gastroenterology and HepatologyChang Gung Memorial Hospital, Linkou Medical CenterLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Youjing Zheng",
+    "aff": [
+     "Virginia Polytechnic Institute and State UniversityBlacksburgVirginiaUSA."
+    ]
+   },
+   {
+    "name": "Yu-Ting Huang",
+    "aff": [
+     "Department of Diagnostic RadiologyChang Gung Memorial Hospital at Keelung, Chang Gung UniversityKeelungTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Yu-Chao Wang",
+    "aff": [
+     "Department of General SurgeryChang Gung Memorial HospitalLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Chien-Wei Peng",
+    "aff": [
+     "Department of Gastroenterology and HepatologyChang Gung Memorial Hospital, Linkou Medical CenterLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Youbao Tang",
+    "aff": [
+     "PAII Inc.BethesdaMarylandUSA."
+    ]
+   },
+   {
+    "name": "Wei-Chen Lee",
+    "aff": [
+     "Department of General SurgeryChang Gung Memorial HospitalLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Ta-Sen Yeh",
+    "aff": [
+     "Department of General SurgeryChang Gung Memorial HospitalLinkouTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "PAII Inc.BethesdaMarylandUSA."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc.BethesdaMarylandUSA."
+    ]
+   },
+   {
+    "name": "Chien-Hung Liao",
+    "aff": [
+     "Department of Trauma and Emergency SurgeryChang Gung Memorial Hospital at LinkouChang Gung UniversityLinkouTaiwan, Republic of China.",
+     "Center for Artificial Intelligence in MedicineChang Gung Memorial HospitalLinkou, TaiwanTaiwan, Republic of China."
+    ]
+   },
+   {
+    "name": "Adam P Harrison",
+    "aff": [
+     "PAII Inc.BethesdaMarylandUSA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35781511",
+  "year": "2023",
+  "journal": "Ann Surg",
+  "title": "Deep Learning for Fully Automated Prediction of Overall Survival in Patients Undergoing Resection for Pancreatic Cancer: A Retrospective Multicenter Study.",
+  "authors": [
+   {
+    "name": "Jiawen Yao",
+    "aff": [
+     "PAII Inc., Bethesda, MD."
+    ]
+   },
+   {
+    "name": "Kai Cao",
+    "aff": [
+     "Department of Radiology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Yang Hou",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China.",
+     "Key Laboratory of Medical Imaging Technology and Artificial Intelligence, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Jian Zhou",
+    "aff": [
+     "Department of Radiology, Sun Yat-sen University Cancer Center, State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangzhou, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Yingda Xia",
+    "aff": [
+     "DAMO Academy, Alibaba Group, New York, NY."
+    ]
+   },
+   {
+    "name": "Isabella Nogues",
+    "aff": [
+     "Departments of Biostatistics, Harvard University T.H. Chan School of Public Health, Boston, MA."
+    ]
+   },
+   {
+    "name": "Qike Song",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Hui Jiang",
+    "aff": [
+     "Department of Pathology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Xianghua Ye",
+    "aff": [
+     "Department of Radiotherapy, The First Affiliated Hospital, Zhejiang University, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Jianping Lu",
+    "aff": [
+     "Department of Radiology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Gang Jin",
+    "aff": [
+     "Department of Surgery, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Hong Lu",
+    "aff": [
+     "Key Laboratory of Cancer Prevention and Therapy, Department of Radiology, Tianjin Medical University Cancer Institute and Hospital, National Clinical Research Center of Cancer, Tianjin, China."
+    ]
+   },
+   {
+    "name": "Chuanmiao Xie",
+    "aff": [
+     "Department of Radiology, Sun Yat-sen University Cancer Center, State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangzhou, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Rong Zhang",
+    "aff": [
+     "Department of Radiology, Sun Yat-sen University Cancer Center, State Key Laboratory of Oncology in South China, Collaborative Innovation Center for Cancer Medicine, Guangzhou, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology Co. Ltd., Shenzhen, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Zaiyi Liu",
+    "aff": [
+     "Department of Radiology, Guangdong Provincial People's Hospital/Guangdong Academy of Medical Sciences, Guangzhou, Guangdong, China.",
+     "Guangdong Provincial Key Laboratory of Artificial Intelligence in Medical Image Analysis and Application, Guangdong Provincial People's Hospital, Guangdong Academy of Medical Sciences, Guangzhou, China."
+    ]
+   },
+   {
+    "name": "Feng Gao",
+    "aff": [
+     "Department of Hepato-pancreato-biliary Tumor Surgery, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Yafei Qi",
+    "aff": [
+     "Department of Pathology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Xuezhou Li",
+    "aff": [
+     "Department of Radiology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Yang Zheng",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "DAMO Academy, Alibaba Group, New York, NY."
+    ]
+   },
+   {
+    "name": "Yu Shi",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China.",
+     "Key Laboratory of Medical Imaging Technology and Artificial Intelligence, Shengjing Hospital of China Medical University, Shenyang, Liaoning, China."
+    ]
+   },
+   {
+    "name": "Ling Zhang",
+    "aff": [
+     "DAMO Academy, Alibaba Group, New York, NY."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "35141147",
+  "year": "2021",
+  "journal": "Front Oncol",
+  "title": "Multi-Institutional Validation of Two-Streamed Deep Learning Method for Automated Delineation of Esophageal Gross Tumor Volume Using Planning CT and FDG-PET/CT.",
+  "authors": [
+   {
+    "name": "Xianghua Ye",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Dazhou Guo",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Chen-Kan Tseng",
+    "aff": [
+     "Department of Radiation Oncology, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   },
+   {
+    "name": "Jia Ge",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Tsung-Min Hung",
+    "aff": [
+     "Department of Radiation Oncology, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   },
+   {
+    "name": "Ping-Ching Pai",
+    "aff": [
+     "Department of Radiation Oncology, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   },
+   {
+    "name": "Yanping Ren",
+    "aff": [
+     "Department of Radiation Oncology, Huadong Hospital Affiliated to Fudan University, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Lu Zheng",
+    "aff": [
+     "Department of Radiation Oncology, Lihuili Hospital, Ningbo Medical Center, Ningbo, China."
+    ]
+   },
+   {
+    "name": "Xinli Zhu",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Ling Peng",
+    "aff": [
+     "Department of Respiratory Disease, Zhejiang Provincial People's Hospital, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Ying Chen",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Xiaohua Chen",
+    "aff": [
+     "Department of Radiation Oncology, The First Hospital of Lanzhou University, Lanzhou, China."
+    ]
+   },
+   {
+    "name": "Chen-Yu Chou",
+    "aff": [
+     "Department of Radiation Oncology, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   },
+   {
+    "name": "Danni Chen",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Jiaze Yu",
+    "aff": [
+     "Department of Radiation Oncology, Haining People's Hospital, Jiaxing, China."
+    ]
+   },
+   {
+    "name": "Yuzhen Chen",
+    "aff": [
+     "Department of Nuclear Medicine, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   },
+   {
+    "name": "Feiran Jiao",
+    "aff": [
+     "Independent Researcher, Silver Spring, MD, United States."
+    ]
+   },
+   {
+    "name": "Yi Xin",
+    "aff": [
+     "Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Lingyun Huang",
+    "aff": [
+     "Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Guotong Xie",
+    "aff": [
+     "Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Senxiang Yan",
+    "aff": [
+     "Department of Radiation Oncology, The First Affiliated Hospital Zhejiang University, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Dakai Jin",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Tsung-Ying Ho",
+    "aff": [
+     "Department of Nuclear Medicine, Chang Gung Memorial Hospital, Linkou, Taiwan."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34666874",
+  "year": "2021",
+  "journal": "Chin Med Sci J",
+  "title": "External and Internal Validation of a Computer Assisted Diagnostic Model for Detecting Multi-Organ Mass Lesions in CT images.",
+  "authors": [
+   {
+    "name": "Lian-Yan Xu",
+    "aff": [
+     "Department of Radiology, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences & Peking Union Medical College, Beijing 100730, China."
+    ]
+   },
+   {
+    "name": "Ke Yan",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA."
+    ]
+   },
+   {
+    "name": "Wei-Hong Zhang",
+    "aff": [
+     "Department of Radiology, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences & Peking Union Medical College, Beijing 100730, China."
+    ]
+   },
+   {
+    "name": "Xu Chen",
+    "aff": [
+     "Department of Radiology, Beijing United Family Hospital, Beijing 100015, China."
+    ]
+   },
+   {
+    "name": "Xiao-Fei Huo",
+    "aff": [
+     "Department of Radiology, Beijing United Family Hospital, Beijing 100015, China."
+    ]
+   },
+   {
+    "name": "Jing-Jing Lu",
+    "aff": [
+     "Department of Radiology, Beijing United Family Hospital, Beijing 100015, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34531406",
+  "year": "2021",
+  "journal": "Nat Commun",
+  "title": "Automated bone mineral density prediction and fracture risk assessment using plain radiographs via deep learning.",
+  "authors": [
+   {
+    "name": "Chen-I Hsieh",
+    "aff": [
+     "Division of Rheumatology, Allergy and Immunology, Chang Gung Memorial Hospital, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Kang Zheng",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Chihung Lin",
+    "aff": [
+     "Center for Artificial Intelligence in Medicine, Chang Gung Memorial Hospital, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Ling Mei",
+    "aff": [
+     "Wuhan Hospital of Traditional Chinese Medicine, Wuhan, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Weijian Li",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Fang-Ping Chen",
+    "aff": [
+     "Department of Medicine, College of Medicine, Chang Gung University, Kwei-Shan, Taoyuan, Taiwan.",
+     "Department of Obstetrics and Gynecology, Osteoporosis Prevention and Treatment Center, Keelung Chang Gung Memorial Hospital, Keelung, Taiwan."
+    ]
+   },
+   {
+    "name": "Yirui Wang",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Xiaoyun Zhou",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Fakai Wang",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Guotong Xie",
+    "aff": [
+     "Ping An Insurance (Group) Company of China, Ltd., Shenzhen, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Insurance (Group) Company of China, Ltd., Shenzhen, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Shun Miao",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA. shwinmiao@gmail.com."
+    ]
+   },
+   {
+    "name": "Chang-Fu Kuo",
+    "aff": [
+     "Division of Rheumatology, Allergy and Immunology, Chang Gung Memorial Hospital, Taoyuan, Taiwan. zandis@gmail.com.",
+     "PAII Inc., Bethesda, MD, USA. zandis@gmail.com.",
+     "Department of Medicine, College of Medicine, Chang Gung University, Kwei-Shan, Taoyuan, Taiwan. zandis@gmail.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34528107",
+  "year": "2022",
+  "journal": "Eur Radiol",
+  "title": "The added value of an artificial intelligence system in assisting radiologists on indeterminate BI-RADS 0 mammograms.",
+  "authors": [
+   {
+    "name": "Chunyan Yi",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital, Shenzhen, 518020, Guangdong, China.",
+     "The Second Clinical Medical College, Jinan University, Shenzhen, 518020, Guangdong, China.",
+     "The First Affiliated Hospital, Southern University of Science and Technology, Shenzhen, 518020, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Yuxing Tang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA."
+    ]
+   },
+   {
+    "name": "Rushan Ouyang",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital, Shenzhen, 518020, Guangdong, China.",
+     "The Second Clinical Medical College, Jinan University, Shenzhen, 518020, Guangdong, China.",
+     "The First Affiliated Hospital, Southern University of Science and Technology, Shenzhen, 518020, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Yanbo Zhang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA."
+    ]
+   },
+   {
+    "name": "Zhenjie Cao",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA."
+    ]
+   },
+   {
+    "name": "Shibin Wu",
+    "aff": [
+     "Ping An Technology, Shenzhen, 518029, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Mei Han",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology, Shenzhen, 518029, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Peng Chang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, 94306, USA. pengchang@gmail.com."
+    ]
+   },
+   {
+    "name": "Jie Ma",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital, Shenzhen, 518020, Guangdong, China. majie688@hotmail.com.",
+     "The Second Clinical Medical College, Jinan University, Shenzhen, 518020, Guangdong, China. majie688@hotmail.com.",
+     "The First Affiliated Hospital, Southern University of Science and Technology, Shenzhen, 518020, Guangdong, China. majie688@hotmail.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34399154",
+  "year": "2021",
+  "journal": "Med Image Anal",
+  "title": "MommiNet-v2: Mammographic multi-view mass identification networks.",
+  "authors": [
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA."
+    ]
+   },
+   {
+    "name": "Zhenjie Cao",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA."
+    ]
+   },
+   {
+    "name": "Yanbo Zhang",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA."
+    ]
+   },
+   {
+    "name": "Yuxing Tang",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA."
+    ]
+   },
+   {
+    "name": "Xiaohui Lin",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital (The Second Clinical Medical College, Jinan University), Shenzhen, Guangdong 518020, China."
+    ]
+   },
+   {
+    "name": "Rushan Ouyang",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital (The Second Clinical Medical College, Jinan University), Shenzhen, Guangdong 518020, China."
+    ]
+   },
+   {
+    "name": "Mingxiang Wu",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital (The Second Clinical Medical College, Jinan University), Shenzhen, Guangdong 518020, China."
+    ]
+   },
+   {
+    "name": "Mei Han",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology Co., Ltd., Shenzhen 518000, China."
+    ]
+   },
+   {
+    "name": "Lingyun Huang",
+    "aff": [
+     "Ping An Technology Co., Ltd., Shenzhen 518000, China."
+    ]
+   },
+   {
+    "name": "Shibin Wu",
+    "aff": [
+     "Ping An Technology Co., Ltd., Shenzhen 518000, China."
+    ]
+   },
+   {
+    "name": "Peng Chang",
+    "aff": [
+     "PAII Inc., Palo Alto, CA 94306, USA. Electronic address: pengchang@gmail.com."
+    ]
+   },
+   {
+    "name": "Jie Ma",
+    "aff": [
+     "Department of Radiology, Shenzhen People's Hospital (The Second Clinical Medical College, Jinan University), Shenzhen, Guangdong 518020, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34387554",
+  "year": "2021",
+  "journal": "JMIR Mhealth Uhealth",
+  "title": "Assessing Electrocardiogram and Respiratory Signal Quality of a Wearable Device (SensEcho): Semisupervised Machine Learning-Based Validation Study.",
+  "authors": [
+   {
+    "name": "Haoran Xu",
+    "aff": [
+     "Medical School of Chinese PLA, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wei Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Ke Lan",
+    "aff": [
+     "Beijing SensEcho Science & Technology Co., Ltd., Beijing, China."
+    ]
+   },
+   {
+    "name": "Chenbin Ma",
+    "aff": [
+     "School of Biological Science and Medical Engineering, Beihang University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Di Wu",
+    "aff": [
+     "Beijing SensEcho Science & Technology Co., Ltd., Beijing, China."
+    ]
+   },
+   {
+    "name": "Anshuo Wu",
+    "aff": [
+     "University of Washington, Seattle, WA, United States."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc., Palo Alto, CA, United States."
+    ]
+   },
+   {
+    "name": "Jiachen Wang",
+    "aff": [
+     "Medical School of Chinese PLA, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yaning Zang",
+    "aff": [
+     "Department of Kinesiology, Shanghai University of Sport, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Muyang Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen, The First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Centre for Artificial Intelligence in Medicine, Medical Innovation Research Department, Chinese PLA General Hospital, Beijing, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34303891",
+  "year": "2021",
+  "journal": "Med Image Anal",
+  "title": "DeepPrognosis: Preoperative prediction of pancreatic cancer survival and surgical margin via comprehensive understanding of dynamic contrast-enhanced CT imaging and tumor-vascular contact parsing.",
+  "authors": [
+   {
+    "name": "Jiawen Yao",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA. Electronic address: yaojiawen076@paii-labs.com."
+    ]
+   },
+   {
+    "name": "Yu Shi",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, China."
+    ]
+   },
+   {
+    "name": "Kai Cao",
+    "aff": [
+     "Department of Radiology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA."
+    ]
+   },
+   {
+    "name": "Jianping Lu",
+    "aff": [
+     "Department of Radiology, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Qike Song",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, China."
+    ]
+   },
+   {
+    "name": "Gang Jin",
+    "aff": [
+     "Department of Surgery, Changhai Hospital, Shanghai, China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Yang Hou",
+    "aff": [
+     "Department of Radiology, Shengjing Hospital of China Medical University, Shenyang, China. Electronic address: houyang1973@163.com."
+    ]
+   },
+   {
+    "name": "Ling Zhang",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "37492171",
+  "year": "2021",
+  "journal": "Front Radiol",
+  "title": "CT-Based Risk Factors for Mortality of Patients With COVID-19 Pneumonia in Wuhan, China: A Retrospective Study.",
+  "authors": [
+   {
+    "name": "Xiang Li",
+    "aff": [
+     "The Central Hospital of Wuhan Affiliated to Tongji Medical College of Huazhong University of Science and Technology, Wuhan, China."
+    ]
+   },
+   {
+    "name": "Nannan Li",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Zhen Chen",
+    "aff": [
+     "The Central Hospital of Wuhan Affiliated to Tongji Medical College of Huazhong University of Science and Technology, Wuhan, China."
+    ]
+   },
+   {
+    "name": "Ling Ye",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Ling Zhang",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Dakai Jin",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Liangxin Gao",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Xinhui Liu",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Bolin Lai",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Jiawen Yao",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Dazhou Guo",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Hua Zhang",
+    "aff": [
+     "Linking Med, Beijing, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Lingyun Huang",
+    "aff": [
+     "Intelligent Vision Technology Department, Ping An Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Fen Ai",
+    "aff": [
+     "The Central Hospital of Wuhan Affiliated to Tongji Medical College of Huazhong University of Science and Technology, Wuhan, China."
+    ]
+   },
+   {
+    "name": "Xiang Wang",
+    "aff": [
+     "The Central Hospital of Wuhan Affiliated to Tongji Medical College of Huazhong University of Science and Technology, Wuhan, China."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34171743",
+  "year": "2021",
+  "journal": "Clin Imaging",
+  "title": "A deep-learning based artificial intelligence (AI) approach for differentiation of clear cell renal cell carcinoma from oncocytoma on multi-phasic MRI.",
+  "authors": [
+   {
+    "name": "Moozhan Nikpanah",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA. Electronic address: https://twitter.com/MoozhanNikpanah."
+    ]
+   },
+   {
+    "name": "Ziyue Xu",
+    "aff": [
+     "NVIDIA Corporation, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Dakai Jin",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Faraz Farhadi",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA. Electronic address: https://twitter.com/Faraz_Farhadi."
+    ]
+   },
+   {
+    "name": "Babak Saboury",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Mark W Ball",
+    "aff": [
+     "Urologic Oncology Branch, National Cancer Institute, National Institutes of Health, Bethesda, MD, USA. Electronic address: https://twitter.com/markballmd."
+    ]
+   },
+   {
+    "name": "Rabindra Gautam",
+    "aff": [
+     "Urologic Oncology Branch, National Cancer Institute, National Institutes of Health, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Maria J Merino",
+    "aff": [
+     "Laboratory of Pathology, National Cancer Institute, National Institutes of Health, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Bradford J Wood",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA. Electronic address: https://twitter.com/BradWoodMD."
+    ]
+   },
+   {
+    "name": "Baris Turkbey",
+    "aff": [
+     "Molecular Imaging Program, National Cancer Institute, National Institutes of Health, Bethesda, USA. Electronic address: https://twitter.com/radiolobt."
+    ]
+   },
+   {
+    "name": "Elizabeth C Jones",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "W Marston Linehan",
+    "aff": [
+     "Urologic Oncology Branch, National Cancer Institute, National Institutes of Health, Bethesda, MD, USA. Electronic address: linehanm@mail.nih.gov."
+    ]
+   },
+   {
+    "name": "Ashkan A Malayeri",
+    "aff": [
+     "Radiology and Imaging Sciences, Clinical Center, National Institutes of Health, Bethesda, MD, USA. Electronic address: ashkan.malayeri@nih.gov."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "33947697",
+  "year": "2021",
+  "journal": "Clin Cancer Res",
+  "title": "Deep Learning for Fully Automated Prediction of Overall Survival in Patients with Oropharyngeal Cancer Using FDG-PET Imaging.",
+  "authors": [
+   {
+    "name": "Nai-Ming Cheng",
+    "aff": [
+     "Department of Nuclear Medicine, Chang Gung Memorial Hospital, Keelung, and Chang Gung University, Taoyuan City, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Jiawen Yao",
+    "aff": [
+     "PAII Inc., Bethesda, Maryland."
+    ]
+   },
+   {
+    "name": "Jinzheng Cai",
+    "aff": [
+     "PAII Inc., Bethesda, Maryland."
+    ]
+   },
+   {
+    "name": "Xianghua Ye",
+    "aff": [
+     "Department of Radiotherapy, The First Affiliated Hospital, Zhejiang University, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Shilin Zhao",
+    "aff": [
+     "Departments of Biostatistics, Vanderbilt University Medical Center, Nashville, Tennessee."
+    ]
+   },
+   {
+    "name": "Kui Zhao",
+    "aff": [
+     "Department of PET Center, The First Affiliated Hospital, Zhejiang University, Hangzhou, Zhejiang, China."
+    ]
+   },
+   {
+    "name": "Wenlan Zhou",
+    "aff": [
+     "NanFang PET Center, Nanfang Hospital, Southern Medical University, Guangzhou, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Isabella Nogues",
+    "aff": [
+     "Department of Biostatistics, Harvard University T.H. Chan School of Public Health, Boston, Massachusetts."
+    ]
+   },
+   {
+    "name": "Yuankai Huo",
+    "aff": [
+     "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, Tennessee."
+    ]
+   },
+   {
+    "name": "Chun-Ta Liao",
+    "aff": [
+     "Department of Otorhinolaryngology, Head and Neck Surgery, Linkou Chang Gung Memorial Hospital and Chang Gung University, Taoyuan City, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Hung-Ming Wang",
+    "aff": [
+     "Department of Medical Oncology, Linkou Chang Gung Memorial Hospital and Chang Gung University, Taoyuan City, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Chien-Yu Lin",
+    "aff": [
+     "Department of Radiation Oncology, Linkou Chang Gung Memorial Hospital and Chang Gung University, Taoyuan City, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Li-Yu Lee",
+    "aff": [
+     "Department of Pathology, Linkou Chang Gung Memorial Hospital and Chang Gung University, Taoyuan City, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology Co., Ltd., Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, Maryland."
+    ]
+   },
+   {
+    "name": "Ling Zhang",
+    "aff": [
+     "PAII Inc., Bethesda, Maryland. zhangling300@paii-labs.com yentc1110@gmail.com."
+    ]
+   },
+   {
+    "name": "Tzu-Chen Yen",
+    "aff": [
+     "Department of Medicine and Molecular Imaging Center, Linkou Chang Gung Memorial Hospital and Chang Gung University, Taoyuan City, Taiwan, ROC. zhangling300@paii-labs.com yentc1110@gmail.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "33872961",
+  "year": "2021",
+  "journal": "Med Image Anal",
+  "title": "Faster Mean-shift: GPU-accelerated clustering for cosine embedding-based cell segmentation and tracking.",
+  "authors": [
+   {
+    "name": "Mengyang Zhao",
+    "aff": [
+     "Thayer School of Engineering, Dartmouth College, Hanover, NH 03755, USA. Electronic address: Mengyang.Zhao@dartmouth.edu."
+    ]
+   },
+   {
+    "name": "Aadarsh Jha",
+    "aff": [
+     "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Quan Liu",
+    "aff": [
+     "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Bryan A Millis",
+    "aff": [
+     "Department of Cell and Developmental Biology, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Anita Mahadevan-Jansen",
+    "aff": [
+     "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD 20817, USA."
+    ]
+   },
+   {
+    "name": "Bennett A Landman",
+    "aff": [
+     "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Matthew J Tyska",
+    "aff": [
+     "Department of Cell and Developmental Biology, Vanderbilt University, Nashville, TN 37235, USA."
+    ]
+   },
+   {
+    "name": "Yuankai Huo",
+    "aff": [
+     "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN 37235, USA. Electronic address: yuankai.huo@vanderbilt.edu."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "33594071",
+  "year": "2021",
+  "journal": "Nat Commun",
+  "title": "A scalable physician-level deep learning algorithm detects universal trauma on pelvic radiographs.",
+  "authors": [
+   {
+    "name": "Chi-Tung Cheng",
+    "aff": [
+     "Department of Trauma and Emergency Surgery, Chang Gung Memorial Hospital, Linkou, Chang Gung University, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Yirui Wang",
+    "aff": [
+     "PAII Inc, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Huan-Wu Chen",
+    "aff": [
+     "Division of Emergency and Critical Care Radiology, Department of Medical Imaging and Intervention, Chang Gung Memorial Hospital, Chang Gung University College of Medicine, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Po-Meng Hsiao",
+    "aff": [
+     "New Taipei Municipal TuCheng Hospital, New Taipei city, Taiwan."
+    ]
+   },
+   {
+    "name": "Chun-Nan Yeh",
+    "aff": [
+     "Department of Surgery, Chang Gung Memorial Hospital, Linkou, Chang Gung University, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Chi-Hsun Hsieh",
+    "aff": [
+     "Department of Trauma and Emergency Surgery, Chang Gung Memorial Hospital, Linkou, Chang Gung University, Taoyuan, Taiwan."
+    ]
+   },
+   {
+    "name": "Shun Miao",
+    "aff": [
+     "PAII Inc, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "PAII Inc, Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Chien-Hung Liao",
+    "aff": [
+     "Department of Trauma and Emergency Surgery, Chang Gung Memorial Hospital, Linkou, Chang Gung University, Taoyuan, Taiwan. surgymet@gmail.com.",
+     "Center for Artificial Intelligence in Medicine, Chang Gung Memorial hospital, Linkou, Taoyuan, Taiwan. surgymet@gmail.com."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc, Bethesda, MD, USA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "33341494",
+  "year": "2021",
+  "journal": "Med Image Anal",
+  "title": "DeepTarget: Gross tumor and clinical target volume segmentation in esophageal cancer radiotherapy.",
+  "authors": [
+   {
+    "name": "Dakai Jin",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA. Electronic address: jindakai376@paii-labs.com."
+    ]
+   },
+   {
+    "name": "Dazhou Guo",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Tsung-Ying Ho",
+    "aff": [
+     "Chang Gung Memorial Hospital, Linkou, Taiwan, ROC. Electronic address: tyho@cgmh.org.tw."
+    ]
+   },
+   {
+    "name": "Adam P Harrison",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology, Shenzhen, Guangdong, China."
+    ]
+   },
+   {
+    "name": "Chen-Kan Tseng",
+    "aff": [
+     "Chang Gung Memorial Hospital, Linkou, Taiwan, ROC."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "32937229",
+  "year": "2020",
+  "journal": "Med Image Anal",
+  "title": "Deep hiearchical multi-label classification applied to chest X-ray abnormality taxonomies.",
+  "authors": [
+   {
+    "name": "Haomin Chen",
+    "aff": [
+     "Johns Hopkins University, Baltimore, MD, United States. Electronic address: hchen135@jhu.edu."
+    ]
+   },
+   {
+    "name": "Shun Miao",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Daguang Xu",
+    "aff": [
+     "NVIDIA AI-Infra, Bethesda, MD, United States."
+    ]
+   },
+   {
+    "name": "Gregory D Hager",
+    "aff": [
+     "Johns Hopkins University, Baltimore, MD, United States."
+    ]
+   },
+   {
+    "name": "Adam P Harrison",
+    "aff": [
+     "PAII Inc., Bethesda, MD, United States. Electronic address: adam.p.harrison@gmail.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "32885290",
+  "year": "2020",
+  "journal": "J Med Syst",
+  "title": "Construction and Application of a Medical-Grade Wireless Monitoring System for Physiological Signals at General Wards.",
+  "authors": [
+   {
+    "name": "Haoran Xu",
+    "aff": [
+     "Medical School of Chinese PLA, Beijing, China.",
+     "Medical Sergeant School, Army Medical University, Hebei, China."
+    ]
+   },
+   {
+    "name": "Peiyao Li",
+    "aff": [
+     "Department of Biomedical Engineering, Chinese PLA General Hospital, Beijing, China.",
+     "Department of Computer Science and Technology, Tsinghua University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhicheng Yang",
+    "aff": [
+     "PAII Inc, Palo Alto, CA, USA."
+    ]
+   },
+   {
+    "name": "Xiaoli Liu",
+    "aff": [
+     "School of Biological Science and Medical Engineering, Beihang University, Beijing, China."
+    ]
+   },
+   {
+    "name": "Zhao Wang",
+    "aff": [
+     "Medical School of Chinese PLA, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wei Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen Therapy, the First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Maoqing He",
+    "aff": [
+     "Beijing Haisi Ruige Science & Technology Co., Ltd, Beijing, China."
+    ]
+   },
+   {
+    "name": "Wenya Chu",
+    "aff": [
+     "Beijing Haisi Ruige Science & Technology Co., Ltd, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yingjia She",
+    "aff": [
+     "Department of Pulmonary & Critical Care Medicine, the First Medical Center, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Yuzhu Li",
+    "aff": [
+     "Department of Pulmonary & Critical Care Medicine, Hainan Hospital of PLA General Hospital, Sanya, Hainan, China."
+    ]
+   },
+   {
+    "name": "Desen Cao",
+    "aff": [
+     "Department of Biomedical Engineering, Chinese PLA General Hospital, Beijing, China."
+    ]
+   },
+   {
+    "name": "Muyang Yan",
+    "aff": [
+     "Department of Hyperbaric Oxygen Therapy, the First Medical Center, Chinese PLA General Hospital, Beijing, China. yanmy301@sina.com."
+    ]
+   },
+   {
+    "name": "Zhengbo Zhang",
+    "aff": [
+     "Department of Biomedical Engineering, Chinese PLA General Hospital, Beijing, China. zhengbozhang@126.com.",
+     "Center for Artificial Intelligence in Medicine, Chinese PLA General Hospital, Beijing, China. zhengbozhang@126.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "32683550",
+  "year": "2020",
+  "journal": "Eur Radiol",
+  "title": "From community-acquired pneumonia to COVID-19: a deep learning-based method for quantitative analysis of COVID-19 on thick-section CT scans.",
+  "authors": [
+   {
+    "name": "Zhang Li",
+    "aff": [
+     "College of Aerospace Science and Engineering, National University of Defense Technology, Changsha, China.",
+     "Hunan Key Laboratory for Image Measurement and Vision Navigation, Changsha, Hunan, China."
+    ]
+   },
+   {
+    "name": "Zheng Zhong",
+    "aff": [
+     "Department of Radiology, The First Hospital of Changsha City, Changsha, China."
+    ]
+   },
+   {
+    "name": "Yang Li",
+    "aff": [
+     "College of Aerospace Science and Engineering, National University of Defense Technology, Changsha, China.",
+     "Hunan Key Laboratory for Image Measurement and Vision Navigation, Changsha, Hunan, China."
+    ]
+   },
+   {
+    "name": "Tianyu Zhang",
+    "aff": [
+     "GROW School for Oncology and Development Biology, Maastricht University, P. O. Box 616, 6200, MD, Maastricht, The Netherlands.",
+     "Department of Radiology, Netherlands Cancer Institute (NKI), Plesmanlaan 121, 1066, CX, Amsterdam, The Netherlands."
+    ]
+   },
+   {
+    "name": "Liangxin Gao",
+    "aff": [
+     "PingAn Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Dakai Jin",
+    "aff": [
+     "PAII Inc., Bethesda, MD, USA."
+    ]
+   },
+   {
+    "name": "Yue Sun",
+    "aff": [
+     "Department of Electrical Engineering, Eindhoven University of Technology, 5600, MB, Eindhoven, The Netherlands."
+    ]
+   },
+   {
+    "name": "Xianghua Ye",
+    "aff": [
+     "Department of Radiotherapy, The First Affiliated Hospital, Zhejiang University, Zhejiang, Hangzhou, China."
+    ]
+   },
+   {
+    "name": "Li Yu",
+    "aff": [
+     "Hunan LanXi Biotechnology Ltd., Changsha, China."
+    ]
+   },
+   {
+    "name": "Zheyu Hu",
+    "aff": [
+     "Hunan Cancer Hospital, the Affiliated Cancer Hospital of Xiangya Medical School, Central South University, Changsha, China."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "PingAn Technology, Shenzhen, China."
+    ]
+   },
+   {
+    "name": "Lingyun Huang",
+    "aff": [
+     "PingAn Technology, Shenzhen, China. huanglingyun691@pingan.com.cn."
+    ]
+   },
+   {
+    "name": "Yuling Tang",
+    "aff": [
+     "Department of Respiratory Medicine, The First Hospital of Changsha City, Changsha, China. tyl71523@qq.com."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "32435698",
+  "year": "2020",
+  "journal": "NPJ Digit Med",
+  "title": "Automated abnormality classification of chest radiographs using deep convolutional neural networks.",
+  "authors": [
+   {
+    "name": "Yu-Xing Tang",
+    "aff": [
+     "1Imaging Biomarkers and Computer-Aided Diagnosis Laboratory, Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   },
+   {
+    "name": "You-Bao Tang",
+    "aff": [
+     "1Imaging Biomarkers and Computer-Aided Diagnosis Laboratory, Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   },
+   {
+    "name": "Yifan Peng",
+    "aff": [
+     "2National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, MD 20894 USA."
+    ]
+   },
+   {
+    "name": "Ke Yan",
+    "aff": [
+     "1Imaging Biomarkers and Computer-Aided Diagnosis Laboratory, Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   },
+   {
+    "name": "Mohammadhadi Bagheri",
+    "aff": [
+     "3Clinical Image Processing Service, Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   },
+   {
+    "name": "Bernadette A Redd",
+    "aff": [
+     "4Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   },
+   {
+    "name": "Catherine J Brandon",
+    "aff": [
+     "5Department of Radiology, University of Michigan, Ann Arbor, MI 48109 USA."
+    ]
+   },
+   {
+    "name": "Zhiyong Lu",
+    "aff": [
+     "2National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, MD 20894 USA."
+    ]
+   },
+   {
+    "name": "Mei Han",
+    "aff": [
+     "PAII Inc, Palo Alto, CA 94306 USA."
+    ]
+   },
+   {
+    "name": "Jing Xiao",
+    "aff": [
+     "Ping An Technology, Shenzhen, Guangdong 518029 China."
+    ]
+   },
+   {
+    "name": "Ronald M Summers",
+    "aff": [
+     "1Imaging Biomarkers and Computer-Aided Diagnosis Laboratory, Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA.",
+     "4Radiology and Imaging Sciences, National Institutes of Health Clinical Center, Bethesda, MD 20892 USA."
+    ]
+   }
+  ]
+ },
+ {
+  "pmid": "34414404",
+  "year": "2020",
+  "journal": "Med Image Comput Comput Assist Interv",
+  "title": "CircleNet: Anchor-free Glomerulus Detection with Circle Representation.",
+  "authors": [
+   {
+    "name": "Haichun Yang",
+    "aff": [
+     "Vanderbilt University Medical Center, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Ruining Deng",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Yuzhe Lu",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Zheyu Zhu",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Ye Chen",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Joseph T Roland",
+    "aff": [
+     "Vanderbilt University Medical Center, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Le Lu",
+    "aff": [
+     "PAII Inc., Bethesda MD 20817, USA."
+    ]
+   },
+   {
+    "name": "Bennett A Landman",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Agnes B Fogo",
+    "aff": [
+     "Vanderbilt University Medical Center, Nashville TN 37215, USA."
+    ]
+   },
+   {
+    "name": "Yuankai Huo",
+    "aff": [
+     "Vanderbilt University, Nashville TN 37215, USA."
+    ]
+   }
+  ]
+ }
+]
