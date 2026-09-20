@@ -7,6 +7,9 @@ markdown 里内嵌的是静态 PNG 导出；要交互版就本地打开对应的
 |---|---|---|---|---|
 | [radar-structure.html](radar-structure.html) | architecture | [radar-structure.architecture.json](radar-structure.architecture.json) | `radar-structure.{light,dark}.png` | [../README.md](../README.md#结构四条腿) |
 | [damo-lineage.html](damo-lineage.html) | lifecycle | [damo-lineage.lifecycle.json](damo-lineage.lifecycle.json) | `damo-lineage.{light,dark}.png` | [../README.md](../README.md#三条血统线) · [../sources/damo-lineage.md](../sources/damo-lineage.md) |
+| [radar-preprocess.html](radar-preprocess.html) | dataflow | [radar-preprocess.dataflow.json](radar-preprocess.dataflow.json) | `radar-preprocess.{light,dark}.png` | [../sources/radar-technical-teardown.md](../sources/radar-technical-teardown.md) ③ |
+| [radar-model.html](radar-model.html) | dataflow | [radar-model.dataflow.json](radar-model.dataflow.json) | `radar-model.{light,dark}.png` | 技术页 ④ · [../README.md](../README.md#技术底细) |
+| [radar-inference.html](radar-inference.html) | dataflow | [radar-inference.dataflow.json](radar-inference.dataflow.json) | `radar-inference.{light,dark}.png` | 技术页 ⑦ |
 | [deeplesion-lineage.html](deeplesion-lineage.html) | dataflow | [deeplesion-lineage.dataflow.json](deeplesion-lineage.dataflow.json) | `deeplesion-lineage.{light,dark}.png` | [../sources/radar-vs-medsam.md](../sources/radar-vs-medsam.md) |
 
 ## SSoT
@@ -34,7 +37,7 @@ Chrome headless `--screenshot`（`--force-device-scale-factor=2` 出 2× 高清�
 
 ## 验收状态
 
-三张图都通过 archify showcase 的全部 9 项 artifact 检查（0 错误 0 警告），以及 1440×900 / 1600×1000 / 1920×1080 / 2048×1320 四档桌面视口的浏览器 overflow 检查（`*.visual-check.json` 是收据），导出的 PNG 逐张看过。
+六张图都通过 archify showcase 的全部 9 项 artifact 检查（0 错误 0 警告），以及 1440×900 / 1600×1000 / 1920×1080 / 2048×1320 四档桌面视口的浏览器 overflow 检查（`*.visual-check.json` 是收据），导出的 PNG 逐张看过。
 自动检查只管溢出与走线，不管空白和美观 —— 改完图务必看一眼导出的 PNG。
 
 ## 改 lifecycle 图时的几何约束
@@ -43,6 +46,11 @@ Chrome headless `--screenshot`（`--force-device-scale-factor=2` 出 2× 高清�
 - **`terminal` lane 的 col N 对齐 main 的 col N+2。** 节点要放在它的源列正下方，否则连线会斜穿别的节点。main col 0/1 下面没有可对齐的列。
 - 渲染器**总会预留第三条带**。只定义两条 lane 时它会画一条空的「03 / Outcomes」（还是英文）。要么填满，要么就会看见一块空白。
 - 节点掉出竖直可用区时用负 `yOffset` 往上拉；这个值和 `viewBox[1]` 互相牵制，当前是 `H=592 / yOffset=-44`。
+
+## dataflow 图的两个注意点
+
+- 每条 flow **必须有 `label`**（schema 强制）。
+- 图例文字是渲染器的固定词汇（`security` 变体叫「策略 / PII」、`dashed` 叫「异步批处理」）。语义不符时用 `meta.legend.entries.<kind>.label` 覆盖，四张 dataflow 图都覆盖过。
 
 ## 已知取舍
 

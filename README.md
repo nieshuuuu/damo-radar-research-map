@@ -246,6 +246,11 @@ Jianfeng Zhang = RADAR 第 37 位作者 ─ RADAR
 
 ## 技术底细
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/radar-model.dark.png">
+  <img alt="模型前向：CT patch 过 U-Net 编码器得三尺度 token，分割头的 mask 决定 token 归属，器官注意力池化得到图像特征，与 BERT 文本特征做软目标对比损失" src="figures/radar-model.light.png">
+</picture>
+
 RADAR = **一个 3D U-Net 编码器 + 一个 BERT**，做图文对比学习。对齐单位不是"整卷 ↔ 整份报告"，而是"**一个器官的图像特征 ↔ 报告里写这个器官的那几句话**"。
 
 | | |
@@ -262,7 +267,7 @@ RADAR = **一个 3D U-Net 编码器 + 一个 BERT**，做图文对比学习。�
 
 MERLIN（*Nature* 652:1318–1328, 2026，通讯 **Akshay S. Chaudhari**）是 RADAR 全部公开可复现性的载体：42 万例 RAD-CT 放不出来，他们用这个公开数据集把整条流水线完整演示了一遍。
 
-→ 设备清单、数据流、模型结构图、损失函数推导、训练配方、推理流程、自己跑一遍的最短路径，见 **[sources/radar-technical-teardown.md](sources/radar-technical-teardown.md)**
+→ 设备清单、预处理 / 模型 / 推理三张流程图、**损失函数的逐步推导（InfoNCE → 软目标 → Dice，含手算算例）**、训练配方、自己跑一遍的最短路径，见 **[sources/radar-technical-teardown.md](sources/radar-technical-teardown.md)**
 
 ---
 
@@ -331,7 +336,7 @@ sources/                           各专题的结论页
   hupan-lab.md                     湖畔实验室是什么
   grassroots-network.md            外部验证网络：为什么是这几家医院
   damo-hiring.md                   达摩院美国实体现状 + 这个圈子的求职通道
-figures/                           三张图：*.json 是图源，*.html 是交互版，*.png 是内嵌用的静态导出
+figures/                           六张图：*.json 是图源，*.html 是交互版，*.png 是内嵌用的静态导出
 data/
   names-final.json                 ★ 中文名的唯一真源（含把握等级）
   authors-meta.json                ★ 单位 / 身份 / PANDA 标记的唯一真源

@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "模型前向：器官特征怎么和器官描述对齐",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1050,
+      540
+    ],
+    "views": [
+      {
+        "id": "vision",
+        "label": "视觉通路",
+        "focus": [
+          "patch",
+          "unet",
+          "tokens",
+          "roi"
+        ],
+        "note": "编码器最深三层的特征展平成 token，再按器官池化。"
+      },
+      {
+        "id": "anatomy",
+        "label": "解剖定位通路",
+        "focus": [
+          "gt",
+          "seghead",
+          "flags",
+          "roi"
+        ],
+        "note": "分割头预测的 mask 决定哪些 token 属于哪个器官。"
+      },
+      {
+        "id": "text",
+        "label": "文本通路与对齐",
+        "focus": [
+          "text",
+          "bert",
+          "tproj",
+          "itc",
+          "roi"
+        ],
+        "note": "器官特征与该器官的描述在 256 维空间里做对比学习。"
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "emphasis": {
+          "label": "主数据通路"
+        },
+        "security": {
+          "label": "解剖定位"
+        },
+        "dashed": {
+          "label": "仅训练时的监督"
+        },
+        "default": {
+          "label": "内部连接"
+        },
+        "database": {
+          "label": "256 维表示"
+        }
+      }
+    }
+  },
+  "stages": [
+    {
+      "label": "输入"
+    },
+    {
+      "label": "编码"
+    },
+    {
+      "label": "256 维表示"
+    },
+    {
+      "label": "器官级对齐"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "patch",
+      "type": "frontend",
+      "label": "CT patch",
+      "sublabel": "1×96×256×384",
+      "stage": 0,
+      "row": 0,
+      "tag": "[0,1] 归一化"
+    },
+    {
+      "id": "gt",
+      "type": "external",
+      "label": "教师 mask",
+      "sublabel": "TotalSegmentator",
+      "stage": 0,
+      "row": 1,
+      "tag": "仅训练时"
+    },
+    {
+      "id": "text",
+      "type": "frontend",
+      "label": "器官描述",
+      "sublabel": "≤512 token",
+      "stage": 0,
+      "row": 2,
+      "tag": "Qwen 抽取"
+    },
+    {
+      "id": "unet",
+      "type": "backend",
+      "label": "U-Net 编码器",
+      "sublabel": "6 stage",
+      "stage": 1,
+      "row": 0,
+      "tag": "约 5200 万参数"
+    },
+    {
+      "id": "seghead",
+      "type": "backend",
+      "label": "分割头",
+      "sublabel": "37 通道",
+      "stage": 1,
+      "row": 1,
+      "tag": "轻解码器"
+    },
+    {
+      "id": "bert",
+      "type": "backend",
+      "label": "BERT-base",
+      "sublabel": "取 [CLS]",
+      "stage": 1,
+      "row": 2,
+      "tag": "另有动量副本"
+    },
+    {
+      "id": "tokens",
+      "type": "database",
+      "label": "三尺度 token",
+      "sublabel": "最深三层 skip",
+      "stage": 2,
+      "row": 0,
+      "tag": "1×1×1 卷积"
+    },
+    {
+      "id": "flags",
+      "type": "security",
+      "label": "器官 token 标记",
+      "sublabel": "max_pool3d",
+      "stage": 2,
+      "row": 1,
+      "tag": "36 × token 数"
+    },
+    {
+      "id": "tproj",
+      "type": "database",
+      "label": "文本特征",
+      "sublabel": "768 → 256",
+      "stage": 2,
+      "row": 2,
+      "tag": "L2 归一化"
+    },
+    {
+      "id": "roi",
+      "type": "backend",
+      "label": "器官注意力池化",
+      "sublabel": "36 个 query",
+      "stage": 3,
+      "row": 0,
+      "tag": "4 头注意力"
+    },
+    {
+      "id": "itc",
+      "type": "messagebus",
+      "label": "对比损失",
+      "sublabel": "软目标",
+      "stage": 3,
+      "row": 2,
+      "tag": "逐器官求和"
+    }
+  ],
+  "flows": [
+    {
+      "id": "m1",
+      "from": "patch",
+      "to": "unet",
+      "label": "体素",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m2",
+      "from": "unet",
+      "to": "tokens",
+      "label": "多尺度特征",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m3",
+      "from": "tokens",
+      "to": "roi",
+      "label": "key / value",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m4",
+      "from": "gt",
+      "to": "seghead",
+      "label": "Dice 监督",
+      "variant": "dashed",
+      "route": "straight"
+    },
+    {
+      "id": "m5",
+      "from": "unet",
+      "to": "seghead",
+      "label": "解码",
+      "variant": "default",
+      "labelDy": 24
+    },
+    {
+      "id": "m6",
+      "from": "seghead",
+      "to": "flags",
+      "label": "argmax mask",
+      "variant": "security",
+      "route": "straight"
+    },
+    {
+      "id": "m7",
+      "from": "flags",
+      "to": "roi",
+      "label": "选 token",
+      "variant": "security"
+    },
+    {
+      "id": "m8",
+      "from": "text",
+      "to": "bert",
+      "label": "分词",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m9",
+      "from": "bert",
+      "to": "tproj",
+      "label": "[CLS]",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m10",
+      "from": "tproj",
+      "to": "itc",
+      "label": "文本侧",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "m11",
+      "from": "roi",
+      "to": "itc",
+      "label": "图像侧",
+      "variant": "emphasis",
+      "labelDy": 24
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "视觉通路",
+      "items": [
+        "编码器最深三层的特征各自投到 256 维，展平成三组 token",
+        "每个器官一个可学习 query，只对属于该器官的 token 做注意力"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "解剖定位通路",
+      "items": [
+        "分割头自己预测 36 类 mask，推理时不再需要外部分割器",
+        "mask 经 max_pool3d 变成「哪些 token 属于器官 k」的布尔表"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "对齐",
+      "items": [
+        "器官特征与该器官的描述做双向对比，36 个器官的损失求和",
+        "总损失 = 对比损失 + 分割 Dice 损失，直接相加"
+      ]
+    }
+  ]
+}

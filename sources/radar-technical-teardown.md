@@ -81,22 +81,14 @@ MERLIN 本身：*Nature* **652:1318–1328**（2026），40 位作者全部斯�
 
 ## ③ 预处理：把"一卷 CT + 一份报告"变成"36 份器官级图文对"
 
-```
-┌─ 图像侧 ────────────────────────────────────────────────────────┐
-│ 原始 CT (NIfTI)                                                  │
-│   → TotalSegmentator v1.5.7      104 类解剖结构 mask             │
-│   → process_img_mask.py          合并成 36 个主要结构            │
-│   → 重采样                       图像和 mask 都到 [1, 1, 5] mm   │
-└─────────────────────────────────────────────────────────────────┘
-┌─ 文本侧（三步全是调 LLM）──────────────────────────────────────┐
-│ 原始报告                                                         │
-│   → check_organ_mention.py   (qwen_plus)  这份报告提没提这个器官 │
-│   → report_parsing.py        (qwen_max)   抽出写该器官的那几句   │
-│   → report_parsing_normal.py              该器官是 正常 / 异常   │
-└─────────────────────────────────────────────────────────────────┘
-        ↓
-每个病人得到：{器官名: 描述文本} + {器官名: normal/abnormal} + 整份报告
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../figures/radar-preprocess.dark.png">
+  <img alt="预处理数据流：图像侧经 TotalSegmentator 与合并重采样得到图像加 36 类 mask，文本侧经 Qwen 三步得到器官级文本和异常标记" src="../figures/radar-preprocess.light.png">
+</picture>
+
+> 交互版 → [../figures/radar-preprocess.html](../figures/radar-preprocess.html)
+
+每个病人最后得到：`{器官名: 描述文本}` + `{器官名: normal/abnormal}` + 整份报告。
 
 **36 个解剖结构**（代码里以中文字符串写死）：肾上腺、主动脉、竖脊肌、脑、锁骨、大肠、十二指肠、食管、面部、股骨、胆囊、臀肌、心脏、髋关节、肱骨、髂动脉、髂静脉、髂腰肌、下腔静脉、肾、肝、肺、胰腺、门静脉、肺动脉、肋骨、骶骨、肩胛骨、小肠、脾、胃、气管、膀胱、颈椎、腰椎、胸椎。
 
@@ -121,35 +113,12 @@ MERLIN 本身：*Nature* **652:1318–1328**（2026），40 位作者全部斯�
 
 ## ④ 模型结构
 
-```
-CT patch  1 × 96 × 256 × 384          报告文本（器官级 或 整份）
-      │                                      │
-┌─────▼──────────────────────┐        ┌──────▼──────────────┐
-│ VisionBranch                │        │ BERT-base           │
-│ PlainConvUNetLightD         │        │ max 512 token       │
-│ 6 stage                     │        │ 取 [CLS]            │
-│ [32,64,128,256,320,320] 通道│        └──────┬──────────────┘
-│                             │               │ Linear 768→256
-│  ├─ 分割头: 37 通道          │               ▼
-│  │   (36 器官 + 背景)        │          text_feat (256-d)
-│  │   argmax → pred_mask      │
-│  │                           │
-│  └─ 最深三层 skip 特征        │
-│      1×1×1 Conv → 256-d      │
-│      展平成三组 token         │
-└─────┬──────────────────────┘
-      │ pred_mask 经 max_pool3d 变成"哪些 token 属于器官 k"的布尔标记
-      ▼
-┌────────────────────────────────────────────┐
-│ 器官 k 的 ROI 池化                          │
-│  query = 可学习的 query_tokens[k] (256-d)   │
-│  key/value = 三个尺度里属于器官 k 的 token  │
-│  MultiheadAttention(4 头, dropout 0.1)      │
-│  → vision_projs[k] : Linear 256→256         │  ← 36 个器官各有自己的投影层
-└─────┬──────────────────────────────────────┘
-      ▼
-  image_feat_k (256-d)   ←── 对比学习 ──→   text_feat
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../figures/radar-model.dark.png">
+  <img alt="模型前向：CT patch 过 U-Net 编码器得三尺度 token，分割头的 mask 经 max_pool3d 决定 token 归属，器官注意力池化得到图像特征，与 BERT 文本特征做软目标对比损失" src="../figures/radar-model.light.png">
+</picture>
+
+> 交互版 → [../figures/radar-model.html](../figures/radar-model.html)
 
 ### 视觉分支：nnU-Net 的编码器 + 砍薄的解码器
 
@@ -182,6 +151,32 @@ organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
 
 在 `[1,1,5]` mm 下，最深层一个 token = **40 mm(z) × 32 mm × 32 mm**。
 
+### 器官特征是怎么池化出来的
+
+**4.1 token 归属** —— 尺度 `s` 的第 `p` 个 token 对应体素块 `Ω_p^(s)`（块大小依次是 `8×32×32`、`4×16×16`、`2×8×8`），`m̂(x)` 是分割头预测的标签：
+
+$$
+F^{(s)}_{k,p} = \max_{x \in \Omega^{(s)}_{p}} \mathbf{1}\bigl[ \hat m(x) = k \bigr]
+$$
+
+WHY：把体素级 mask 变成"哪些 token 属于器官 `k`"。HOW：就是 `max_pool3d` —— 块里只要有一个体素属于器官 `k`，整个 token 就算它的。
+
+**4.2 注意力池化** —— 器官 `k` 有一个可学习的 query `q_k`（256 维），key/value 是三个尺度里属于它的全部 token：
+
+$$
+Z_k = \bigcup_{s=1}^{3} \bigl\lbrace z^{(s)}_{p} \ :\ F^{(s)}_{k,p} = 1 \bigr\rbrace , \qquad h_k = \mathrm{softmax}\Bigl( \frac{(q_k W^{Q})(Z_k W^{K})^{\top}}{\sqrt{d_h}} \Bigr) Z_k W^{V}
+$$
+
+WHY：器官大小不一，token 数从几个到几千个不等，要压成一个定长向量。HOW：4 个头、每头 `d_h = 64`、dropout 0.1；上式写的是单头形式。注意力层 36 个器官共用，query 各用各的。
+
+**4.3 投影并归一化** —— 每个器官有自己的一层 `Linear(256 → 256)`：
+
+$$
+v = \frac{W_k h_k + b_k}{\lVert W_k h_k + b_k \rVert_2}, \qquad t = \frac{W_t \mathrm{BERT}(\mathrm{text})_{[\mathrm{CLS}]} + b_t}{\lVert W_t \mathrm{BERT}(\mathrm{text})_{[\mathrm{CLS}]} + b_t \rVert_2}
+$$
+
+WHY：把图像和文本放进同一个 256 维单位球面，点积才有可比性。HOW：图像侧 36 套 `(W_k, b_k)`，文本侧只有一套 `(W_t, b_t)`。
+
 ### 文本分支
 
 | checkpoint | 文本编码器 |
@@ -193,43 +188,197 @@ organ_token_flags1[i][unique_values.long() - 1] = highlight_tokens1 > 0
 
 ---
 
-## ⑤ 损失函数：真正的方法贡献在这里
+## ⑤ 损失函数
 
-总损失 = **对比损失 + 分割 Dice 损失**。训练时**奇偶迭代交替**两种对比学习：
+### 速查
 
-```
-偶数步（radar_plus=True 时）→ 整图对比：整卷特征 ↔ 整份报告      ← RADAR+ 的"全局对齐"
-奇数步                     → 器官级对比：器官 k 特征 ↔ 器官 k 的描述   ← RADAR 的核心
-```
+总损失，两项直接相加、无权重：
 
-### 器官级对比：逐器官各算一次 InfoNCE
+$$
+\mathcal{L} = \mathcal{L}_{\mathrm{itc}} + \mathcal{L}_{\mathrm{seg}}
+$$
 
-对每个器官 k，在全部 GPU 上 `all_gather` 出该器官的所有 (图像特征, 文本特征) 对，算双向相似度矩阵 `sim_i2t / sim_t2i`（除以可学习温度，初值 0.07，钳在 [0.001, 0.5]），再对 36 个器官的损失**求和**。
+对比项的通用形式 —— 软目标交叉熵，`Y` 逐行和为 1：
 
-两个筛选条件决定一个样本进不进某个器官的损失：
+$$
+\mathcal{L}(S, Y) = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{N} Y_{ij} \log \frac{\exp S_{ij}}{\sum_{l=1}^{N} \exp S_{il}}
+$$
 
-1. **器官必须完整** —— 模型自己预测的 mask 不碰 patch 的六个边界面。被裁掉一半的肝不参与对齐。
-2. **这个 batch 里该器官至少有一例异常** —— 全是"正常"的器官这一步不算，没有可学的对比。
+`Y = I` 时退化成标准 InfoNCE（整图分支用它）；器官级分支用软目标：
 
-### 软目标：同一器官的"正常"不互相排斥
+$$
+Y_{ij} = \frac{\delta_{ij} + M_{ij}}{1 + \sum_{l} M_{il}}, \qquad M_{ij} = (1 - \delta_{ij}) \bigl( B_{ij} + a_i a_j \tilde P_{ij} \bigr)
+$$
 
-标准 InfoNCE 把 batch 里除自己以外的样本全当负例。但两个病人的肝都写着"正常"，把他们推开是错的。RADAR 把目标矩阵改成：
+$$
+B_{ij} = \max\bigl( (1 - a_i)(1 - a_j),\ e_{ij} \bigr), \qquad \tilde P_{ij} = \frac{\exp( \tilde t_i^{\top} \tilde t_j / \tau )}{\sum_{l=1}^{N} \exp( \tilde t_i^{\top} \tilde t_l / \tau )}
+$$
 
-```
-sim_targets = 对角线 1
-            + [两例都 normal]                               → 记为正例
-            + [两例文本逐字相同]                             → 记为正例
-            + [两例都 abnormal] × softmax(动量BERT的文本相似度)  → 按相似程度给软权重
-  然后逐行归一化
-```
+分割项是负的平均 Dice：
 
-> [!insight] 这三行才是 RADAR 在模型层面的新东西
-> 报告监督天然带大量"伪负例"（绝大多数器官在绝大多数病人身上是正常的）。==normal/abnormal 标记 + 文本-文本软相似度，就是为了不让模型把"同样正常"或"同样是脂肪肝"的两个病人强行推开。==
-> 预处理第三步花钱调 LLM 判 normal/abnormal，钱就花在这里。
+$$
+\mathcal{L}_{\mathrm{seg}} = -\frac{1}{36 B} \sum_{b=1}^{B} \sum_{c=1}^{36} \frac{2 \sum_{x} p_{b,c}(x) g_{b,c}(x)}{\max\bigl( \sum_{x} p_{b,c}(x) + \sum_{x} g_{b,c}(x),\ 10^{-8} \bigr)}
+$$
 
-### 分割损失
+---
 
-分割头的 37 通道 softmax 输出对 TotalSegmentator 的 mask（最近邻降采样到输出尺寸）算 **soft Dice**（不含背景）。它和对比损失直接相加，没有权重系数。
+### Known（对某个器官 `k`、某一步迭代）
+
+| 符号 | 含义 | 代码里的名字 |
+|---|---|---|
+| `N` | 跨所有 GPU `all_gather` 之后、器官 `k` 完整的样本数 | `len(image_feat_all)` |
+| `v_i` | 样本 `i` 的器官 `k` 图像特征，256 维，已 L2 归一化 | `image_feat` |
+| `t_i` | 样本 `i` 写器官 `k` 的那段文本的特征，256 维，已 L2 归一化 | `text_feat` |
+| `t̃_i` | 同一段文本过**动量** BERT 得到的特征 | `text_feat_m` |
+| `a_i` | 异常标记，1 = 报告说该器官异常，0 = 正常 | `organ_abnormal_flags` |
+| `e_ij` | 两段文本逐字相同则为 1 | `cl_text_input_all[:,None] == [None,:]` |
+| `τ` | 可学习温度，初值 0.07，每步钳到 `[0.001, 0.5]` | `self.temp` |
+
+### Want
+
+一个标量损失，让 `v_i` 靠近"该靠近的" `t_j`、远离其余的 —— 关键是**谁算"该靠近的"**。
+
+### Assumptions
+
+- 特征都已 L2 归一化，所以点积就是余弦相似度，取值 `[−1, 1]`。
+- 负例只来自当前这一步跨卡汇总的 batch（`queue_size: 0`，ALBEF 原有的负例队列关掉了）。
+- 同一个 `Y` 同时用于图→文和文→图两个方向（代码里 `sim_i2t_targets = sim_t2i_targets = sim_targets`）。
+
+### Steps
+
+**5.1 相似度矩阵**
+
+$$
+S^{\mathrm{i2t}}_{ij} = \frac{v_i^{\top} t_j}{\tau}, \qquad S^{\mathrm{t2i}}_{ij} = \frac{t_i^{\top} v_j}{\tau}
+$$
+
+WHY：把"第 `i` 个图像和第 `j` 段文本有多像"变成 logits。HOW：两个矩阵互为转置；`τ` 越小 softmax 越尖。
+
+**5.2 通用形式：软目标交叉熵**
+
+$$
+\mathcal{L}(S, Y) = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{N} Y_{ij} \log \frac{\exp S_{ij}}{\sum_{l=1}^{N} \exp S_{il}}
+$$
+
+WHY：先写最一般的形式，后面两个分支只是换 `Y`。HOW：对 `S` 逐行 softmax，与目标分布 `Y` 的第 `i` 行算交叉熵，再对行取平均。
+
+**5.3 特例：`Y = I` 就是 InfoNCE**
+
+$$
+\mathcal{L}_{\mathrm{InfoNCE}} = -\frac{1}{N} \sum_{i=1}^{N} \log \frac{\exp( v_i^{\top} t_i / \tau )}{\sum_{l=1}^{N} \exp( v_i^{\top} t_l / \tau )}
+$$
+
+WHY：只有自己配对的那段文本是正例，batch 里其余 `N − 1` 段全当负例。HOW：分子是正例，分母是全部候选 —— 一个 `N` 选 1 的分类问题。
+
+**5.4 整图分支（RADAR+ 的全局对齐）直接用 InfoNCE**
+
+$$
+\mathcal{L}_{\mathrm{whole}} = \tfrac{1}{2} \Bigl[ \mathcal{L}\bigl(S^{\mathrm{i2t}}, I\bigr) + \mathcal{L}\bigl(S^{\mathrm{t2i}}, I\bigr) \Bigr]
+$$
+
+WHY：整份报告几乎不会两两相同，硬目标够用。HOW：这里的 `v` 是一个全局 query 对**全部** token 做注意力得到的整卷特征，`t` 是整份报告的 `[CLS]`。
+
+**5.5 器官级分支的问题：硬目标里全是伪负例**
+
+同一个器官，绝大多数病人的文本都是 `normal.`。按 5.3，两个"肝正常"的病人互为负例、被强行推开 —— 这是错的监督。所以要重新定义"谁是正例"。
+
+**5.6 硬正例指示 `B`：都正常，或文本逐字相同**
+
+$$
+B_{ij} = \max\bigl( (1 - a_i)(1 - a_j),\ e_{ij} \bigr)
+$$
+
+WHY：两个都正常的样本语义上等价；文本完全一样的也等价。HOW：第一项只在 `a_i = a_j = 0` 时为 1；两项取 max（代码里是相加后转 bool）。
+
+**5.7 软正例权重 `P̃`：都异常时，按文本有多像给权重**
+
+$$
+\tilde P_{ij} = \frac{\exp( \tilde t_i^{\top} \tilde t_j / \tau )}{\sum_{l=1}^{N} \exp( \tilde t_i^{\top} \tilde t_l / \tau )}
+$$
+
+WHY：两个"都异常"不等于同一种异常 —— 肝囊肿和肝癌不该被当成正例，但两个脂肪肝应该部分算。HOW：用**动量** BERT 的文本-文本相似度做逐行 softmax；不回传梯度。分母包含 `l = i` 自己那一项（余弦 = 1，最大），所以非对角的权重天然偏小。
+
+**5.8 合成目标矩阵并逐行归一化**
+
+$$
+M_{ij} = (1 - \delta_{ij}) \bigl( B_{ij} + a_i a_j \tilde P_{ij} \bigr)
+$$
+
+$$
+Y_{ij} = \frac{\delta_{ij} + M_{ij}}{1 + \sum_{l} M_{il}}
+$$
+
+WHY：对角线（自己的配对）永远是 1 份权重，其余正例按 `M` 分享。HOW：`a_i a_j` 让软权重只在"都异常"时生效；`(1 − δ_ij)` 把 `M` 的对角线清零；最后每行除以行和。
+
+**算例**（肝，`N = 4`，`a = (0, 0, 1, 1)`，四段文本互不相同，`τ = 0.07`；动量文本余弦：`t̃_3·t̃_4 = 0.9`，其余两两 0.3）：
+
+$$
+\tilde P_{34} = \frac{e^{0.9/0.07}}{e^{1/0.07} + e^{0.9/0.07} + 2 e^{0.3/0.07}} = 0.193
+$$
+
+$$
+Y = \begin{pmatrix} 0.5 & 0.5 & 0 & 0 \cr 0.5 & 0.5 & 0 & 0 \cr 0 & 0 & 0.838 & 0.162 \cr 0 & 0 & 0.162 & 0.838 \end{pmatrix}
+$$
+
+两个正常的样本把目标**对半分**；两个描述相近的异常样本是 **84 / 16**；正常与异常之间仍然是 0 —— 继续互为负例。
+
+**5.9 器官 `k` 的损失：两个方向取平均**
+
+$$
+\mathcal{L}_k = \tfrac{1}{2} \Bigl[ \mathcal{L}\bigl(S^{\mathrm{i2t}}, Y\bigr) + \mathcal{L}\bigl(S^{\mathrm{t2i}}, Y\bigr) \Bigr]
+$$
+
+若 `Y` 的所有元素相等（没有任何对比信息）或这个器官没有文本，跳过。
+
+**5.10 哪些样本、哪些器官进损失**
+
+记 `c_ik = 1` 表示样本 `i` 的器官 `k` **完整** —— 模型自己预测的 mask 不碰 patch 的六个边界面。器官 `k` 只用 `c_ik = 1` 的样本；而且整个跨卡 batch 里至少要有一例"完整且异常"，这个器官才算：
+
+$$
+\mathcal{K} = \Bigl\lbrace k \ :\ \sum_{i} a_{ik} c_{ik} \ge 1 \Bigr\rbrace , \qquad \mathcal{L}_{\mathrm{anat}} = \sum_{k \in \mathcal{K}} \mathcal{L}_k
+$$
+
+WHY：被裁掉一半的肝不该和"肝脏大小形态正常"对齐；全是正常的器官没有可学的对比。HOW：对 36 个器官**求和**而不是取平均 —— 一步里出现的器官越多，对比项越大。
+
+**5.11 奇偶步交替**（`n` 是迭代计数）
+
+$$
+\mathcal{L}_{\mathrm{itc}}(n) = \mathcal{L}_{\mathrm{whole}} \quad \text{if } n \text{ is even (RADAR+ on)}
+$$
+
+$$
+\mathcal{L}_{\mathrm{itc}}(n) = \mathcal{L}_{\mathrm{anat}} \quad \text{otherwise}
+$$
+
+WHY：全局对齐和器官级对齐共用同一个编码器，交替着训而不是加权求和。HOW：`radar_plus: False` 时每一步都是器官级。
+
+**5.12 分割项：负的平均 soft Dice**
+
+$$
+\mathrm{Dice}_{b,c} = \frac{2 \sum_{x} p_{b,c}(x) g_{b,c}(x)}{\max\bigl( \sum_{x} p_{b,c}(x) + \sum_{x} g_{b,c}(x),\ 10^{-8} \bigr)}, \qquad \mathcal{L}_{\mathrm{seg}} = -\frac{1}{36 B} \sum_{b=1}^{B} \sum_{c=1}^{36} \mathrm{Dice}_{b,c}
+$$
+
+WHY：让分割头学会贴对 36 个器官的标签，供 ④ 的 token 标记用。HOW：`p` 是分割头的 softmax 概率，`g` 是 TotalSegmentator mask 的 one-hot（最近邻降采样到分割头的输出尺寸）；不含背景、`smooth = 0`、逐样本逐类算再平均。取值 `[−1, 0]`；某器官在预测和教师里都不存在时该项为 0。
+
+**5.13 总损失**
+
+$$
+\mathcal{L}(n) = \mathcal{L}_{\mathrm{itc}}(n) + \mathcal{L}_{\mathrm{seg}}
+$$
+
+两项**直接相加，没有权重系数**。配置里保留了 ALBEF 的 `alpha: 0.4`，代码里还定义了 `_rampup_factor`，但这版 `forward` 里两者都没有被用到 —— ALBEF 的"动量蒸馏"被 5.6–5.8 的软目标整个替换掉了。
+
+**5.14 动量编码器的更新**
+
+$$
+\tilde\theta \leftarrow m \tilde\theta + (1 - m) \theta, \qquad m = 0.995
+$$
+
+只作用于文本编码器和文本投影层。这一行写在**逐器官的循环里面**，所以一步迭代里会更新 `|K|` 次，等效的每步动量是 `0.995^|K|`。
+
+> [!insight] 真正的方法贡献就是 5.6–5.8 这三个式子
+> 报告监督天然带大量伪负例。==normal/abnormal 标记 + 动量文本相似度，就是为了不让模型把"同样正常"或"同样是脂肪肝"的两个病人强行推开。==
+> 预处理第三步花钱调 LLM 判 normal/abnormal，钱就花在 `a_i` 这一个布尔量上。
 
 ---
 
@@ -244,6 +393,26 @@ sim_targets = 对角线 1
 | 规模 | 30 epoch，总 batch 48，fp32，seed 42 |
 | 队列 | `queue_size: 0` —— ALBEF 原有的 57,600 负例队列被关掉，只用跨卡 `all_gather` 的 in-batch 负例 |
 | 开关 | `radar_plus: True` 开全局对齐；`radar_ft: True` 从旗舰权重微调（只加载视觉侧，**文本编码器不加载** —— 因为中文换英文）|
+
+**6.1 输入归一化** —— 先钳位再按这一卷自己的极值拉到 `[0, 1]`：
+
+$$
+x' = \frac{\mathrm{clip}(x,\ a,\ b) - x_{\min}}{x_{\max} - x_{\min}}
+$$
+
+旗舰 `(a, b) = (−300, 400)` HU，MERLIN 分支 `(−1000, 1000)` HU；`x_min`、`x_max` 取自钳位后的整卷。
+
+**6.2 学习率** —— 第 0 个 epoch 内按步线性 warmup（`s` 是步数，`s_w = 3000`，`η_w = 1e-6`，`η_0 = 1e-4`）：
+
+$$
+\eta(s) = \min\Bigl( \eta_0,\ \eta_w + (\eta_0 - \eta_w) \frac{s}{s_w} \Bigr)
+$$
+
+之后按 **epoch**（不是按步）余弦衰减（`e` 是 epoch 序号，`E = 30`，`η_min = 1e-6`）：
+
+$$
+\eta(e) = \eta_{\min} + \tfrac{1}{2} (\eta_0 - \eta_{\min}) \Bigl( 1 + \cos \frac{\pi e}{E} \Bigr)
+$$
 
 微调时，全局对齐那一支的参数（`query_tokens_whole`、`attention_whole`、`vision_projs_whole`）直接**用第 0 号器官的权重初始化**。
 
@@ -261,18 +430,32 @@ cd RADAR_train && python train.py
 
 RADAR 没有分类头。146 个征象每个都是"**这个器官的图像特征，更像阳性描述还是阴性描述**"。
 
-```
-① 整卷 → 重采样 [1,1,5] → HU 钳位 + min-max → 裁掉全零区域（z 外扩 5、面内外扩 20）
-② 滑窗过分割头    roi = 96×256×384, overlap = 0.25, sw_batch_size = 1
-                  各窗的 seg 概率三线性插值回原尺寸、重叠处取平均 → argmax → 全卷 mask
-③ 对每个器官      以该器官 mask 为中心，裁一个 96×256×384 的窗
-                  → ROI 注意力池化 → 器官特征 (256-d)
-④ 对该器官的每个征象
-                  text_feat = 预先算好的 [若干阴性提示词 ; 若干阳性提示词] 嵌入
-                  sim = image_feat · text_featᵀ / temp
-                  阳性组取均值、阴性组取均值 → softmax([neg, pos]) → 取 pos 作为该征象的分数
-⑤ 写 CSV：每个征象一个阳性分数
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../figures/radar-inference.dark.png">
+  <img alt="推理流程：整卷 CT 经滑窗过分割头得全卷 mask，再逐器官裁窗池化出器官特征，与离线算好的正负提示词嵌入比相似度，softmax 得征象阳性分数" src="../figures/radar-inference.light.png">
+</picture>
+
+> 交互版 → [../figures/radar-inference.html](../figures/radar-inference.html)
+
+**7.1 滑窗拼接** —— 窗 `w` 给出的第 `c` 类概率记 `p_c^(w)(x)`，重叠处取平均再 argmax：
+
+$$
+\bar p_c(x) = \frac{\sum_{w \ni x} p_c^{(w)}(x)}{\max\bigl(\lvert \lbrace w : w \ni x \rbrace \rvert,\ 1\bigr)}, \qquad \hat m(x) = \operatorname*{arg max}_{c}\ \bar p_c(x)
+$$
+
+WHY：单窗只覆盖 `96×256×384`，整卷要拼。HOW：窗步长 = `roi × (1 − 0.25)`。
+
+**7.2 正负提示词打分** —— 征象 `f`（属于器官 `k`）有阳性提示词集 `P_f`、阴性提示词集 `N_f`，器官特征 `v`：
+
+$$
+s^{+} = \frac{1}{\lvert P_f \rvert} \sum_{p \in P_f} \frac{v^{\top} t_p}{\tau}, \qquad s^{-} = \frac{1}{\lvert N_f \rvert} \sum_{n \in N_f} \frac{v^{\top} t_n}{\tau}
+$$
+
+$$
+\mathrm{score}_f = \frac{e^{s^{+}}}{e^{s^{+}} + e^{s^{-}}} = \sigma\bigl(s^{+} - s^{-}\bigr)
+$$
+
+WHY：没有分类头，分数就是"更像阳性描述还是阴性描述"。HOW：先在组内取均值（提示词集成），再两路 softmax；`τ` 用训练学到的温度。一个器官落在多个窗里时，各窗分数再取平均。
 
 - 提示词嵌入是**离线算好**的：`ckpt/infer_text_embedding_radar.pt`（旗舰）/ `infer_text_embedding_merlin.pt`，推理时不跑 BERT。每个征象是**多条提示词的集成**（prompt ensemble）。
 - 任何一维超过 1000 体素的体数据会被直接跳过。

@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "预处理：一卷 CT + 一份报告 → 36 份器官级图文对",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1050,
+      540
+    ],
+    "views": [
+      {
+        "id": "image-side",
+        "label": "图像侧",
+        "focus": [
+          "ct",
+          "totalseg",
+          "merge",
+          "imgmask"
+        ],
+        "note": "TotalSegmentator 只在这里用一次，是离线教师。"
+      },
+      {
+        "id": "text-side",
+        "label": "文本侧",
+        "focus": [
+          "report",
+          "mention",
+          "parse",
+          "captions"
+        ],
+        "note": "三步全是调 LLM，便宜的模型做高频过滤，贵的做抽取。"
+      },
+      {
+        "id": "false-negative",
+        "label": "给损失函数准备的标记",
+        "focus": [
+          "mention",
+          "normal",
+          "flags"
+        ],
+        "note": "正常/异常标记只有一个用途：构造对比损失的软目标。"
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "emphasis": {
+          "label": "主流程"
+        },
+        "default": {
+          "label": "派生标记"
+        },
+        "database": {
+          "label": "数据"
+        }
+      }
+    }
+  },
+  "stages": [
+    {
+      "label": "原始数据"
+    },
+    {
+      "label": "第一步"
+    },
+    {
+      "label": "第二步"
+    },
+    {
+      "label": "训练样本"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ct",
+      "type": "database",
+      "label": "增强腹部 CT",
+      "sublabel": "NIfTI 体数据",
+      "stage": 0,
+      "row": 0,
+      "tag": "图像"
+    },
+    {
+      "id": "report",
+      "type": "database",
+      "label": "放射报告",
+      "sublabel": "自由文本",
+      "stage": 0,
+      "row": 1,
+      "tag": "文本"
+    },
+    {
+      "id": "totalseg",
+      "type": "external",
+      "label": "TotalSegmentator",
+      "sublabel": "v1.5.7 · 104 类",
+      "stage": 1,
+      "row": 0,
+      "tag": "离线教师"
+    },
+    {
+      "id": "mention",
+      "type": "cloud",
+      "label": "器官提及检测",
+      "sublabel": "qwen_plus",
+      "stage": 1,
+      "row": 1,
+      "tag": "高频 · 便宜"
+    },
+    {
+      "id": "merge",
+      "type": "backend",
+      "label": "合并 + 重采样",
+      "sublabel": "36 类 · 1×1×5 mm",
+      "stage": 2,
+      "row": 0,
+      "tag": "图与 mask 同步"
+    },
+    {
+      "id": "parse",
+      "type": "cloud",
+      "label": "器官描述抽取",
+      "sublabel": "qwen_max",
+      "stage": 2,
+      "row": 1,
+      "tag": "低频 · 贵"
+    },
+    {
+      "id": "normal",
+      "type": "cloud",
+      "label": "正常/异常判定",
+      "sublabel": "逐器官",
+      "stage": 2,
+      "row": 2,
+      "tag": "压伪负例"
+    },
+    {
+      "id": "imgmask",
+      "type": "database",
+      "label": "图像 + mask",
+      "sublabel": "36 个解剖结构",
+      "stage": 3,
+      "row": 0,
+      "tag": "视觉输入"
+    },
+    {
+      "id": "captions",
+      "type": "database",
+      "label": "器官级文本",
+      "sublabel": "没提到填 normal.",
+      "stage": 3,
+      "row": 1,
+      "tag": "文本输入"
+    },
+    {
+      "id": "flags",
+      "type": "database",
+      "label": "异常标记",
+      "sublabel": "每器官一个布尔",
+      "stage": 3,
+      "row": 2,
+      "tag": "软目标用"
+    }
+  ],
+  "flows": [
+    {
+      "id": "f1",
+      "from": "ct",
+      "to": "totalseg",
+      "label": "逐卷推理",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "f2",
+      "from": "totalseg",
+      "to": "merge",
+      "label": "104 类 mask",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "f3",
+      "from": "merge",
+      "to": "imgmask",
+      "variant": "emphasis",
+      "route": "straight",
+      "label": "36 类 mask"
+    },
+    {
+      "id": "f4",
+      "from": "report",
+      "to": "mention",
+      "label": "逐器官过滤",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "f5",
+      "from": "mention",
+      "to": "parse",
+      "label": "提到的器官",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "f6",
+      "from": "parse",
+      "to": "captions",
+      "variant": "emphasis",
+      "route": "straight",
+      "label": "器官 → 描述"
+    },
+    {
+      "id": "f7",
+      "from": "parse",
+      "to": "normal",
+      "variant": "default",
+      "label": "逐器官描述",
+      "labelDy": 24
+    },
+    {
+      "id": "f8",
+      "from": "normal",
+      "to": "flags",
+      "variant": "default",
+      "route": "straight",
+      "label": "布尔标记"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "图像侧",
+      "items": [
+        "TotalSegmentator 出 104 类，合并成 36 个主要结构",
+        "图像和 mask 一起重采样到 1×1×5 mm"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "文本侧",
+      "items": [
+        "三步全是调 LLM：提没提 → 抽描述 → 正常/异常",
+        "高频过滤用 qwen_plus，结构化抽取用 qwen_max"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "为什么要判正常/异常",
+      "items": [
+        "绝大多数器官在绝大多数病人身上是正常的",
+        "这个标记只用来构造对比损失的软目标"
+      ]
+    }
+  ]
+}

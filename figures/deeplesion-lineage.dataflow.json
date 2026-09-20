@@ -43,7 +43,21 @@
         ],
         "note": "两条线共享祖先命题与部分人员，但双向数据集交集为空。"
       }
-    ]
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "emphasis": {
+          "label": "数据流"
+        },
+        "dashed": {
+          "label": "人的动作，不是数据"
+        },
+        "database": {
+          "label": "数据集"
+        }
+      }
+    }
   },
   "stages": [
     {

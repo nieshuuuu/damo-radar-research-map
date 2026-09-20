@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "推理：零样本，靠正负提示词打分",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1050,
+      430
+    ],
+    "views": [
+      {
+        "id": "two-pass",
+        "label": "两遍扫描",
+        "focus": [
+          "vol",
+          "sw",
+          "crop",
+          "roi"
+        ],
+        "note": "第一遍滑窗只为拿全卷 mask；第二遍以每个器官为中心重新裁窗取特征。"
+      },
+      {
+        "id": "scoring",
+        "label": "打分",
+        "focus": [
+          "prompts",
+          "roi",
+          "score"
+        ],
+        "note": "没有分类头：图像特征更像阳性描述还是阴性描述。"
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "emphasis": {
+          "label": "主流程"
+        },
+        "dashed": {
+          "label": "离线预计算"
+        },
+        "database": {
+          "label": "预存嵌入"
+        }
+      }
+    }
+  },
+  "stages": [
+    {
+      "label": "输入"
+    },
+    {
+      "label": "第一遍：全卷分割"
+    },
+    {
+      "label": "第二遍：逐器官"
+    },
+    {
+      "label": "打分"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "vol",
+      "type": "frontend",
+      "label": "整卷 CT",
+      "sublabel": "1×1×5 mm · 钳位",
+      "stage": 0,
+      "row": 0,
+      "tag": "裁掉全零区"
+    },
+    {
+      "id": "prompts",
+      "type": "database",
+      "label": "提示词嵌入",
+      "sublabel": "正负各若干条",
+      "stage": 3,
+      "row": 0,
+      "tag": "离线算好"
+    },
+    {
+      "id": "sw",
+      "type": "backend",
+      "label": "滑窗过分割头",
+      "sublabel": "96×256×384",
+      "stage": 1,
+      "row": 0,
+      "tag": "重叠 0.25"
+    },
+    {
+      "id": "crop",
+      "type": "backend",
+      "label": "逐器官裁窗",
+      "sublabel": "以 mask 为中心",
+      "stage": 2,
+      "row": 0,
+      "tag": "同样 96×256×384"
+    },
+    {
+      "id": "roi",
+      "type": "backend",
+      "label": "器官特征",
+      "sublabel": "注意力池化 256 维",
+      "stage": 2,
+      "row": 1,
+      "tag": "每器官一个"
+    },
+    {
+      "id": "score",
+      "type": "messagebus",
+      "label": "征象阳性分数",
+      "sublabel": "softmax(阴, 阳)",
+      "stage": 3,
+      "row": 1,
+      "tag": "146 个征象"
+    }
+  ],
+  "flows": [
+    {
+      "id": "i1",
+      "from": "vol",
+      "to": "sw",
+      "label": "逐窗",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "i2",
+      "from": "sw",
+      "to": "crop",
+      "label": "拼接后 argmax",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "i3",
+      "from": "crop",
+      "to": "roi",
+      "label": "过编码器",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "id": "i4",
+      "from": "roi",
+      "to": "score",
+      "label": "图像特征",
+      "variant": "emphasis",
+      "route": "straight"
+    },
+    {
+      "id": "i5",
+      "from": "prompts",
+      "to": "score",
+      "label": "文本特征",
+      "variant": "dashed",
+      "labelDy": 24
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "两遍扫描",
+      "items": [
+        "第一遍：滑窗出分割概率，重叠处取平均，argmax 得全卷 mask",
+        "第二遍：以每个器官的 mask 为中心裁窗，池化出器官特征"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "没有分类头",
+      "items": [
+        "每个征象 = 一组阳性提示词 + 一组阴性提示词",
+        "两组相似度各取均值，softmax 后取阳性那一项"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "实现细节",
+      "items": [
+        "提示词嵌入离线存成 .pt，推理时不跑 BERT",
+        "任一维超过 1000 体素的体数据直接跳过"
+      ]
+    }
+  ]
+}
